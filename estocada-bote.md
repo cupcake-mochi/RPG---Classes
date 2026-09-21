@@ -21,7 +21,7 @@ O requisito de feitiço sem dano distingue esse uso da ofensiva com feitiço de 
 
 ## Relação com o nível 27
 
-O autor escolheu a nova versão de [Ferrão](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-ferrao.md>), habilitada depois de uma conclusão mágica cujo feitiço afete o alvo. Foi preservada a incompatibilidade: Bote e Ferrão não podem ser usados juntos no mesmo turno. Se ambos forem elegíveis, escolha entre os dois ataques de Bote e o ataque que carrega Classe 0 de Ferrão.
+O autor escolheu a nova versão de [Ferrão](estocada-ferrao.md), habilitada depois de uma conclusão mágica cujo feitiço afete o alvo. Foi preservada a incompatibilidade: Bote e Ferrão não podem ser usados juntos no mesmo turno. Se ambos forem elegíveis, escolha entre os dois ataques de Bote e o ataque que carrega Classe 0 de Ferrão.
 
 ## Orçamento
 

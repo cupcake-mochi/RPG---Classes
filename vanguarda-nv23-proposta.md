@@ -1,6 +1,6 @@
 # Vanguarda — candidata para o nível 23
 
-**Registro histórico da proposta de um uso por cena.** A versão de trabalho foi fechada com metade da maestria, arredondada para baixo, + 1 usos por descanso curto ou longo. Regra e orçamento vigentes em [Persistência — nível 23](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-nv23.md>). Os números abaixo conservam a comparação original.
+**Registro histórico da proposta de um uso por cena.** A versão de trabalho foi fechada com metade da maestria, arredondada para baixo, + 1 usos por descanso curto ou longo. Regra e orçamento vigentes em [Persistência — nível 23](vanguarda-nv23.md). Os números abaixo conservam a comparação original.
 
 Proposta de 19 de setembro de 2026, ainda não aprovada e sem nome definitivo.
 

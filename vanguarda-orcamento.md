@@ -22,7 +22,7 @@ O valor cobre Abrir, Conduzir e Concluir com o catálogo atual de seis conduçõ
 
 O ataque extra do nível 7 mantém o tratamento de correção de base da reforma. As 1,25 fatias anteriormente livres foram distribuídas entre os níveis 23 e 30. Os poderes antigos ainda não revisados não são considerados mantidos gratuitamente; as Trilhas têm orçamento separado. A distribuição fecha o orçamento de trabalho, com preços ainda provisórios.
 
-Em 18 de setembro de 2026, após o exemplo de Abertura com Guarda, condução Pressionar a Guarda e conclusão Derrubada, o autor aprovou a Escola simplificada: “por mim tudo bem, achei okey”. O texto aprovado está em [Escola de Arma simplificada](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-escolas-rascunho.md>). O nome do arquivo foi preservado para manter os links existentes; seu estado agora é aprovado como versão de trabalho.
+Em 18 de setembro de 2026, após o exemplo de Abertura com Guarda, condução Pressionar a Guarda e conclusão Derrubada, o autor aprovou a Escola simplificada: “por mim tudo bem, achei okey”. O texto aprovado está em [Escola de Arma simplificada](vanguarda-escolas-rascunho.md). O nome do arquivo foi preservado para manter os links existentes; seu estado agora é aprovado como versão de trabalho.
 
 ## Por que dois
 
@@ -36,7 +36,7 @@ Os 4,8953 do cenário extremo e os 5,6939 do teste extremo de doze turnos contin
 
 A reserva de 0,75 para a Escola também é uma escolha de orçamento, com as hipóteses e limitações da conferência preservadas no documento da Escola. Aprovar o conjunto não transforma os 2,75 em um teto universal demonstrado.
 
-**Conferência de 19/09:** com conduções sem teto e erro encerrando a sequência, a mesma referência rendeu 1,2621 sem Escola e 1,3869 com Precisão. Conservam-se as reservas de 2,00 para Sequência e 0,75 para Escola. Os números da seção anterior registram a justificativa histórica da reserva; a [auditoria da Conclusão Dupla](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-conclusao-dupla.md>) traz a regra e os resultados atuais.
+**Conferência de 19/09:** com conduções sem teto e erro encerrando a sequência, a mesma referência rendeu 1,2621 sem Escola e 1,3869 com Precisão. Conservam-se as reservas de 2,00 para Sequência e 0,75 para Escola. Os números da seção anterior registram a justificativa histórica da reserva; a [auditoria da Conclusão Dupla](vanguarda-conclusao-dupla.md) traz a regra e os resultados atuais.
 
 ## Regras que sustentam o preço
 
@@ -54,9 +54,9 @@ A reserva de 0,75 para a Escola também é uma escolha de orçamento, com as hip
 
 ## Histórico e conferência
 
-**Não Cede, regra mantida:** qualquer TR falhado, repetir e usar o segundo resultado, maestria usos por descanso curto e no máximo uma vez por rodada, sem ação nem PE. O autor dispensou expressamente o +1 na rerrolagem; esse adicional não integra a habilidade. Conserva-se a reserva provisória de 1,00 fatia, agora com referência de 0,8173 sob as hipóteses da [conferência de Não Cede](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-nao-cede.md>). A proposta de um uso por cena apenas contra condições também foi retirada.
+**Não Cede, regra mantida:** qualquer TR falhado, repetir e usar o segundo resultado, maestria usos por descanso curto e no máximo uma vez por rodada, sem ação nem PE. O autor dispensou expressamente o +1 na rerrolagem; esse adicional não integra a habilidade. Conserva-se a reserva provisória de 1,00 fatia, agora com referência de 0,8173 sob as hipóteses da [conferência de Não Cede](vanguarda-nao-cede.md). A proposta de um uso por cena apenas contra condições também foi retirada.
 
-**Nível 30:** o autor escolheu desenvolver Conclusão Dupla no lugar da antiga Não Acabou. Uma vez por cena, após pelo menos duas conduções acertadas na mesma sequência, aplica duas conclusões elegíveis em um único ataque. O texto completo e a conta estão na [auditoria da Conclusão Dupla](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-conclusao-dupla.md>).
+**Nível 30:** o autor escolheu desenvolver Conclusão Dupla no lugar da antiga Não Acabou. Uma vez por cena, após pelo menos duas conduções acertadas na mesma sequência, aplica duas conclusões elegíveis em um único ataque. O texto completo e a conta estão na [auditoria da Conclusão Dupla](vanguarda-conclusao-dupla.md).
 
 **Restrição de fontes acrescentada pelo autor:** as duas conclusões devem pertencer à mesma fonte da execução — corpo a corpo, distância ou feitiço. Conclusões compartilhadas entre os catálogos de armas continuam elegíveis em qualquer um deles, respeitando o ataque usado. Preparar com uma arma e concluir com feitiço é permitido pela habilidade da Estocada; misturar uma conclusão de arma e outra mágica na mesma dupla não é. As contas atuais só abrangem as duplas de armas; a reserva do nível 30 ainda precisa ser conferida com o catálogo mágico fechado como versão de trabalho, sem considerar a ampliação gratuita. Desorientar passou a afetar qualquer próxima rolagem, Expor a Guarda concede vantagem ao próximo ataque de um aliado e Refluxo concede energia temporária equivalente à metade do custo de uma única condução acertada; essas alterações ainda não têm preço conjunto validado.
 
@@ -64,10 +64,10 @@ A reserva de 0,75 para a Escola também é uma escolha de orçamento, com as hip
 
 **Revisão da ordem de trabalho:** avançar ao nível 30 antes de definir o 23 foi reconhecido como erro de sequência do desenvolvimento. O saldo de 0,25 não é uma restrição definitiva ao desenho do nível 23; as reservas dos dois níveis continuam abertas à distribuição conjunta.
 
-**Nível 23 fechado como versão de trabalho:** [Persistência](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-nv23.md>) preserva a sequência após errar uma condução, sem acertar o ataque, aplicar seu efeito, recuperar PE ou renovar o prazo. A quantidade adotada é metade da maestria arredondada para baixo + 1 usos por descanso curto ou longo, conforme a correção final do autor. Substitui a proposta inicial de um uso por cena, conservada como histórico.
+**Nível 23 fechado como versão de trabalho:** [Persistência](vanguarda-nv23.md) preserva a sequência após errar uma condução, sem acertar o ataque, aplicar seu efeito, recuperar PE ou renovar o prazo. A quantidade adotada é metade da maestria arredondada para baixo + 1 usos por descanso curto ou longo, conforme a correção final do autor. Substitui a proposta inicial de um uso por cena, conservada como histórico.
 
 **Reserva do nível 23: 0,25 fatia.** Com três usos disponíveis a cada combate, o marginal antes do nível 30 é 0,2091 na referência. O nível 30, após já possuir Persistência, acrescenta 0,8395. O total conjunto de 1,0487 cabe na reserva conjunta de 1,25. Descansos menos frequentes reduzem a disponibilidade modelada; a conta não presume uma frequência real de descansos. O planejamento fecha em 5,00, sem declarar resolvidos os cenários de estresse anteriores.
 
 Este é o registro vigente do valor de trabalho. Substitui a recomendação anterior de reservar automaticamente as cinco fatias para a base.
 
-A [auditoria v2](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-precificacao-v2.md>) conserva as hipóteses, os resultados e as limitações. As contas permanecem nesta mesma pasta autorizada. Nenhum arquivo do repositório de consulta foi alterado.
+A [auditoria v2](vanguarda-precificacao-v2.md) conserva as hipóteses, os resultados e as limitações. As contas permanecem nesta mesma pasta autorizada. Nenhum arquivo do repositório de consulta foi alterado.

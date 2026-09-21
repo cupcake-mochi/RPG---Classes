@@ -10,7 +10,7 @@ A mudança corrige a conta da habilidade antiga. A habilidade reformada chama-se
 
 ## Fonte e premissas
 
-O texto e a decomposição do preço vêm de [DESENHO-trilhas.md, linha 800](</media/mizuki/HD Externo II/Claude/Claude 2/DESENHO-trilhas.md:800>). A regra de mesa também aparece no [capítulo de Caminhos e Trilhas, linha 158](</media/mizuki/HD Externo II/Claude/Claude 2/sistema/05-material/livro/manual/35-caminhos-e-trilhas.md:158>).
+O texto e a decomposição do preço vêm de [DESENHO-trilhas.md, linha 800](referencia-jjk-project/DESENHO-trilhas.md). A regra de mesa também aparece no [capítulo de Caminhos e Trilhas, linha 158](referencia-jjk-project/sistema/05-material/livro/manual/35-caminhos-e-trilhas.md).
 
 - Dano bruto do Classe 0 no nível 30: **27**.
 - Uma fatia: **5,08 de dano por rodada**.
@@ -41,7 +41,7 @@ Na base, faltava aplicar o acerto do feitiço. Na vantagem, a conta publicada mu
 
 ## Conferência independente
 
-[conferir-fagulha.py](</home/mizuki/CHAT-GPT/RPG -JJK/conferir-fagulha.py>) enumera as combinações de dois dados de ataque dos socos e dois dados do feitiço. Sem vantagem, só o primeiro dado do feitiço conta.
+[conferir-fagulha.py](conferir-fagulha.py) enumera as combinações de dois dados de ataque dos socos e dois dados do feitiço. Sem vantagem, só o primeiro dado do feitiço conta.
 
 Em **160.000 combinações**, o feitiço acerta em **110.000**: **68,75%** nas rodadas elegíveis. Multiplicar essa probabilidade por 27 de dano e pela frequência de 56% produz os mesmos **10,395 de dano por rodada**, ou **2,04625984 fatias**. O script também rejeita a conta histórica sem a correção como resultado válido.
 

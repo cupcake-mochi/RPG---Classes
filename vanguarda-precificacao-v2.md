@@ -2,7 +2,7 @@
 
 18 de setembro de 2026. Substitui a proposta inicial de −2 de dano e 1 PE.
 
-**Valor de trabalho registrado posteriormente: 2,00 fatias para a Sequência e 3,00 ainda livres no Caminho.** É um preço provisório declarado, com margem sobre o cenário de referência, e não uma média de uso observada. O registro vigente está em [Vanguarda — orçamento de trabalho](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-orcamento.md>).
+**Valor de trabalho registrado posteriormente: 2,00 fatias para a Sequência e 3,00 ainda livres no Caminho.** É um preço provisório declarado, com margem sobre o cenário de referência, e não uma média de uso observada. O registro vigente está em [Vanguarda — orçamento de trabalho](vanguarda-orcamento.md).
 
 ## Revisão da leitura do orçamento
 

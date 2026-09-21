@@ -89,6 +89,6 @@ Pontos específicos: Desorientar pode agora atingir TR, Bloquear ou outras rolag
 
 ## Próxima entrega
 
-**Bote, nível 19, mantido pelo autor:** permite usar o ataque extra na ação bônus quando o feitiço da ação padrão é de condição e não causa dano. A regra e as interações estão em [Bote](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-bote.md>). [Ferrão, nível 27](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-ferrao.md>), foi escolhido com gatilho após conclusão mágica. Os preços históricos não foram reafirmados. A [conferência de orçamento](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-auditoria.md>) distingue os resultados já calculados do preço conjunto ainda pendente.
+**Bote, nível 19, mantido pelo autor:** permite usar o ataque extra na ação bônus quando o feitiço da ação padrão é de condição e não causa dano. A regra e as interações estão em [Bote](estocada-bote.md). [Ferrão, nível 27](estocada-ferrao.md), foi escolhido com gatilho após conclusão mágica. Os preços históricos não foram reafirmados. A [conferência de orçamento](estocada-auditoria.md) distingue os resultados já calculados do preço conjunto ainda pendente.
 
 Fontes consultadas para compatibilidade: `sistema/03-mecanica/19-dano-e-condicoes.md`; energia temporária em `sistema/03-mecanica/01-atributos-acerto-defesa.md`, §5.1.2; arredondamento no §5.4; Bote em `sistema/05-material/livro/manual/35-caminhos-e-trilhas.md`; regras de Sequência e Conclusão Dupla da pasta de trabalho. Nenhum arquivo do repositório de consulta foi alterado.

@@ -1,6 +1,6 @@
 # Vanguarda — primeira auditoria de preço
 
-**Histórico: os custos desta proposta foram substituídos pela [precificação v2](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-precificacao-v2.md>), com os dados de abertura e o PE escalando por maestria propostos pelo autor.**
+**Histórico: os custos desta proposta foram substituídos pela [precificação v2](vanguarda-precificacao-v2.md), com os dados de abertura e o PE escalando por maestria propostos pelo autor.**
 
 18 de setembro de 2026. Propostas para decisão; não é texto aprovado de manual.
 
@@ -131,9 +131,9 @@ Não foram atribuídos gratuitamente os antigos Escola de Arma, Não Cede e Não
 
 Consulta somente leitura ao repositório local:
 
-- [Aptidões e Refino](</media/mizuki/HD Externo II/Claude/Claude 2/sistema/05-material/livro/manual/45-aptidoes-e-refino.md>), dano de Canalizar e Kokusen.
-- [Bênçãos e Lapidação](</media/mizuki/HD Externo II/Claude/Claude 2/sistema/05-material/livro/manual/47-bencaos-e-lapidacao.md>), Estímulo Muscular.
-- [Dano e condições, peça 19](</media/mizuki/HD Externo II/Claude/Claude 2/sistema/03-mecanica/19-dano-e-condicoes.md>), equivalências e ressalvas da régua.
+- [Aptidões e Refino](referencia-jjk-project/sistema/05-material/livro/manual/45-aptidoes-e-refino.md), dano de Canalizar e Kokusen.
+- [Bênçãos e Lapidação](referencia-jjk-project/sistema/05-material/livro/manual/47-bencaos-e-lapidacao.md), Estímulo Muscular.
+- [Dano e condições, peça 19](referencia-jjk-project/sistema/03-mecanica/19-dano-e-condicoes.md), equivalências e ressalvas da régua.
 - Caminhos e Trilhas, Como Jogar, O Turno, Equipamento e Descanso e Recuperação, nos capítulos do manual publicado.
 - Peça 26 §3.1, referência de acerto e resistência do inimigo; DESENHO-manhas e continuidade da reforma, unidade e orçamento.
 

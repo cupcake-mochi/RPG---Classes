@@ -18,7 +18,7 @@ O aumento é uma parcela do PE máximo, não um ganho de PE por ataque, conduç�
 
 O ataque da ação bônus é um ataque existente e pode ser usado para Abrir, Conduzir ou Concluir, respeitando os requisitos e custos dessas etapas. Permanece o limite de uma condução ou conclusão por turno. O feitiço não conta como uma etapa da sequência nem renova seu prazo por si só.
 
-Compasso não libera automaticamente o ataque extra na ação bônus. Essa exceção pertence ao [Bote, nível 19](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-bote.md>), mantido pelo autor quando o feitiço da ação padrão for de condição e não causar dano.
+Compasso não libera automaticamente o ataque extra na ação bônus. Essa exceção pertence ao [Bote, nível 19](estocada-bote.md), mantido pelo autor quando o feitiço da ação padrão for de condição e não causar dano.
 
 **Exemplo:** com uma sequência ativa, conjure na ação padrão e use o ataque da ação bônus para Conduzir. Pague o PE da condução normalmente. Acertar renova o prazo e registra uma condução bem-sucedida; errar encerra a sequência, salvo o uso de Persistência quando disponível.
 
@@ -44,7 +44,7 @@ O orçamento da Estocada é separado das cinco fatias já reservadas para o Cami
 
 ## Continuidade
 
-**Nível 11 fechado como versão de trabalho:** o autor substituiu o segundo alvo de Traçado pela possibilidade de preparar a Sequência com armas e concluir com feitiço. O catálogo de seis opções está em [Estocada — conclusões para feitiços](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-conclusoes-feiticos.md>), com os ajustes finais de Desorientar, Expor a Guarda e Refluxo. Rechaçar, que apenas empurrava 3 metros, foi rejeitada como fraca. O ataque da ação bônus de Compasso continua disponível, mas uma conclusão mágica ocupa a etapa da Sequência permitida no turno e impede nova abertura naquele mesmo turno. Bote, nível 19, foi mantido. [Ferrão, nível 27](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-ferrao.md>), foi escolhido com gatilho após conclusão mágica. As quatro entregas estão definidas como versão mecânica de trabalho; a [conferência de orçamento](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-auditoria.md>) registra por que o total da Trilha ainda não está validado.
+**Nível 11 fechado como versão de trabalho:** o autor substituiu o segundo alvo de Traçado pela possibilidade de preparar a Sequência com armas e concluir com feitiço. O catálogo de seis opções está em [Estocada — conclusões para feitiços](estocada-conclusoes-feiticos.md), com os ajustes finais de Desorientar, Expor a Guarda e Refluxo. Rechaçar, que apenas empurrava 3 metros, foi rejeitada como fraca. O ataque da ação bônus de Compasso continua disponível, mas uma conclusão mágica ocupa a etapa da Sequência permitida no turno e impede nova abertura naquele mesmo turno. Bote, nível 19, foi mantido. [Ferrão, nível 27](estocada-ferrao.md), foi escolhido com gatilho após conclusão mágica. As quatro entregas estão definidas como versão mecânica de trabalho; a [conferência de orçamento](estocada-auditoria.md) registra por que o total da Trilha ainda não está validado.
 
 Fontes de consulta: `sistema/05-material/livro/manual/35-caminhos-e-trilhas.md`, seção Estocada; `sistema/03-mecanica/10-descanso-e-recuperacao.md`; regra reformada de Retaliação em `bastiao-nomes-aprovados.md`. Todos permanecem como consulta, sem alteração no repositório.
 

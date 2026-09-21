@@ -2,7 +2,7 @@
 
 Versão de trabalho aprovada pelo autor em 18 de setembro de 2026, depois da apresentação da proposta e do exemplo de uso com katana, Guarda, Pressionar a Guarda e Derrubada. A reserva de 2,75 fatias para Sequência + Escola foi adotada; continua provisória como avaliação de equilíbrio. O nome do arquivo foi preservado para manter os links existentes. Nenhuma regra aprovada da Sequência ou arquivo do repositório de consulta foi alterado.
 
-**Atualização de 19/09:** o autor retirou o teto de conduções e passou a encerrar a sequência ao errar uma condução, mantendo o prazo de dois turnos. As regras da Escola abaixo permanecem. Os valores numéricos desta conferência de 18/09 são históricos; os resultados com a continuidade nova estão em [Conclusão Dupla e revisão da Sequência](</home/mizuki/CHAT-GPT/RPG -JJK/vanguarda-conclusao-dupla.md>).
+**Atualização de 19/09:** o autor retirou o teto de conduções e passou a encerrar a sequência ao errar uma condução, mantendo o prazo de dois turnos. As regras da Escola abaixo permanecem. Os valores numéricos desta conferência de 18/09 são históricos; os resultados com a continuidade nova estão em [Conclusão Dupla e revisão da Sequência](vanguarda-conclusao-dupla.md).
 
 ## Orçamento adotado
 

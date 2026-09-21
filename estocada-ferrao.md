@@ -26,6 +26,6 @@ Você abriu e acertou duas conduções com a arma, respeitando o limite de uma p
 
 ## Conferência
 
-O preço antigo não considera este gatilho mais restrito nem substitui a conferência das regras atuais de acerto próprio do Classe 0 e de exclusão de Canalizar. A auditoria atual está em [Estocada — conferência de orçamento](</home/mizuki/CHAT-GPT/RPG -JJK/estocada-auditoria.md>). A regra escolhida não foi alterada para corrigir uma eventual discrepância de preço.
+O preço antigo não considera este gatilho mais restrito nem substitui a conferência das regras atuais de acerto próprio do Classe 0 e de exclusão de Canalizar. A auditoria atual está em [Estocada — conferência de orçamento](estocada-auditoria.md). A regra escolhida não foi alterada para corrigir uma eventual discrepância de preço.
 
 Fontes: `sistema/05-material/livro/manual/35-caminhos-e-trilhas.md` (Ferrão original); `45-aptidoes-e-refino.md` (Canalizar); `10-como-jogar.md` (crítico próprio do feitiço que acompanha a arma); decisão do autor nesta conversa. Repositório de consulta preservado.
