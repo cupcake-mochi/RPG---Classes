@@ -1,0 +1,292 @@
+{
+  "status": "Rascunho; preços marginais condicionais, não média observada nem teto universal.",
+  "assumptions": [
+    "1 fatia = 5.08 equivalentes/rodada; 1 PE = 5.14 equivalentes.",
+    "Benefício da escola apenas na abertura acertada; usa a categoria adequada em todos os ataques elegíveis.",
+    "Precisão: +1 no próximo ataque elegível; consumido inclusive no erro. Sem bônus em feitiços.",
+    "Guarda: +1 Defesa = 3.39 equivalentes por abertura; supõe o benefício integralmente útil.",
+    "Empurrar 3m e deslocar 1.5m: 0.60 equivalente/m, multiplicados pela falha do TR Físico; situação sempre útil.",
+    "Versado: economia de Movimento avaliada como deslocamento integral. Uso desse gesto para recarga/outras ações não simulado.",
+    "O quadro cruza efeitos com todos os perfis para comparação; isso não concede escolas incompatíveis com a arma.",
+    "Conserva as limitações do modelo anterior, inclusive condições externas favoráveis para Fixar/Explorar."
+  ],
+  "profiles": {
+    "corpo_a_corpo": {
+      "desde_T1": {
+        "sem_escola": 0.0,
+        "effects": {
+          "precisao": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "guarda": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "empurrar_3m": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "desviar_1_5m": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "versado_movimento": {
+            "net_slices": 0.11288566144742163,
+            "incremento": 0.11288566144742163,
+            "aberturas_acertadas_por_rodada": 0.6757226418470983
+          }
+        }
+      },
+      "desde_T2": {
+        "sem_escola": 0.0,
+        "effects": {
+          "precisao": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "guarda": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "empurrar_3m": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "desviar_1_5m": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "versado_movimento": {
+            "net_slices": 0.08086044686796967,
+            "incremento": 0.08086044686796967,
+            "aberturas_acertadas_por_rodada": 0.4920297299107143
+          }
+        }
+      },
+      "T2_sem_ataque": {
+        "sem_escola": 0.0,
+        "effects": {
+          "precisao": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "guarda": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "empurrar_3m": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "desviar_1_5m": {
+            "net_slices": 0.0,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.0
+          },
+          "versado_movimento": {
+            "net_slices": 0.08086044686796967,
+            "incremento": 0.08086044686796967,
+            "aberturas_acertadas_por_rodada": 0.4920297299107143
+          }
+        }
+      }
+    },
+    "batedor_referencia": {
+      "desde_T1": {
+        "sem_escola": 1.4864976984295017,
+        "effects": {
+          "precisao": {
+            "net_slices": 1.596012789769729,
+            "incremento": 0.10951509134022719,
+            "aberturas_acertadas_por_rodada": 0.2854477355573521
+          },
+          "guarda": {
+            "net_slices": 1.6747115333234641,
+            "incremento": 0.18821383489396237,
+            "aberturas_acertadas_por_rodada": 0.2854477355573521
+          },
+          "empurrar_3m": {
+            "net_slices": 1.5398543354223524,
+            "incremento": 0.05335663699285065,
+            "aberturas_acertadas_por_rodada": 0.2854477355573521
+          },
+          "desviar_1_5m": {
+            "net_slices": 1.5126071629546889,
+            "incremento": 0.026109464525187143,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "versado_movimento": {
+            "net_slices": 1.9309885049779265,
+            "incremento": 0.44449080654842477,
+            "aberturas_acertadas_por_rodada": 0.3828709826169707
+          }
+        }
+      },
+      "desde_T2": {
+        "sem_escola": 0.6255027806569997,
+        "effects": {
+          "precisao": {
+            "net_slices": 0.709105716285328,
+            "incremento": 0.08360293562832832,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "guarda": {
+            "net_slices": 0.7857963877853562,
+            "incremento": 0.1602936071283565,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "empurrar_3m": {
+            "net_slices": 0.6592050446329374,
+            "incremento": 0.033702263975937674,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "desviar_1_5m": {
+            "net_slices": 0.6377176991046938,
+            "incremento": 0.012214918447694068,
+            "aberturas_acertadas_por_rodada": 0.12535714285714286
+          },
+          "versado_movimento": {
+            "net_slices": 0.9944384728661404,
+            "incremento": 0.3689356922091407,
+            "aberturas_acertadas_por_rodada": 0.2856816333200613
+          }
+        }
+      },
+      "T2_sem_ataque": {
+        "sem_escola": 0.5753188738155262,
+        "effects": {
+          "precisao": {
+            "net_slices": 0.657063146227503,
+            "incremento": 0.08174427241197679,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "guarda": {
+            "net_slices": 0.7356124809438818,
+            "incremento": 0.1602936071283556,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "empurrar_3m": {
+            "net_slices": 0.6090211377914634,
+            "incremento": 0.03370226397593723,
+            "aberturas_acertadas_por_rodada": 0.2679516763392857
+          },
+          "desviar_1_5m": {
+            "net_slices": 0.58753379226322,
+            "incremento": 0.012214918447693845,
+            "aberturas_acertadas_por_rodada": 0.12535714285714286
+          },
+          "versado_movimento": {
+            "net_slices": 0.9516075558810158,
+            "incremento": 0.3762886820654896,
+            "aberturas_acertadas_por_rodada": 0.3026603553519949
+          }
+        }
+      }
+    },
+    "batedor_extremo": {
+      "desde_T1": {
+        "sem_escola": 4.895322253280964,
+        "effects": {
+          "precisao": {
+            "net_slices": 4.895322253280964,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.2857142834821289
+          },
+          "guarda": {
+            "net_slices": 5.085985918833014,
+            "incremento": 0.19066366555204972,
+            "aberturas_acertadas_por_rodada": 0.2857142834821289
+          },
+          "empurrar_3m": {
+            "net_slices": 4.981373996140741,
+            "incremento": 0.08605174285977668,
+            "aberturas_acertadas_por_rodada": 0.2857142834821289
+          },
+          "desviar_1_5m": {
+            "net_slices": 4.938348124710852,
+            "incremento": 0.04302587142988745,
+            "aberturas_acertadas_por_rodada": 0.2857142834821289
+          },
+          "versado_movimento": {
+            "net_slices": 5.361676056436056,
+            "incremento": 0.46635380315509156,
+            "aberturas_acertadas_por_rodada": 0.42750268300782646
+          }
+        }
+      },
+      "desde_T2": {
+        "sem_escola": 2.86166358712107,
+        "effects": {
+          "precisao": {
+            "net_slices": 2.86166358712107,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "guarda": {
+            "net_slices": 3.052088923089328,
+            "incremento": 0.19042533596825795,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "empurrar_3m": {
+            "net_slices": 2.9476077653014343,
+            "incremento": 0.08594417818036426,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "desviar_1_5m": {
+            "net_slices": 2.904635676211252,
+            "incremento": 0.04297208909018213,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "versado_movimento": {
+            "net_slices": 3.266261447688816,
+            "incremento": 0.4045978605677458,
+            "aberturas_acertadas_por_rodada": 0.28571428570870533
+          }
+        }
+      },
+      "T2_sem_ataque": {
+        "sem_escola": 2.859498732387242,
+        "effects": {
+          "precisao": {
+            "net_slices": 2.859498732387242,
+            "incremento": 0.0,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "guarda": {
+            "net_slices": 3.0499240683555,
+            "incremento": 0.19042533596825795,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "empurrar_3m": {
+            "net_slices": 2.9454429105676043,
+            "incremento": 0.08594417818036248,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "desviar_1_5m": {
+            "net_slices": 2.902470821477424,
+            "incremento": 0.04297208909018213,
+            "aberturas_acertadas_por_rodada": 0.285357140625
+          },
+          "versado_movimento": {
+            "net_slices": 3.2642512591881214,
+            "incremento": 0.4047525268008796,
+            "aberturas_acertadas_por_rodada": 0.28607142410157643
+          }
+        }
+      }
+    }
+  },
+  "checks": "Escola desativada reproduz modelo anterior; incrementos não negativos: OK."
+}

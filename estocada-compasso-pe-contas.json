@@ -1,0 +1,77 @@
+{
+  "status": "Regra de aumento de PE aprovada; precificação apenas desta parcela.",
+  "regra": "Escolha Essência ou Inteligência para Compasso; o mesmo atributo aumenta uma única vez o PE máximo.",
+  "premissas": {
+    "pe_por_nivel_vanguarda": 5,
+    "pe_equivalente": 5.14,
+    "fatia_por_rodada": 5.08,
+    "rodadas_no_dia": 10.5,
+    "descanso_curto": "25% do máximo, arredondado para baixo; sem redução por exaustão.",
+    "aproveitamento": "Começa com PE cheio; todo incremento inicial e de recuperação pode ser gasto. Capacidade e recuperação não garantem gasto real.",
+    "limite": "Não mede Compasso inteiro, atributo de ataque, ação bônus, Sequência ou dano das outras entregas."
+  },
+  "exemplos": [
+    {
+      "nivel": 2,
+      "atributo_escolhido": 3,
+      "descansos_curto_25_porcento": 0,
+      "pe_maximo_antes": 10,
+      "pe_maximo_depois": 13,
+      "recuperacao_antes": 2,
+      "recuperacao_depois": 3,
+      "recuperacao_extra_por_descanso": 1,
+      "pe_extra_disponivel": 3,
+      "fatias_nominais": 0.28908886389201344
+    },
+    {
+      "nivel": 30,
+      "atributo_escolhido": 6,
+      "descansos_curto_25_porcento": 0,
+      "pe_maximo_antes": 150,
+      "pe_maximo_depois": 156,
+      "recuperacao_antes": 37,
+      "recuperacao_depois": 39,
+      "recuperacao_extra_por_descanso": 2,
+      "pe_extra_disponivel": 6,
+      "fatias_nominais": 0.5781777277840269
+    }
+  ],
+  "orcamento_nivel_30": [
+    {
+      "nivel": 30,
+      "atributo_escolhido": 6,
+      "descansos_curto_25_porcento": 0,
+      "pe_maximo_antes": 150,
+      "pe_maximo_depois": 156,
+      "recuperacao_antes": 37,
+      "recuperacao_depois": 39,
+      "recuperacao_extra_por_descanso": 2,
+      "pe_extra_disponivel": 6,
+      "fatias_nominais": 0.5781777277840269
+    },
+    {
+      "nivel": 30,
+      "atributo_escolhido": 6,
+      "descansos_curto_25_porcento": 1,
+      "pe_maximo_antes": 150,
+      "pe_maximo_depois": 156,
+      "recuperacao_antes": 37,
+      "recuperacao_depois": 39,
+      "recuperacao_extra_por_descanso": 2,
+      "pe_extra_disponivel": 8,
+      "fatias_nominais": 0.7709036370453692
+    },
+    {
+      "nivel": 30,
+      "atributo_escolhido": 6,
+      "descansos_curto_25_porcento": 2,
+      "pe_maximo_antes": 150,
+      "pe_maximo_depois": 156,
+      "recuperacao_antes": 37,
+      "recuperacao_depois": 39,
+      "recuperacao_extra_por_descanso": 2,
+      "pe_extra_disponivel": 10,
+      "fatias_nominais": 0.9636295463067115
+    }
+  ]
+}

@@ -1,0 +1,2518 @@
+{
+  "status": "Conferência estrutural e cenários condicionais; não preço final da Trilha.",
+  "premissas": {
+    "weapon": "d12 + atributo 6 + Canalizar conforme refino",
+    "p_weapon": 0.55,
+    "p_main_spell_affects": 0.55,
+    "p_c0": 0.55,
+    "c0_mean": 27,
+    "crit_chance": 0.05,
+    "kokusen": false,
+    "active_blocking": false,
+    "prep": "Abertura perde 2d4; condução paga 3 PE; uma condução/conclusão por turno; erro encerra; prazo T+2; Persistência três usos no começo de cada cena.",
+    "bonus_opportunity": "Ataques de Compasso/Bote são comparados com a mesma ação Conjurar, com bônus sem outro uso quantificado. Não é otimização de todas as ações da ficha.",
+    "limits": "Feitiços e efeitos de conclusão têm o mesmo resultado-base dos dois lados da comparação de Ferrão. Não enumera todos os modificadores criados por essas condições nem o valor do catálogo mágico."
+  },
+  "ferrão_by_refino": {
+    "1": {
+      "normal_weapon": 8.575,
+      "with_ferrão": 16.11,
+      "delta_after_main_spell_affected": 7.535,
+      "delta_per_closing_attempt_p55": 4.14425
+    },
+    "3": {
+      "normal_weapon": 9.95,
+      "with_ferrão": 16.11,
+      "delta_after_main_spell_affected": 6.16,
+      "delta_per_closing_attempt_p55": 3.3880000000000003
+    },
+    "6": {
+      "normal_weapon": 11.325,
+      "with_ferrão": 16.11,
+      "delta_after_main_spell_affected": 4.785,
+      "delta_per_closing_attempt_p55": 2.6317500000000003
+    },
+    "9": {
+      "normal_weapon": 12.7,
+      "with_ferrão": 16.11,
+      "delta_after_main_spell_affected": 3.41,
+      "delta_per_closing_attempt_p55": 1.8755000000000002
+    },
+    "10": {
+      "normal_weapon": 14.9,
+      "with_ferrão": 16.11,
+      "delta_after_main_spell_affected": 1.21,
+      "delta_per_closing_attempt_p55": 0.6655
+    }
+  },
+  "scenes": {
+    "ref1_conjurar_desde_T1": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.10223687605455581,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 26.978635625,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 22.434260625
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 36.6819076875,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 30.7487826875
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 25.724999999999998,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 21.180625
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 34.3,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 28.366874999999997
+        }
+      ]
+    },
+    "ref1_abrir_com_Atacar": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.6666343750000001,
+      "expected_ferrão_uses_per_scene": 0.36664890625,
+      "marginal_ferrão_slices_per_round": 0.1553824245553293,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 36.6819076875,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 31.0550639375
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.4171853125,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 46.0184913296875,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 38.8801960171875
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 34.3,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 28.673156249999998
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 42.87499999999999,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 35.736704687499994
+        }
+      ]
+    },
+    "ref1_inicio_T2": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.15125000000000002,
+      "expected_ferrão_uses_per_scene": 0.08318750000000003,
+      "marginal_ferrão_slices_per_round": 0.035254095191226124,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 25.724999999999998,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 21.737499999999997
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 35.553635625,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 31.009260625
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 25.724999999999998,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 21.737499999999997
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 34.3,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 29.755625
+        }
+      ]
+    },
+    "ref1_T2_sem_ataque": {
+      "schedules": [
+        "WXD",
+        "WXDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.10223687605455581,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 26.978635625,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 22.434260625
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 36.6819076875,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 30.442501437500002
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 25.724999999999998,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 21.180625
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 34.3,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 28.06059375
+        }
+      ]
+    },
+    "ref1_duas_conducoes": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 2,
+      "expected_closing_attempts_per_scene": 0.27867812500000005,
+      "expected_ferrão_uses_per_scene": 0.15327296875000004,
+      "marginal_ferrão_slices_per_round": 0.06495567038983409,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.09150625000000004,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 34.98949959375,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 30.194530843749998
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.21503968750000005,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 44.4953240453125,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 38.6859490453125
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 34.3,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 29.50503125
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 42.87499999999999,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 37.065625
+        }
+      ]
+    },
+    "ref1_condicao_sem_dano": {
+      "schedules": [
+        "CCC",
+        "CCCC"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.7767831328125001,
+      "expected_ferrão_uses_per_scene": 0.0,
+      "marginal_ferrão_slices_per_round": 0.0,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 51.44999999999999,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 45.009646953124985
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 68.6,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 60.316736797070305
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 51.44999999999999,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 45.009646953124985
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 68.6,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 60.316736797070305
+        }
+      ]
+    },
+    "ref1_seis_turnos": {
+      "schedules": [
+        "WDDDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 1.1249975,
+      "expected_ferrão_uses_per_scene": 0.618748625,
+      "marginal_ferrão_slices_per_round": 0.15296164335219845,
+      "with_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.618748625,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 64.687270889375,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 55.21623234640625
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 60.02499999999999,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 50.55396145703124
+        }
+      ]
+    },
+    "ref3_conjurar_desde_T1": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.08358051181102372,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 30.874869999999998,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 26.330495
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 41.747253,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 35.814128000000004
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 29.849999999999998,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 25.305625
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 39.8,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 33.866875
+        }
+      ]
+    },
+    "ref3_abrir_com_Atacar": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.6666343750000001,
+      "expected_ferrão_uses_per_scene": 0.36664890625,
+      "marginal_ferrão_slices_per_round": 0.12702796751968515,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 41.747253,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 36.12040925
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.4171853125,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 52.319861525,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 45.1815662125
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 39.8,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 34.17315625
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 49.75,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 42.6117046875
+        }
+      ]
+    },
+    "ref3_inicio_T2": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.15125000000000002,
+      "expected_ferrão_uses_per_scene": 0.08318750000000003,
+      "marginal_ferrão_slices_per_round": 0.02882086614173228,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 29.849999999999998,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 25.862499999999997
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 40.82487,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 36.280494999999995
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 29.849999999999998,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 25.862499999999997
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 39.8,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 35.255624999999995
+        }
+      ]
+    },
+    "ref3_T2_sem_ataque": {
+      "schedules": [
+        "WXD",
+        "WXDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.08358051181102372,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 30.874869999999998,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 26.330495
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 41.747253,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 35.50784675
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 29.849999999999998,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 25.305625
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 39.8,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 33.560593749999995
+        }
+      ]
+    },
+    "ref3_duas_conducoes": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 2,
+      "expected_closing_attempts_per_scene": 0.27867812500000005,
+      "expected_ferrão_uses_per_scene": 0.15327296875000004,
+      "marginal_ferrão_slices_per_round": 0.05310244586614156,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.09150625000000004,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 40.36367849999999,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 35.56870974999999
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.21503968750000005,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 51.074644475,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 45.265269475
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 39.8,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 35.005031249999995
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 49.75,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 43.940625
+        }
+      ]
+    },
+    "ref3_condicao_sem_dano": {
+      "schedules": [
+        "CCC",
+        "CCCC"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.7767831328125001,
+      "expected_ferrão_uses_per_scene": 0.0,
+      "marginal_ferrão_slices_per_round": 0.0,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 59.7,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 53.259646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 79.60000000000001,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 71.31673679707032
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 59.7,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 53.259646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 79.60000000000001,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 71.31673679707032
+        }
+      ]
+    },
+    "ref3_seis_turnos": {
+      "schedules": [
+        "WDDDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 1.1249975,
+      "expected_ferrão_uses_per_scene": 0.618748625,
+      "marginal_ferrão_slices_per_round": 0.12504893471128556,
+      "with_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.618748625,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 73.46149152999999,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 63.99045298703124
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 69.65,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 60.17896145703126
+        }
+      ]
+    },
+    "ref6_conjurar_desde_T1": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.06492414756749182,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 34.771104375,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 30.226729375
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 46.8125983125,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 40.879473312500004
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 33.974999999999994,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 29.430624999999996
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 45.3,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 39.366875
+        }
+      ]
+    },
+    "ref6_abrir_com_Atacar": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.6666343750000001,
+      "expected_ferrão_uses_per_scene": 0.36664890625,
+      "marginal_ferrão_slices_per_round": 0.09867351048404097,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 46.8125983125,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 41.1857545625
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.4171853125,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 58.621231720312494,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 51.482936407812495
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 45.3,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 39.67315625
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 56.625,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 49.4867046875
+        }
+      ]
+    },
+    "ref6_inicio_T2": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.15125000000000002,
+      "expected_ferrão_uses_per_scene": 0.08318750000000003,
+      "marginal_ferrão_slices_per_round": 0.022387637092238434,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 33.974999999999994,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 29.987499999999994
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 46.096104374999996,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 41.551729374999994
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 33.974999999999994,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 29.987499999999994
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 45.3,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 40.755624999999995
+        }
+      ]
+    },
+    "ref6_T2_sem_ataque": {
+      "schedules": [
+        "WXD",
+        "WXDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.06492414756749182,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 34.771104375,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 30.226729375
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 46.8125983125,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 40.5731920625
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 33.974999999999994,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 29.430624999999996
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 45.3,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 39.060593749999995
+        }
+      ]
+    },
+    "ref6_duas_conducoes": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 2,
+      "expected_closing_attempts_per_scene": 0.27867812500000005,
+      "expected_ferrão_uses_per_scene": 0.15327296875000004,
+      "marginal_ferrão_slices_per_round": 0.04124922134244944,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.09150625000000004,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 45.73785740625,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 40.94288865625
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.21503968750000005,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 57.6539649046875,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 51.844589904687496
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 45.3,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 40.505031249999995
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 56.625,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 50.815625
+        }
+      ]
+    },
+    "ref6_condicao_sem_dano": {
+      "schedules": [
+        "CCC",
+        "CCCC"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.7767831328125001,
+      "expected_ferrão_uses_per_scene": 0.0,
+      "marginal_ferrão_slices_per_round": 0.0,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 67.95,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 61.509646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 90.60000000000001,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 82.31673679707032
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 67.95,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 61.509646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 90.60000000000001,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 82.31673679707032
+        }
+      ]
+    },
+    "ref6_seis_turnos": {
+      "schedules": [
+        "WDDDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 1.1249975,
+      "expected_ferrão_uses_per_scene": 0.618748625,
+      "marginal_ferrão_slices_per_round": 0.09713622607037359,
+      "with_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.618748625,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 82.23571217062499,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 72.76467362765624
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 79.275,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 69.80396145703125
+        }
+      ]
+    },
+    "ref9_conjurar_desde_T1": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.04626778332395973,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 38.66733875,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 34.12296375
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 51.877943625,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 45.944818625
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 38.099999999999994,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 33.55562499999999
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 50.8,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 44.866875
+        }
+      ]
+    },
+    "ref9_abrir_com_Atacar": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.6666343750000001,
+      "expected_ferrão_uses_per_scene": 0.36664890625,
+      "marginal_ferrão_slices_per_round": 0.07031905344839702,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 51.877943625,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 46.251099875
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.4171853125,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 64.922601915625,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 57.784306603124996
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 50.8,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 45.17315625
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 63.5,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 56.3617046875
+        }
+      ]
+    },
+    "ref9_inicio_T2": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.15125000000000002,
+      "expected_ferrão_uses_per_scene": 0.08318750000000003,
+      "marginal_ferrão_slices_per_round": 0.015954408042744787,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 38.099999999999994,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 34.1125
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 51.36733875,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 46.82296375
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 38.099999999999994,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 34.1125
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 50.8,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 46.255624999999995
+        }
+      ]
+    },
+    "ref9_T2_sem_ataque": {
+      "schedules": [
+        "WXD",
+        "WXDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.04626778332395973,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 38.66733875,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 34.12296375
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 51.877943625,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 45.638537375
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 38.099999999999994,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 33.55562499999999
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 50.8,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 44.560593749999995
+        }
+      ]
+    },
+    "ref9_duas_conducoes": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 2,
+      "expected_closing_attempts_per_scene": 0.27867812500000005,
+      "expected_ferrão_uses_per_scene": 0.15327296875000004,
+      "marginal_ferrão_slices_per_round": 0.029395996818756914,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.09150625000000004,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 51.112036312499995,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 46.31706756249999
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.21503968750000005,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 64.233285334375,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 58.423910334374995
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 50.8,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 46.005031249999995
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 63.5,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 57.690625
+        }
+      ]
+    },
+    "ref9_condicao_sem_dano": {
+      "schedules": [
+        "CCC",
+        "CCCC"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.7767831328125001,
+      "expected_ferrão_uses_per_scene": 0.0,
+      "marginal_ferrão_slices_per_round": 0.0,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 76.2,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 69.759646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 101.60000000000001,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 93.31673679707032
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 76.2,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 69.759646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 101.60000000000001,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 93.31673679707032
+        }
+      ]
+    },
+    "ref9_seis_turnos": {
+      "schedules": [
+        "WDDDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 1.1249975,
+      "expected_ferrão_uses_per_scene": 0.618748625,
+      "marginal_ferrão_slices_per_round": 0.06922351742946256,
+      "with_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.618748625,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 91.00993281125001,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 81.53889426828127
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 88.9,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 79.42896145703125
+        }
+      ]
+    },
+    "ref10_conjurar_desde_T1": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.016417600534308012,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 44.90131375,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 40.35693875
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.982496125,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 54.049371125
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 44.7,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 40.155625
+        },
+        {
+          "opening_attempts": 2.1574999999999998,
+          "opening_hits": 1.186625,
+          "conduct_attempts": 1.26775,
+          "conduct_hits": 0.6972625000000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.40899375,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.6,
+          "opening_loss": 5.9331249999999995,
+          "conduct_pe": 3.80325,
+          "net_weapon_damage": 53.666875000000005
+        }
+      ]
+    },
+    "ref10_abrir_com_Atacar": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.6666343750000001,
+      "expected_ferrão_uses_per_scene": 0.36664890625,
+      "marginal_ferrão_slices_per_round": 0.024951922191366792,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.982496125,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 54.355652375
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.4171853125,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 75.00479422812501,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 67.866498915625
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.046125,
+          "opening_hits": 1.12536875,
+          "conduct_attempts": 1.379125,
+          "conduct_hits": 0.7585187500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.5203687499999999,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.6,
+          "opening_loss": 5.62684375,
+          "conduct_pe": 4.137375,
+          "net_weapon_damage": 53.97315625
+        },
+        {
+          "opening_attempts": 2.5957437499999996,
+          "opening_hits": 1.4276590625,
+          "conduct_attempts": 1.6457375,
+          "conduct_hits": 0.9051556250000001,
+          "closing_attempts": 0.7585187500000001,
+          "closing_affected": 0.4171853125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6177909374999999,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 74.5,
+          "opening_loss": 7.1382953124999995,
+          "conduct_pe": 4.9372125,
+          "net_weapon_damage": 67.3617046875
+        }
+      ]
+    },
+    "ref10_inicio_T2": {
+      "schedules": [
+        "DDD",
+        "DDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.15125000000000002,
+      "expected_ferrão_uses_per_scene": 0.08318750000000003,
+      "marginal_ferrão_slices_per_round": 0.005661241563554473,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 44.7,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 40.712500000000006
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.80131375,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 55.256938749999996
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.45,
+          "opening_hits": 0.7975000000000001,
+          "conduct_attempts": 0.55,
+          "conduct_hits": 0.30250000000000005,
+          "closing_attempts": 0.0,
+          "closing_affected": 0.0,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 44.7,
+          "opening_loss": 3.9875,
+          "conduct_pe": 1.6500000000000001,
+          "net_weapon_damage": 40.712500000000006
+        },
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.358875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.6,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 55.055625
+        }
+      ]
+    },
+    "ref10_T2_sem_ataque": {
+      "schedules": [
+        "WXD",
+        "WXDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.43862500000000004,
+      "expected_ferrão_uses_per_scene": 0.24124375000000003,
+      "marginal_ferrão_slices_per_round": 0.016417600534308012,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.16637500000000005,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 44.90131375,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 40.35693875
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.3161125,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.982496125,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 53.743089874999995
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.6524999999999999,
+          "opening_hits": 0.9088750000000001,
+          "conduct_attempts": 1.045,
+          "conduct_hits": 0.5747500000000001,
+          "closing_attempts": 0.30250000000000005,
+          "closing_affected": 0.16637500000000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.2475,
+          "weapon_attempts": 3.0,
+          "weapon_damage": 44.7,
+          "opening_loss": 4.544375,
+          "conduct_pe": 3.135,
+          "net_weapon_damage": 40.155625
+        },
+        {
+          "opening_attempts": 2.268875,
+          "opening_hits": 1.24788125,
+          "conduct_attempts": 1.156375,
+          "conduct_hits": 0.6360062500000001,
+          "closing_attempts": 0.5747500000000001,
+          "closing_affected": 0.3161125,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.29761875,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.6,
+          "opening_loss": 6.239406249999999,
+          "conduct_pe": 3.469125,
+          "net_weapon_damage": 53.36059375
+        }
+      ]
+    },
+    "ref10_duas_conducoes": {
+      "schedules": [
+        "WDD",
+        "WDDD"
+      ],
+      "required_conducts": 2,
+      "expected_closing_attempts_per_scene": 0.27867812500000005,
+      "expected_ferrão_uses_per_scene": 0.15327296875000004,
+      "marginal_ferrão_slices_per_round": 0.010430837580849265,
+      "with_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.09150625000000004,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.7107225625,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 54.9157538125
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.21503968750000005,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 74.760198021875,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 68.950823021875
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 1.7436249999999998,
+          "opening_hits": 0.9589937500000001,
+          "conduct_attempts": 2.09,
+          "conduct_hits": 1.1495000000000002,
+          "closing_attempts": 0.16637500000000005,
+          "closing_affected": 0.09150625000000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.77900625,
+          "weapon_attempts": 4.0,
+          "weapon_damage": 59.6,
+          "opening_loss": 4.79496875,
+          "conduct_pe": 6.27,
+          "net_weapon_damage": 54.80503125
+        },
+        {
+          "opening_attempts": 2.1125,
+          "opening_hits": 1.161875,
+          "conduct_attempts": 2.49651875,
+          "conduct_hits": 1.3730853125000002,
+          "closing_attempts": 0.39098125000000006,
+          "closing_affected": 0.21503968750000005,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.884255625,
+          "weapon_attempts": 5.0,
+          "weapon_damage": 74.5,
+          "opening_loss": 5.809374999999999,
+          "conduct_pe": 7.48955625,
+          "net_weapon_damage": 68.690625
+        }
+      ]
+    },
+    "ref10_condicao_sem_dano": {
+      "schedules": [
+        "CCC",
+        "CCCC"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 0.7767831328125001,
+      "expected_ferrão_uses_per_scene": 0.0,
+      "marginal_ferrão_slices_per_round": 0.0,
+      "with_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 89.4,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 82.959646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 119.20000000000002,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 110.91673679707033
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 2.3419465624999996,
+          "opening_hits": 1.288070609375,
+          "conduct_attempts": 1.6682909375,
+          "conduct_hits": 0.9175600156250001,
+          "closing_attempts": 0.6360062500000001,
+          "closing_affected": 0.34980343750000004,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.6504934218749999,
+          "weapon_attempts": 6.0,
+          "weapon_damage": 89.4,
+          "opening_loss": 6.440353046875,
+          "conduct_pe": 5.0048728125,
+          "net_weapon_damage": 82.959646953125
+        },
+        {
+          "opening_attempts": 3.0120957101562498,
+          "opening_hits": 1.6566526405859376,
+          "conduct_attempts": 2.18505925859375,
+          "conduct_hits": 1.2017825922265626,
+          "closing_attempts": 0.9175600156250001,
+          "closing_affected": 0.50465800859375,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8627410726171875,
+          "weapon_attempts": 8.0,
+          "weapon_damage": 119.20000000000002,
+          "opening_loss": 8.283263202929687,
+          "conduct_pe": 6.55517777578125,
+          "net_weapon_damage": 110.91673679707033
+        }
+      ]
+    },
+    "ref10_seis_turnos": {
+      "schedules": [
+        "WDDDDD"
+      ],
+      "required_conducts": 1,
+      "expected_closing_attempts_per_scene": 1.1249975,
+      "expected_ferrão_uses_per_scene": 0.618748625,
+      "marginal_ferrão_slices_per_round": 0.024563183604002302,
+      "with_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.618748625,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 105.04868583625,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 95.57764729328125
+        }
+      ],
+      "without_ferrão": [
+        {
+          "opening_attempts": 3.4440140156249996,
+          "opening_hits": 1.89420770859375,
+          "conduct_attempts": 2.430988484375,
+          "conduct_hits": 1.3370436664062502,
+          "closing_attempts": 1.1249975,
+          "closing_affected": 0.618748625,
+          "ferrão_uses": 0.0,
+          "recovery_uses": 0.8661001078124999,
+          "weapon_attempts": 7.0,
+          "weapon_damage": 104.30000000000001,
+          "opening_loss": 9.47103854296875,
+          "conduct_pe": 7.292965453124999,
+          "net_weapon_damage": 94.82896145703126
+        }
+      ]
+    }
+  },
+  "compasso_bote": {
+    "1": {
+      "weapon_expected": 8.575,
+      "one_bonus_weapon_every_round_slices": 1.6879921259842519,
+      "two_bonus_weapons_every_round_slices": 3.3759842519685037,
+      "two_plus_pe_pool_two_rests": 4.339613798275215
+    },
+    "3": {
+      "weapon_expected": 9.95,
+      "one_bonus_weapon_every_round_slices": 1.9586614173228345,
+      "two_bonus_weapons_every_round_slices": 3.917322834645669,
+      "two_plus_pe_pool_two_rests": 4.8809523809523805
+    },
+    "6": {
+      "weapon_expected": 11.325,
+      "one_bonus_weapon_every_round_slices": 2.229330708661417,
+      "two_bonus_weapons_every_round_slices": 4.458661417322834,
+      "two_plus_pe_pool_two_rests": 5.422290963629546
+    },
+    "9": {
+      "weapon_expected": 12.7,
+      "one_bonus_weapon_every_round_slices": 2.5,
+      "two_bonus_weapons_every_round_slices": 5.0,
+      "two_plus_pe_pool_two_rests": 5.963629546306711
+    },
+    "10": {
+      "weapon_expected": 14.9,
+      "one_bonus_weapon_every_round_slices": 2.9330708661417324,
+      "two_bonus_weapons_every_round_slices": 5.866141732283465,
+      "two_plus_pe_pool_two_rests": 6.829771278590176
+    }
+  },
+  "checks": "Enumeração de dados = fórmula; contador, custos, prazo, ordem, preparação e incompatibilidade com Bote: OK."
+}

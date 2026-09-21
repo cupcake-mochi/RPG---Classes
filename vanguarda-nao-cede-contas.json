@@ -1,0 +1,127 @@
+{
+  "status": "Sensibilidade; frequências hipotéticas, não média de mesa.",
+  "rules": "Qualquer TR falhado, segundo resultado, maestria usos/descanso curto, no máximo um/rodada.",
+  "constants": {
+    "slice": 5.08,
+    "failure_probability": 0.35,
+    "mastery_at_30": 4,
+    "rounds_per_day": 10.5
+  },
+  "scenarios": {
+    "73_dano_um_TR_por_combate": {
+      "difference_success_failure": 36.5,
+      "options": {
+        "mode": "one_per_combat"
+      },
+      "rerolls_per_day": 1.0499999999999998,
+      "successful_rerolls_per_day": 0.6824999999999999,
+      "avoided_equivalents_per_day": 24.911249999999995,
+      "original_slices": 0.467027559055118,
+      "with_plus_one_slices": 0.5029527559055118,
+      "plus_one_increment": 0.035925196850393804,
+      "move_3m_increment": 0.02303149606299212
+    },
+    "73_dano_TR_em_metade_das_rodadas": {
+      "difference_success_failure": 36.5,
+      "options": {},
+      "rerolls_per_day": 1.8375,
+      "successful_rerolls_per_day": 1.194375,
+      "avoided_equivalents_per_day": 43.5946875,
+      "original_slices": 0.8172982283464566,
+      "with_plus_one_slices": 0.8801673228346457,
+      "plus_one_increment": 0.06286909448818911,
+      "move_3m_increment": 0.04030511811023622
+    },
+    "73_dano_um_TR_por_rodada": {
+      "difference_success_failure": 36.5,
+      "options": {
+        "frequency": 1.0
+      },
+      "rerolls_per_day": 3.675,
+      "successful_rerolls_per_day": 2.38875,
+      "avoided_equivalents_per_day": 87.189375,
+      "original_slices": 1.6345964566929132,
+      "with_plus_one_slices": 1.7603346456692914,
+      "plus_one_increment": 0.12573818897637823,
+      "move_3m_increment": 0.08061023622047243
+    },
+    "73_dano_dois_TR_por_rodada": {
+      "difference_success_failure": 36.5,
+      "options": {
+        "frequency": 1.0,
+        "tests_per_event": 2
+      },
+      "rerolls_per_day": 6.06375,
+      "successful_rerolls_per_day": 3.9414375,
+      "avoided_equivalents_per_day": 143.86246875,
+      "original_slices": 2.6970841535433068,
+      "with_plus_one_slices": 2.9045521653543305,
+      "plus_one_increment": 0.2074680118110237,
+      "move_3m_increment": 0.13300688976377953
+    },
+    "73_dano_metade_rodadas_sem_descanso_curto": {
+      "difference_success_failure": 36.5,
+      "options": {
+        "rests": false
+      },
+      "rerolls_per_day": 1.8066964201996043,
+      "successful_rerolls_per_day": 1.174352673129743,
+      "avoided_equivalents_per_day": 42.86387256923562,
+      "original_slices": 0.8035971610280392,
+      "with_plus_one_slices": 0.8654123272609654,
+      "plus_one_increment": 0.061815166232926155,
+      "move_3m_increment": 0.03962944903699919
+    },
+    "67_dano_metade_rodadas": {
+      "difference_success_failure": 33.5,
+      "options": {},
+      "rerolls_per_day": 1.8375,
+      "successful_rerolls_per_day": 1.194375,
+      "avoided_equivalents_per_day": 40.0115625,
+      "original_slices": 0.7501230314960629,
+      "with_plus_one_slices": 0.8078248031496065,
+      "plus_one_increment": 0.05770177165354362,
+      "move_3m_increment": 0.04030511811023622
+    },
+    "167_dano_metade_rodadas": {
+      "difference_success_failure": 83.5,
+      "options": {},
+      "rerolls_per_day": 1.8375,
+      "successful_rerolls_per_day": 1.194375,
+      "avoided_equivalents_per_day": 99.7303125,
+      "original_slices": 1.8697096456692912,
+      "with_plus_one_slices": 2.013533464566929,
+      "plus_one_increment": 0.14382381889763796,
+      "move_3m_increment": 0.04030511811023622
+    },
+    "182_5_dano_metade_rodadas": {
+      "difference_success_failure": 91.25,
+      "options": {},
+      "rerolls_per_day": 1.8375,
+      "successful_rerolls_per_day": 1.194375,
+      "avoided_equivalents_per_day": 108.98671875,
+      "original_slices": 2.0432455708661417,
+      "with_plus_one_slices": 2.2004183070866143,
+      "plus_one_increment": 0.15717273622047268,
+      "move_3m_increment": 0.04030511811023622
+    },
+    "perda_hipotetica_78_75_metade_rodadas": {
+      "difference_success_failure": 78.75,
+      "options": {},
+      "rerolls_per_day": 1.8375,
+      "successful_rerolls_per_day": 1.194375,
+      "avoided_equivalents_per_day": 94.05703125,
+      "original_slices": 1.7633489173228345,
+      "with_plus_one_slices": 1.8989911417322838,
+      "plus_one_increment": 0.13564222440944929,
+      "move_3m_increment": 0.04030511811023622
+    }
+  },
+  "checks": "Gatilho de falha, limite por rodada, reserva de usos e diferença entre sucesso/falha: OK.",
+  "proposed_budget": {
+    "base_approved": 2.75,
+    "nao_cede_proposed": 1.0,
+    "combined_if_accepted": 3.75,
+    "remaining_if_accepted": 1.25
+  }
+}

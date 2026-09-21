@@ -1,0 +1,79 @@
+{
+  "status": "Comparação condicional, não preço adotado. Hipóteses favoráveis de aproveitamento integral do Movimento.",
+  "attack": {
+    "weapon_mean": 6.5,
+    "attribute": 6,
+    "channel_mean": 14,
+    "normal_damage": 26.5,
+    "hit": 0.55,
+    "critical": 0.05,
+    "kokusen": 0.2,
+    "expected_damage_per_extra_attack": 15.065000000000001
+  },
+  "movement_equivalents_per_activation": 5.3999999999999995,
+  "assumptions": [
+    "3,5 rodadas por combate. A frequência de abates úteis não é medida.",
+    "O ataque ocorre antes do início do próximo turno, com Canalizar ativo e sem vantagem. Sem recuperar PE ou conceder nova conjuração.",
+    "Reação representada apenas por um ataque normal quando já havia sido gasta, é reposta e surge oportunidade real de gastá-la. Outras Reações podem ter valor diferente.",
+    "Movimento já gasto e totalmente aproveitável: 9m × 0,60. Recuperar recursos ainda disponíveis não acrescenta recursos.",
+    "Os cenários de duas ativações são em rodadas distintas na versão com limite de uma por rodada.",
+    "Não inclui ataques adicionais de outras fontes, usos de Conduzir/Concluir, reação que cause nova ativação, inventário ou recarga.",
+    "Uma ativação no fim do último inimigo sem utilidade posterior não conta como ativação útil."
+  ],
+  "rows": [
+    {
+      "ativacoes_por_combate": 0.5,
+      "fracao_reacoes_repostas_que_viram_ataque": 0,
+      "original_fatias": 0.5755061867266591,
+      "movimento_reacao_fatias": 0.15185601799775025
+    },
+    {
+      "ativacoes_por_combate": 0.5,
+      "fracao_reacoes_repostas_que_viram_ataque": 0.5,
+      "original_fatias": 0.7873312710911137,
+      "movimento_reacao_fatias": 0.36368110236220474
+    },
+    {
+      "ativacoes_por_combate": 0.5,
+      "fracao_reacoes_repostas_que_viram_ataque": 1,
+      "original_fatias": 0.999156355455568,
+      "movimento_reacao_fatias": 0.5755061867266591
+    },
+    {
+      "ativacoes_por_combate": 1,
+      "fracao_reacoes_repostas_que_viram_ataque": 0,
+      "original_fatias": 1.1510123734533182,
+      "movimento_reacao_fatias": 0.3037120359955005
+    },
+    {
+      "ativacoes_por_combate": 1,
+      "fracao_reacoes_repostas_que_viram_ataque": 0.5,
+      "original_fatias": 1.5746625421822273,
+      "movimento_reacao_fatias": 0.7273622047244095
+    },
+    {
+      "ativacoes_por_combate": 1,
+      "fracao_reacoes_repostas_que_viram_ataque": 1,
+      "original_fatias": 1.998312710911136,
+      "movimento_reacao_fatias": 1.1510123734533182
+    },
+    {
+      "ativacoes_por_combate": 2,
+      "fracao_reacoes_repostas_que_viram_ataque": 0,
+      "original_fatias": 2.3020247469066364,
+      "movimento_reacao_fatias": 0.607424071991001
+    },
+    {
+      "ativacoes_por_combate": 2,
+      "fracao_reacoes_repostas_que_viram_ataque": 0.5,
+      "original_fatias": 3.1493250843644547,
+      "movimento_reacao_fatias": 1.454724409448819
+    },
+    {
+      "ativacoes_por_combate": 2,
+      "fracao_reacoes_repostas_que_viram_ataque": 1,
+      "original_fatias": 3.996625421822272,
+      "movimento_reacao_fatias": 2.3020247469066364
+    }
+  ]
+}
