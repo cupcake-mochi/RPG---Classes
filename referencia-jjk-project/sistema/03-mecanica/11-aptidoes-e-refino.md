@@ -1,0 +1,1410 @@
+# APTIDÕES E DEGRAUS DE REFINO
+
+**Fase 4, décima primeira peça.** O eixo do controle: o que o refino é, o que ele governa, e o que se compra com ele.
+Versão v0.27, com as Bênçãos na v0.116, corrigidas para contraparte na v0.117 — 11/08/2026
+
+O `arquitetura.md` chama esta camada de *"o risco maior da estrutura inteira"*, e o motivo está escrito lá: aptidões são uma **segunda economia de poder**, e ela nasceu sem teto. O Fundamento tem orçamento, teto e validador; Barreira Simples, Cortina, Domínio Simples e o resto acontecem em combate e não passam por nenhum deles.
+
+Esta peça existe para dar teto a essa economia. Validador: `conferir-aptidoes.py`.
+
+> **Quatro entradas do catálogo ainda não estão aqui**, e a seção 7 explica por quê. **Elas saíram na v0.29**, depois que a Expansão de Domínio ganhou regra no manual v7.7 — antes disso, precificá-las seria mirar num alvo que não existia. *Eram as "quatro anti-domínio" até a v0.165, quando a `Extensão de Domínio` saiu da categoria: as entradas continuam quatro, e a categoria passou a ser três.*
+
+---
+
+## 1. O que o refino é
+
+O eixo do **controle**, separado do eixo do **poder**. É a distinção que a obra faz o tempo todo: o Gojo diz que qualquer feiticeiro pode aprender Kokusen, e quase nenhum consegue. **Poder é quanto você tem; refino é quanto você não desperdiça.**
+
+Até a v0.26 isso era só intenção. O refino existia como contador — subia nos marcos, tinha teto 10, e destravava aptidão. Entre um refino 3 e um refino 10, no mesmo nível, com as mesmas aptidões, **nada mudava na ficha**.
+
+> **O refino é a métrica geral das aptidões.** Ele é o requisito para pegá-las, e é o número que diz o tamanho delas.
+
+Ele entra no texto de uma aptidão **como variável**, no mesmo molde que o manual usa para `sua maior Classe`: *"a sua proteção é 1/3 do refino"*, *"Redução de Dano de 1,5 × refino"*, *"role d100 e tire 2 × refino ou menos"*. E **cada aptidão declara o próprio teto** — nem toda uma usa o valor cheio.
+
+## 2. A trava, e o que ela permite
+
+O refino sobe +1 por marco no passivo e +1 a mais quando você escolhe esse lado. Numa campanha inteira:
+
+| o que cresce | do nível 2 ao 30 |
+|---|---|
+| atributo investido | 3 → 6, **+3** |
+| maestria | 1 → 4, **+3** |
+| refino, quem nunca escolhe | 1 → 8, **+7** |
+| refino, quem sempre escolhe | 1 → 10, **+9** |
+
+**O refino cresce duas a três vezes mais rápido que tudo o mais.** Isso não é defeito: ele é o eixo em que investir tem que aparecer. Mas ele proíbe uma coisa, e a proibição é a regra que governa o sistema desde a peça 1 — *numa rolagem disputada, os dois lados precisam crescer no mesmo ritmo*.
+
+> **O refino não pode aparecer de um lado de uma rolagem em que o outro lado não cresce no ritmo dele.**
+
+Isso elimina de saída **acerto, CD, defesa e Teste de Resistência** — os quatro têm do outro lado alguém que cresce +3. É o erro que a v0.9 achou na maestria a cada quatro níveis, com o dobro do tamanho: um valor que sobe +9 contra um que sobe +3 leva o acerto de 50% a 5% no meio da campanha.
+
+**E ela permite refino contra refino**, que é simétrico. É por isso que o clash de expansões pode ser decidido por ele: os dois lados crescem igual, e a chance não deriva.
+
+### ⚠⚠ Dano era o quinto item desta lista, e ele nunca coube nela — v0.158
+
+**A frase acima dizia "acerto, CD, defesa, Teste de Resistência e dano", e os cinco eram justificados pelo mesmo motivo.** *Ele não alcança o quinto.* **Dano não é rolagem disputada: não existe ninguém do outro lado dele rolando um dado que cresce `+3`.** *O que está do outro lado do dano é a vida do inimigo, e ela é uma tabela do manual — ela não rola, e a régua dela é o playtest.*
+
+> **Dano fica travado por outro motivo, e é um motivo de ORÇAMENTO.** O pico da rodada é o feitiço, e o Fundamento é dono do orçamento dele: um dado que o refino escala não pode entrar na rodada de feitiço, senão ele soma por fora de uma conta que já fecha.
+
+**Então a trava sobre dano tem duas condições, e as duas são medíveis:**
+
+> **1. O dano de refino não sobe o PICO da rodada.** Ele só existe na rodada em que não há feitiço — e a rodada de feitiço fica exatamente do tamanho que o Fundamento fechou.
+> **2. A rodada em que ele cai fica abaixo da Rotina do nível**, que é a régua com que a peça 6 §3 aprovou o ataque extra.
+
+**Duas entradas do catálogo usam esta exceção, e as duas são gratuitas:** *`projetar energia`, que é o que sobra quando o PE acaba, e o **dano na arma** do `canalizar energia` e do `Estímulo Muscular`.* **As duas são medidas contra as duas condições na §6.9**, que é a dona.
+
+*E a cerca da peça 5 §4 continua inteira do jeito que está escrita:* **ela proíbe um CAMINHO de conceder refino dentro de uma rolagem, e o dano na arma não vem de Caminho — vem de aptidão gratuita.** *Nenhum dos cinco Caminhos entrega um ponto de refino a ninguém.*
+
+O que sobra para o refino escalar:
+
+| eixo | exemplo |
+|---|---|
+| **custo** | quanto PE a aptidão cobra |
+| **frequência** | quantas vezes por cena, por descanso, por dia |
+| **escopo** | alcance, duração, quantos alvos |
+| **magnitude fora de disputa** | Redução de Dano, proteção, dano que não compete com feitiço |
+| **disputa contra outro refino** | o clash de expansões |
+
+### O caso que quase escapou
+
+**Cobrir-se de energia dá proteção, e proteção entra na Defesa.** Se ela escalasse com o refino cheio, o atacante cairia de 50% para 5% de acerto no nível 22 — a mesma deriva, pelo lado defensivo. O `arquitetura.md` já tinha escrito a conclusão sem número: *"cobrir-se de energia dá uma defesa que não cresce"*.
+
+A saída não foi tirar o refino dela: foi **dividir por três**. `1/3 do refino` cresce de 0 a 3 na campanha, que é exatamente o que um atributo cresce. É o único divisor que cabe — com 1/2 seriam +5.
+
+## 3. O marco tem três eixos
+
+*Esta seção substitui a escolha de duas opções da peça 2, seção 3.*
+
+A cada quatro níveis — **6, 10, 14, 18, 22, 26 e 30**, sete marcos — o personagem recebe três coisas de graça e escolhe uma quarta.
+
+> **Passivo:** +1 ponto de atributo, +1 de refino e **+1 espaço de feitiço**.
+> **Escolha, uma das três:**
+> **Corpo** — mais um ponto de atributo, **e mais uma perícia ou um ofício treinado**. *Do nível 10 em diante, no lugar da perícia ou do ofício novo, você pode **especializar** um que já treina: some **metade da maestria** de novo naquela rolagem.*
+> **Refino** — mais um de refino, e uma aptidão. **Se o seu refino já estiver no teto, você leva `2` aptidões no lugar.**
+> **Leque** — mais um feitiço, que só pode ser feitiço, e uma Passiva.
+
+**Por que o terceiro eixo existe.** Passiva custa espaço de feitiço conhecido, e a Expansão de Domínio também. Sem uma rota que devolva espaço, quem monta técnica funda fica sem lista: três Passivas de Classe 2 mais a Expansão completa chegavam ao **nível 20 com dois feitiços**, e a montagem cheia — cinco Passivas de Classe 3 mais Expansão — era **impossível em qualquer nível**. O teto de *"cinco Passivas pagas"* do manual já era letra morta.
+
+A linha passiva do marco sozinha conserta isso:
+
+| montagem | nv14 | nv20 | nv26 | nv30 |
+|---|---|---|---|---|
+| só feitiço | 12 | 16 | 21 | 24 |
+| 3 Passivas Classe 2 | 6 | 10 | 15 | 18 |
+| 3 Passivas Classe 2 + Expansão completa | 3 | **7** | 12 | 15 |
+| 5 Passivas Classe 3 + Expansão completa | 0 | 0 | **3** | 6 |
+
+### O teto de refino chega antes do último marco, e a escolha não pode virar meia
+
+**A linha de graça sozinha entrega 8 dos 10.** Sete marcos a `+1`, mais o refino 1 com que toda ficha começa: **quem nunca escolhe Refino termina a campanha com refino 8.**
+
+**Então a metade *"mais um de refino"* da escolha só tem 2 pontos de espaço para caber, na campanha inteira** — e quem escolhe Refino nos sete marcos pagaria 15 e para em 10.
+
+| marco | refino antes | depois | o que a ESCOLHA comprou |
+|---|---|---|---|
+| 6 | 1 | 3 | `+1` de refino e uma aptidão |
+| 10 | 3 | 5 | `+1` de refino e uma aptidão |
+| 14 | 5 | 7 | `+1` de refino e uma aptidão |
+| 18 | 7 | 9 | `+1` de refino e uma aptidão |
+| **22** | 9 | **10** | o refino da escolha **cai no teto** |
+| **26** | 10 | **10** | idem |
+| **30** | 10 | **10** | idem |
+
+**Nos três últimos ela entregava metade do que promete.** *E os outros dois eixos não desperdiçam nada:* o Corpo ganha 14 pontos contra um teto somado de 30 nos cinco atributos, e o teto de Passivas do Leque sobe uma vaga por escolha, junto com a rota. **O refino era o único dos três cujo teto não acompanha quem o compra.**
+
+> ***Decisão do Mizuki, na v0.89: no teto, a escolha de Refino leva DUAS aptidões.*** *Não é aptidão de graça — é a segunda metade da escolha trocando de moeda quando a primeira acaba.*
+
+**A forma da comparação não muda, e é por isso que isto fecha.** Cortando o par aptidão/Passiva dos dois lados — eles vivem na mesma escada de Classe Passiva —, o marco sempre compara `+1` atributo contra **alguma coisa** contra `+1` feitiço. **Antes do teto essa alguma coisa é `+1` de refino; a partir dele é uma aptidão a mais.** *A escolha nunca fica com uma das mãos vazia.*
+
+> **⚠ E o que isto NÃO tem é régua, declarado.** *"Uma aptidão a mais" não converte em fatia, e foi ela que matou o `Repertório` na v0.81.* **A diferença é quem recebe:** lá a Trilha era vendida para qualquer ficha, e o número tinha de valer para quem nunca pega aptidão nenhuma. **Aqui quem leva a segunda aptidão é, por definição, quem já escolheu esse eixo cinco vezes.** *A régua continua não existindo; o que muda é que esta comparação não depende dela.*
+
+**A rota pura passa a precisar de 10 aptidões**, e o catálogo da seção 6 tem **13 que custam marco**. *Cabe, com três de folga.* **E desde a v0.91 elas estão escritas com número**, quando a `Barreira Simples` e a `Cortina` fecharam.
+
+> **⚠ A folga já foi uma, por uma versão.** *O `Kokusen` base saiu da lista de compráveis na v0.202 — ele virou regra de mundo, e o §6.6 registra por quê —, e o catálogo caiu para onze pagas contra dez picks.* **A v0.203 pagou a dívida com a `Circulação`**, e a folga voltou a duas. **A v0.239 acrescentou a `Regravação`, e ela foi a três.** *Fica escrito porque a dívida foi declarada quando ela nasceu, e uma dívida declarada e paga sem registro vira número que ninguém sabe de onde veio.*
+
+> **⚠ Só que a `Cortina` gasta DOIS marcos**, porque ela exige a `Barreira Simples`. *Uma rota pura que queira as duas usa `2` dos `10` picks para uma entrada só de catálogo.* **A folga de três continua de pé, e ela some se alguém quiser as treze.**
+
+### A curva das três rotas, marco a marco
+
+*Ela morava no `02-esqueleto/arquitetura.md` §4.3 desde a v0.10 e **mudou de casa na v0.104**.* **Era a última fonte de progressão do projeto fora de uma peça de regra** — a peça 18 §7 registrava isso com esse nome. *Documento de projeto é onde a ideia nasce; peça de regra é onde ela mora e onde um validador alcança ela.*
+
+**O refino começa em `1`, sobe `+1` de graça em cada um dos sete marcos, e a escolha do marco pode somar mais `+1` até o teto de `10`.**
+
+| | nv 6 | nv 10 | nv 14 | nv 18 | nv 22 | nv 26 | nv 30 |
+|---|---|---|---|---|---|---|---|
+| **especialista** — sempre refino | `3` | `5` | `7` | `9` | **`10`** | `10` | `10` |
+| **meio a meio** | `3` | `4` | `6` | `7` | `9` | `10` | `10` |
+| **generalista** — nunca refino | `2` | `3` | `4` | `5` | `6` | `7` | **`8`** |
+
+**A faixa é `4` a `7` no nível 14 e `6` a `10` no nível 22** — diferencia sem virar caos. *E o especialista bate no teto exatamente no nível 22, que é o marco em que a escolha de Refino troca de moeda e passa a levar duas aptidões.*
+
+> **Os gates da seção 5 saem daqui, e é por isso que ela precisava estar numa peça.** *A tabela de `Classe Passiva 2 no refino 4` e `Classe Passiva 3 no refino 7` não é escolha: ela é esta curva lida em três colunas.* **Doze níveis entre o especialista e o generalista na Passiva 3 — o tamanho que *"quase ninguém consegue"* pede.**
+
+### As três não se substituem, e é isso que as equilibra
+
+`+1 feitiço e uma Passiva` empata com `+1 refino e uma aptidão` porque **Passiva e aptidão vivem na mesma escada de Classe Passiva** — as duas são efeito pequeno, reativo ou permanente, nas mesmas três alturas. O que sobra dos dois lados é `+1 feitiço` contra `+1 refino`.
+
+E aí a conta fecha sozinha: **refino não vale nada para quem não tem aptidão.** Quem escolhe Leque sete vezes tem zero aptidões, então o refino dele é um número morto. Quem escolhe refino tem dez aptidões e nenhuma Passiva a mais para querer. Nenhuma das três precisa de trava porque nenhuma compra o que a outra compra.
+
+No nível 30, as três rotas puras:
+
+| rota | atributo | refino | aptidões | Passivas | feitiços a mais | perícia ou ofício |
+|---|---|---|---|---|---|---|
+| sempre Corpo | **14** | 8 | 0 | 5 | 0 | **+7** |
+| sempre Refino | 7 | **10** | **10** | 5 | 0 | 0 |
+| sempre Leque | 7 | 8 | 0 | **12** | **7** | 0 |
+
+> **A coluna da direita entrou na v0.212, e ela CONSERTA a simetria em vez de quebrar.** *Até ali o `Corpo` era o único eixo com uma moeda só — os outros dois sempre tiveram duas, refino com aptidão e Passiva com feitiço.* **Agora os três têm duas**, e a razão é retorno de mesa do Mizuki: *"refino no momento está muito crucial e no caso das técnicas já vale muito, então dar esse gostinho extra no atributo vai apetecer mais ele."*
+>
+> **A especialização não é uma segunda moeda, é a mesma comprada em altura.** *Ela soma metade da maestria numa rolagem que você já treinou, contra a maestria inteira numa que você não fazia — então ela nunca passa de metade do que a perícia nova entrega.* **E ela só abre no nível 10**, porque antes dele a maestria é `1`: *pelo piso da peça 1 §5.4 a metade dela vale `1`, e a especialização entregaria o mesmo que a perícia nova, e não metade.* *Até a v0.245 esta frase dizia que a metade descia para zero.* ***Decisão do Mizuki na v0.246: ela vale `1`***, *e o gate continua no 10 pelo motivo de cima.*
+>
+> | marco | maestria | a especialização vale |
+> |---|---|---|
+> | 6 | `1` | **não abre** |
+> | 10 e 14 | `2` | `+1` |
+> | 18 e 22 | `3` | `+1` |
+> | 26 e 30 | `4` | `+2` |
+
+**O teto de Passivas sobe junto, e a grátis traz a própria vaga.** Cada escolha de Leque aumenta o máximo em um, e a Passiva concedida ocupa a vaga nova — então as **pagas continuam sendo cinco**, exatamente as cinco de sempre. O teto não cresce de verdade; ele abre lugar para o que a rota concede.
+
+### Feitiços conhecidos
+
+> **`2 + (nível ÷ 2)`, arredondando para baixo — mais um por marco.**
+
+Três no nível 2: dois de toda ficha, mais o do próprio nível 2. Essa soma é o que confundia dois documentos: o manual dizia *"treze no nível 20"* e a peça 8 dizia *"dois no nível 2"*, e os dois não fechavam. A fórmula dá **doze no nível 20**, e o manual corrige o número na v7.7.
+
+### Quem nunca escolhe Refino termina com zero aptidões
+
+**E isso está escrito de propósito, aqui, para ninguém descobrir no nível 20.** A rota existe, ela é legítima, e o que ela troca é claro: **catorze pontos de atributo contra sete, e dez aptidões contra nenhuma**. Quem foca corpo é o dobro de atributo de quem foca controle.
+
+Ele também não fica sem nada. **Cobrir-se de energia e canalizar energia vêm de graça no refino 1**, e as duas crescem com o refino passivo, que chega a 8 sem escolha nenhuma. O que ele nunca vai ter é Energia Reversa nem Barreira Simples.
+
+## 4. As Classes Passivas — e o nome nunca vem sozinho
+
+> **`Classe Passiva 1 · 2 · 3`. Sempre com as duas palavras, e nunca `Classe` solta.**
+
+*Escrito na v0.64, e ele existe porque a palavra estava fazendo trabalho demais.* **O glossário do manual diz `Classe — o tamanho do feitiço, de 0 a 7`**, uma escala só. Só que ele também escreve *"cada Passiva tem uma Classe, **como um feitiço**"*, e a tabela de níveis dele diz *"7 — libera Passiva de Classe 2"*. **Então `Classe 2` já quer dizer duas coisas antes de esta peça abrir a boca**, e quando ela escrevia `Classe 2` querendo dizer *"reativo com limite"*, quem lia entendia *"feitiço de tamanho 2"*.
+
+*Isso mordeu de verdade:* o Mizuki leu a régua de Trilha inteira e parou em *"Classe?, para mim Classe é feitiço"*. **Ele estava certo** — a leitura óbvia da palavra é a do glossário, e o eixo de formato vivia pegando ela emprestada sem devolver.
+
+**O conserto é o idioma do próprio manual, não um termo novo.** Ele já escreve *"Passiva de Classe 2"* e *"Classe de Passiva"* quando precisa desambiguar; o projeto passa a fazer o mesmo, sempre. *`Feitio`, `Talhe`, `Lavra`, `Feição` e `Formato` saíram LIVRE na triagem e foram recusados de propósito — inventar palavra para o que o manual já sabe dizer é criar a segunda fonte que a lição nº 9 existe para evitar.*
+
+As aptidões herdam a escada das Passivas do manual. **Ela não mede quanto — mede o quê.**
+
+| Classe Passiva | o que cabe | as Passivas do manual naquela altura |
+|---|---|---|
+| **1** | efeito pequeno, condicional, ou de informação | `Leitura` · `Instinto` · `Raiz` · `Mão Firme` · `Farejador` · `Aviso` |
+| **2** | efeito reativo, com limite de uso por cena ou por descanso | `Fluxo` · `Recomposição` · `Segunda Natureza` · `Eco` · `Costura` · `Contramedida` · `Peso da Presença` |
+| **3** | permanente. Muda como você joga | `Escama` · `Afinidade` · `Reserva Profunda` |
+
+**A terceira coluna é cópia, e o dono é a lista de Passivas do manual.** *A `Regra Própria` e a `Passiva Própria` ficam de fora dela de propósito: as duas são `1 a 3` e não moram numa altura só.* **O `conferir-manual.py` compara as três linhas contra o `.docx` na checagem 4k.**
+
+> **⚠ A coluna passou da v0.64 até a v0.107 errada em duas das três linhas.** *A `2` listava cinco de sete, e a `3` dizia `—` — nenhuma —, enquanto o manual publica `Escama`, `Afinidade` e `Reserva Profunda` ali desde sempre.* **A `Escama` é da v0.26, e ela é a Passiva que este mesmo documento discute na seção de playtest.** *Ninguém comparava as duas cópias, e é o que a checagem nova passa a fazer.*
+
+*A terceira coluna é a prova de que a leitura não foi inventada aqui:* as seis da Classe Passiva 1 são todas *"você sabe"* ou *"você não sofre"*, e as sete da 2 **disparam quando alguma coisa acontece** — quatro delas com limite escrito (`Recomposição`, `Segunda Natureza`, `Costura` e o *"da cena"* do `Eco`), a `Contramedida` presa à reação, e `Fluxo` e `Peso da Presença` presas só ao gatilho. **A escada estava na tabela do manual; o que faltava era alguém escrever o que ela separa.**
+
+> *E duas delas não trazem relógio nenhum, o que parece frouxidão e não é:* **a `Circulação` cobra um feitiço de Classe 3 ou mais para disparar, e o `Peso da Presença` só pega inimigo fraco e ainda passa por TR.** *O que a Classe Passiva 2 pede é **gatilho**, e não contador* — uma Passiva de Classe 1 melhorada, presa a uma condição que já custa caro, cabe nesta linha inteira. **A definição escrita na tabela do manual é que está mais estreita do que a lista que ela abriga**, e isso é pergunta para o dono da lista.
+
+Uma Classe Passiva 3 não é "uma Classe Passiva 1 maior": é uma coisa de outro formato. **Farejador** — *"você sente se alguém conjurou num lugar nas últimas 24 horas"* — não fica obsoleta porque uma permanente existe; ela faz algo que nenhuma permanente faz.
+
+**E o que impede a Classe Passiva 3 de comer as outras duas é o refino.** Um marco compra uma aptidão de qualquer Classe Passiva que o seu refino alcance, e se ela medisse tamanho, ninguém olharia para a 1 depois de destravar a 3 — mesmo preço, efeito maior. Com o refino escalando o que a aptidão entrega, **uma Classe Passiva 1 no refino 10 não é a mesma coisa que no refino 2**. Ela cresce junto com você.
+
+> **E há uma diferença real entre a Passiva do manual e a aptidão daqui, que a palavra escondia:** na Passiva, a Classe Passiva **também cobra** — a 3 custa mais espaço de feitiço que a 1. Na aptidão **não cobra nada**: o marco compra uma de qualquer altura que o refino alcance, e o preço é o mesmo. *São duas economias, e é por isso que a seção abaixo diz que a aptidão não custa espaço de feitiço.*
+
+> **A aptidão não custa espaço de feitiço.** Essa é a moeda das Passivas e da Expansão de Domínio, e as duas economias ficam separadas de propósito: uma muda de preço sem obrigar a outra a ser refeita.
+
+## 5. O gate, e por que ele não é só nível
+
+**Cada aptidão declara o próprio requisito: nenhum, só nível, só refino, ou os dois.** *E existem mais três formatos, os três escritos no fim desta seção: **só Origem**, desde a v0.58, **exigir outra aptidão**, desde a v0.91, e **um valor mínimo num atributo**, desde a v0.117.* **São seis no total.**
+
+A régua herdada das Passivas gateia por **nível** — Classe Passiva 1 no 1, a 2 no 7, a 3 no 13. Sozinha, ela não serve aqui, e a conta mostra por quê: com gate só de nível, **quem escolhe refino uma vez, no nível 26, compra uma Classe Passiva 3 na hora** — o mesmo acesso de quem investiu seis vezes. A ficção do refino some.
+
+Um gate de refino separa:
+
+| gate | especialista | meio a meio | generalista |
+|---|---|---|---|
+| Classe Passiva 2 no refino 4 | nível 10 | nível 10 | nível 14 |
+| Classe Passiva 3 no refino 7 | nível 14 | nível 18 | **nível 26** |
+
+Doze níveis entre o especialista e o generalista, que é o tamanho que *"quase ninguém consegue"* pede.
+
+**E guardar marco não guarda refino.** A rota que espera — atributo cedo, refino tarde — não domina, porque o refino passivo sobe sozinho e ela chega ao nível 22 com refino 5, ainda precisando de outro marco para alcançar o 7. Ela troca quatro aptidões por quatro pontos de atributo, e as três que sobram são Classe Passiva 3. É a mesma escolha por outro caminho, não um atalho.
+
+### O quarto formato: gate de Origem
+
+*Escrito na v0.58, quando a peça 15 precisou de um e não tinha onde declará-lo.* Os três formatos acima gateiam por **coisa que se compra** — nível se ganha jogando, refino se ganha escolhendo no marco. Um gate de Origem não: ele pergunta **quem o personagem é**, e isso foi decidido na criação e não muda mais.
+
+> **Um gate de Origem só é legal quando o efeito não faz sentido nenhum fora daquela Origem.** Não é para tornar caro; é para dizer que o resto da ficha não tem onde pendurar aquilo.
+
+**Ele é raro de propósito, e o teste é o filtro multi-mestre.** Nível e refino dois mestres leem igual, porque estão escritos na ficha e crescem. Origem é um rótulo — se ela virar moeda de preço, a criação passa a ser escolhida por quais gates ela destrava, e a Origem deixa de ser ficção para virar árvore de talento. **Então ele não se usa para precificar: se o efeito couber num degrau da régua da peça que o publica, é ali que ele mora, e o gate não entra.**
+
+### O quinto formato: gate de aptidão
+
+*Escrito na v0.91, quando a `Cortina` pediu a `Barreira Simples`.* **Uma aptidão pode exigir que você já tenha outra.**
+
+> **⚠ E este formato foi RECUSADO uma versão antes, então a diferença precisa estar escrita.** *Na v0.90 as três de kokusen passaram a empilhar, e fazer a `Kokusen Constante` exigir a `Kokusen Melhorado` foi recusado — porque as três são **alternativas**: cada uma serve sozinha, e o requisito obrigaria a comprar a de antes só para chegar na de depois.* **A `Cortina` é outra coisa: ela é a `Barreira Simples` maior.** *A obra diz isso — barreira é o básico, e cortina exige um nível de habilidade que muitos feiticeiros poderosos não têm.* **Um caso é escada; o outro seria pedágio.**
+
+**A regra de quando ele é legal:** *a aptidão exigida tem de ser a mesma coisa em tamanho menor, e tem de servir sozinha.* **Se a de baixo só existir para destravar a de cima, é pedágio.**
+
+*E o pedágio é exatamente o que a v0.65 derrubou* — uma pergunta de leitor do Mizuki, ***"por que não dá para pegar a de baixo em vez da de cima?"***, matou uma mecânica inteira. **O defeito não era a dependência: era ninguém ter escrito que ela podia existir.** *Agora está escrito.*
+
+**E ele é o único formato que cobra MARCO** — a tabela completa dos seis está na subseção seguinte, junto do sexto.
+
+*Uma ficha tem sete marcos na campanha inteira.* **Um gate de refino custa zero marcos — `refino 4` chega no nível 14 até para quem nunca escolhe Refino.** *Um gate de aptidão gasta um marco antes de a aptidão gateada abrir, e é por isso que ele não precisa de número em cima:* **o preço dele já é o mais caro que o marco tem.**
+
+### O sexto formato: gate de atributo — v0.117
+
+*Escrito quando as Bênçãos precisaram de um jeito de separar rotas dentro de uma Origem só.* **Uma entrada pode exigir um valor mínimo num atributo.**
+
+> **Um gate de atributo só é legal quando a entrada mede aquele atributo fazendo o que ele já faz.** *Não é para tornar caro; é para dizer de que corpo — ou de que cabeça — aquela coisa sai.*
+
+**Ele é o segundo formato que cobra recurso escasso, e o preço dele está medido na peça 1 §5:** *uma ficha tem entre `16` e `23` pontos de atributo na campanha inteira, contra um teto somado de `30` nos cinco.* **Ela enche entre dois e três atributos de seis** — então um gate de atributo alto obriga a escolher uma rota e abrir mão de outra, e é exatamente por isso que ele serve para o catálogo das Bênçãos.
+
+| formato | quem paga |
+|---|---|
+| nível | o tempo. Você joga e chega |
+| refino · Lapidação | a linha passiva do marco, que sobe `+1` sem escolha nenhuma |
+| Origem | a criação de personagem, uma vez |
+| **atributo** | **pontos de atributo**, que são `16` a `23` na campanha e enchem dois ou três de cinco |
+| **aptidão** | **um marco.** É o recurso mais escasso da ficha |
+
+**E ele NÃO pode aparecer numa entrada que já mede aquele mesmo atributo numa rolagem.** *Senão o atributo entra dos dois lados: você paga para destravar e paga de novo para usar, e a entrada vira imposto em cima de quem já escolheu aquela rota.* **É a mesma trava da regra que governa tudo, aplicada a gate em vez de a rolagem.**
+
+### E o exemplar único do gate de Origem
+
+**O primeiro e único exemplar hoje é o `Remoto` da peça 15 §3.7**, na faixa *fora da cena*: alcance de país exige **Restrição Celestial pelo ramo do corpo limitado** e uma técnica voltada a isso, que é o Ultimate Mechamaru sem regra especial nenhuma. **O validador daquela peça confere que ele continua sendo o único** — um segundo gate no catálogo quer dizer que a régua de degrau parou de precificar sozinha.
+
+## 6. O catálogo — as que têm número
+
+### Cobrir-se de energia · grátis no refino 1
+
+> **Sem Traje e sem Revestimento, a sua proteção é `1/3 do refino + 1`.** Escudo **soma** com ela.
+> **Como Reação, você concentra a energia no impacto:** Redução de Dano de `1,5 × refino` num golpe, por **2 PE** — e você fica sem proteção até o fim do seu próximo turno.
+
+> *Duas mudanças da v0.42, as duas vindas da peça de equipamento.* **O escudo saiu da lista do que desliga:** com o desligamento, ele virava prejuízo já no primeiro marco — no refino 3 você trocava proteção 2 por proteção 1 — e nenhum número o salvava enquanto competisse com uma proteção que cresce. **E o preço da Reação virou agnóstico de fonte:** ele dizia *"a proteção passiva"*, e quem estava fardado não pagava nada, porque não tira o colete no meio do golpe. Uma palavra a menos conserta os dois lados.
+
+*Os 2 PE entraram na v0.30.* Até lá estava escrito só *"gastando PE"*, sem quantidade — um preço sem número, que é a lição nº 6 do README pelo avesso: o termo existia e o valor não. O `conferir-orcamento.py` procura essa forma agora.
+
+**E o 2 é fixo, não escala — porque o limitador dela não é PE.** É a Reação, que você tem uma por rodada, e a proteção que você perde por um turno. Medindo contra o que um PE compra atacando (`Rotina ÷ custo do feitiço`), só o valor fixo mantém defender não sendo estritamente pior que atacar:
+
+| preço da Reação | saldo no nv14 | no nv30 |
+|---|---|---|
+| **fixo 2 PE** | **+0,0** | **+0,9** |
+| metade da Classe | +0,0 | −1,1 |
+| metade do refino | −1,0 | −2,1 |
+| `1 × Classe` | −2,0 | −4,1 |
+
+Ela existe para o feiticeiro que não tem corpo. Quem zerou Destreza sai de ser acertado 80% das vezes para 60% no nível 30; quem investiu em Destreza e veste uniforme continua nos 50%. **É piso, não teto.**
+
+A Reação é o momento do Todo contra o Mahito, e o `1,5 ×` é o que a faz valer a campanha inteira. Com `1 × refino` ela viraria armadilha: o custo de ficar um turno sem proteção cresce junto com o golpe do chefe, e a RD trava no teto 10.
+
+| nível | RD | golpe de chefe | custo esperado | saldo |
+|---|---|---|---|---|
+| 6 | 4 | 17 | 1,7 | **+2,3** |
+| 14 | 10 | 36 | 5,3 | +4,7 |
+| 22 | 15 | 54 | 10,8 | +4,2 |
+| 30 | 15 | 72 | 14,4 | **+0,6** |
+
+Positiva do começo ao fim, e o saldo **encolhe** em vez de virar — forte quando você não tem outra resposta, e só mais uma opção quando já tem. **E ela não é redução de dano passiva:** custa Reação, custa 2 PE e custa a proteção de um turno. A regra que matou a Casca continua valendo.
+
+*Um recado para a peça de equipamento:* no refino 10 ela dá proteção 4, e um Vanguarda que largue o uniforme chega a Defesa 20 contra os 17 dele fardado. **Um uniforme precisa valer mais que 4**, senão ele nasce morto.
+
+### Canalizar energia · grátis no refino 1
+
+Já está escrita na peça 5: *"um feitiço de Toque é um feitiço de Forma Toque, sem Melhoria e sem Restrição. Mesma Classe, mesmo orçamento de pontos, mesmo custo em PE."*
+
+**O refino não escala o feitiço de Toque**, e essa metade continua sendo o exemplo mais limpo do teto por aptidão: ele vive inteiro dentro do orçamento do Fundamento, e pôr refino ali seria dar poder de graça numa conta que já fecha.
+
+**A outra metade é o dano na arma, e ela escala com o refino de propósito.**
+
+> **Os seus ataques com arma causam `1d4` de dano a mais a cada `3` pontos de refino.** No refino `10` os dados viram `d6` **e entra um dado a mais**.
+> **Só arma:** ele não entra em feitiço nem em Kata, e não se soma por cima de um ataque que já esteja carregando um feitiço de dano de `Classe 0` ou mais.
+
+**A regra, a escada, a conta e o argumento de desenho moram na §6.9**, porque a mesma regra é metade do `Estímulo Muscular` da §6.8 e escrever duas vezes criaria as duas cópias que a lição nº 9 existe para não deixar existir.
+
+> **⚠⚠ Este parágrafo dizia *"o refino não a escala"* da v0.27 até a v0.158, e ele virou falso na v0.147**, quando o dano na arma entrou no livro. *Ele sobreviveu onze versões em duas cópias — aqui e no §10 — porque aquela versão escreveu a mecânica só no livro, e nenhum validador comparava a peça com o capítulo.* **A `⚠` seguinte, do `projetar energia`, caiu no mesmo commit e pelo mesmo motivo.**
+
+### Projetar energia
+
+> **Você dispara energia crua. O dano é `refino`, e ela não gasta PE.**
+
+É o que sobra quando o combustível acaba, e o `arquitetura.md` já dizia o que ela não pode ser: *"o dano dela é fixo e baixo, e existe para quem ficou sem PE, não para competir com feitiço"*.
+
+Com `dano = refino` ela fica entre **8% e 12% da coluna Rotina** do nível 2 ao 30 — sempre acima do Classe 0 depois do nível 10, e nunca perto de competir. Ela deriva para **baixo**, porque a vida do inimigo cresce mais rápido que o refino. Errar para baixo é o lado seguro.
+
+> **⚠ Esta linha dizia *"é o único lugar do catálogo onde o refino toca dano"* até a v0.158, e são dois desde a v0.147.** *O outro é o dano na arma, e ele é o caso oposto deste: **ele deriva para cima**, e o que segura ele não é a curva — é a rodada em que ele mora.* **A §6.9 mede os dois contra as duas condições da §2.**
+
+### Kokusen — regra de mundo, e não entrada do catálogo
+
+> **Em crítico no corpo a corpo, role d100. `2 × refino` ou menos é kokusen: o dano leva +50% depois de todos os valores resolvidos.**
+
+***Decisão do Mizuki na v0.202: o kokusen base é de todo mundo, e não se compra.*** *Palavras dele:* **"é uma regra de mundo, qualquer um pode tirar e exige mais sorte que cálculo, já que nem o Gojo conseguiu fazer diversas vezes seguidas."** *As aptidões de kokusen são as duas de MELHORIA, e são elas que ocupam vaga de catálogo.*
+
+> **⚠⚠ E o sistema estava cobrando por ele.** *O texto desta seção sempre disse que ele "existe pelo grito na mesa, não pela planilha" e que "ninguém deve montar ficha em cima dele" — sem gate de refino e sem gate de nível, ao contrário das duas de melhoria.* **Mas a tabela do §7 o contava como entrada e o `conferir-aptidoes.py` tinha `MARCOS_DA_PILHA = 3` escrito no código, com o comentário `Kokusen + Constante + Melhorado, um marco cada`.** *Uma ficha pagava um marco por uma coisa que a peça declarava de graça, e isso atravessou desde a v0.90.*
+
+> **⚠⚠ E o livro já dizia certo, com estas palavras: *"o Kokusen em si não é uma aptidão: é uma mecânica, e todo feiticeiro que tem energia consegue usar"*.** *Ele estava correto e a peça é que cobrava — o que virou a varredura da v0.202 e destampou mais três divergências entre os dois, nenhuma com validador.*
+>
+> | | a peça dizia | o livro publicava | quem estava certo |
+> |---|---|---|---|
+> | **o gatilho** | só o corpo a corpo | corpo a corpo **ou feitiço de Toque** | **a peça** |
+> | **o relógio da proteção contra azar** | zera no descanso longo | zera **no fim da cena** | **a peça** |
+> | **o requisito das duas de melhoria** | nenhuma exige a outra | *"e ter tirado um `Kokusen`"* | **a peça** |
+>
+> **O gatilho é o pior dos três, e a conta é a mesma que fechou o escopo do crítico na v0.151.** *Um feitiço de Toque `Classe 7` com kokusen entrega `283,5` de dano — `2,62 ×` a Rotina —, contra `58,5` do corpo a corpo, que é `0,54 ×`.* **É `4,8 ×` mais, num gatilho que ninguém escolhe e que sai em `20%` dos críticos.**
+>
+> *O relógio é o segundo pior por outro motivo: o livro publicava exatamente a forma que esta seção MEDIU E RECUSOU, com a conta escrita três parágrafos abaixo.*
+
+Em cima do crítico que já dobrou os dados — um crítico entrega `2D`, um kokusen entrega `3D`.
+
+| refino | chance no d100 | dano por rodada | sessões até o primeiro |
+|---|---|---|---|
+| 1 | 2% | +0,2% | 47 |
+| 5 | 10% | +0,9% | 9,5 |
+| 10 | 20% | **+1,8%** | 4,7 |
+
+**Ele existe pelo grito na mesa, não pela planilha, e o texto precisa dizer isso** — 1,8% no teto é menos de um quinto do que um ponto de atributo compra. Ninguém deve montar ficha em cima dele.
+
+**E ele tem proteção contra azar.** No refino 1 a espera pelo primeiro seriam 47 sessões, o que na prática significa nunca. Cada d100 falhado empurra o próximo em **+2**, e o acumulado **zera no descanso longo**:
+
+| | refino 1 | refino 5 | refino 10 |
+|---|---|---|---|
+| sem proteção | 47 sessões | 9,5 | 4,7 |
+| com ela, zerando por missão | **~9** | 5,6 | 3,9 |
+
+Ela socorre quem não investiu e quase não move quem investiu, que é a propriedade que se queria. E o relógio já existe: *por descanso longo* é o quarto da escada da peça 10, o mesmo da Integridade.
+
+*Por que o relógio não é "por cena":* o acúmulo só começa a partir do **segundo crítico da mesma cena**, e dois críticos no mesmo combate acontecem em **4,4%** das vezes. Ele evaporaria antes de servir.
+
+### Kokusen Melhorado · refino 5 e nível 14
+
+> **Vantagem no d100.**
+
+A vantagem ganha do `3 × refino` em **todo refino**, e a distância cresce: 36% contra 30% no teto. E ela não muda número nenhum na ficha — você rola dois d100 e pega o melhor.
+
+O gate duplo tem folga do lado certo. Refino 5 cai no nível 10 para quem sempre escolhe refino, então **o nível 14 é a trava que morde**, e ela faz o especialista e o meio a meio convergirem no mesmo marco.
+
+**O preço é ruim de propósito.** A ~2% de dano por rodada, ele vale um quinto do que um ponto de atributo compra, numa campanha com no máximo dez aptidões. Quem olha o número não escolhe; quem escolhe, escolhe pelo grito.
+
+### Kokusen Constante · refino 5
+
+> **A base sobe para `3 × refino`.**
+
+Trinta por cento no teto. É a única das três que mexe no número em vez do dado, e por isso é a que se lê de cara na hora de escolher.
+
+> ***As três empilham, e a ordem é essa:*** **a base é `3 × refino`, e a vantagem da `Kokusen Melhorado` rola em cima dela.** *Com as três na ficha, o d100 sai em `51%` no refino 10.* **Nenhuma delas exige a outra** — os quatro formatos de gate desta peça gateiam por nível, refino, os dois ou Origem, e nenhum deles é *"ter pego a de antes"*.
+
+**Sozinha, ela perde para a `Kokusen Melhorado` em todo refino — e isso fica declarado, com a conta.**
+
+| refino | só a `Melhorado` | só a `Constante` | as duas |
+|---|---|---|---|
+| 1 | 4,0% | 3,0% | 5,9% |
+| 5 | 19,0% | 15,0% | 27,8% |
+| **10** | **36,0%** | 30,0% | **51,0%** |
+
+**A diferença é de forma e não de tamanho.** *Vantagem numa chance `p` dá `2p − p²`, e isso ganha de `1,5p` enquanto `p` estiver abaixo de `50%`.* **O teto do kokusen é `20%`, então a `Melhorado` ganha sempre.**
+
+**O que a `Constante` compra em troca é o que esta seção já dizia dela: ela mora no número da ficha, e não na sorte do dado.** *E o gate é só de refino por causa disso:*
+
+| gate | especialista | meio a meio | generalista |
+|---|---|---|---|
+| **`Kokusen Constante`** — refino 5 | **nível 10** | nível 14 | nível 18 |
+| `Kokusen Melhorado` — refino 5 **e nível 14** | nível 14 | nível 14 | nível 18 |
+
+**São quatro níveis em que ela é a única das duas disponíveis, e eles vão inteiros para quem investiu.** *É a mesma folga do lado certo que o gate duplo da `Melhorado` tem — só que virada para a outra ponta da campanha.*
+
+**A cascata mexe só na chance do d100, e com teto.** Dobrar a chance no refino 5 rende **+0,9 ponto**; fazer a margem cair para 19 rende **+10,9%** — e **9,1 desses pontos vêm do dado a mais, antes de o kokusen entrar**. A margem carrega o crítico inteiro junto, e é por isso que ela está fora.
+
+E "mais fácil depois do primeiro" sem teto é a espiral da exaustão com o sinal trocado: quem crita mais fácil crita mais, e crita mais fácil ainda. Sem teto, quatro degraus numa cena levariam o físico a **1,8× o dano base**, e aí a coluna Rotina para de valer no meio da luta.
+
+### Energia Reversa · Classe Passiva 3 · refino 7 e nível 14
+
+> **Ação padrão. Gaste até `maior Classe` de PE e recupere `1d8` de vida por PE gasto, em você.**
+> **E ela é o requisito de todo uso ofensivo de energia reversa** — a Forma `Cura` do manual só fere maldição na mão de quem tem esta aptidão, e sem ela apontar aquele feitiço num inimigo não produz nada.
+
+*Ela estava na lista das que faltavam desde a v0.27 e fechou na v0.77, quando a Trilha `Sutura` do Guia precisou dela para existir.*
+
+#### Ferir maldição — escrito na v0.194, e o número não é desta peça
+
+**Energia positiva machuca maldição, e o manual v7.20 é o dono da regra:** *a Forma `Cura` pode escolher um alvo hostil, e ali ela pede rolagem de acerto em vez de ser automática; contra maldição os dados viram dano com `50%` a mais.*
+
+> **Os `50%` não são bônus, e é por isso que eles não precisaram ser escolhidos.** *A cura já rende **dois terços** do dano da mesma Classe, nas sete — e `2/3 × 1,5 = 1`.* **Somar metade em cima devolve exatamente a linha de dano daquela Classe**, e nenhum número novo entra no sistema.
+
+**A rota nunca é a melhor escolha, e isso é o que a segura.** *Ela custa a `Média` da Forma, e um `Projétil` custa zero e fere qualquer coisa.* **Ela existe para o feitiço de cura não ser inútil contra maldição — não para ser arma.**
+
+***Decisão do Mizuki na v0.194: esta aptidão é o requisito.*** **Sem ela, uma técnica focada em cura já feriria maldição sem nunca passar por aqui** — e aí a aptidão viraria enfeite para quem cura. *Com ela como porta, os dois usos ficam pendurados na mesma compra.*
+
+> **E ferir com a APTIDÃO, fora do feitiço, pede que ela já alcance os outros** — hoje isso é o `Enxerto` da Trilha `Sutura`, no nível 11 dela, e nada mais precisa existir. *A energia tem de sair do corpo antes de tocar em alguém, e curar a si mesmo não prova isso.*
+
+**Nenhum número aqui é escolha minha, e vale mostrar de onde cada um sai.** A seção 7 já mandava medir esta aptidão contra a Passiva **`Recomposição`**, que é a cura inata: `5 × maior Classe`, uma vez por descanso curto — **`35` de cura no nível 30**. O projeto tem câmbio de PE, porque `+1` PE por rodada vale `5,14` de dano por rodada; e cura é **dano evitado**, que a régua converte `1` pra `1`. **Então um PE vale cerca de cinco de cura.** E o manual já cura em dado: *"cada ponto que sobra vira `1d8`"*, que é `4,5`.
+
+| | quanto cura no nível 30 |
+|---|---|
+| a Passiva `Recomposição`, uma vez por descanso curto | `35` |
+| **`Energia Reversa` no teto — `7d8`** | **`31,5`** |
+
+**Mesma altura, e a diferença mora em outro eixo:** a Passiva é de graça e acontece uma vez; esta cobra PE e se repete. *E ela gasta a ação padrão — curar `31,5` contra um golpe de chefe que te tira `36,5` é empatar, e o empate é a intenção.*
+
+> **⚠ Este número era `33,9` da v0.78 à v0.170, e ele não reconstruía de nada.** *Nenhum documento registrava a derivação dele, e nenhum validador o alcançava — número órfão, que é a lição nº 9 sem precisar de uma segunda cópia para divergir.* **O `36,5` é derivado:** *o golpe de chefe do nível 30 é `73` — a linha de `219` por rodada da tabela de inimigo do manual, dividida pelas `3` ações da peça 19 §2.2 —, e o acerto contra alvo que investiu em defesa é `50%`, da peça 1 §6.*
+
+> **⚠⚠ Até a v0.200 esta régua lia a RODADA do chefe, e não o golpe, e ninguém tinha como ver.** *O chefe entregava `72` por rodada em golpes de `24`, e o número que a régua usava — `36,0` — era `72 × 50%`.* **A linha nova separou os dois, e a leitura certa é a do golpe:** *a cura repõe o que um golpe tirou, e não o que a rodada inteira tirou.* ***Decisão do Mizuki na v0.201:*** *"a cura é pra aguentar basicamente 1-2 ataques que você tomou, nunca foi feita para deixar full alguém que recebeu o dano todo da rodada."* **E o número mal se moveu — `36,0` virou `36,5` —, porque o golpe do chefe de hoje é quase exatamente a rodada do chefe de ontem.**
+
+**O gate não foi escolhido por simetria com a `Extensão de Domínio`, mesmo sendo o mesmo.** No material, energia reversa é gerada no **cérebro** e não no intestino como a comum, e o que a torna rara é sustentar **dois fluxos de energia ao mesmo tempo**. É a coisa que quase ninguém alcança — e a Classe Passiva 3 com refino 7 é exatamente a altura que a seção 5 reserva para isso: **o generalista só chega no nível 26.**
+
+> **Ela cura VOCÊ, e isso não é economia de texto.** *Curar terceiro é o degrau raro do material*: o Gojo cura a si mesmo e não cura os outros, e a Shoko é nomeada como uma das poucas que conseguem. **Quem cura os outros é a Trilha `Sutura`**, e é ela que paga por isso — no nível 11 dela, e não no 2.
+
+### O refino não escala esta aptidão, e o teto é a `maior Classe`
+
+> **⚠ O argumento desta linha caiu na v0.158, e ela ficou de pé doze versões sem ele.** *Ela dizia que pôr refino no tamanho da cura "a faria derivar contra a vida do inimigo, **que é o que a seção 2 proíbe**".* **A v0.158 tirou dano daquela lista com todas as letras:** *dano não é rolagem disputada, e a vida do inimigo não rola.* **Pela §2 de hoje, cura é `magnitude fora de disputa`** — a mesma caixa da Redução de Dano e da proteção —, **e a §2 não proíbe.** *A decisão continua de pé; quem a sustenta é a conta abaixo, e ela nunca tinha sido escrita.*
+
+**O que segura o teto é o empate, e ele vale a faixa inteira da aptidão.** *A régua é a da tabela acima — cura contra o que um GOLPE te tira: a linha de inimigo do manual dividida pelas três ações do chefe, vezes os `50%` de acerto da peça 1 §6.* **A aptidão nasce no nível 14**, que é onde o especialista alcança o refino `7`.
+
+| nível | um golpe te tira | teto `maior Classe` | cobre | teto se fosse `refino` | cobriria |
+|---|---|---|---|---|---|
+| 14 | `17,3` | `4` → `18,0` | **`104%`** | `7` → `31,5` | `182%` |
+| 18 | `22,1` | `5` → `22,5` | **`102%`** | `9` → `40,5` | `183%` |
+| 22 | `26,9` | `6` → `27,0` | **`100%`** | `10` → `45,0` | `167%` |
+| 26 | `31,7` | `7` → `31,5` | **`99%`** | `10` → `45,0` | `142%` |
+| 30 | `36,5` | `7` → `31,5` | **`86%`** | `10` → `45,0` | `123%` |
+
+**Com a `maior Classe`, a rodada de cura cancela o golpe que você tomou e para de cancelar no fim.** *Ela não é uma rodada ganha: é uma rodada comprada, e no nível 30 ela já não paga o preço cheio.*
+
+**Com o refino, isso quebra no nível em que o gate abre** — e a estreia é o pior ponto, não o teto: quem acaba de comprar a aptidão cura `1,8×` o que o chefe tira dele, e ela nunca volta a empatar.
+
+**E o eixo está errado por um segundo motivo, que é a lição nº 1.** *Do nível 14 ao 30 o golpe de chefe cresce `2,11×`.* **A `maior Classe` cresce `1,75×` — quase junto, e é essa folga que faz o empate escorrer para `88%` no fim, de propósito.** *O refino cresce `1,43×` e para: ele bate no teto `10` no marco 22 e fica lá por oito níveis, enquanto o inimigo continua subindo.* **A Classe é o único dos dois que acompanha o nível**, e é a variável que o manual já usa para tudo que escala com tamanho de feitiço.
+
+### Circulação · Classe Passiva 3 · exige a `Energia Reversa` e refino 8
+
+> **O teto por uso da sua `Energia Reversa` sobe para `1,5 × a sua maior Classe` de PE**, arredondando para baixo.
+> **E você pode usá-la como Ação Bônus.** *Usada assim, os dados de cura são `d4` em vez de `d8`.*
+> **Recompor um membro perdido gasta o teto inteiro do uso**, e naquele uso você não cura vida nenhuma.
+
+***Pedida pelo Mizuki na v0.203.*** *O nome sai da obra: o Gojo tem energia positiva circulando o corpo o tempo todo, como segunda natureza — é o estado dele, e não uma técnica que ele ativa.*
+
+> **⚠ O nome passou na triagem e tem uma vizinhança declarada.** *`Fluxo Constante` foi o primeiro candidato e morreu no `conferir-nomes.py`: `Fluxo` já é uma Passiva do manual, a que dá vida temporária a quem conjura feitiço grande.* **`Circulação` está livre nas duas direções**, mas ela encosta em sentido na `canalizar energia`, que é uma das duas de graça do refino `1` e aparece quarenta e sete vezes no projeto. *A diferença fica escrita aqui: **canalizar** é pôr energia amaldiçoada para fora, e **circular** é a energia positiva andando dentro de você.* ***Escolha do Mizuki entre três livres.***
+
+| nível | maior Classe | teto da `Energia Reversa` | teto com a `Circulação` | Ação Padrão, `d8` | Ação Bônus, `d4` |
+|---|---|---|---|---|---|
+| 18 | 5 | `5` PE | `7` PE | `31,5` | `17,5` |
+| 22 | 6 | `6` PE | `9` PE | `40,5` | `22,5` |
+| 26 a 30 | 7 | `7` PE | `10` PE | `45,0` | `25,0` |
+
+**As duas metades têm preços bem diferentes, e vale saber qual é qual.**
+
+> **O teto maior é a metade barata.** *Ele acrescenta `9,0` a `13,5` de cura, e espalhado numa luta de três rodadas isso é `0,39×` a `0,48×` um ponto de atributo.*
+>
+> **A Ação Bônus é a metade cara, e é ela que precisava do `d4`.** *Numa ficha que não usa a Ação Bônus para nada, curar ali sai de graça — você cura e ataca na mesma rodada.* **Com `d8` isso entrega `45` por rodada, que é `4,17×` um ponto de atributo e reprova; com `d4` entrega `25`, que é `2,31×` e passa.** *O filtro do projeto reprova a partir de `3,00×`, e a razão fica plana em `2,30×` a `2,39×` nos quatro níveis.*
+>
+> ***Decisão do Mizuki: o dado cai para `d4` e ela não leva relógio.*** *O relógio já existe e é o combustível — `10` PE por uso, e curar em toda rodada do dia custa `105` PE de um poço de `120` a `180`.* **Quem cura toda rodada não conjura mais nada naquele dia.**
+
+**E a Ação Bônus é o que tira a cura de ser troca ruim, que é o defeito que a v0.203 mediu.** *Levantar alguém de `0` gastando a Ação Padrão é empate exato — você perde a sua rodada e devolve a dele.* **Na Ação Bônus o saldo vira `+51,8`**, e é por isso que ela é a metade que importa.
+
+> **⚠ v0.246: o argumento do `+51,8` não vale mais.** *A `Circulação` só cura você — curar outra pessoa é a `Sutura` —, então sozinha ela nunca levantou ninguém.* **E mesmo com a `Sutura`, desde a v0.245 quem está em 0 só levanta com `20%` da vida máxima de uma vez**, *e a Ação Bônus com `d4` não chega a isso em nível nenhum numa ficha de Constituição 3.* **O preço continua de pé porque a razão de `2,31×` mede cura por rodada, e não o levantar.** *O parágrafo "Levantar quem caiu" do capítulo 45 do livro saiu, por decisão do Mizuki.*
+
+> **O molde é o do d20, e ele foi lido antes de isto ser escrito.** *A `Palavra Curativa` do `Livro do Jogador` de 2024 é **Ação Bônus** e cura `2d4 + modificador` — pequena de propósito —, e a regra de `0` PV de lá diz que você fica Inconsciente "até recuperar **qualquer quantidade** de Pontos de Vida".* **A peça 1 §5.5 já tinha a segunda metade dessa regra; o que faltava era a primeira.**
+
+#### O gate, e por que ele é `refino 8`
+
+**A curva de refino pula de `7` para `9`, então `refino 8` e `refino 9` caem no MESMO nível para quem investe** — `18` no especialista e `22` no meio a meio. *A diferença entre os dois gates é só o generalista: no `8` ele alcança no nível 30, no `9` ele nunca alcança.*
+
+***Decisão do Mizuki: `refino 8`***, e o generalista chega no último nível da campanha.
+
+**A corrente inteira é cara em marco, e é isso que faz o "quase ninguém consegue" da obra.** *Um marco pela `Energia Reversa`, um pela `Circulação` — o gate de aptidão cobra o marco antes de a gateada abrir —, e o especialista chega ao refino `8` tendo gasto **quatro dos sete marcos** em Refino.* **Sobram dois para o resto da ficha.**
+
+> **O gate de aptidão é legal aqui pela regra do §5:** *a exigida tem de ser a mesma coisa em tamanho menor e tem de servir sozinha.* **A `Energia Reversa` serve sozinha e a `Circulação` é ela maior** — é escada, e não pedágio.
+
+#### O membro, e a regra que NÃO vai existir
+
+**Recompor gasta o teto inteiro e não cura vida naquele uso.** *No nível 30 são `10` PE.*
+
+**Em combate isso é caro do jeito certo:** a sua rodada inteira mais o combustível, e você continua machucado. *Fora de combate são `10` PE de um poço de `120` a `180`, e é lá que ele deve ser barato.*
+
+> **A obra dá o precedente de "coisa mais difícil custa mais energia reversa":** *tirar veneno exige mais que curar ferimento.* **E ela diz que energia positiva reproduz sangue, osso, carne e órgão, com membro inteiro sendo coisa de quem é proficiente.**
+
+***Decisão do Mizuki: perder membro NÃO vai ter regra, e isso segue o d20.*** *"Na dúvida segue igual D&D — D&D não tem regra pra remover, mas tem as penalidades, que aí fica mais na mão do mestre ou dos pactos dos players."* **Então esta aptidão desfaz uma coisa que o sistema não sabe causar, de propósito**, e o texto dela diz *"o que a mesa tiver tirado de você"*.
+
+> **⚠ E recompor o membro de OUTRA pessoa exige a `Sutura`.** *O `Enxerto`, no nível 11 dela, é quem faz a `Energia Reversa` alcançar os outros.* **Uma ficha com `Sutura` e `Circulação` é o degrau da Shoko — a obra trata curar os outros como raríssimo, e diz com todas as letras que o Gojo não consegue.** *O gate cai da combinação, sem número novo.*
+>
+> **E quando as duas se encontram, o teto é o maior dos dois:** *o `Cerzido` da `Sutura` põe em `maior Classe` e a `Circulação` põe em `1,5 ×`.*
+
+### Regravação · Classe Passiva 3 · exige a `Circulação`
+
+> **Durante o seu Rescaldo, como Ação Bônus, gaste o teto inteiro da sua `Energia Reversa`, e o Rescaldo acaba.** *A técnica volta a responder, e naquele uso você não cura vida nenhuma.*
+> **Cada uso deixa uma marca, e as marcas somem no descanso longo.**
+> **Com `metade da sua Inteligência + metade da sua maestria` marcas, você não abre Expansão de Domínio**, cada metade arredondando para baixo.
+
+***Pedida pelo Mizuki na v0.239, e é a porta de saída do Rescaldo que a rodada 2 do rascunho da Expansão sem barreira tinha adiado.*** *O requisito, a Ação Bônus com o teto inteiro, o contador até o descanso longo e a fórmula das marcas são decisões dele.* **O nome também:** *`Regravação` foi escolhido entre quatro que passaram no `conferir-nomes.py`.*
+
+**Cada parte da regra sai de uma cena da obra**, e as fontes estão no rascunho, seção 6.8:
+
+| o que a obra mostra | fonte | a regra |
+|---|---|---|
+| a técnica queimada não volta com energia reversa comum | cap. `227` p. `3` | exige a `Circulação` |
+| o Gojo e o Sukuna destroem a gravação da técnica no cérebro e curam com energia reversa | cap. `226` p. `14`–`17` | gasta o teto inteiro |
+| e não conseguem fazer isso e curar o corpo ao mesmo tempo | cap. `229` p. `11` | naquele uso você não cura vida |
+| o dano no cérebro acumula até impedir a Expansão, e o Gojo parou depois de cinco vezes | cap. `230` p. `10`–`11` | as marcas |
+
+> **O gate de aptidão é legal aqui pela regra do §5.** *A `Circulação` serve sozinha, e a `Regravação` é a mesma energia reversa levada até a gravação da técnica.* **A corrente inteira custa três marcos, e ela só serve a quem abre Expansão de Domínio.**
+
+#### As marcas, em todos os casos
+
+**A `Regravação` chega no nível `22` para o especialista:** *a `Energia Reversa` no `14`, a `Circulação` no `18` e esta no marco seguinte.* **A maestria ali já é `3`, então a metade dela nunca dá zero.**
+
+| Inteligência | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|---|
+| marcas, do nível 22 ao 25 | 1 | 1 | 2 | 2 | 3 | 3 | 4 |
+| marcas, do nível 26 ao 30 | 2 | 2 | 3 | 3 | 4 | 4 | 5 |
+
+**Com `N` marcas você abre a Expansão `N` vezes, que são `N − 1` reaberturas**, com uma regravação depois de cada abertura. *A última devolve a técnica e fecha a Expansão até o descanso longo.* **Inteligência `6` no nível `30` dá `5`, que é a conta do Gojo.**
+
+> **O arredondamento é o da peça 1 §5.4:** *cada metade desce sozinha, que é o lado que não te favorece.* **Somar antes de dividir daria uma marca a mais com Inteligência ímpar, do nível 22 ao 25.**
+
+> **Regravar é escolha.** *Sem regravar, o Rescaldo acaba com a cena, e a luta seguinte abre de novo.* **Com uma marca só, a regravação troca as Expansões do resto do dia pela técnica de volta nesta cena.**
+
+#### Quem o contador segura
+
+**O PE do dia paga no máximo duas reaberturas no Bastião, três na Vanguarda e no Guia, e quatro no Evocador e no Emanador.** *É o poço inteiro gasto em domínio, com os dois respiros entre as três lutas de graça da peça 10: cada reabertura custa o teto da regravação mais os `6 ×` a maior Classe de abrir.*
+
+**O contador segura antes do PE em todo Caminho, para quem tem Inteligência baixa.** *As quatro reaberturas só saem com Inteligência `6` do nível `26` em diante, e só o Evocador e o Emanador têm PE para elas.*
+
+> **A `Regravação` no inimigo fechou na v0.242, na peça 26 §6.4.** *Ele carrega a corrente inteira, com os gates e os marcos do jogador, e paga a regravação na cota.* **As marcas são as desta tabela, e só nele a cura de Ação Bônus da `Circulação` vira Reação.**
+
+## 6.5. As três anti-domínio, e a `Extensão de Domínio` ao lado delas
+
+*Escritas na v0.29, depois que a Expansão ganhou regra no manual v7.7.* **Eram quatro até a v0.165.**
+
+> ***A `Extensão de Domínio` saiu da categoria, e o motivo é de leitura e não de número.*** *Levantado por um colega do Mizuki:* **ela não É uma anti-domínio — ela SERVE como uma.** *As três abaixo existem para uma coisa só: anular o Acerto garantido. A `Extensão de Domínio` é uma camada de domínio próprio que faz várias coisas, e anular o Acerto é uma delas.*
+>
+> **Nada de mecânico se moveu com isso, e é por isso que a troca é barata:** *ela continua anulando o Acerto de uma Expansão completa, continua sendo Classe Passiva 3 com gate de refino 7 e nível 14, e continua custando `1,5 × maior Classe` de PE por rodada.* **O que muda é a etiqueta e a contagem.**
+>
+> ***E a etiqueta importa por um motivo que a §7 já escrevia:*** *"os anti-domínio serem aptidões baratas é o que torna o acerto garantido sobrevivível".* **A `Extensão de Domínio` nunca foi a barata** — ela é a única Classe Passiva 3 das quatro, e a resposta que chega cedo é a `Cesta Oca de Vime`, de Classe Passiva 1 e sem gate. *Contá-la junto inflava a lista com a entrada que menos responde à pergunta que a lista existe para responder.*
+
+### A regra que vale para as quatro, e que precisa estar escrita
+
+> **Elas anulam o Acerto de uma Expansão. Nenhuma delas serve contra a Expansão incompleta.**
+> *Vale igual para a `Extensão de Domínio`, que anula o mesmo Acerto sem ser da categoria.*
+
+Não é escolha nossa: é como a obra funciona, e tem cena provando. O Reggie ativou Cesta Oca de Vime dentro do Jardim de Sombras Quimérico do Megumi — que é incompleto — e não adiantou nada. Os shikigami tomaram forma e bateram nele como qualquer coisa bate em qualquer um.
+
+**O motivo é mecânico e limpo.** Estas quatro anulam *acerto garantido*. A incompleta não tem acerto garantido: o Acerto dela **rola**. Contra ela você se defende com Defesa e com Teste de Resistência, como se defende de tudo o mais no jogo. Não existe buraco aqui — existe uma peça respondendo ao que ela responde, e nada além.
+
+E é por isso que o terceiro espaço da Expansão compra alguma coisa de verdade: ele troca um Acerto que dá para bloquear com Defesa por um que só estas quatro alcançam.
+
+### O que cada uma custa por fora, e por que elas são diferentes
+
+*As quatro linhas ficam juntas nas duas tabelas abaixo porque é assim que se compara — a `Extensão de Domínio` está marcada.*
+
+O eixo que separa as quatro não é força — é **quanta liberdade você tem enquanto está protegido**. Os quatro preços vêm da obra:
+
+| | protege | e cobra |
+|---|---|---|
+| **Cesta Oca de Vime** | só você, dentro de uma esfera | você segura o símbolo e **não faz mais nada** |
+| **Domínio Simples** | um raio em volta de você | **os pés não saem do chão**, ou ela quebra |
+| **Pétala** | o seu corpo, e **devolve o golpe** | exige concentração, e **não para ataque físico** |
+| **Extensão de Domínio** | o seu corpo, e faz o **seu** ataque acertar | **nenhum feitiço enquanto ela estiver de pé** |
+
+### As quatro, com número
+
+| | Classe · gate | abre em | o refino escala | PE por rodada |
+|---|---|---|---|---|
+| **Cesta Oca de Vime** | 1 · sem gate | nv 6, nas três rotas | **nada** | **nenhum** |
+| **Domínio Simples** | 2 · refino 4, nível 10 | nv 10 · 10 · 14 | o raio: `1,5 m + refino ÷ 2` | `1 × maior Classe` |
+| **Pétala** | 2 · refino 4, nível 10 | nv 10 · 10 · 14 | quantos Acertos devolve: `refino ÷ 2` | `1 × maior Classe` |
+| **Extensão de Domínio** | 3 · refino 7, nível 14 | nv 14 · 18 · 26 | a duração: `refino` rodadas | `1,5 × maior Classe` |
+
+> ***A `Extensão de Domínio` está nas duas tabelas e NÃO é da categoria*** — *ela serve como uma, e fica aqui porque é assim que se compara.* **A linha dela não leva marca de propósito:** *o `conferir-ferramenta.py` lê o gate do grau mais alto desta tabela, e marca dentro da célula quebra o extrator dele.*
+
+**Todas custam um marco, como qualquer aptidão. Nenhuma custa espaço de feitiço.**
+
+### Cesta Oca de Vime · Classe Passiva 1, sem gate
+
+> **Você faz o símbolo e uma esfera se fecha em volta de você. Enquanto você o segurar, o Acerto de uma Expansão não te alcança — e você não faz mais nada.**
+
+Ela é a **predecessora** do Domínio Simples, e é pior de propósito: **anula o Acerto e mais nada.** O Efeito da Expansão continua acontecendo em cima de você, e o refino não a melhora em nada — é a segunda aptidão do catálogo que não usa o valor cheio, junto com canalizar energia.
+
+**Em troca ela não quebra**, e é a única das quatro assim. Não tem duração, não tem teste, não tem PE: enquanto o símbolo estiver de pé, ela está de pé.
+
+**E ela é de graça em PE porque já cobra o turno**, que é o recurso mais caro de uma luta. Cobrar as duas coisas seria cobrar duas vezes pela mesma escolha:
+
+| rodadas segurando | dos seus turnos na luta | Acertos que você evita |
+|---|---|---|
+| 1 | 29% | 1 |
+| 2 | **57%** | 2 |
+| 3 | 86% | 3 |
+
+Evitar dois Acertos custa mais da metade dos seus turnos: **você sobrevive e não contribui.** É resposta de sobrevivência, não de vitória — que é exatamente o que ela é na obra.
+
+**É ela, e não o Domínio Simples, a resposta que chega no nível 6 para as três rotas.** Um marco de Refino, uma vez, e o acerto garantido deixa de ser sentença. Isso é o que torna a Expansão completa jogável, e é o menor preço que o sistema cobra por qualquer coisa.
+
+### Domínio Simples · Classe Passiva 2, refino 4 e nível 10
+
+> **Um domínio pequeno em volta de você, de raio `1,5 m + refino ÷ 2`. Dentro dele o Acerto de uma Expansão não acontece. Custa `1 × a sua maior Classe` de PE por rodada, e ela quebra se os seus pés saírem do chão.**
+
+É o que se ensina, e o que a Miwa e o Kusakabe usam. A diferença para a Cesta Oca não é ser mais forte contra o Acerto — é **você poder lutar dentro dela**, e ela **cobrir quem estiver no raio**.
+
+| refino | 1 | 2 | 4 | 6 | 8 | 10 |
+|---|---|---|---|---|---|---|
+| raio | 1,5 m | 2,5 m | 3,5 m | 4,5 m | 5,5 m | **6,5 m** |
+
+O Domínio Simples da obra tem cerca de 2,21 m, e a fórmula bate nisso no refino 2. **Ela nunca passa de um movimento (9 m)**, e isso é a trava: uma defesa que cercasse o inimigo seria outra peça. O Kusakabe puxando gente para dentro é coisa da Trilha dele, não da aptidão.
+
+### Pétala · Classe Passiva 2, refino 4 e nível 10
+
+> **A energia cobre o seu corpo e devolve o golpe. Quando o Acerto de uma Expansão te alcança, ele é anulado no ponto de contato — `refino ÷ 2` vezes por cena. Custa `1 × a sua maior Classe` de PE por rodada, e ela cai se você perder a concentração.**
+
+Ela não faz domínio nenhum: é a energia no corpo que reage. Segredo dos três clãs — Gojo, Zenin e Kamo —, e o Gojo disse que aprendeu criança e nunca tinha usado.
+
+**Ela não cobre a Expansão inteira, e isso é de propósito.** A completa dispara o Acerto ao abrir e no começo de cada turno do portador:
+
+| refino | Acertos que a Expansão solta | a Pétala devolve |
+|---|---|---|
+| 4 | 3 | 2 |
+| 6 | 4 | 3 |
+| 8 | 5 | 4 |
+| 10 | **6** | **5** |
+
+Sempre sobra um. Se ela devolvesse tudo, o terceiro espaço que a Expansão completa custou deixaria de comprar alguma coisa.
+
+**E ela não para ataque físico** — o Dagon socou o Naobito com a Pétala de pé. Contra um Acerto que é golpe de corpo, ela não faz nada.
+
+### Extensão de Domínio · Classe Passiva 3, refino 7 e nível 14
+
+> **Você se envolve numa camada fina de domínio sem técnica dentro. Ela anula o Acerto de uma Expansão, e faz o seu ataque acertar independentemente da técnica do alvo. Dura `refino` rodadas, custa `1,5 × a sua maior Classe` de PE por rodada — e enquanto ela estiver de pé, você não usa a sua técnica.**
+> **E o que encostar nela é anulado até `1/3 do refino + 1`:** *uma `Classe Passiva`, uma `Regra Própria` ou um feitiço de `Classe` até esse número. Acima dele, passa.*
+
+> ***A segunda linha era "anula qualquer técnica que encostar nela", sem teto, e ela caiu na v0.165.*** *Levantado por um colega do Mizuki, e a decisão é dele:* **"anular qualquer feitiço era bem negativo — anula Classe Passiva, regra e Classe, contanto que seja `1/3` do refino, mas não tudo."**
+>
+> **O número dele reconstrói de fórmula que já tem dono, e não foi ajustado:** *`1/3 do refino + 1` é literalmente a proteção de `cobrir-se` do §6 desta peça.* **No gate — refino `7` — ela para em `3`, e no refino `10` ela chega em `4`.**
+>
+> | o que encosta | a escala dele | o teto alcança |
+> |---|---|---|
+> | `Classe Passiva` | `1` a `3` | **tudo**, já no gate |
+> | `Regra Própria` | `1` a `3` | **tudo**, já no gate |
+> | feitiço de `Classe` | `0` a `7` | `3` no gate, `4` no teto de refino — **metade da escada** |
+>
+> ***O "mas não tudo" tem dono, e é o feitiço:*** *as duas coisas de escala `1`–`3` sempre couberam inteiras, e nunca foi delas que a frase falava.* **O invariante que fica escrito: o teto NUNCA alcança a maior Classe.** *Com refino `10` ele para em `4` contra uma escada que vai a `7`.*
+
+É a única das quatro que também é ataque, e a única Classe Passiva 3. É o que o Jogo e o Hanami usaram contra o Ilimitado do Gojo.
+
+**O preço dela se equilibra sozinho, e é bonito de ver:** ela dura o dobro do que uma Expansão dura, mas o PE é o teto de verdade.
+
+| nv | refino | duração | PE/rodada | segurar até o fim | do dia de um Bastião |
+|---|---|---|---|---|---|
+| 14 | 7 | 7 | 6 | 42 | 75% |
+| 20 | 9 | 9 | 8 | 72 | 90% |
+| 26 | 10 | 10 | 11 | 110 | **106%** |
+| 30 | 10 | 10 | 11 | 110 | 92% |
+
+**No nível 26 um Bastião não consegue segurar até o fim** — ele fica sem PE na nona rodada de dez. A duração é teto, não promessa, e quem tem pouco PE descobre isso antes de quem tem muito. Numa luta normal de 3,5 rodadas ela custa uns 32% do dia, que é o preço de verdade.
+
+E some tudo isso com *"você não lança nada enquanto ela está de pé"*: quem tem feitiço bom paga o dobro por ela.
+
+### Por que o custo por rodada é `1 × maior Classe`
+
+A conta escolheu sozinha. Medido no Bastião, que é o piso de PE do sistema, numa luta de 3,5 rodadas:
+
+| custo por rodada | do dia, por luta | lutas que cabem |
+|---|---|---|
+| metade da Classe | 9% a 18% | 5 a 11 |
+| **`1 × Classe`** | **20% a 26%** | **3 a 4** |
+| `2 × Classe` | 41% a 52% | 1 a 2 |
+
+**O `1 ×` fica exatamente do tamanho do orçamento de lutas do dia.** A exaustão dispara da quarta luta, então dá para segurar a defesa em toda luta de um dia normal e terminar seco bem quando o cansaço chegaria de qualquer jeito. Tensão sem armadilha.
+
+As outras duas quebram nas pontas: com `2 ×` você se defende uma vez e acabou o dia; com metade, o custo cai para 9% no nível 20 e **evapora**.
+
+## 6.6. As duas barreiras — e o gate delas é um relógio
+
+*Escritas na v0.91, e elas eram as duas últimas entradas do catálogo sem número.*
+
+**As duas são ferramenta de preparação e não de luta, e isso não é sabor: é a única forma que a conta deixa.**
+
+> **A régua do projeto diz que dano evitado converte `1` pra `1`.** *Uma barreira que o inimigo precisa quebrar consome nele exatamente a vida dela — então ela **evita a própria vida**.*
+>
+> | vida no teto | quanto ela evitaria | por rodada de luta | em fatias |
+> |---|---|---|---|
+> | `50`, a `Barreira Simples` | 50 de dano | 15,2 | **2,98** |
+> | `200`, a `Cortina` | 200 de dano | 60,6 | **11,93** |
+>
+> **Uma Trilha inteira leva `5,00` fatias, e um marco compra `2,13`.** *Qualquer uma das duas, se coubesse numa luta, seria uma aptidão valendo mais que a Trilha que a ficha escolheu.*
+
+**E gastar a rodada inteira levantando não gateia. Não chega perto.**
+
+*Uma luta dura `3,3` rodadas: gastar uma inteira deixa `2,3` com a barreira de pé, que são `70%` da luta.* **E o câmbio fica a seu favor — uma rodada sua no nível 30 vale `108` de dano, e você a troca por uma barreira que absorve `200`.**
+
+**O que gateia é levantar custar mais do que a luta inteira dura.** `1 minuto` são **dez rodadas** contra uma luta de `3,3`. **Aí ela não cabe, em mesa nenhuma, e nenhum mestre precisa julgar se alguém "está em combate"** — que é a pergunta que sete mesas respondem de sete jeitos.
+
+*E o número já tem casa: `1 minuto` é a duração que o manual usa na Melhoria `Anteparo`.*
+
+### Barreira Simples · sem gate
+
+> **Um minuto para levantar.** Um domo de **raio `6 m`**, ancorado no lugar onde você o ergueu, que **bloqueia passagem e linha de efeito nos dois sentidos**.
+>
+> **Ele tem `5 × refino` de pontos de vida, e cai quando você fica `Inconsciente`.**
+
+**A vida sai de comparação com o manual, e ela fica embaixo de propósito.** *A Melhoria `Anteparo` deixa uma parede com `10 × Classe` de vida — `70` no Classe 7, que é a maior parede que um feitiço monta.* **`5 × refino` dá `50` no teto: menos que a maior parede montada, e por um motivo.** *Aquela custa pontos de montagem dentro de um feitiço e sai numa ação; esta custa um marco e um minuto.* **A que sai rápido pode ser maior; a que é permanente na ficha não pode.**
+
+**Ela é ancorada, e isso é o que a separa de um escudo.** *O domo fica onde foi erguido — você não o leva junto.* **Fechar um cômodo, uma porta, uma escada: é isso que ela faz.**
+
+*Na obra, barreira comum é zona que protege um lugar, e não anteparo portátil.* **A ficção e a conta pediram a mesma coisa.**
+
+### Cortina · exige a `Barreira Simples`
+
+> **Um minuto para levantar.** Ela cobre **um lugar** — um prédio, uma escola, um quarteirão — e **esconde o que está dentro de quem não é feiticeiro**.
+>
+> **Você pendura uma condição sobre quem atravessa.**
+>
+> **Ela tem `20 × refino` de pontos de vida, e cai quando você fica `Inconsciente`.**
+
+**O gate é ter a `Barreira Simples`, e nada mais.** *Sem gate de nível e sem gate de refino:* **o preço é o segundo marco**, e ele é mais caro que qualquer gate de refino, que a linha passiva paga sozinha.
+
+| rota | a `Barreira Simples` abre | a `Cortina` abre |
+|---|---|---|
+| sempre Refino | nível 6 | **nível 10** |
+| meio a meio | nível 10 | **nível 22** |
+| sempre Corpo · sempre Leque | nunca | **nunca** |
+
+***Quem nunca escolhe Refino duas vezes não levanta Cortina, e isso é da obra:*** *cortina exige um nível de habilidade que muitos feiticeiros poderosos não têm, e as condições delas chegam a ser encomendadas a quem sabe fazer.*
+
+**A condição fala de QUEM ATRAVESSA, e de mais nada.** *É o recorte da obra — as condições de uma cortina tratam de energia amaldiçoada e de passagem.*
+
+| a condição pode | a condição não pode |
+|---|---|
+| barrar uma pessoa específica | causar dano a quem entra |
+| deixar entrar quem tem energia amaldiçoada, e mais ninguém | mover a cortina, ou fazer ela seguir você |
+| impedir que quem está dentro saia | dar bônus a quem está dentro |
+| deixar passar quem você nomeou na hora de levantar | esconder de quem é feiticeiro — o efeito base já é o contrário |
+
+*O exemplar da obra é o feiticeiro que levantou uma cortina que deixava outros feiticeiros passarem e barrava só o Gojo.*
+
+> **O tamanho dela não tem metro, e isso é decisão e não descuido.** *Ela é a única coisa do sistema cujo tamanho **nunca entra numa rolagem**: dois mestres discordarem se ela pega um quarteirão ou dois não muda número nenhum, porque nada dentro dela se mede em metros.* **Está escrito aqui justamente para ninguém tentar usá-la como medida de combate** — quem quiser fechar uma distância com energia usa a `Barreira Simples`, que tem raio.
+
+## 6.7. Aptidão Própria — e a régua dela já existia, no manual
+
+*Escrita na v0.92, e ela fecha o catálogo.* **Esta peça listou "falta a régua do `Efeito Próprio`" por sessenta versões, e a régua está escrita no manual, numa tabela, com o critério de desempate incluído.**
+
+> **`Efeito Próprio · Passiva Própria` — *Em quantas cenas por arco isso vai importar?*** *Uma cena: **Leve**. Metade: **Média**. Quase toda: **Pesada**. **Na dúvida, Pesada.***
+
+**E as três respostas caem exatamente nos três degraus da escada de Classe Passiva da seção 4.**
+
+| em quantas cenas por arco | o manual cobra | e a escada desta peça diz |
+|---|---|---|
+| **uma** | Leve | **Classe Passiva 1** — pequeno, condicional, ou de informação |
+| **metade** | Média | **Classe Passiva 2** — reativo, com limite por cena ou por descanso |
+| **quase toda** | Pesada | **Classe Passiva 3** — permanente. Muda como você joga |
+
+**A escada desta peça mede FORMA; a do manual mede FREQUÊNCIA. E as duas caem nos mesmos três degraus.** *Não é coincidência: condicional dispara pouco, reativo com limite dispara em parte, permanente dispara sempre.* **É a mesma escada vista pelos dois lados**, e é por isso que a seção 4 pôde dizer *"ela não mede quanto — mede o quê"* sem que isso deixasse a aptidão sem preço.
+
+> ***E aí a trava que já estava escrita ganha número:*** *`Classe Passiva 1 ou 2, nunca 3`* **quer dizer que uma `Aptidão Própria` importa em NO MÁXIMO metade das cenas de um arco.** *Se a proposta importar em quase toda cena, ela é Classe Passiva 3, e Classe Passiva 3 está fora — não por ser forte, mas por ser permanente.*
+
+### Aptidão Própria · Classe Passiva 1 ou 2, uma vez na ficha
+
+> **Classe Passiva 1 ou 2, e uma vez na ficha inteira.**
+>
+> **Você escreve, com o mestre, uma aptidão que não está no catálogo.** *Antes da sessão, e nunca no meio dela.*
+>
+> **A ficha registra duas coisas: a frase, e a resposta de *"em quantas cenas por arco isso vai importar?"***
+
+**Os cinco requisitos são o molde da `Regra Própria` do manual, com um trocado — e o trocado está explicado abaixo.**
+
+1. **Uma frase.**
+2. **Verificável** — a mesa aponta o momento em que ela disparou.
+3. **Não é atalho** — ela não repete uma das treze entradas do catálogo com outro nome, e não entrega uma que o seu gate ainda não alcança.
+4. **Sem dado de dano** — a cerca da peça 5 §4 vale aqui inteira.
+5. **Com limite por cena**, se ela for Classe Passiva 2.
+
+> **O requisito que NÃO veio é a simetria.** *A `Regra Própria` do manual exige *"vale contra você nas mesmas condições"* porque ela **impõe uma regra ao mundo** — e uma regra que só pega os outros é a definição de abuso.* **Uma `Aptidão Própria` não impõe regra a ninguém: ela muda o que VOCÊ faz.** *Exigir simetria dela mataria metade das propostas legítimas por um motivo que não se aplica.*
+>
+> **No lugar entrou o nº 3**, e ele guarda o risco que é desta camada e não daquela: ***a `Aptidão Própria` virar a porta dos fundos do catálogo.*** *Sem ele, um jogador escreve a `Energia Reversa` com outro nome e pula o gate de refino 7.*
+
+### O que a mesa lê, e por que isso é o que faz ela funcionar em sete mesas
+
+**A ficha carrega a RESPOSTA da pergunta de frequência, e não só o texto.** *Um segundo mestre lê "metade das cenas" e sabe o degrau; lendo só a frase, ele reconstrói a intenção — e sete mestres reconstroem sete intenções.*
+
+**E o desempate é o do manual, com o sinal a favor da mesa: na dúvida, Pesada.** *Aqui isso quer dizer **Classe Passiva 3**, e Classe Passiva 3 está fora do que a `Aptidão Própria` alcança.* **Então dúvida reprova a proposta.** *É o único lugar do sistema em que "não sei" tem resposta escrita, e ela é "não".*
+
+### Três exemplos, e um deles é recusado
+
+| proposta | em quantas cenas | degrau | veredito |
+|---|---|---|---|
+| *"você sabe se um objeto foi tocado por energia amaldiçoada nas últimas 24 horas"* | uma por arco | Classe Passiva 1 | **passa** |
+| *"uma vez por cena, quando um aliado a até 9 m falha um Teste de Resistência, ele rerrola"* | metade | Classe Passiva 2 | **passa** |
+| *"o seu deslocamento é `+3 m`"* | quase toda | **Classe Passiva 3** | **recusada** — permanente |
+
+*A terceira é o exemplo mais útil das três, porque ela é pequena.* **`+3 m` sempre vale `0,35` fatia na tabela da peça 5 §4 — é barato, e mesmo assim está fora.** *A trava não é de tamanho: é de forma.* **Uma coisa que está sempre ligada é Classe Passiva 3, e a `Aptidão Própria` não alcança a 3.**
+
+> **A aptidão não custa espaço de feitiço, e a `Passiva Própria` do manual custa.** *São duas economias, e a seção 4 já dizia isso.* **Quem quiser a mesma ficção com Classe Passiva 3 tem a `Passiva Própria` do lado do manual, pagando em espaço.** *A porta existe; ela só não é esta.*
+
+## 6.8. As Bênçãos e a Lapidação — a contraparte, e ela espelha a forma e não o conteúdo
+
+*A pergunta está aberta desde a v0.38 e mora no §10 desta peça, em *"O que ainda não foi decidido"*: **o catálogo das Bênçãos espelha o das aptidões entrada por entrada, ou tem lista própria?** A v0.116 foi responder e a contagem respondeu antes de qualquer conta.*
+
+**A Restrição Celestial pelo ramo da Maki não tem energia amaldiçoada — nenhuma, não pouca.** *Então ela não tem aptidão nem refino: tem **Bênçãos** e **Lapidação**, a mesma máquina com outra métrica.* **A regra está na peça 9 §5, onde ela devia estar desde a v0.39.**
+
+### A contagem: catorze das quinze morrem, e a que sobra não tem conteúdo
+
+| # | aptidão | o que ela gasta | sobrevive sem energia? |
+|---|---|---|---|
+| 1 | `Cobrir-se de energia` | a energia, no nome | **não** |
+| 2 | `Canalizar energia` | a energia — e é ela que fere maldição | **não** |
+| 3 | `Projetar energia` | idem | **não** |
+| 4 | `Cesta Oca de Vime` | uma esfera de barreira | **não** |
+| 5 | `Domínio Simples` | um domínio próprio | **não** |
+| 6 | `Pétala` | *cobre o corpo de energia*, e é ela que devolve o golpe | **não** |
+| 7 | `Extensão de Domínio` | idem | **não** |
+| 8 | `Barreira Simples` | barreira | **não** |
+| 9 | `Cortina` | barreira | **não** |
+| 10 | `Energia Reversa` | o nome | **não** |
+| 11–12 | `Kokusen Melhorado` · `Kokusen Constante` | energia aplicada no impacto | **não** |
+| 13 | `Circulação` | a energia reversa, que é energia | **não** |
+| 14 | `Regravação` | a energia reversa, e a gravação da técnica | **não** |
+| 15 | `Aptidão Própria` | nada — ela é **formato**, e não conteúdo | **sim, e é a única** |
+
+**Uma de quinze, e é a que não diz o que faz.** *Espelhar entrada por entrada nunca foi uma escolha pior: é impossível, e a razão é estrutural — este catálogo inteiro é construído em cima do recurso que aquela Origem não tem.* **A pergunta some, e o que fica no lugar dela é uma lista própria com tamanho derivado.**
+
+*As duas conferidas na fonte, porque as duas pareciam candidatas:* **o kokusen é energia amaldiçoada aplicada no impacto dentro de um milionésimo de segundo, e a `Pétala` cobre o usuário de energia — é a energia que revida, não o corpo.** *A Maki ganha energia amaldiçoada mais tarde na obra, depois da morte da Mai; a Origem daqui modela o estado de energia zero, que é o do Toji do começo ao fim.*
+
+### ⚠ Correção — as duas gratuitas NÃO são delegadas para fora: elas são Bênçãos, e a v0.116 escreveu isso errado
+
+*Achado quando o Mizuki apontou o que estava faltando: "o ponto não é espelhar, mas ser a **contraparte**."* **A v0.116 tinha delegado as duas vagas gratuitas inteiras para fora do catálogo — a proteção para o uniforme (peça 14) e o resto para a ferramenta amaldiçoada (peça 16) —, e isso subestimava a pergunta.** *Ferir maldição de fato não tem outro dono: continua sendo a ferramenta, e a peça 5 §3 já dizia por quê ("a Maki só compete porque a ferramenta carrega a energia por ela").* **Mas proteção sem equipamento não devia ter sido delegada — ela é exatamente o tipo de coisa que uma contraparte tem de ter, com o mesmo peso e o mesmo lugar na ficha.**
+
+**A primeira gratuita é `cobrir-se`, portada sem inventar número.** *A fórmula já existe, peça 11 §6: `1/3 do refino + 1`. Aqui o divisor é o mesmo e o que muda é só o nome do recurso:*
+
+> **`1/3 da Lapidação + 1`, grátis na Lapidação `1`.** *Mesma curva de `1` a `4`, mesmas regras de interação — Traje e Revestimento desligam, escudo soma.*
+> **E como Reação, Redução de Dano de `1,5 × Lapidação` num golpe, por `2` PE** — e você fica sem proteção até o fim do seu próximo turno.
+
+> ***A Reação ficou de fora até a v0.165, e a pergunta era de regra e não de sabor.*** *A `cobrir-se` do feiticeiro tem duas metades — a proteção passiva e a Reação —, e a v0.118 portou só a primeira sem dizer nada da segunda.* **Decisão do Mizuki: ela vem junto.**
+
+> **Ela não inventa número nenhum:** *é a mesma substituição da linha de cima, refino por Lapidação, com o mesmo `1,5 ×` e o mesmo custo de `2` PE.* **E a rota tem com o que pagar desde a v0.120**, quando `PE` passou a ler `Pontos de Esforço` além de `Pontos de Energia` — *era esse o lado que estava fechado quando a v0.118 escreveu a Bênção.*
+
+**Isso não move o teto de Defesa da peça 14 §3.** *O teto é derivado de `10 + teto de atributo + cobrir(teto de refino)`, e esta Bênção usa a MESMA função com a MESMA faixa `1`–`10` — ela não é um recurso novo, é o recurso de sempre com outro nome.* **A rota deixa de ter proteção zero e passa a ter a curva que todo mundo já tem**, o que fecha o buraco que a peça 14 §9 registrava desde a v0.48 (*"sem energia nenhuma... não tem cobrir-se para desligar"*) — aquela frase estava certa e vira falsa aqui.
+
+**A segunda gratuita é o `Estímulo Muscular`, e ela tem mecânica de verdade.** *A primeira leitura foi dar a ela o peso de `canalizar energia`, que a §6 registra como **"nada — vive no orçamento do Fundamento"**.* ***Decisão do Mizuki: não.*** **O `canalizar` em golpe vai ganhar mecânica quando a Técnica Marcial chegar, e a contraparte não pode nascer valendo zero à espera disso.**
+
+> **`Estímulo Muscular` · grátis na Lapidação `1`.** Escolha **uma perícia** e **um Teste de Resistência** na criação, e eles não mudam.
+> **`1×` por cena, e `2×` se a sua Lapidação for `10`.** Cada uso dá **vantagem** numa rolagem de um dos dois.
+> **E ela carrega o dano na arma**, com a Lapidação no lugar do refino: `1d4` a cada `3` pontos, e no `10` os dados viram `d6` com um dado a mais. **A régua é a §6.9**, e os números são os mesmos.
+
+> **⚠ A segunda metade entrou na v0.158, e ela é conserto de um lugar em que a contraparte tinha ficado para trás.** *A v0.147 escreveu o dano na arma nos dois lados do livro e em peça nenhuma; esta seção continuou publicando só o relógio.* **Ela não é entrega nova: é a mesma que a rota já joga desde aquela versão, chegando à peça que devia ser dona dela.**
+
+**Os três números saem de regra que já existe, e nenhum deles é escolha nova:**
+
+| a peça | o que ela decide aqui |
+|---|---|
+| **§2 desta peça** | frequência é um dos cinco eixos que o refino pode escalar — e é por ele que o segundo uso pode existir |
+| **peça 10 §5** | *"se o gatilho é estreito — **uma perícia nomeada, um Teste de Resistência nomeado** —, `por cena` é seguro"*. **É literalmente esta forma.** *Fosse o gatilho largo, a mesma seção mandaria descer para `por descanso curto`* |
+| **peça 1 §5.4** | o arredondamento: ganho desce, e o que você ganha nunca fica abaixo de `1` |
+
+| a rota | nv2 | nv14 | nv22 | nv30 |
+|---|---|---|---|---|
+| nunca escolhe Lapidação — chega a `8` | 1 | 1 | 1 | **1** |
+| meio a meio — chega a `10` no nv26 | 1 | 1 | 1 | **2** |
+| sempre escolhe — chega a `10` no nv22 | 1 | 1 | **2** | 2 |
+
+> ***Decisão do Mizuki:*** ***"se for pra ser em uma perícia e um TR, honestamente"***. **A primeira redação dava `1/3 da Lapidação`, que chega a `3` usos por cena — e num gatilho de duas coisas nomeadas isso é muito.**
+>
+> **⚠ E a segunda redação escrevia `1/5 da Lapidação, mínimo 1`, que é a mesma coisa vestida de fórmula.** *`1/5` só morde uma vez em dez pontos: o piso de `1` carrega a Lapidação `1` à `9` e o divisor só age no `10`.* **Isso é o defeito que a v0.68 achou no arredondamento do `Servo` — uma fórmula que a escala nunca deixa morder vira letra morta**, e escrever degrau único como fração veste de conta uma decisão que é de sabor. *A regra passou a dizer o que ela faz.*
+>
+> **Se um dia ela precisar escalar de verdade, o divisor é `1/4`** — ele daria `2` a partir da Lapidação `8`, alcançando também quem nunca escolhe Lapidação. *Fica registrado como a alternativa, e não como o que está valendo.*
+
+**E isso resolve sozinho a comparação com o Legado `Repetição`**, que a primeira redação tinha de declarar como diferença aceita: *a Bênção vale o mesmo `1×` por cena que ele durante quase toda a campanha, e só encosta na frente no último terço.*
+
+> **⚠ E "escolha um atributo" foi medido e reprovou, com o número.** *Era a forma mais elegante — ela deixava a Bênção seguir a rota mental ou física que a ficha escolheu.* **Mas o quadro da peça 7 §2 distribui as vinte e três perícias assim: Força `1`, Destreza `4`, Essência `7`, Inteligência `11`, Constituição `0`.** *Amarrar a Bênção a um atributo entregaria onze perícias a quem escolhesse Inteligência e nenhuma a quem escolhesse Constituição.* **Espalhamento de `11` para `0` numa entrada gratuita.** *Uma perícia nomeada mais um Teste de Resistência nomeado dá `1 + 1` para todo mundo, e continua deixando a escolha ser mental — `Ocultismo` mais `Intelecto` é uma ficha tão legal quanto `Atletismo` mais `Físico`.*
+
+*E a diferença que sobra para o Legado `Repetição` — "uma vez por cena, vantagem num Teste de Resistência escolhido", peça 13 — é a perícia a mais e o segundo uso no fim.* **Nenhuma contém a outra pelo teste da peça 13 §2**, e o que sobra de vantagem é a aplicação da regra que a peça 9 §4 já escreve para o Sem Técnica: **a rota não pode ser "os outros menos o Fundamento"**. *Esta perde o Fundamento inteiro, o eixo `Leque` do marco e a linha de espaço de feitiço.*
+
+**E as quatro anti-domínio continuam cobertas por fora, e isso não mudou.** *A peça 16 §6 tem o `Anátema` — "o contato anula técnica amaldiçoada", que é a Lança Invertida do Céu — e o `Quebranto`, que anula um feitiço como Reação.* **O gate delas foi escrito de propósito sem a metade de refino, para não trancar a peça na cara de quem não tem refino nenhum.**
+
+### O tamanho da lista é derivado, e são catorze — não doze
+
+**Ela não escolhe o próprio tamanho.** *O §3 desta peça fixa que a rota pura de Refino precisa de **dez** aptidões — sete marcos, com os três últimos levando duas —, e o catálogo de aptidões tem treze pagas com três de folga, mais as duas gratuitas do refino `1`.* **A rota pura de Lapidação é a mesma rota com outro nome, e ela herda a MESMA derivação: duas gratuitas na Lapidação `1`, e doze pagas com duas de folga.**
+
+> **Catorze Bênçãos: `cobrir-se` e `estímulo muscular` grátis na Lapidação `1`, doze compradas com marco.** *A forma espelhava o catálogo de aptidões espaço por espaço, mesmo o conteúdo não espelhando quase nada.* **Mais a `Bênção Própria`, que é a única entrada que espelha de verdade** — ela é formato, e formato atravessa.
+
+> **⚠ Os dois lados ficaram desencontrados por uma versão, e vale saber por quê.** *O `Kokusen` base saiu da lista de compráveis na v0.202 e a Restrição Celestial não tem contraparte dele — kokusen é energia amaldiçoada aplicada no impacto, e aquela rota não tem energia nenhuma.* **A v0.203 fechou o vão pelo outro lado, com a `Circulação`**, e as duas voltaram a doze pagas. *O que sempre espelhou não foi a lista: foi a derivação, e as duas se medem contra os mesmos dez picks da rota pura.* **A v0.239 abriu o vão de novo, pelo lado do feiticeiro:** *a `Regravação` levou as aptidões a treze pagas, e as Bênçãos ficam em doze.* **É o caso que o aviso do fim desta seção prevê: o catálogo do feiticeiro cresce, a folga cresce junto, e o piso de `10` não se move.**
+
+> **⚠⚠ Este parágrafo dizia o contrário até a v0.122, e ele era verdade quando foi escrito.** *Ele dizia: "o marco perde um dos três eixos, para as duas rotas que não escrevem Fundamento — o `Leque` compra `+1 feitiço e uma Passiva`, e as duas coisas são do Fundamento. Sobram `Corpo` e `Lapidação`, e a linha de graça perde o `+1 espaço de feitiço`, que também não tem onde cair."*
+>
+> **A peça 20 deu lista a ela.** *A Técnica Marcial é a máquina do Fundamento com o corpo no lugar da energia: ela tem `Kata`, tem Passivas e tem espaços de feitiço conhecido.* **Então o `Leque` tem onde cair, e o `+1 espaço` da linha de graça também.**
+
+**O marco desta rota tem os três eixos, iguais aos de todo mundo: `Corpo`, `Lapidação` e `Leque`.**
+
+**Nenhum número se move com isso, e vale dizer por quê.** *O `10` de picks que a rota pura de Lapidação precisa sai dos sete marcos com os três últimos levando duas, e ele mora no §3 — ele não depende de quantos eixos existem, e sim de quantas vezes você escolhe o mesmo.* **A folga de duas entradas no catálogo continua de pé, e é ela que impede a rota de virar corredor.**
+
+*O que se move é a pressão:* **a frase antiga concluía que "a rota sem energia é empurrada para a Lapidação mais forte do que uma ficha comum é empurrada para o Refino, porque ela não tem um segundo eixo de poder para onde ir".** *Ela tem, e a conclusão cai junto com a premissa.*
+
+### As doze pagas
+
+***Decisão do Mizuki:*** **elas são mecânica física, e o gate de atributo do §5 é quem deixa cada ficha escolher a área que quer seguir — inclusive os atributos mentais.**
+
+**É por isso que o ramo mudou de nome.** *Ele se chamava `energia pelo corpo`, e o nome prometia corpo.* **Agora ele se chama `sem energia`**, porque o que a Origem fixa é a perda. *Um restringido de Inteligência alta que nunca levantou peso é uma ficha legítima, e o nome antigo dizia que não era.* **A troca está na peça 9 §5.**
+
+| # | Bênção | o que ela faz | Classe Passiva | gate |
+|---|---|---|---|---|
+| 1 | **`Ímpeto`** | você atravessa o campo num piscar, e o chão deixa de ser obrigatório | 2 | **Destreza 4** |
+| 2 | **`Casco`** | o golpe entra e não derruba | 3 | **Constituição 4** |
+| 3 | **`Faro`** | o corpo acha o que a energia acharia | 1 | — |
+| 4 | **`Presilha`** | agarrar, derrubar e tirar do lugar param de falhar | 2 | **Força 4** |
+| 5 | **`Vulto`** | você percebe sem enxergar | 2 | — |
+| 6 | **`Sem Pegada`** | você não deixa por onde te seguirem | 1 | — |
+| 7 | **`Antecipar`** | o efeito que já te pegou uma vez pega menos na segunda | 2 | **Inteligência 4** |
+| 8 | **`Assombro`** | você assusta sem ter energia para assustar | 1 | **Essência 4** |
+| 9 | **`Vigília`** | o corpo não para quando devia | 2 | — |
+| 10 | **`Campo`** | você lê o lugar e o alvo mais rápido que os outros | 1 | — |
+| 11 | **`Esteio`** | o dado deixa de te trair no que você é bom | 3 | — |
+| 12 | **`Bênção Própria`** | a que você escreve | 1 ou 2 | uma vez na ficha |
+
+**Cinco gates, um por atributo, e esse é o teto.** *A conta está abaixo, em "Por que só cinco".*
+
+#### As que precisam de número
+
+> **`Ímpeto` · Classe Passiva 2 · Destreza 4.** Como Ação Bônus, você se move até o seu deslocamento sem provocar ataque de oportunidade.
+> **E o chão deixa de ser obrigatório:** você anda em parede, em água e no ar enquanto estiver se movendo. Se terminar o movimento sem apoio, você cai.
+
+> **`Casco` · Classe Passiva 3 · Constituição 4.** Você ganha **`+1` de vida a cada dois níveis** e **`+1`** em todo Teste de Resistência de Vigor.
+
+*No nível 30 são `+14` de vida, e as rodadas para cair sob foco vão de `2,9` a `3,1` no Emanador e de `4,2` a `4,4` no Bastião.* **A trava da peça 1 §5.1 — média dos dados mais Constituição típica perto de `8` — vai de `8,0` para `8,5`, dentro da tolerância de `1,0`.** *O `+1` por nível, que foi a primeira proposta, levava a `9,0` e estourava.*
+
+> **`Presilha` · Classe Passiva 2 · Força 4.** Quando você erra uma rolagem para **agarrar, derrubar ou tirar alguém do lugar**, role de novo. Uma vez por rodada.
+
+> **`Vulto` · Classe Passiva 2.** Você percebe tudo o que estiver a **`1,5 m × metade da Lapidação`** de você sem precisar enxergar. *No teto são `7,5 m`.*
+
+> **`Campo` · Classe Passiva 1.** A ação **`Estudar`** custa a sua Ação Bônus em vez da Ação Padrão, **uma vez por cena**.
+
+*O relógio não é decoração.* **A peça 3 §3.1 põe `1× por cena` no `Ler o Ambiente` porque a ação obriga o mestre a produzir conteúdo, e sem teto ela vira imposto de improviso.** *Um `Estudar` de bônus ilimitado cai no mesmo buraco.* **A separação por alvo continua de pé — `Ler o Ambiente` é sobre o lugar, `Estudar` é sobre a criatura —, e é ela que impede as duas de se dominarem.**
+
+> **`Esteio` · Classe Passiva 3.** Escolha **um atributo** na criação. Num Teste de Resistência daquele atributo, se o `d20` sair abaixo da sua **Lapidação**, ele vale a sua Lapidação.
+> **O piso nunca passa do atributo escolhido mais `2`** — então o máximo dele é `8`.
+
+**É a `Indomitable Might` do Bárbaro do d20, e o teto é o que a separa de imunidade.** *Contra a CD de um conjurador do seu nível, o `d20` precisa sempre de `8`* — então o `Esteio` só alcança essa altura quando o atributo escolhido chega a `6`, que é o nível 26. *Abaixo disso ele resolve o médio e deixa o difícil de pé.*
+
+| o que você precisa tirar | com `Esteio` no teto |
+|---|---|
+| CD 6 — fácil | automático |
+| CD 10 — média | automático |
+| CD 14 — difícil | automático |
+| CD 18 — muito difícil | automático |
+| CD 22 — extrema | ainda rola |
+| CD 26 — quase impossível | ainda rola |
+
+> **A linha da média mudou de coluna, e ela estava errada antes.** *A tabela dizia que média "ainda rola" enquanto a prosa logo acima dizia que o `Esteio` "resolve o médio e deixa o difícil de pé".* **A prosa estava certa:** com o piso em `8` e o bônus em `10` no nível 26, a antiga CD 18 pedia exatamente `8` — e piso igual ao pedido é automático. *A escada nova põe média em `16`, que pede `6`, então a tabela e a prosa passam a dizer a mesma coisa por dois motivos ao mesmo tempo.*
+
+#### As que não precisam
+
+**`Faro`, `Sem Pegada`, `Assombro` e `Vigília` não têm número**, e isso é a escada de Classe Passiva funcionando. *A `1` é "efeito pequeno, condicional, ou de informação" (§4), e três delas moram ali.*
+
+> **⚠ O `Antecipar` subiu para Classe Passiva `2` na v0.130, e o espelho com o catálogo de aptidões quebrou de propósito.** ***Achado dos jogadores, e o Mizuki concordou:*** *a versão antiga — "você sabe qual foi a última ação que ela tomou" — era informação que a mesa não usava.* **A nova entrega vantagem sem limite de uso, e vantagem sem limite não cabe na faixa da `1`**, que é *"efeito pequeno, condicional, ou de informação"*. *O que a segura não é relógio: é ter de **falhar primeiro**.*
+
+**As cinco ganharam texto na v0.122**, junto com a peça 20 — *era o que a seção "O que ainda espera a Técnica Marcial" listava, e o motivo era saber contra o que medir uma rodada desta rota.*
+
+> **`Faro` · Classe Passiva 1.** Você segue rastro de feiticeiro e de maldição pelo que o corpo deles deixou — cheiro, marca, o que ficou fora do lugar. **E, encostando no que uma técnica fez, você sabe o que ela fez ali**, sem saber de quem é.
+
+*É o buraco que o `Presságio` da peça 16 tapa por fora, e que a Origem tem porque **não pode ter `Sentir Energia`** — a única perícia do sistema que uma Origem inteira não alcança.* **Ele não diz onde a coisa está agora e não identifica ninguém:** rastro é passado, e é isso que o mantém na Classe Passiva 1.
+
+> **`Sem Pegada` · Classe Passiva 1.** Você não deixa rastro físico: pegada, cheiro, marca, som de passo. **Nem `Faro`, nem cão, nem técnica de rastreamento acham por onde você passou.**
+> *Quem te viu passar continua sabendo. Isto apaga o vestígio, não a testemunha.*
+
+*A contraparte declarada é o `Faro`, que é a Bênção logo acima, e as duas se anulam de propósito — **duas fichas desta Origem numa perseguição empatam**, o que é o resultado certo.* **Não é furtividade:** `Furtividade` continua sendo a perícia, e esta entrada não soma nada nela.
+
+> **`Antecipar` · Classe Passiva 2 · Inteligência 4.** Quando você **falha** num Teste de Resistência contra um efeito, você passa a rolar **com vantagem** contra aquele mesmo efeito pelo resto da cena.
+>
+> *O corpo aprende o golpe apanhando dele. Ela não tem relógio, e o que a limita é o preço de entrada: sem a falha, ela não liga.*
+> *Você lê o corpo: peso, guarda, para onde os olhos foram. Energia não entra nisso.*
+
+*Ela é a contraparte da `Leitura` do manual — "você identifica a Classe e a Forma de qualquer feitiço conjurado a até 18 m" —, e a diferença é a fonte: **a `Leitura` lê energia, e esta lê postura.*** **Por isso ela alcança quem não conjura, e é pior contra quem conjura de longe.**
+
+> **`Assombro` · Classe Passiva 1 · Essência 4.** Uma vez por cena, ao entrar numa cena ou ao ser visto pela primeira vez, escolha uma criatura que enxerga você. **Ela faz um Teste de Resistência de Espírito contra a CD da sua técnica ou fica `Amedrontada` até o fim do próximo turno dela.**
+
+*O molde é a `Peso da Presença` do manual, que faz isso em área contra inimigos fracos e sem escolher.* **Esta escolhe um e não tem corte de força, e o relógio de `1×` por cena é o que separa as duas.** *A CD sai da peça 1: `8 + atributo da técnica + maestria`, e o gate de Essência é o atributo que a alimenta — a trava do §5 vale, então **a Essência não entra duas vezes**.*
+
+> **`Vigília` · Classe Passiva 2.** **Você conta um degrau de exaustão a menos do que tem**, para todo efeito. O degrau continua marcado na ficha; o que muda é o que ele cobra de você.
+
+*A peça 10 §4 tem três degraus numerados, e ele segura um.* **É Classe Passiva 2 e não 1 porque ele encosta numa escada com preço**, e a escada de Classe do §4 põe "efeito reativo, com limite" na 2. *Ela é o que o Toji é na obra: o corpo não para quando devia.*
+
+> **⚠ E ela não vira imunidade, porque a escada não tem degrau zero.** *Com três degraus e um a menos, o pior caso continua sendo dois — e o descanso longo continua limpando pelo mesmo ritmo.* **Se a escada de exaustão ganhar um quarto degrau, esta entrada tem de ser relida**, porque um a menos de quatro é uma fração diferente de um a menos de três.
+
+#### Por que só cinco gates, e não doze
+
+**A rota pura de Lapidação escolhe Lapidação nos sete marcos, então ela não escolhe `Corpo` nenhuma vez.** *Ela tem `9` pontos de atributo da criação mais `7` da linha de graça: `16` no total, e o melhor arranjo é `6/6/4/0/0`.* **Dois atributos no teto e um terceiro em `4` — ela passa em três gates de cinco.**
+
+**E ela precisa de `10` picks de um catálogo de `12`.**
+
+| Bênçãos com gate | ela alcança |
+|---|---|
+| 3 | 10,8 |
+| **5** | **10,0** |
+| 6 | 9,6 |
+| 12 | 7,2 |
+
+> **Acima de cinco a rota pura deixa de fechar.** *Gatear as doze, que foi a primeira ideia, a deixaria alcançando `7` dos `10` picks que ela precisa.*
+
+***Decisão do Mizuki: cinco, um por atributo — separação máxima, e folga zero.*** *A alternativa medida era três gates, que devolveria a folga de duas entradas que o §3 pede, ao preço de dois atributos ficarem sem cor.*
+
+#### A forma da entrada sai do atributo do gate
+
+***Achado do Mizuki, e ele é maior que o caso que o produziu:*** ***"seria ideal colocar habilidades que não envolvem perícias nas que têm requisitos de Constituição"***. **O quadro da peça 7 §2 obriga:**
+
+| atributo do gate | perícias | a entrada pode ser sobre perícia? |
+|---|---|---|
+| Inteligência | 11 | sim, e sobra |
+| Essência | 7 | sim |
+| Destreza | 4 | sim |
+| **Força** | **1** | quase não — `Atletismo` vira a entrada inteira |
+| **Constituição** | **0** | **não. Não existe perícia para ela** |
+
+> **Quanto menos perícias o atributo do gate tem, mais a entrada tem de ser FEITO em vez de rolagem.** *Numa gateada em Constituição, feito é a única forma possível.*
+
+*O levantamento externo concorda nas duas fontes:* **em D&D os dois feats de Constituição — `Tough` e `Durable` — não tocam em teste de perícia nenhum**, e a obra descreve a Restrição Celestial como *sheer physical prowess*. **É por isso que o `Casco` é vida e a `Presilha` é manobra, e nenhum dos dois é bônus de perícia.**
+
+**E a trava do §5 vale inteira:** *uma Bênção gateada num atributo não soma aquele atributo na rolagem dela.* **Você paga o atributo para destravar ou o usa na conta, nunca os dois.**
+
+
+### A `Bênção Própria` é a mesma máquina da `Aptidão Própria`
+
+***Decisão do Mizuki:*** **quem não tem energia também escreve a própria, e vale a mesma trava dos dois lados.**
+
+> **`Bênção Própria` · uma vez na ficha inteira.** *Mesmo molde da `Aptidão Própria` da §6.7:* **`Classe Passiva 1 ou 2, nunca 3`**, sem valor numérico próprio, e ela não pode repetir uma das doze com outro nome nem entregar uma que o seu gate não alcança.
+
+**O `uma vez na ficha` é da ficha inteira e não do catálogo** — vale para o feiticeiro e para o sem energia igual, e nenhuma ficha carrega duas. *A régua de frequência que preça as duas é a mesma, e ela é do manual: **uma cena por arco é Leve, metade é Média, quase toda é Pesada — na dúvida, Pesada***, e a `Própria` não alcança a Classe Passiva 3, então **a dúvida reprova a proposta**.
+
+> **⚠ E o tamanho das duas listas é derivado, não fixo — isso importa porque elas vão crescer.** *O Mizuki já registrou que pretende acrescentar aptidões ao catálogo do feiticeiro.* **As doze pagas de cada lado saem de uma conta só: a rota pura precisa de `10` (sete marcos, os três últimos levando duas), e o catálogo carrega `+2` de folga para que escolher qual deixar de fora seja escolha e não falta de cardápio.** *Se o marco mudar, as duas listas mudam junto; se o catálogo do feiticeiro crescer, a folga cresce e o piso de `10` não se move.* **O número que não pode ser copiado à mão é o `10`, e ele mora no §3.**
+
+### ~~O que ainda espera a Técnica Marcial~~ — nada mais espera, desde a v0.122
+
+**O que faltava era o texto de cinco das doze, e ele está escrito acima.** *`Faro`, `Sem Pegada`, `Antecipar`, `Assombro` e `Vigília` tinham só a linha da tabela; as outras sete já tinham bloco de regra desde a v0.118.*
+
+*O motivo da espera era o que a peça 16 §2 registrou:* ***"o dano por rodada da rota sem energia — magnitude, e ela é peça"***. **Escrever as doze antes dela seria escolher o orçamento da peça que ainda não existia**, que é o erro que o `RASCUNHO-trilhas.md` §3 registra como a única recomendação de método dele: *a régua vem antes do catálogo*.
+
+> **E a régua chegou menor do que a espera fazia parecer.** *A peça 20 não inventou orçamento nenhum: ela herdou o do Fundamento inteiro.* **Então as cinco não precisaram de número — precisaram de saber contra o que uma rodada desta rota se mede**, e a resposta é *contra a mesma coisa que a de todo mundo*.
+
+*O que NÃO espera mais:* **se espelha** (o conteúdo não, a forma sim), **quantas são** (catorze: duas grátis e doze pagas, mais a `Bênção Própria`), **as duas gratuitas** (`Defesa sem Armadura` portada e o `Estímulo Muscular`, as duas escritas acima com número), **o que as escala** (a Lapidação, `1` a `10`, mesmos degraus do §5), **como as doze se separam** (gate de atributo, o sexto formato), **e o que não precisa entrar** (ferir maldição e anti-domínio, que já têm dono na peça 16).
+
+## 6.9. O dano na arma — a exceção da §2, com o incentivo escrito
+
+*Escrito na v0.158. Ele entrou no livro na v0.147 e passou onze versões **sem peça, sem validador e sem conta** — o único dado do sistema nessa situação. Este é o dono.*
+
+**Duas entradas gratuitas carregam ele, uma de cada lado da máquina:** o `canalizar energia` do feiticeiro, na §6, e o `Estímulo Muscular` da rota sem energia, na §6.8. *A regra é a mesma nas duas; o que muda é o nome do recurso — refino de um lado, Lapidação do outro.*
+
+> **Os seus ataques com arma causam `1d4` de dano a mais a cada `3` pontos de refino.**
+> **No refino `10` os dados viram `d6` e entra um dado a mais.**
+> **Só arma.** Ele não entra em feitiço nem em Kata. E se o mesmo ataque já estiver carregando um feitiço de dano de `Classe 0` ou mais — como no nível 27 da `Brasa` —, este dano **não** se soma por cima.
+
+### A escada, e o último degrau vale `2,6×` cada um dos outros
+
+| refino | dados | dano a mais | o degrau |
+|---|---|---|---|
+| `1` · `2` | — | `0,0` | — |
+| **`3`** | `1d4` | `2,5` | **`+2,5`** |
+| `4` · `5` | `1d4` | `2,5` | — |
+| **`6`** | `2d4` | `5,0` | **`+2,5`** |
+| `7` · `8` | `2d4` | `5,0` | — |
+| **`9`** | `3d4` | `7,5` | **`+2,5`** |
+| **`10`** | **`4d6`** | **`14,0`** | **`+6,5`** |
+
+***Decisão do Mizuki na v0.157: o refino `10` passa a dar um dado a mais.*** *Até ali ele dava `3d6` = `10,5`, e o degrau era `+3,0`.* **Só o `10` se moveu** — e é isso que faz as contas da v0.155 continuarem valendo inteiras, porque o degrau do nível 7 dos cinco Caminhos foi todo medido no **refino passivo `8`**, que não mudou.
+
+### ⚠⚠ O argumento é de DESENHO, e ele é o motivo da entrada existir assim
+
+***Palavras dele:*** *"isso incentiva a galera a querer pegar refino, e isso é bom, dá peso para as outras opções."*
+
+**A escolha de marco compara `Corpo` contra `Refino` contra `Leque`, e o `Refino` era o eixo mais difícil de sentir na mesa** — as aptidões que ele compra são condicionais, reativas ou de informação, e o número do refino em si aparece dentro de fórmula alheia. **O dano na arma é a única coisa que um ponto de refino entrega e a ficha sente em toda rodada de ataque** — e o único ponto que a escolha é dona sozinha é o `10`.
+
+> **E ele é o único degrau da campanha que a linha de graça NÃO alcança.**
+
+| rota | onde ela chega | quando ela pega o `4d6` |
+|---|---|---|
+| **especialista** — sempre Refino | refino `10` no nível 22 | **nível 22** |
+| **meio a meio** | refino `10` no nível 26 | nível 26 |
+| **generalista** — nunca Refino | refino `8`, e para ali | **nunca** |
+
+**A linha passiva do marco entrega `8` dos `10` sozinha (§3), e é por isso que os degraus `3`, `6` e `9` chegam para todo mundo mais cedo ou mais tarde.** *O `10` é o único que exige ter escolhido Refino, e ele é o maior:* **quatro níveis de vantagem para o especialista sobre o meio a meio, e uma porta fechada para quem nunca escolheu.**
+
+### O que ele vale, medido no nível 30
+
+*Base: o **golpe simples com o soco** — `d10` pela maestria (peça 14 §5.0.6) mais Força `6` (peça 2), que dá `11,50`, o número que a peça 5 §4 publica.* **A Ação de Atacar são dois golpes, pelo ataque extra do nível 7 (peça 6 §3.1).** *O `Classe 0` grátis vale `27` no nível 30, lido da tabela do manual.*
+
+| a rodada sem PE, no nível 30 | Ação de Atacar | contra o `Classe 0` grátis |
+|---|---|---|
+| sem dado nenhum — refino `1` ou `2` | `23,00` | **`0,85×`** — o botão grátis ganha |
+| refino `8`, quem nunca escolhe | `33,00` | `1,22×` |
+| refino `10` com `3d6`, até a v0.157 | `44,00` | `1,63×` |
+| **refino `10`, com o `4d6`** | **`51,00`** | **`1,89×`** |
+
+> **Com arma de duas mãos (`d12`, golpe `12,50`) as duas últimas viram `46,00` e `53,00`** — `1,70×` e `1,96×`. *A arma muda o valor absoluto e não muda o dano na arma: os dados extras não dependem dela.*
+
+**E a linha de cima é o que a entrada existe para consertar.** *Sem o dano na arma, a Ação de Atacar de um físico de nível 30 rende `23` contra os `27` do botão que toda ficha tem de graça — ela é estritamente pior, e o ataque extra do nível 7 vira letra morta.* **É a medida que a v0.82 usou para recusar prender o ataque extra à Ação de Atacar, e que a v0.147 aceitou de propósito.** *O dano na arma é o que devolve sentido àquela rodada.*
+
+**No dia inteiro, com as `10,5` rodadas de luta do bloco 1 do `conferir-orcamento.py`:**
+
+| Bastião no nível 30 — conjura `48%` das rodadas | média do dia | da Rotina |
+|---|---|---|
+| refino `8` | `62,3` | `57,7%` |
+| refino `10` com `3d6` | `68,0` | `63,0%` |
+| **refino `10` com o `4d6`** | **`71,6`** | **`66,3%`** |
+
+*A rodada de feitiço não se move em nenhuma das três — ela vale `94` nas três, porque o dano na arma não entra em feitiço.* **O que sobe é o piso, e é só ele.**
+
+### O invariante que a §2 cobra, e o `4d6` não o toca
+
+**A segunda condição da §2 é que a rodada em que o dano na arma cai fique abaixo da Rotina do nível.** *Medida nos vinte e nove níveis, na rota que mais recebe — o golpe simples reconstruído do soco da peça 14 §5.0.6 mais a Força da peça 2 §3, que vai de `3` a `6` no ritmo da maestria:*
+
+> **O pior nível é o `7`, com a Ação de Atacar em `51,6%` da Rotina** — e o `4d6` **não move esse número**, porque no nível 7 o refino é `3`. *No nível 30 ela fica em `47,2%`.*
+
+*O pior nível é o 7 pelo motivo que a peça 6 §3.1 já mede:* **o ataque extra dobra a rodada de golpe de uma vez, e o golpe simples encolhe contra o feitiço a campanha inteira.** *O dano na arma segura essa queda sem inverter ela.*
+
+> **E o refino `10` só existe do nível 22 em diante**, então o `4d6` não encosta em nenhum nível abaixo dele: *o pior caso da rodada de golpe continua sendo exatamente o que a v0.147 já tinha.*
+
+**A primeira condição é a trava `Só arma`**, e ela é o que impede o dado de entrar na rodada de feitiço. *A segunda metade dela — não somar por cima de um `Classe 0` que viajou junto do ataque — é o que impede a `Fornalha` de empilhar as duas coisas.* **No nível 30 a rodada de feitiço vale `94` e a Ação de Atacar cheia vale `51`, que são `54%` dela:** *o pico não se move, e o piso não alcança o pico.*
+
+### Dominância dentro do mesmo Caminho
+
+**No nível 30 nenhuma ficha existe sem dano na arma**: a linha de graça do marco entrega refino `8` sem escolha nenhuma, e a Bênção faz o mesmo com a Lapidação. *Então a comparação que vale é entre a pior e a melhor rota que existem naquele nível.*
+
+| | pior rota (`2d4`) | melhor rota | espalhamento |
+|---|---|---|---|
+| com `3d6` | `33,00` | `44,00` | `1,33×` |
+| **com o `4d6`** | `33,00` | `51,00` | **`1,55×`** |
+
+**O filtro do projeto reprova a partir de `3,00×`, e as duas passam com folga.**
+
+> **⚠ Isso não é o mesmo número que a peça 6 §3.1 publica como dispersão do ataque extra.** *Lá a comparação é contra uma **ficha nua**, e ficha nua é uma ficha do nível 2 ao 9 — ninguém chega ao 30 com refino `2`.* **A dispersão de `3,7×` daquela seção mede a entrega ao longo da campanha; esta mede duas fichas do mesmo nível, que é o que o filtro de dominância pergunta.**
+
+### O que o `4d6` custa, e o Mizuki aceitou os três
+
+| | com `3d6` | com o `4d6` |
+|---|---|---|
+| Ação de Atacar contra o `Classe 0` grátis, nível 30 | `1,63×` | **`1,89×`** |
+| o ataque extra do nível 7, no teto (peça 6 §3.1) | `1,68` fatia | **`1,95` fatia** |
+| dispersão do ataque extra ao longo da campanha | `3,2×` | **`3,7×`** |
+
+*As duas últimas saem por razão e não por reconta:* **o ataque extra é um golpe, e um golpe vale `golpe + dados extras`** — então `(11,50 + 14,00) ÷ (11,50 + 10,50)` = `1,159`, e `1,68 × 1,159` dá `1,95`. *Contra a linha nua de `0,53` daquela tabela, isso é `3,67×`.*
+
+### ⚠⚠ E o `4d6` é o que faz a exclusão do crítico virar carga
+
+**A peça 1 §5.2 diz que o crítico *"dobra só os dados do que rolou o acerto"*, e a lista de exclusão nomeia *"dados que vieram de aptidão ou Bênção"*.** *O dano na arma é exatamente isso, e ele não dobra.*
+
+**O que aconteceria se dobrasse, contra o teto de `15,43` da banda `Leve` da peça 19:**
+
+| o que o crítico dobraria | ganho | do teto da `Leve` |
+|---|---|---|
+| só o dado da arma — soco `d10` | `4,95` | `32%` |
+| \+ o dano na arma do refino `10`, com `3d6` | `14,40` | `93%` |
+| **\+ o dano na arma do refino `10`, com o `4d6`** | **`17,55`** | **`114%`** |
+| o mesmo, com arma `d12` | `18,45` | `120%` |
+
+**Na v0.151 essa linha era folga — a condição ficava *"a um `d12` de estourar a própria banda"*.** *Com o `4d6` ela deixa de ser folga:* **o soco sozinho já põe o `Incapacitado` fora da `Leve`, e é a exclusão que o segura.** *A peça 19 §2.4 tem a tabela inteira, e as três âncoras `critico_*` do `conferir-dano.py` guardam a linha no dono.*
+
+### A fronteira desta conta
+
+*Sem ela a próxima contagem mede outra coisa, que é o que aconteceu com o par da v0.141.*
+
+| entra | não entra |
+|---|---|
+| os dados extras do refino, `1d4` a cada `3`, com a exceção do `10` | crítico — o dado de aptidão não dobra (peça 1 §5.2) |
+| dois golpes por rodada do nível 7 em diante, um antes (peça 6 §3.1) | Manha — ela é da Vanguarda, e o `DESENHO-manhas.md` é o dono |
+| o golpe simples com o **soco**, `d10` + Força `6` no nível 30 | a rodada de feitiço — o dano na arma não entra nela |
+| acerto de `55%` (peça 1 §6) **só na conversão em fatia** — as tabelas de rodada são cruas, no molde da peça 6 §3 | arma de dado maior: ela sobe o golpe, não o dano na arma |
+
+> **A conclusão não depende da dívida de acerto da peça 19 §2.5.** *A `55%` o `4d6` vale `15,40` de dano por rodada, que são `3,03` fatias; a `50%`, `14,00` e `2,76`.* **As duas condições da §2 passam nos dois, e o espalhamento não se move — ele é razão entre duas rodadas medidas do mesmo jeito.**
+
+**E o que fica declarado e NÃO medido:** *quanto o dano na arma vale numa ficha que empilhou Manha em cima dele.* **A Manha e o dano na arma se multiplicam no segundo golpe, e o catálogo de Manhas tem duas dívidas de preço abertas** — as sete travas que não derivam, e as quatro que supõem dois ataques. *Somar as duas contas antes de as dívidas fecharem produziria um número que ninguém consegue refazer depois.*
+
+## 7. O que faltava, e por que já não falta
+
+
+
+*As quatro anti-domínio saíram desta seção na v0.29 e estão na seção 6.5. **A `Energia Reversa` saiu na v0.78** e está na seção 6, medida contra a `Recomposição`.* **E a `Barreira Simples` e a `Cortina` saíram na v0.91** — estão na seção 6.6, com o relógio de um minuto que tira as duas do combate.
+
+~~**Sobra uma, e ela falta por régua e não por número: a `Aptidão Própria`.**~~ **FECHADA na v0.92, e a régua nunca precisou ser escrita — ela é do manual.** *Está na seção 6.7.*
+
+> **Esta linha ficou em pé por sessenta versões dizendo que faltava a régua do `Efeito Próprio`, e o manual publica ela numa tabela**, com as três faixas de frequência e o critério de desempate. *Ninguém tinha aberto.* **É o terceiro exemplar do mesmo defeito em doze versões** — o Classe 0 da v0.80 e a ação `Mirar` da v0.86 são os outros dois: **o projeto procurando um número que já tinha dono.**
+
+**A `Aptidão Própria` é a energia densa do Hakari e o Punho Divergente do Itadori:** a coisa que um feiticeiro construiu sozinho, que não é técnica e não está no catálogo. **`Classe Passiva 1 ou 2, nunca 3`, e uma vez na ficha inteira**, no mesmo molde do Legado.
+
+## 8. O Limiar
+
+Vem do dossiê, seção 2, roubado do PbtA e do FitD: **gatilho de ficção antes da rolagem**. Aqui ele é mecânica separada, e o kokusen é só um dos lugares que o citam.
+
+> **Quando a ficção chega num ponto em que alguma coisa tem que ceder, o mestre abre um Limiar.**
+
+Ele não faz nada sozinho — o que acontece é o mestre que decide, e a lista abaixo é exemplo e não menu fechado: a ficção anda sem número, você rerrola o que falhou, você tem vantagem, aquilo acontece mesmo se você errar, aquilo simplesmente acontece.
+
+**Uma coisa que o mestre precisa saber antes de escolher, e que não vai no texto de mesa:** essas opções não são do mesmo tamanho. Contra o alvo difícil, rerrolar e dar vantagem valem os **mesmos +25 pontos percentuais**; "acontece mesmo errando" e "sucesso garantido" valem **o dobro**. E as duas famílias correm em sentidos opostos — a vantagem é auto-regulada e dá pouco quando você já ia acertar (9 pp contra alvo fácil), enquanto o garantido vale **mais** quanto mais difícil for a coisa (75 pp contra CD alta), que é justamente quando alguém vai querer dar.
+
+**O que ele resolve no kokusen** é o caso que a proteção contra azar não pega: não a espera longa, mas o momento em que o personagem *precisa*.
+
+### Uma nota de método, registrada e não resolvida
+
+O dossiê defende o gatilho de ficção **contra** a discricionariedade: *"'quando você força energia amaldiçoada além do seu limite, role' é mais arbitrável por cinco mestres diferentes do que 'o mestre decide se pede um teste'"*. Aqui a escolha foi a outra.
+
+O `arquitetura.md` sustenta: *"discricionariedade na ficção é o trabalho do mestre e não atravessa mesas"*. O Limiar acontece uma vez e não fica na ficha — o personagem sai da campanha do mestre A com a mesma ficha, independentemente de quantos Limiares ele abriu. **Está marcado para o playtest**, junto da contagem de lutas, que é a mesma aposta.
+
+## 9. Em aberto
+
+- ~~**As quatro anti-domínio**, travadas até a Expansão existir no manual v7.7.~~ **Saíram na v0.29, e estão na seção 6.5** — as quatro com Classe, gate, degrau por rota e custo de uso. *O manual está na v7.9, e a abertura da seção 6 já dizia isso.*
+- ~~**O número de Barreira Simples e Cortina**, e a régua da Aptidão Própria.~~ **As três fecharam, e cada uma na sua seção:** a `Barreira Simples` e a `Cortina` na v0.91, na seção 6.6; a `Aptidão Própria` na v0.92, na seção 6.7. *A `Energia Reversa` já tinha saído desta linha na v0.78, e está na seção 6.* **Com elas, as catorze entradas do catálogo têm regra, gate e validador.**
+- **Se o teto de doze Passivas pesa na mesa.** O manual escolheu cinco por peso, não por orçamento — cada Passiva é uma coisa que o mestre lembra sozinho. A rota de Leque pura chega a doze, e paga por isso com zero aptidões e metade do atributo.
+- **Se alguém escolhe o Leque.** Ele é o eixo novo e o único que compra versatilidade em vez de poder. Se ninguém pegar, o aperto de espaços que ele resolve continua resolvido pela linha passiva — e aí ele sai.
+- **Se o Limiar sem número na mesa produz mestres que entregam o dobro achando que entregaram o mesmo.**
+
+*Resolvidos e escritos aqui:* o que o refino faz por si só, a trava dele, o terceiro eixo do marco, o teto de Passivas, a fórmula de feitiços conhecidos, e por que a Classe de aptidão mede formato e não tamanho.
+
+---
+
+## 10. O registro de decisão — de onde saiu cada número desta peça
+
+*Movido do `ESTADO-ATUAL.md` nesta versão, inteiro e sem corte.* Ele morava lá porque foi escrito enquanto esta peça ainda era "a próxima"; a peça fechou na v0.27 e o argumento ficou para trás. **Um documento de retomada não é lugar de argumento de peça fechada** — ele é lido no começo de toda conversa, e tinha crescido a ponto de não caber numa leitura só.
+
+Nada aqui foi reescrito. O que segue é o registro de projeto que sustenta os números das seções 1 a 9, e é onde procurar quando alguém perguntar *por que esse valor e não outro*.
+
+### O que já está fechado, e não precisa ser reaberto
+
+| | |
+|---|---|
+| **A régua** | as aptidões herdam as Classes das Passivas do manual — **Classe Passiva 1** é efeito pequeno, condicional ou de informação; a **2** é reativo, com limite por cena ou descanso; a **3** é permanente e muda como você joga. Não são "mais" e "menos": são **formatos** |
+| **O gate** | cada aptidão declara o seu: **nenhum, só nível, só refino, ou os dois**. O Kokusen Melhorado é o primeiro escrito — refino 5 e nível 14 |
+| **O preço** | um marco compra **uma aptidão**. Sem moeda nova, sem pontos |
+| **O que impede a Classe Passiva 3 de comer as outras** | o refino. Uma Classe Passiva 1 no refino 10 não é a mesma coisa que no refino 2 — ela cresce junto com você |
+| **O refino** | é **a métrica geral das aptidões**: requisito, tamanho e frequência. Entra no texto **como variável**, no molde do manual (*"3 × refino"*, *"refino usos por descanso"*), e **algumas aptidões declaram teto** — nem toda uma usa o valor cheio |
+| **Já vem de graça no refino 1** | cobrir-se de energia e canalizar energia. As aptidões compradas *melhoram* o que já existe |
+| **Não se compra em nível nenhum** | o `Kokusen` base, que é regra de mundo e vale para toda ficha com refino. *As duas de melhoria dele são aptidão como qualquer outra* |
+| **Kokusen Melhorado** | aptidão, refino 5 e nível 14. A escada da cascata mexe **só na chance do d100, com teto** — nunca na margem de crítico |
+| **O tamanho do catálogo** | **sem teto, desde a v0.243.** O piso é a rota pura do §3: pelo menos `10` pagas. *Até a v0.242 era "doze a quinze", escolhido sem conta, com o argumento de que dez já eram obrigatórias pela obra* |
+| **Quem nunca escolhe refino** | termina com **zero aptidões, e o texto diz isso com todas as letras** — 14 pontos de atributo contra 7, e as duas de graça crescendo com o refino passivo até 8. A rota existe e ninguém deve descobrir no nível 20 que caiu nela sem saber |
+| **Aptidão Própria** | existe, e é **uma entrada do catálogo como qualquer outra** — com uma trava: **só pode ser pega uma vez na ficha inteira**, no mesmo molde do Legado. **Classe Passiva 1 ou 2, nunca 3.** Vem com catálogo de exemplos, uma métrica para criar e aprovação do mestre. É a energia densa do Hakari e o Punho Divergente do Itadori |
+
+**As doze que a obra obriga:** cobrir-se de energia · canalizar energia · projetar energia · Barreira Simples · Cortina · Domínio Simples · Extensão de Domínio · Pétala · Cesta Oca de Vime · Energia Reversa · Kokusen · Kokusen Melhorado. **Três delas não se compram** — `cobrir-se` e `canalizar` vêm de graça no refino 1, e o `Kokusen` base é regra de mundo desde a v0.202 —, então **nove são compráveis** antes de qualquer invenção.
+
+**Os quatro anti-domínio ficam como quatro entradas separadas, todas aptidão, e a diferença entre elas é o requisito.** O `arquitetura.md` tinha diagnosticado que eles *"não pertencem ao mesmo degrau"* e proposto virar trilha; a decisão foi manter quatro peças e pôr a diferença no gate, que é a mesma coisa por um caminho mais barato de conferir — **uma rota só, e o validador olha um campo em vez de quatro.**
+
+*Corrigido na v0.29:* esta seção dizia **"Domínio Simples sem gate — é o que se ensina"**. A pesquisa na obra inverteu isso. Quem é sem gate é a **Cesta Oca de Vime**, que é a **predecessora** que o Domínio Simples melhorou — antiga, mais limitada, e por isso a mais barata. O Domínio Simples subiu para Classe Passiva 2. Os detalhes estão na seção 6.5 da peça 11.
+
+*Correção de conta:* uma versão desta análise dizia que quatro entradas separadas levariam o catálogo a **dezessete**. Estava errado — os quatro já estavam contados dentro das doze da obra. Com eles separados o catálogo fica em **catorze**, e a escolha não custou nada de faixa. Foi contagem dupla minha, e é a mesma família da lição *"esse número já inclui o que eu estou somando nele?"*.
+
+### A trava do refino, corrigida
+
+O `arquitetura.md` propôs *"aptidão não produz dano e não escala com nível"*, e isso foi escrito antes de existir régua. Com a régua das Classes, a trava que importa é outra, e ela vem da regra que governa tudo:
+
+> **O refino cresce +7 a +9 numa campanha; atributo e maestria crescem +3.**
+> **Então refino não pode aparecer de um lado de uma rolagem em que o outro lado não cresce no ritmo dele.**
+
+Isso proíbe refino somando em acerto, CD, defesa e Teste de Resistência — os quatro têm do outro lado alguém que cresce +3. E **permite refino contra refino**, que é simétrico: o clash de expansões é exatamente esse caso, e ele passa.
+
+O que sobra para o refino escalar: **custo em PE, frequência, alcance, duração, quantos alvos** — e disputa contra outro refino.
+
+> **⚠ Este parágrafo listava `dano` junto dos quatro e dizia *"os quatro"* na mesma frase, contando cinco.** *A §2 desfez o nó na v0.158:* **dano não é rolagem disputada, e a justificativa dos quatro nunca alcançou ele.** *A trava sobre dano é de orçamento, tem duas condições escritas, e a §6.9 mede as duas entradas que a usam.*
+
+### As duas gratuitas — o registro, e uma duplicata que estava velha
+
+**Este pedaço chegou aqui vazio de novidade, e o validador provou isso na hora.**
+
+O texto que morava no `ESTADO-ATUAL` repetia a seção 6.1 inteira — a regra, o argumento do `1/3`, a tabela de saldo da Reação — só que **congelado antes da v0.30**: ele ainda dizia *"gastando PE"*, sem quantidade, quando o preço virou **2 PE** seis versões atrás. Nenhum validador varria o `ESTADO-ATUAL`, então a cópia velha sobreviveu; **no primeiro segundo dentro de uma peça, o `conferir-orcamento.py` acendeu nas duas frases.**
+
+É a lição nº 9 com data: *um número que mora em dois documentos vai divergir* — e o exemplar mais barato de consertar, porque a cópia não tinha leitor.
+
+> **A regra, o preço e as contas moram na seção 6.1.** Não há segunda cópia.
+
+Sobraram dois pedaços que a seção 6.1 não tinha, e só eles ficam:
+
+**O recado para a peça de equipamento.** Cobrir-se não é exclusiva do conjurador: um Vanguarda de refino alto que largue o uniforme chega a **Defesa 20**. Como **Traje e Revestimento desligam** a proteção de energia, a tabela de proteção não compete com 0 — ela compete com **1 no nível 2 e 4 no refino 10**.
+
+> *A frase seguinte era "um uniforme precisa valer mais que proteção 4, senão ninguém veste", e a peça de equipamento a tratou como orientação e não como invariante — tratá-la como invariante travava a peça inteira.* **O uniforme não precisa ganhar de cobrir-se; precisa alcançar e ter chance de passar.** E **o escudo saiu desta lista na v0.42**: ele soma com cobrir-se em vez de desligar, porque desligando ele virava prejuízo já no primeiro marco.
+
+**Canalizar energia** já está escrita na peça 5: *"um feitiço de Forma Toque, sem Melhoria e sem Restrição"*. **O refino não escala o feitiço de Toque** — ele vive no orçamento do Fundamento, e é o exemplo de aptidão que não usa o valor cheio na metade que o Fundamento é dono.
+
+> **⚠ Esta linha dizia *"o refino não a escala"*, e ela era a segunda cópia da frase que a §6 publicava.** *As duas viraram falsas na v0.147, quando o dano na arma entrou no livro sem chegar a peça nenhuma.* **A metade que o refino escala é o dano na arma, e a dona dela é a §6.9.**
+
+### As três aptidões de kokusen
+
+| | o que faz |
+|---|---|
+| **Kokusen** | em crítico no corpo a corpo, role d100: **2 × refino** ou menos é kokusen, e o dano leva **+50% depois de tudo resolvido** |
+| **Kokusen Melhorado** | **vantagem no d100.** Refino 5 e nível 14. Ganha do `3 ×` em todo refino — 36% contra 30% no refino 10 |
+| **`Kokusen Constante`** | sobe a base para **3 × refino**, e a vantagem da `Melhorado` rola em cima. Refino 5, sem gate de nível |
+
+A 2 ×, o refino 10 soma **1,8% de dano por rodada** e leva ~5 sessões até o primeiro; no refino 1 são **47 sessões**, então ele praticamente não existe antes de você investir. **A cascata mexe só na chance do d100, com teto** — fazer a margem cair para 19 renderia +10,9%, dos quais **9,1 vêm do dado a mais** e não do kokusen.
+
+**E o kokusen tem proteção contra azar, zerando por missão.** No refino 1 a espera pelo primeiro kokusen é de **47 sessões** — na prática, a maioria dos jogadores nunca veria um. Cada d100 falhado empurra o próximo em **+2**, e o acumulado zera no descanso longo:
+
+| relógio | refino 1 | refino 5 | refino 10 |
+|---|---|---|---|
+| sem proteção nenhuma | 47 sessões | 9,5 | 4,7 |
+| por cena | 41,2 | 9,3 | 4,7 |
+| por dia | 19,9 | 7,6 | 4,3 |
+| **por missão** | **~9 a 10** | 5,6 | 3,9 |
+
+**Por missão entrega quase o efeito cheio e quase não move o refino 10** — o socorro vai inteiro para quem não investiu, que é a propriedade que se queria. E o relógio já existe: *por descanso longo* é o quarto da escada da peça 10, o mesmo da Integridade. Nenhum contador novo.
+
+O motivo de "por cena" não servir: o acúmulo só começa a partir do **segundo crítico da mesma cena**, e dois críticos no mesmo combate acontecem em **4,4%** das vezes — ele evapora antes de servir.
+
+Com as três de kokusen, o catálogo fica em **catorze entradas** — doze da obra mais a `Kokusen Constante` mais a Aptidão Própria —, dentro da faixa de doze a quinze que valia até a v0.242.
+
+> **Hoje são quinze, e o catálogo não tem mais teto.** *O `Kokusen` base saiu na v0.202, a `Circulação` entrou na v0.203 e a `Regravação` na v0.239.*
+>
+> ***Decisão do Mizuki, v0.243:*** *"pq n pode mais que 15? pretendo adicionar mais, tira o limite, eu devo por pelo menos umas 25".* **O que continua valendo é o piso do §3:** *o catálogo precisa de pelo menos tantas pagas quanto a rota pura escolhe, senão escolher vira falta de cardápio.*
+
+### O Limiar — mecânica à parte, e o cardápio precisa dizer o tamanho
+
+*Decidido depois da v0.26.* Vem do dossiê, seção 2: **gatilho de ficção antes da rolagem**, roubado do PbtA e do FitD. Aqui ele é **mecânica separada, e quem declara é o mestre** — um gancho com cardápio, e o kokusen é só um dos lugares que o citam.
+
+**O nome passou pela triagem.** *Faísca* morreu dentro de *Faísca em Cadeia* e *Impulso* é Melhoria do manual. **Limiar** está livre nos dois lados.
+
+**O cardápio tem duas alturas, e não uma.** Medido contra o alvo difícil, em que se acerta 50%:
+
+| o que o mestre entrega | vira | ganho |
+|---|---|---|
+| a ficção anda, sem número | 50% | — |
+| rerrolar a que falhou | 75% | **+25 pp** |
+| vantagem na rolagem | 75% | **+25 pp** |
+| acontece mesmo errando, com custo | 100% | **+50 pp** |
+| sucesso garantido | 100% | **+50 pp** |
+
+Rerrolar e vantagem valem **exatamente a mesma coisa**. Sucesso garantido vale **o dobro dos dois**. Se o cardápio for lista solta de sabores, o mestre entrega o dobro achando que entregou o mesmo — é o conserto que a exaustão levou na v0.26, aplicado antes de o erro existir.
+
+E os dois **correm em sentidos opostos**: a vantagem é auto-regulada e dá pouco quando você já ia acertar (9 pp contra alvo fácil); o sucesso garantido vale **mais** quanto mais difícil a coisa for (75 pp contra CD alta) — que é justamente quando o mestre vai querer dar.
+
+**Nota de método, registrada e não resolvida:** o dossiê defende o gatilho de ficção *contra* a discricionariedade — *"é mais arbitrável por cinco mestres do que 'o mestre decide se pede um teste'"*. A escolha aqui foi a outra, e o `arquitetura.md` a sustenta: *"discricionariedade na ficção é o trabalho do mestre e não atravessa mesas"*. O Limiar acontece uma vez e não fica na ficha. **Vai para o playtest junto com a contagem de lutas**, que é a mesma aposta.
+
+### O catálogo fechado — quinze entradas, uma rota
+
+| # | aptidão | gate | o refino escala |
+|---|---|---|---|
+| 1 | **Cobrir-se de energia** | grátis no refino 1 | proteção `1/3 + 1`, e a RD da Reação `1,5 ×` |
+| 2 | **Canalizar energia** | grátis no refino 1 | **nada** — vive no orçamento do Fundamento |
+| 3 | **Projetar energia** | — | o dano, entre 8% e 12% da Rotina |
+| 4 | **Cesta Oca de Vime** | Classe Passiva 1, **sem gate** | **nada** — e não custa PE, porque já custa o turno |
+| 5 | **Domínio Simples** | Classe Passiva 2 · refino 4, nível 10 | o raio: `1,5 m + refino ÷ 2` |
+| 6 | **Pétala** | Classe Passiva 2 · refino 4, nível 10 | Acertos devolvidos: `refino ÷ 2` |
+| 7 | **Extensão de Domínio** | Classe Passiva 3 · refino 7, nível 14 | a duração: `refino` rodadas |
+| 8 | **Barreira Simples** | sem gate | a vida do domo: `5 ×` |
+| 9 | **Cortina** | exige a `Barreira Simples` | a vida dela: `20 ×` |
+| 10 | **Energia Reversa** | Classe Passiva 3 · refino 7, nível 14 | **nada** — o teto é `maior Classe`, e `1d8` de cura por PE |
+| 11 | **Circulação** | Classe Passiva 3 · exige a `Energia Reversa`, refino 8 | **nada** — o teto vai a `1,5 × maior Classe` |
+| 12 | **Regravação** | Classe Passiva 3 · exige a `Circulação` | **nada** — gasta o teto da `Circulação` inteiro |
+| 13 | **Kokusen Melhorado** | refino 5, nível 14 | vantagem no d100 |
+| 14 | **Kokusen Constante** | refino 5 | a chance, `3 ×` |
+| 15 | **Aptidão Própria** | Classe Passiva 1 ou 2, **uma vez na ficha** | conforme o que for escrito |
+
+> **O `Kokusen` base saiu desta tabela na v0.202: ele é regra de mundo e não ocupa vaga.** *As duas de melhoria dele continuam sendo aptidão como qualquer outra, e o §6.6 registra o porquê.*
+
+**Todas custam um marco. Nenhuma custa espaço de feitiço** — essa é a moeda das Passivas e da Expansão de Domínio, que ficam do lado do manual.
+
+### O que ainda não foi decidido
+
+> **Destravado na v0.28.** A Expansão tem regra no manual v7.7, então as quatro anti-domínio — Domínio Simples, Pétala, Cesta Oca de Vime e Extensão de Domínio — já podem ser escritas com número. **É a próxima coisa da fila**, e o que elas medem agora existe: Acerto por rolagem na incompleta, Acerto que acontece na completa, barreira de `50 × metade do refino` e duração de `metade do refino` em rodadas.
+
+- **O que cada uma das catorze faz, com número**, e o gate e o teto de refino das que estão marcadas acima.
+- ~~**O catálogo das Bênçãos**, e se ele espelha o das aptidões entrada por entrada ou tem lista própria.~~ **RESPONDIDO na v0.116 e corrigido na v0.117, e está na seção 6.8:** *o conteúdo não espelha — **catorze das quinze aptidões são construídas em cima da energia amaldiçoada** —, mas a FORMA espelha: **catorze Bênçãos, duas grátis na Lapidação `1` e doze pagas**, igual ao catálogo de aptidões.* **O conteúdo das doze pagas continua esperando a Técnica Marcial; o tamanho, a métrica, as duas gratuitas e o que fica de fora não esperam mais.**
+- **O conteúdo mecânico do `estímulo muscular`, a segunda gratuita.** *A primeira (`cobrir-se`, portada) não pediu escolha — é a mesma fórmula com outro nome. Esta pede, porque `canalizar energia` — o par que ela substitui — vale **"nada" em número**, e o par certo para ela precisa do mesmo peso.* **Três candidatos medidos, nenhum decidido:**
+
+  | candidato | o que faz | peso mecânico |
+  |---|---|---|
+  | **feitos físicos automáticos** | andar em parede e em água, deslocar-se no ar — o mesmo vocabulário que a peça 9 já usa para o Corpo Amaldiçoado | **zero em número**, igual a `canalizar energia`. Sem dado, sem teste, é o que a fatia mede como "0,00" |
+  | **perícia extra treinada** | uma perícia física adicional além das que Origem e Caminho já dão | **maestria**, num único teste — mais pesado que os outros dois, e mexe na fração `8 de 23` que a peça 7 §6 trava |
+  | **vantagem 1× por cena** | numa perícia ou TR físico escolhido, no molde do Legado `Repetição` | **`+25pp` uma vez por cena** — pequeno e medido, mas é mecânica de Legado, não de aptidão de refino |
+
+  *O primeiro é o único que copia o peso exato de `canalizar energia`. Decisão do Mizuki.*
+- **Como o Acerto e o Efeito se precificam** — a expansão é comprada com espaço de feitiço, e nada diz ainda quanto de cada um cabe por espaço.
+- **A métrica da Aptidão Própria.** O `arquitetura.md` sugere a mesma pergunta do Efeito Próprio — *"em quantas cenas por arco isso importa?"*, com o mesmo "na dúvida, erre para o lado que não infla".
+- **O teto de cada aptidão**, já que nem toda uma usa o refino cheio — o clash de expansões usa, canalizar não.
+- **Se o cardápio do Limiar lista as duas alturas separadas** ou deixa o mestre pesar.
+- **Se o d100 falhado empurra o próximo.** A conta está feita: +2 por falha leva o refino 1 de 48 sessões para 8 e quase não move o refino 10 — o socorro vai para quem não investiu. Não foi decidido, e o Limiar pode cobrir o mesmo buraco por outro caminho.
