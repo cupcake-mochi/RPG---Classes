@@ -17,7 +17,7 @@ O perfil de distância fecha em **5,07 fatias**, folga parecida com a que o Bast
 
 Conta em [`conferir-vanguarda-pe.py`](conferir-vanguarda-pe.py), saída completa em `vanguarda-pe-contas.json`.
 
-> ⚠ **Achado de 21/09, noite, pendente de decisão do Mizuki.** Os 5,07 e os 1,34 desta tabela foram medidos numa Vanguarda que nunca conjura. A régua do repositório principal diz que ela conjura em 7 das 10,5 rodadas no nível 30 (`conferir-orcamento.py`, bloco 1; peça 6, "Vanguarda conjura 67% das rodadas"), e sem Compasso essas rodadas não têm ataque de arma. Nessa base o Caminho mede **1,09** (distância) e **0,88** (corpo a corpo) pra Batedor e Executor, e **4,57** / **1,22** pra Estocada. A decisão de PE bruto não muda; o que falta decidir é contra qual Vanguarda o Caminho é preçado. Conta em `conferir-estocada-rotina.py`; quadro completo em `vanguarda-completo.md`.
+> **Achado de 21/09, noite. Encerrado em 22/09** — ver `vanguarda-completo.md`; os números ficam, a pergunta sai da fila. Os 5,07 e os 1,34 desta tabela foram medidos numa Vanguarda que nunca conjura. A régua do repositório principal diz que ela conjura em 7 das 10,5 rodadas no nível 30 (`conferir-orcamento.py`, bloco 1; peça 6, "Vanguarda conjura 67% das rodadas"), e sem Compasso essas rodadas não têm ataque de arma. Nessa base o Caminho mede **1,09** (distância) e **0,88** (corpo a corpo) pra Batedor e Executor, e **4,57** / **1,22** pra Estocada. A decisão de PE bruto não muda. Conta em `conferir-estocada-rotina.py`; quadro completo em `vanguarda-completo.md`.
 
 ## Valor adotado
 

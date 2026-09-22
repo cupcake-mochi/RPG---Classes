@@ -52,7 +52,7 @@ print()
 print('Contra-teste — e se o degrau extra fosse em outro lugar do buraco 19–27?')
 for nv in (20, 21, 22, 23, 24, 25, 26):
     (salto, a, b), _ = vao(tuple(sorted(CALENDARIOS['atual, da v0.70 em diante C 2·7·15·30'] + (nv,))))
-    marca = '  <- melhor' if salto == 4 else ''
+    marca = '  <- o menor vao possivel' if salto == novo else ''
     print(f'  degrau no {nv}: maior vão {salto} (entre {a} e {b}){marca}')
 print('O 23 não é o único que fecha o buraco; 22, 23 e 24 empatam. A escolha entre eles é de sabor,')
 print('e o 22 já é marco no sistema (peça 18), o que faz dele o mais cheio dos três.')

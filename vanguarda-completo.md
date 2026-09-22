@@ -14,7 +14,9 @@ O Caminho foi refeito em volta de uma mecânica central, a **Sequência de Condu
 
 Conta em `conferir-vanguarda-pe.py` / `vanguarda-pe-contas.json`.
 
-## ⚠ A Vanguarda de referência não conjura — achado de 21/09, noite, pendente de decisão
+## A Vanguarda de referência não conjura — achado de 21/09, noite, encerrado em 22/09
+
+**Fechado pelo Mizuki em 22/09: a questão sai da fila.** *"Pode fazer sentido no papel, mas na lógica não vai funcionar assim"* — o terreno muda quando as Trilhas forem reescritas. Os números abaixo ficam como medição; o que morre é a pergunta de contra qual ficha preçar.
 
 **Os 5,07 e os 1,34 acima foram medidos numa Vanguarda que ataca de arma nas 10,5 rodadas do dia e nunca conjura.** A régua do repositório principal não trabalha com essa ficha. O `conferir-orcamento.py` (bloco 1) calcula conjurações por dia = PE do Caminho × nível ÷ custo do maior feitiço — no nível 30, 150 ÷ 21 = **7 de 10,5 rodadas** —, e a peça 6 publica *"Vanguarda conjura 67% das rodadas no nível 30"* e preça o ataque extra do nível 7 só nas rodadas que sobram. Nas rodadas em que conjura, a Vanguarda sem Compasso não tem ataque de arma nenhum (desde a v0.147 o ataque extra exige a Ação de Atacar).
 
@@ -29,7 +31,7 @@ Medido nessa base (`conferir-estocada-rotina.py`, com o próprio v3 e as rodadas
 
 **Sem Compasso, a Sequência quase não cabe**: só sobram 3,5 rodadas de arma no dia, espalhadas em três lutas, e o prazo de T+2 vence nas rodadas de conjuração. Sequência + Escola + Persistência + Conclusão Dupla somam 0,27 no perfil de distância; quase todo o 1,09 é o Não Cede (0,82), que não depende de ataque. **Com Compasso, o Caminho volta pra perto do que foi medido** — o ataque de bônus devolve 3,48 ao Caminho, fora os 3,01 de dano cru dele.
 
-Isto **não reabre** a decisão de PE bruto — ela continua valendo nas duas colunas. É outra pergunta: contra qual Vanguarda o Caminho é preçado.
+Isto **não reabre** a decisão de PE bruto — ela continua valendo nas duas colunas. A outra pergunta, contra qual Vanguarda o Caminho é preçado, foi encerrada em 22/09 sem ser respondida.
 
 ## Nomes fechados em 21/09
 
@@ -214,7 +216,7 @@ O preço zero antigo do núcleo de Compasso se apoiava numa regra em que conjura
    **O Compasso sozinho passa do orçamento inteiro da Trilha no perfil de distância.** O nível 11 e o 27 valem zero na referência: o ataque de bônus do Compasso já pode Concluir de arma, e toda conclusão de arma disponível vale mais que a melhor conclusão mágica — o otimizador nunca troca uma pela outra, e Ferrão depende de uma conclusão mágica pra disparar. O Bote é teto: supõe que todo feitiço conjurado seja de condição sem dano e que o feitiço de condição valha o mesmo que o de dano da mesma Classe (que é o que a economia de pontos do Fundamento promete, mas não foi medido aqui).
 2. ~~Medir as seis conclusões mágicas como catálogo de escolhas.~~ **Feito em 21/09**, tabela acima.
 3. Conferir as duplas mágicas do nível 30. Valor por acionamento medido — a melhor dupla é Desorientar + Ancorar, 1,34 fatia; a pior é Cortar a Resposta + Expor a Guarda, 0,68 (toda dupla é a soma exata das duas isoladas, conferido por contra-teste). **Frequência de uso na referência: zero**, pelo mesmo motivo do nível 11.
-4. Distribuir as cinco fatias da Trilha: com os números acima, a Estocada mede de 5,35 a 8,78 no perfil de distância e de 2,13 a 4,19 no corpo a corpo, concentrada toda no 2 e no 19. Depende das decisões da seção "⚠ A Vanguarda de referência" no topo deste arquivo.
+4. Distribuir as cinco fatias da Trilha: com os números acima, a Estocada mede de 5,35 a 8,78 no perfil de distância e de 2,13 a 4,19 no corpo a corpo, concentrada toda no 2 e no 19. Fica pra reescrita das Trilhas — a seção do topo deste arquivo explica por quê.
 
 ## O que continua aberto
 

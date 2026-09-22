@@ -275,9 +275,12 @@ def audit():
                     external_explorable=True, break_on_miss=True, q_physical=.55, q_vigor=.55)
 
     # Regressão 1 (modelo B): sem conjurar nunca, o valor da Sequência dá o já medido.
-    for rate, alvo in ((PE_RATE, 1.2621357356808118), (0., 3.0101)):
+    # Os dois alvos vêm do documento dono (vanguarda-pe-contas.json), não escritos aqui:
+    # perturbar o JSON tem de acender esta checagem.
+    seq = PE_CONTAS['perfis']['distancia']['etapas']['sequencia']['acumulado']
+    for rate, alvo in ((PE_RATE, seq['L']), (0., seq['Br'])):
         v = f(B_dia(yumi, 0, rate)['score'] - B_dia(replace(yumi, sequencia=False), 0, rate)['score'])
-        assert abs(v - alvo) < 1e-4, (rate, v)
+        assert abs(v - alvo) < 1e-12, (rate, v, alvo)
 
     # Regressão 2 (modelo A): sem conjurar nunca, o Caminho completo dá o 5,07 e o 1,34
     # que vanguarda-pe-contas.json registra.

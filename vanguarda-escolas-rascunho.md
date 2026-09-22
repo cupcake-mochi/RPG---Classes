@@ -4,6 +4,17 @@ Versão de trabalho aprovada pelo autor em 18 de setembro de 2026, depois da apr
 
 **Atualização de 19/09:** o autor retirou o teto de conduções e passou a encerrar a sequência ao errar uma condução, mantendo o prazo de dois turnos. As regras da Escola abaixo permanecem. Os valores numéricos desta conferência de 18/09 são históricos; os resultados com a continuidade nova estão em [Conclusão Dupla e revisão da Sequência](vanguarda-conclusao-dupla.md).
 
+**Os números da regra vigente, medidos em 22/09.** Os de 18/09 continuam na tabela mais abaixo, e ficam porque o argumento deles é histórico — mas não são o preço de hoje. No mesmo cenário de referência (Yumi contra Defesa 20, disponível desde o primeiro turno):
+
+| Uso | Sem Escola | Com Precisão | Acréscimo | Com Versado | Acréscimo |
+|---|---:|---:|---:|---:|---:|
+| 18/09 — teto de duas, erro não encerra | 1,4865 | 1,5960 | 0,1095 | 1,9310 | 0,4445 |
+| **vigente — sem teto, erro encerra** | **1,2621** | **1,3869** | **0,1248** | **1,7770** | **0,5149** |
+
+Os três valores da linha vigente saem do `vanguarda-contas-v3.json`, sem conta nova: `sequence_without_school.sem_nivel_30.net_slices` dá o 1,2621, `profiles.yumi_referencia` dá o 1,3869 e `profiles.yumi_versado` dá o 1,7770. **Perturbando as duas regras uma de cada vez, o teto é inerte neste perfil** — quem move o número é errar-encerra, sozinho.
+
+**A margem da reserva cai junto:** 0,75 − 0,5149 = **0,2351**, e não os 0,3055 que a seção do orçamento abaixo ainda calcula sobre o 0,4445.
+
 ## Orçamento adotado
 
 | Parte | Fatias reservadas |
@@ -75,6 +86,6 @@ As outras Manhas também foram instrumentadas para inspeção, cruzando cada efe
 
 Os efeitos de posição não têm equivalência completa nessa régua: deslocar lateralmente alguém, abrir passagem e empurrar em terreno relevante não são iguais a dano. As quatro Manhas não estão certificadas como escolhas de força idêntica. O rascunho controla o orçamento do conjunto; a atratividade de cada opção permanece assunto de revisão e uso em mesa.
 
-Reservar 0,75 deixa 0,3055 acima do maior acréscimo dos exemplos compatíveis da referência. Essa margem é deliberada, não calculada como uma entrega adicional. No teste extremo já existente, Versado acrescentou 0,4664 ao valor anterior de 4,8953; o extremo continua fora do orçamento nominal. Portanto, **2,75 é o orçamento adotado para avançar, não um teto universal comprovado**.
+Reservar 0,75 deixa 0,3055 acima do maior acréscimo dos exemplos compatíveis da referência — **número de 18/09; sob a regra vigente a margem é 0,2351, ver o bloco no topo deste arquivo**. Essa margem é deliberada, não calculada como uma entrega adicional. No teste extremo já existente, Versado acrescentou 0,4664 ao valor anterior de 4,8953; o extremo continua fora do orçamento nominal. Portanto, **2,75 é o orçamento adotado para avançar, não um teto universal comprovado**.
 
 Esta proposta evita reduzir PE ou a perda de dano para financiar as Escolas. Nenhum novo uso gratuito das conclusões é concedido. O resultado completo da conferência está em `vanguarda-escolas-contas.json`, nesta mesma pasta autorizada.

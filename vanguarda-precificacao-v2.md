@@ -4,6 +4,8 @@
 
 **Valor de trabalho registrado posteriormente: 2,00 fatias para a Sequência e 3,00 ainda livres no Caminho.** É um preço provisório declarado, com margem sobre o cenário de referência, e não uma média de uso observada. O registro vigente está em [Vanguarda — orçamento de trabalho](vanguarda-orcamento.md).
 
+> ⚠ **Duas regras deste documento morreram em 19/09, e ele as publicava como vigentes.** *O teto de duas conduções acertadas por sequência* caiu: hoje **não há teto**. *E erro em condução, que aqui só não renovava o prazo,* hoje **encerra a sequência**. Os preços abaixo foram medidos com as regras velhas e não valem como preço de hoje. A regra vigente está em [`vanguarda-completo.md`](vanguarda-completo.md); a linha do tempo, em [`vanguarda-sequencia-consolidada.md`](vanguarda-sequencia-consolidada.md) §5 e §13.
+
 ## Revisão da leitura do orçamento
 
 **4,90 é o resultado de um cenário extremo, não um preço fechado da classe. A recomendação abaixo de reservar automaticamente as cinco fatias fica retirada.** A unidade já é benefício por rodada: a soma foi dividida pelo tempo. O início e a conclusão da sequência precisam ser considerados para obter essa média, e a frequência de uso do jogador ainda não foi medida.
@@ -47,7 +49,7 @@ O autor pediu redução de Xd4 na abertura, sendo X metade da maestria, e condu�
 
 **Fechar a Rota.** Depois do acerto, TR Físico; falhando, o alvo não pode se afastar voluntariamente do usuário até o fim do próximo turno dele. Aproximação continua permitida. Mantidas as exceções de movimento forçado e teleporte. A alternativa anterior de cobrar movimento em dobro não foi adotada.
 
-**O autor confirmou que continua o teto de duas conduções acertadas por sequência.** Não existe renovação ilimitada. Abertura ou condução acertada no turno T mantém a sequência até o fim de T+2; erro não renova nem apaga antecipadamente. Uma condução OU conclusão por turno, cada uma usando um ataque existente. Conclusão consome mesmo errando e impede reabertura no mesmo turno.
+**O autor confirmou que continua o teto de duas conduções acertadas por sequência.** Não existe renovação ilimitada. Abertura ou condução acertada no turno T mantém a sequência até o fim de T+2; erro não renova nem apaga antecipadamente. ***⚠ As duas coisas caíram em 19/09: hoje não há teto de conduções, e errar uma condução encerra a sequência em vez de só não renovar o prazo.*** Uma condução OU conclusão por turno, cada uma usando um ataque existente. Conclusão consome mesmo errando e impede reabertura no mesmo turno.
 
 **Fixar continua exigindo duas conduções acertadas e redução prévia de movimento.** Não foi acrescentado contador por descanso. Fechar a Rota, por restringir uma direção e não reduzir a característica de deslocamento, não foi usado como atalho automático para esse requisito.
 
