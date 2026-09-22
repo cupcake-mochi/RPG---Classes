@@ -73,7 +73,7 @@ Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não
 | **Fixar o Alvo** | **≥ 2 conduções e o alvo já com movimento reduzido antes do ataque** [V1, V2, ORC] | distância; requisito externo de Lento | Impedido, TR Físico | 132,15 |
 
 - Rasteira e Quebrar o Ritmo pertencem aos dois catálogos de arma. [CD, ECF]
-- A CD dos TRs: 8 + atributo usado no ataque + maestria. [ESC, para as Manhas; ECF, para as conclusões mágicas. Para as conclusões de arma está implícito.]
+- A CD dos TRs: 8 + atributo usado no ataque + maestria. [ESC, para as Manhas; ECF, para as conclusões de feitiço. Para as conclusões de arma está implícito.]
 - Depois de Fixar ou Rasteira, os seus ataques seguintes contra o alvo carregam a condição: vantagem com Impedido; vantagem de perto e desvantagem de longe com Derrubado. [v2.py, `attack()`]
 - Fixar não tem contador por descanso. [V2, ORC] A V1 propôs uma ou duas tentativas por descanso longo; não foi adotado. [V1]
 
@@ -107,7 +107,7 @@ Quando errar o ataque de uma Condução, pode gastar um uso pra impedir que o er
 ## 8. A Estocada em cima da Sequência
 
 - **Compasso (2).** O ataque da ação bônus serve pra Abrir, Conduzir ou Concluir, com os custos e requisitos normais. O feitiço não é etapa e não renova prazo. [EC]
-- **Conclusões mágicas (11).** Depois de acertar pelo menos uma Condução, um feitiço de Classe 1 ou mais que cause dano ou imponha condição ao alvo da sequência pode Concluir. Ativa se o feitiço acerta ou o alvo falha no TR principal — dano parcial não basta. Escolhe antes de resolver. Afeta só o alvo da sequência. Consome a sequência mesmo falhando. TR adicional com CD 8 + atributo do Compasso + maestria; os efeitos novos do feitiço não pioram esse TR. Uma conclusão mágica ocupa a etapa do turno e impede nova abertura nele. [ECF, EC]
+- **Conclusões de feitiço (11).** Depois de acertar pelo menos uma Condução, um feitiço de Classe 1 ou mais que cause dano ou imponha condição ao alvo da sequência pode Concluir. Ativa se o feitiço acerta ou o alvo falha no TR principal — dano parcial não basta. Escolhe antes de resolver. Afeta só o alvo da sequência. Consome a sequência mesmo falhando. TR adicional com CD 8 + atributo do Compasso + maestria; os efeitos novos do feitiço não pioram esse TR. Uma conclusão de feitiço ocupa a etapa do turno e impede nova abertura nele. [ECF, EC]
   Seis opções: **Cortar a Resposta** (2 conduções, TR Físico, sem Reação) · **Romper Fileira** (antes Abrir Caminho; 1, TR Físico, move o alvo 6 m e você meio deslocamento) · **Desorientar** (1, sem TR, desvantagem na próxima rolagem dele) · **Expor a Guarda** (2, TR de Vigor, vantagem no próximo ataque de um aliado) · **Ancorar** (2, TR Físico, deslocamento zero) · **Refluxo** (1, sem TR, metade do PE de uma condução em energia temporária). [ECF]
 - **Bote (19).** Com feitiço de condição sem dano na padrão, dois ataques na bônus: o primeiro pode Abrir e o segundo Conduzir. Se o feitiço concluiu, os dois ataques não dão etapa nem abertura nova. O feitiço não conta como condução. [EB]
 - **Ferrão (27).** Depois de Concluir com feitiço que afetou o alvo, o primeiro ataque da bônus leva um Classe 0. A sequência já terminou; Ferrão não reabre. [EF]
@@ -131,7 +131,7 @@ Quando errar o ataque de uma Condução, pode gastar um uso pra impedir que o er
 | 18/09, tarde | Custos do autor: Xd4 e maestria/2+1 PE. Teto de duas mantido. Fechar a Rota só impede afastar. Fixar sem contador. Escola reduzida a quatro Manhas + Versado | V2, ESC |
 | 18/09, noite | Não Cede mantido, reserva de 1,00 | NC |
 | 19/09, manhã | Persistência: um uso por cena → metade da maestria pra baixo + 1 por descanso | N23P, N23 |
-| 19/09, tarde | Sem teto de conduções; erro encerra; Conclusão Dupla no 30, com fontes que não misturam. Estocada: Compasso com atributo no PE, seis conclusões mágicas, Bote mantido, Ferrão após conclusão mágica | CD, ORC, EC, ECF, EB, EF |
+| 19/09, tarde | Sem teto de conduções; erro encerra; Conclusão Dupla no 30, com fontes que não misturam. Estocada: Compasso com atributo no PE, seis conclusões de feitiço, Bote mantido, Ferrão após conclusão de feitiço | CD, ORC, EC, ECF, EB, EF |
 
 ---
 
@@ -180,10 +180,10 @@ Triagem rodada no `conferir-nomes.py` do repositório principal, de `sistema/03-
 | Escola de Arma, Manha (deslocar o alvo 1,5 m) | Desvio | **Mover Alvo** | sentido invertido: a Manha desloca o alvo, "desviar" no hobby é o defensor esquivando |
 | Conclusão de arma (crítico em 19–20) | Golpe de Impacto | **Ponto Fraco** | Impacto é Tema (tipo de dano) no manual |
 | Conclusão de arma (Derrubado + empurrão) | Derrubada | **Rasteira** | a uma letra de Derrubado (condição) e Derrubar (opção de ataque do manual) |
-| Conclusão mágica da Estocada (desloca o alvo 6 m, você meio deslocamento) | Abrir Caminho | **Romper Fileira** | "Caminho" é a classe inteira — 53 arquivos do repositório principal usam o termo |
+| Conclusão de feitiço da Estocada (desloca o alvo 6 m, você meio deslocamento) | Abrir Caminho | **Romper Fileira** | "Caminho" é a classe inteira — 53 arquivos do repositório principal usam o termo |
 
 **Mantidos sem troca, colisão aceita de propósito:**
 - **Fechar a Rota** (condução): "Rota" é termo definido no repositório principal (Rota de arma, Rota de ferramenta, peça 20 e manual 42; Rota: Yumi/Besta/Arma de Fogo do Batedor, manual 35) — colisão real, não incidental. Mantido por decisão do Mizuki.
-- **Interromper a Resposta** (conclusão de arma, só à distância) e **Cortar a Resposta** (conclusão mágica da Estocada): mesmo efeito, dois nomes — ficam separados de propósito, porque são entregas de catálogos diferentes (arma × feitiço), não a mesma entrada duplicada.
+- **Interromper a Resposta** (conclusão de arma, só à distância) e **Cortar a Resposta** (conclusão de feitiço da Estocada): nomes separados para catálogos diferentes (arma × feitiço). Após comparar as janelas em 22/09 (`RASCUNHO-comparacao-resposta.md`), o Mizuki manteve Interromper até o próximo turno e Cortar só contra o próximo ataque: a conjuração já oferece sua entrega própria, e seu bônus pode ser menor.
 
-**Ainda sem nome fechado:** a etapa 1 (Abrir/Abertura). "Abertura" colide de sentido com o vocabulário de Expansão de Domínio ("a cada abertura", "reaberturas"). Candidatos triados e livres: Golpe Inicial, Primeiro Golpe.
+**Nome fechado em 22/09/2026: Golpe Inicial.** Escolha do Mizuki após a triagem no `conferir-nomes.py` do repositório principal, que retornou LIVRE e leu o manual sem pulos. Substitui Abrir/Abertura como nome da etapa; as ocorrências anteriores neste registro conservam o histórico. O verbo comum abrir uma sequência continua possível. Nenhuma regra ou número mudou.

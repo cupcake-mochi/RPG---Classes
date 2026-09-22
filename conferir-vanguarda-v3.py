@@ -35,6 +35,8 @@ class Config(OLD['Config']):
     # Parte do valor de impedir Reação que resta quando Impedido já prejudicou ataques.
     reaction_after_fixar:float=.5
     slow_from_turn:int=1
+    response_magnitude:float|None=None
+    response_enabled:bool=True
 
 
 def add(*vectors):
@@ -74,6 +76,8 @@ def condition_value(effects, cfg):
     """
     e = frozenset(effects)
     magnitudes = {'derrubada':9.35,'desarme':3.45,'resposta':36.5,'ritmo':39.2,'fixar':132.15}
+    if cfg.response_magnitude is not None:
+        magnitudes['resposta'] = cfg.response_magnitude
     if cfg.overlap_mode=='additive':
         return sum(magnitudes[k] for k in e)
     value = 0.
@@ -94,7 +98,7 @@ def condition_value(effects, cfg):
     if 'desarme' in e:
         value += 3.45
     if 'resposta' in e:
-        value += 36.5*(cfg.reaction_after_fixar if 'fixar' in e else 1.)
+        value += magnitudes['resposta']*(cfg.reaction_after_fixar if 'fixar' in e else 1.)
     return value+max(movement,default=0.)
 
 
@@ -126,7 +130,7 @@ def available_finishes(cfg, n, turn):
     allowed = ['impacto'] if cfg.melee else (['cobertura'] if cfg.cover else [])
     if n>=1:
         allowed += ['derrubada','ritmo']
-        allowed += ['desarme'] if cfg.melee else ['resposta']
+        allowed += ['desarme'] if cfg.melee else (['resposta'] if cfg.response_enabled else [])
     if n>=2 and not cfg.melee and cfg.external_slow and turn>=cfg.slow_from_turn:
         allowed.append('fixar')
     return allowed
@@ -380,5 +384,91 @@ def audit():
     print(output['checks'],flush=True)
 
 
+def comparar_resposta(publicar=False):
+    """Sensibilidade da janela; não adota uma mudança de regra.
+
+    Reutiliza o modelo de Persistência e PE do dono atual. A tabela publicada
+    é conferida sem ser reescrita, salvo publicação explícita após revisão.
+    """
+    import re
+    doc = ROOT/'RASCUNHO-comparacao-resposta.md'
+    texto = doc.read_text()
+    loader = (ROOT/'conferir-vanguarda-pe.py').read_text().split('\noutput = {')[0]
+    ns = {'__file__':str(ROOT/'conferir-vanguarda-pe.py')}
+    exec(compile(loader, '<resposta: modelo atual com Persistência>', 'exec'), ns)
+    medir, referencia, melee = ns['day'], ns['reference'], ns['melee']
+    # O número de recuperações pertence ao dono de Persistência usado no preço Br.
+    usos = int(re.search(r'recovery_uses=(\d+)', (ROOT/'conferir-vanguarda-pe.py').read_text()).group(1))
+    magia = (ROOT/'estocada-conclusoes-feiticos.md').read_text()
+    larga = float(re.search(r'magnitude (\d+,\d+)', magia).group(1).replace(',', '.'))
+    fonte = (ROOT/'referencia-jjk-project/sistema/03-mecanica/19-dano-e-condicoes.md').read_text()
+    def celula(label):
+        linha = next(l for l in fonte.splitlines() if l.startswith('| '+label+' |'))
+        return float(re.search(r'`([\d,]+)`', linha.split('|')[2]).group(1).replace(',', '.'))
+    estreita = celula('vantagem e desvantagem')*celula('`1` ponto percentual na rolagem de um aliado')
+    base = json.loads((ROOT/'vanguarda-pe-contas.json').read_text())
+    cenarios = [('distancia', referencia), ('corpo_a_corpo', melee),
+                ('sem_fixar', replace(referencia, external_slow=False))]
+    for rotulo, q in re.findall(r'^\| (vigor_resiste_\w+) \| ([0-9.]+) \|$', texto, re.M):
+        cenarios.append((rotulo, replace(referencia, q_vigor=float(q))))
+    assert len(cenarios)>3, 'Faltam cenários de sensibilidade de Vigor no documento dono'
+    saida = {'magnitudes':{'larga':larga, 'estreita':estreita}, 'cenarios':{}}
+    linhas = ['| Grandeza | Larga | Estreita |', '|---|---:|---:|']
+    def linha(nome, a, b):
+        linhas.append(f'| {nome} | {a:.6f} | {b:.6f} |')
+    linha('Magnitude por aplicação bem-sucedida', larga, estreita)
+    for nome, cfg in cenarios:
+        resultados = {}
+        for janela, magnitude in saida['magnitudes'].items():
+            c = replace(cfg, response_magnitude=magnitude)
+            seq = medir(replace(c, school='', school_open_value=0), pe_rate=0)
+            antes = medir(replace(c, recovery=True, recovery_uses=usos), pe_rate=0)
+            completo_cfg = replace(c, recovery=True, recovery_uses=usos, capstone=True)
+            completo = medir(completo_cfg, pe_rate=0)
+            sem = medir(replace(completo_cfg, response_enabled=False), pe_rate=0)
+            resultados[janela] = {
+                'sequencia':seq['after_opening_slices'],
+                'caminho':completo['after_opening_slices']+base['nao_cede_slices'],
+                'dupla_marginal':completo['after_opening_slices']-antes['after_opening_slices'],
+                'resposta_marginal':completo['after_opening_slices']-sem['after_opening_slices'],
+                'duplas_dia':{k:v for k,v in completo.items() if k.startswith('dupla:')},
+                'pares_isolados':{},
+            }
+            if nome == 'distancia':
+                for par in combinations(ns['ns']['module'].available_finishes(c, 2, 3), 2):
+                    r = medir(completo_cfg, pe_rate=0, force_pair=par)
+                    resultados[janela]['pares_isolados']['+'.join(par)] = r['after_opening_slices']-antes['after_opening_slices']
+            assert resultados[janela]['resposta_marginal']>=-1e-9
+        a, b = resultados['larga'], resultados['estreita']
+        if nome in base['perfis']:
+            assert abs(a['caminho']-base['perfis'][nome]['total_com_nao_cede']['Br'])<1e-9, f'{nome}: janela larga diverge do preço Br atual'
+        assert a['caminho']>=b['caminho']-1e-9, f'{nome}: estreitar aumentou o valor'
+        for chave in ('sequencia','caminho','dupla_marginal','resposta_marginal'):
+            linha(nome+'/'+chave, a[chave], b[chave])
+        for chave in a['duplas_dia']:
+            if max(a['duplas_dia'][chave], b['duplas_dia'][chave])>1e-9:
+                linha(nome+'/'+chave+'/tentativas_dia', a['duplas_dia'][chave], b['duplas_dia'][chave])
+        for chave in a['pares_isolados']:
+            linha(nome+'/dupla_isolada/'+chave, a['pares_isolados'][chave], b['pares_isolados'][chave])
+        saida['cenarios'][nome] = resultados
+        print('Comparação de janelas:', nome, 'OK', flush=True)
+    inicio, fim = '<!-- inicio-contas-resposta -->', '<!-- fim-contas-resposta -->'
+    anterior = texto.split(inicio)[1].split(fim)[0]
+    calculado = '\n'+'\n'.join(linhas)+'\n'
+    if publicar:
+        doc.write_text(texto.replace(inicio+anterior+fim, inicio+calculado+fim))
+    else:
+        assert anterior == calculado, 'Tabela publicada da comparação de Resposta diverge do cálculo; revisar a fonte alterada'
+    saida['checks'] = 'Preço largo reproduz Br; remoção não aumenta valor; estreitar não aumenta valor; tabela publicada confere.'
+    (ROOT/'vanguarda-resposta-contas.json').write_text(json.dumps(saida, ensure_ascii=False, indent=2)+'\n')
+    print(saida['checks'], flush=True)
+
+
 if __name__=='__main__':
-    audit()
+    import sys
+    if sys.argv[1:] == ['--comparar-resposta']:
+        comparar_resposta()
+    elif not sys.argv[1:]:
+        audit()
+    else:
+        raise SystemExit('Uso: conferir-vanguarda-v3.py [--comparar-resposta]')

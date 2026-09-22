@@ -1,6 +1,6 @@
 # Estocada — Ferrão, nível 27
 
-Versão mecânica de trabalho escolhida pelo autor em 19 de setembro de 2026: manter o Classe 0 que acompanha a arma, mas fazê-lo suceder uma conclusão mágica. Substitui o gatilho antigo de qualquer feitiço da ação padrão acertar. O nome continua o existente; a precificação anterior não foi reafirmada.
+Versão mecânica de trabalho escolhida pelo autor em 19 de setembro de 2026: manter o Classe 0 que acompanha a arma, mas fazê-lo suceder uma conclusão de feitiço. Substitui o gatilho antigo de qualquer feitiço da ação padrão acertar. O nome continua o existente; a precificação anterior não foi reafirmada.
 
 ## Regra
 

@@ -46,11 +46,11 @@ Triagem rodada no `conferir-nomes.py` do repositório principal (`sistema/03-mec
 | Desvio (Manha) | **Mover Alvo** | sentido invertido: a Manha desloca o alvo, "desviar" no hobby é o defensor esquivando |
 | Golpe de Impacto (conclusão) | **Ponto Fraco** | Impacto é Tema no manual |
 | Derrubada (conclusão) | **Rasteira** | a uma letra de Derrubado (condição) e Derrubar (opção de ataque do manual) |
-| Abrir Caminho (conclusão mágica) | **Romper Fileira** | "Caminho" é a classe inteira — 53 arquivos do repositório principal usam o termo |
+| Abrir Caminho (conclusão de feitiço) | **Romper Fileira** | "Caminho" é a classe inteira — 53 arquivos do repositório principal usam o termo |
 
-**Mantidos, colisão aceita de propósito:** **Fechar a Rota** (condução) — "Rota" é termo definido do Batedor (Rota de arma, Rota: Yumi/Besta/Arma de Fogo), mas o Mizuki manteve. **Interromper a Resposta** (conclusão de arma, só à distância) e **Cortar a Resposta** (conclusão mágica) — mesmo efeito, dois nomes, ficam separados porque são entregas de catálogos diferentes (arma × feitiço), não a mesma entrada duplicada.
+**Mantidos, colisão aceita de propósito:** **Fechar a Rota** (condução) — "Rota" é termo definido do Batedor (Rota de arma, Rota: Yumi/Besta/Arma de Fogo), mas o Mizuki manteve. **Interromper a Resposta** (conclusão de arma, só à distância) e **Cortar a Resposta** (conclusão de feitiço) — nomes mantidos para catálogos diferentes (arma × feitiço). Hoje as janelas também diferem: Interromper dura até o próximo turno; Cortar afeta apenas o próximo ataque. A [comparação das janelas](RASCUNHO-comparacao-resposta.md) foi concluída; o Mizuki decidiu mantê-las diferentes em 22/09.
 
-**Ainda sem nome fechado: a etapa 1.** Este documento usa **Abrir/Abertura** como nome de trabalho. Candidatos triados e livres: Golpe Inicial, Primeiro Golpe.
+**Nome da etapa 1 fechado em 22/09/2026: Golpe Inicial.** Escolhido pelo Mizuki após triagem no validador do projeto principal. A mudança é de nome; custos, requisitos e efeitos permanecem iguais.
 
 ## O Caminho
 
@@ -60,15 +60,15 @@ Reserva conjunta: **2,75 fatia** (Sequência 2,00 + Escola 0,75). Entram juntas 
 
 #### A Sequência — forma geral
 
-Três etapas: **Abrir → Conduzir → Concluir.** Uma única sequência ativa por vez, contra um único inimigo. Cada etapa usa um ataque que você já tem — a Sequência não concede ataque nem ação. No máximo uma Condução **ou** uma Conclusão por turno; abrir e conduzir/concluir no mesmo turno, com ataques diferentes, pode.
+Três etapas: **Golpe Inicial → Conduzir → Concluir.** Uma única sequência ativa por vez, contra um único inimigo. Cada etapa usa um ataque que você já tem — a Sequência não concede ataque nem ação. No máximo uma Condução **ou** uma Conclusão por turno; abrir e conduzir/concluir no mesmo turno, com ataques diferentes, pode.
 
-**Abrir.** Antes de rolar um ataque, declare que está abrindo uma sequência. O golpe que abriu perde **Xd4 do dano total, mínimo zero**, sendo X metade da maestria arredondada pra cima — 1d4 nas maestrias 1 e 2, 2d4 nas 3 e 4. A redução é rolada uma vez, quando o ataque acerta, descontada depois dos modificadores do atacante e antes da mitigação do alvo; não dobra no crítico. Acertar abre mesmo que o dano termine em zero. Não custa PE. Não pode abrir no turno em que concluiu, nem reabrir uma sequência ainda ativa no mesmo alvo. **Abrir uma sequência contra outro alvo substitui a anterior.**
+**Golpe Inicial.** Antes de rolar um ataque, declare que está abrindo uma sequência. O golpe que abriu perde **Xd4 do dano total, mínimo zero**, sendo X metade da maestria arredondada pra cima — 1d4 nas maestrias 1 e 2, 2d4 nas 3 e 4. A redução é rolada uma vez, quando o ataque acerta, descontada depois dos modificadores do atacante e antes da mitigação do alvo; não dobra no crítico. Acertar abre mesmo que o dano termine em zero. Não custa PE. Não pode abrir no turno em que concluiu, nem reabrir uma sequência ainda ativa no mesmo alvo. **Dar o Golpe Inicial contra outro alvo substitui a sequência anterior.**
 
 **Conduzir.** Cada tentativa custa **metade da maestria arredondada pra cima + 1 PE**, pago antes de rolar, inclusive se errar — 2 PE nas maestrias 1 e 2, 3 PE nas 3 e 4. Acertar o ataque é acertar a condução, mesmo que o alvo passe no TR do efeito secundário — o acerto conta e renova o prazo. **Errar o ataque encerra a sequência imediatamente**, salvo gastar um uso de Persistência a partir do nível 23. **Não há teto de conduções acertadas.** Trocar de condução encerra os efeitos sustentados da anterior na declaração, mesmo que o novo ataque erre; os benefícios não se acumulam.
 
-**Concluir.** Não custa PE adicional. Consome a sequência mesmo errando ou se o alvo passa no TR. Impede nova Abertura no mesmo turno.
+**Concluir.** Não custa PE adicional. Consome a sequência mesmo errando ou se o alvo passa no TR. Impede novo Golpe Inicial no mesmo turno.
 
-**Prazo.** Abertura ou Condução acertada no turno T mantém a sequência até o fim do turno T+2 — o segundo turno seu depois daquele. A sequência encerra por: erro numa condução; fim do prazo sem retomar; uma conclusão resolvida, acertando ou não. Efeitos com duração própria respeitam seu prazo; movimento já feito não se desfaz.
+**Prazo.** Um Golpe Inicial acertado ou uma Condução acertada no turno T mantém a sequência até o fim do turno T+2 — o segundo turno seu depois daquele. A sequência encerra por: erro numa condução; fim do prazo sem retomar; uma conclusão resolvida, acertando ou não. Efeitos com duração própria respeitam seu prazo; movimento já feito não se desfaz.
 
 **Ataque fora do seu turno não é etapa** — o texto-base diz "no seu turno" e "uma vez por turno seu"; Reação não conta.
 
@@ -101,16 +101,18 @@ Rasteira e Quebrar o Ritmo pertencem aos dois catálogos de arma. Depois de Fixa
 
 #### Escola de Arma
 
-| Categorias | Manha | Efeito na Abertura acertada |
+| Categorias | Manha | Efeito no Golpe Inicial acertado |
 |---|---|---|
 | Lâmina Curta, Arremesso, Yumi, Balestra, Arma de Fogo | **Ritmo** | +1 no próximo ataque com a categoria contra o alvo da sequência; consome mesmo errando |
 | Lâmina Longa, Manopla, golpes desarmados | **Postura Firme** | +1 de Defesa até o começo do seu próximo turno; não acumula consigo mesma; inclui Bloquear |
 | Massa, Porrete, Machado, Armas Longas | **Empuxo** | TR Físico; na falha, empurra até 3 m |
 | Ceifa, Flexível | **Mover Alvo** | TR Físico; na falha, desloca até 1,5 m |
 
-Aplica a Manha da categoria uma vez por sequência, no máximo uma por turno, resolvida depois do dano da Abertura. Não dispara em condução, conclusão, ataque comum ou abertura que erre.
+Aplica a Manha da categoria uma vez por sequência, no máximo uma por turno, resolvida depois do dano do Golpe Inicial. Não dispara em condução, conclusão, ataque comum ou abertura que erre.
 
-**Versado, alternativa:** logo depois de acertar a Abertura, guarda uma arma e saca outra sem gastar ação, uma troca por sequência. Abre com qualquer arma elegível, sem as Manhas de categoria.
+**Versado, alternativa:** logo depois de acertar o Golpe Inicial, guarda uma arma e saca outra sem gastar ação, uma troca por sequência. Abre com qualquer arma elegível, sem as Manhas de categoria.
+
+**Escola conferida no modelo v3 em 22/09:** [a tabela atual](vanguarda-escolas-rascunho.md) e `vanguarda-escolas-contas.json` separam o líquido do bruto adotado. Os valores históricos de 18/09 permanecem identificados no documento da Escola.
 
 ### Nível 15 — Não Cede
 
@@ -136,7 +138,7 @@ Reserva: **1,00 fatia** (marginal medido 0,8395 com Persistência já presente).
 
 > Uma vez por cena, ao Concluir uma sequência em que acertou pelo menos duas conduções, escolha duas conclusões diferentes da mesma fonte e aplique as duas pelo mesmo ataque ou feitiço.
 
-**Fontes: corpo a corpo, distância, feitiço — não mistura.** A fonte da preparação não precisa ser a da conclusão (preparar com arma, concluir com duas mágicas, é permitido pela Estocada). Escolhe as duas antes de rolar; ambas precisam ter os requisitos cumpridos. Um ataque, uma rolagem, um dano; cada conclusão com TR rola o seu, resolve todos antes de aplicar os efeitos. Explorar o Desequilíbrio afeta só um TR, ordem declarada antes. Consome o uso na declaração, mesmo errando.
+**Fontes: corpo a corpo, distância, feitiço — não mistura.** A fonte da preparação não precisa ser a da conclusão (preparar com arma, concluir com duas de feitiço, é permitido pela Estocada). Escolhe as duas antes de rolar; ambas precisam ter os requisitos cumpridos. Um ataque, uma rolagem, um dano; cada conclusão com TR rola o seu, resolve todos antes de aplicar os efeitos. Explorar o Desequilíbrio afeta só um TR, ordem declarada antes. Consome o uso na declaração, mesmo errando.
 
 **Fixar + Quebrar o Ritmo:** o movimento reduzido precisa existir antes de declarar; o Lento que a outra vai aplicar não serve pra satisfazer o requisito. Impedido recém-aplicado não dá desvantagem no outro TR do mesmo ataque.
 
@@ -153,7 +155,7 @@ Reserva: **1,00 fatia** (marginal medido 0,8395 com Persistência já presente).
 
 No perfil corpo a corpo (lâmina longa, Postura Firme), o mesmo total bruto mede **1,34** — Não Cede sozinho já é 0,82 dele; a Sequência inteira soma só 0,52.
 
-## Trilha Estocada — Compasso e o catálogo mágico
+## Trilha Estocada — Compasso e o catálogo de feitiços
 
 ### Nível 2 — Compasso
 
@@ -165,9 +167,9 @@ No perfil corpo a corpo (lâmina longa, Postura Firme), o mesmo total bruto mede
 >
 > **Quando usar a ação Conjurar na ação padrão, pode fazer um ataque com arma de um desses grupos como ação bônus.** Não exige que o feitiço acerte pra liberar esse ataque.
 
-O ataque da ação bônus é um ataque existente e pode Abrir, Conduzir ou Concluir. O feitiço não conta como etapa nem renova o prazo por si só. Preço da parcela de PE: **0,58 a 0,96 fatia** (atributo 6 no nível 30; 0,58 sem descanso extra, 0,96 com dois descansos curtos aproveitados). O núcleo de conjurar-e-atacar não está revalidado como preço zero — participa da avaliação conjunta da Trilha.
+O ataque da ação bônus é um ataque existente e pode ser usado para dar o Golpe Inicial, Conduzir ou Concluir. O feitiço não conta como etapa nem renova o prazo por si só. Preço da parcela de PE: **0,58 a 0,96 fatia** (atributo 6 no nível 30; 0,58 sem descanso extra, 0,96 com dois descansos curtos aproveitados). O núcleo de conjurar-e-atacar não está revalidado como preço zero — participa da avaliação conjunta da Trilha.
 
-### Nível 11 — as seis conclusões mágicas
+### Nível 11 — as seis conclusões de feitiço
 
 *Substitui Traçado. Base: depois de acertar pelo menos uma Condução, um feitiço de Classe 1 ou mais que cause dano ou imponha condição ao alvo da sequência pode Concluir. Ativa se o feitiço acerta ou o alvo falha no TR principal — dano parcial não basta. Escolhe antes de resolver; CD do TR adicional 8 + atributo de Compasso + maestria.*
 
@@ -182,14 +184,14 @@ O ataque da ação bônus é um ataque existente e pode Abrir, Conduzir ou Concl
 
 Preços medidos em 21/09 (`conferir-estocada-conclusoes-magicas.py`), pela régua já publicada do repositório principal: dois gates onde a opção pede TR adicional (o feitiço precisa acertar/o alvo falhar no TR principal, **e depois** falhar o TR adicional da opção), um gate só onde não pede. **Dois achados, resolvidos em 21/09:**
 
-- **Cortar a Resposta pedia as mesmas 2 conduções que Expor a Guarda e Ancorar, e valia de 3× a 6× mais** — na mecânica antiga, "sem Reação até o começo do seu próximo turno" (janela larga, magnitude 36,50 — meia ação de chefe). **Decisão do Mizuki: estreitar a mecânica.** Agora nega Reação só contra o próximo ataque, não a janela inteira — mesma lógica de "vantagem numa rolagem" que Expor a Guarda já usa, e bate no mesmo número: 0,34. ⚠ Isto estreita só a versão mágica; a irmã de arma, **Interromper a Resposta**, continua com a janela larga e o 36,50 dentro do modelo já validado (`conferir-vanguarda-v3.py`) — as duas deixam de ser "mesmo efeito, dois nomes" até alguém decidir estreitar a de arma também. Não mexi nela agora pra não desarrumar números já fechados da Sequência sem sua confirmação.
+- **Cortar a Resposta pedia as mesmas 2 conduções que Expor a Guarda e Ancorar, e valia de 3× a 6× mais** — na mecânica antiga, "sem Reação até o começo do seu próximo turno" (janela larga, magnitude 36,50 — meia ação de chefe). **Decisão do Mizuki: estreitar a mecânica.** Agora nega Reação só contra o próximo ataque, não a janela inteira — mesma lógica de "vantagem numa rolagem" que Expor a Guarda já usa, e bate no mesmo número: 0,34. ⚠ Isto estreita só a versão de feitiço; a irmã de arma, **Interromper a Resposta**, continua com a janela larga e o 36,50 dentro do modelo já validado (`conferir-vanguarda-v3.py`) — o Mizuki decidiu manter essa diferença em 22/09: a conjuração oferece uma entrega própria, então o efeito adicional pode ter janela menor. A comparação dos dois cenários está em `RASCUNHO-comparacao-resposta.md`.
 - **Desorientar não tinha convenção publicada pra "próxima rolagem de qualquer natureza".** Decisão do Mizuki: fecha no piso, 0,62 — a rolagem que ele pega é imprevisível, às vezes ataque, às vezes perícia sem importância nenhuma, e o preço tem que refletir o caso médio, não o favorável.
 
-Catálogo fechado como versão mecânica de trabalho; preço do conjunto (rotina completa com Compasso/Bote/Ferrão, e as duplas mágicas do 30) ainda não validado (ver "o que falta" abaixo).
+Catálogo fechado como versão mecânica de trabalho; preço do conjunto (rotina completa com Compasso/Bote/Ferrão, e as duplas de feitiço do 30) ainda não validado (ver "o que falta" abaixo).
 
 ### Nível 19 — Bote
 
-> Quando conjurar na ação padrão um feitiço de condição que **não causa dano**, pode usar seu ataque extra na ação bônus de Compasso — o primeiro ataque pode Abrir, o segundo Conduzir.
+> Quando conjurar na ação padrão um feitiço de condição que **não causa dano**, pode usar seu ataque extra na ação bônus de Compasso — o primeiro ataque pode dar o Golpe Inicial, o segundo Conduzir.
 
 Não recebe outra ação bônus nem terceiro ataque. Se o feitiço concluiu, os dois ataques não dão etapa nem abertura nova. O feitiço não conta como condução por satisfazer o gatilho de Bote. **Bote e Ferrão são incompatíveis no mesmo turno.**
 
@@ -209,23 +211,28 @@ O preço zero antigo do núcleo de Compasso se apoiava numa regra em que conjura
    |---|---:|---:|
    | Compasso (2) — sobre a Sequência sozinha | **5,35** | **2,13** |
    | … dos quais, o dano cru dos 7 ataques de bônus | 3,01 | 1,98 |
-   | Conclusões mágicas (11) | **0,00** | **0,00** |
+   | Conclusões de feitiço (11) | **0,00** | **0,00** |
    | Bote (19), se todo feitiço conjurado for de condição sem dano | até **3,43** | até **2,05** |
    | Ferrão (27) | **0,00** | **0,00** |
 
-   **O Compasso sozinho passa do orçamento inteiro da Trilha no perfil de distância.** O nível 11 e o 27 valem zero na referência: o ataque de bônus do Compasso já pode Concluir de arma, e toda conclusão de arma disponível vale mais que a melhor conclusão mágica — o otimizador nunca troca uma pela outra, e Ferrão depende de uma conclusão mágica pra disparar. O Bote é teto: supõe que todo feitiço conjurado seja de condição sem dano e que o feitiço de condição valha o mesmo que o de dano da mesma Classe (que é o que a economia de pontos do Fundamento promete, mas não foi medido aqui).
-2. ~~Medir as seis conclusões mágicas como catálogo de escolhas.~~ **Feito em 21/09**, tabela acima.
-3. Conferir as duplas mágicas do nível 30. Valor por acionamento medido — a melhor dupla é Desorientar + Ancorar, 1,34 fatia; a pior é Cortar a Resposta + Expor a Guarda, 0,68 (toda dupla é a soma exata das duas isoladas, conferido por contra-teste). **Frequência de uso na referência: zero**, pelo mesmo motivo do nível 11.
-4. Distribuir as cinco fatias da Trilha: com os números acima, a Estocada mede de 5,35 a 8,78 no perfil de distância e de 2,13 a 4,19 no corpo a corpo, concentrada toda no 2 e no 19. Fica pra reescrita das Trilhas — a seção do topo deste arquivo explica por quê.
+   **O Compasso sozinho passa do orçamento inteiro da Trilha no perfil de distância.** O nível 11 e o 27 valem zero na referência: o ataque de bônus do Compasso já pode Concluir de arma, e toda conclusão de arma disponível vale mais que a melhor conclusão de feitiço — o otimizador nunca troca uma pela outra, e Ferrão depende de uma conclusão de feitiço pra disparar. O Bote é teto: supõe que todo feitiço conjurado seja de condição sem dano e que o feitiço de condição valha o mesmo que o de dano da mesma Classe (que é o que a economia de pontos do Fundamento promete, mas não foi medido aqui).
+2. ~~Medir as seis conclusões de feitiço como catálogo de escolhas.~~ **Feito em 21/09**, tabela acima.
+3. Conferir as duplas de feitiço do nível 30. Valor por acionamento medido — a melhor dupla é Desorientar + Ancorar, 1,34 fatia; a pior é Cortar a Resposta + Expor a Guarda, 0,68 (toda dupla é a soma exata das duas isoladas, conferido por contra-teste). **Frequência de uso na referência: zero**, pelo mesmo motivo do nível 11.
+4. Distribuir as cinco fatias da Trilha: na hipótese de feitiços de condição sem dano tão valiosos quanto os de dano, os números acima vão de 5,35 a 8,78 no perfil de distância e de 2,13 a 4,19 no corpo a corpo, concentrados no 2 e no 19. **Não são o preço líquido da Trilha.** A escolha entre os feitiços foi revalidada depois; ver abaixo.
+
+**Comparação complementar de 22/09:** os números do item 1 usam a Sequência sozinha para a escada da Estocada. No Caminho completo, com Escola, Persistência e Conclusão Dupla, a mesma rotina de sete conjurações dá **6,49 fatias** para Compasso sozinho à distância (**2,32** corpo a corpo), antes do PE adicional. Se todos os sete feitiços habilitarem Bote, Compasso+Bote chega a **9,99** (**4,42** corpo a corpo). A análise de limites, PE nominal, disputa da ação bônus e suas ressalvas está em [`RASCUNHO-orcamento-estocada.md`](RASCUNHO-orcamento-estocada.md). Nenhum limite virou regra; as conclusões de feitiço e Ferrão ainda não foram reotimizados nesse Caminho completo.
+
+**Revalidação da escolha de feitiço:** [o cálculo atualizado](RASCUNHO-revalidacao-estocada.md) confirma que a diferença 6,49 / 2,32 vem de duas fichas: Yumi tem 87,75% de acerto, vantagem e acesso a Fixar; Lâmina Longa tem 55% de acerto e não tem Fixar. O 9,99 é teto de Bote com feitiços de condição sem dano de valor equivalente ao feitiço de dano. Se o controle valer zero, o ganho incremental de Bote cai a **0,076** fatia à distância e **0,000** corpo a corpo. A conta de Compasso exige pelo menos um descanso curto para que as sete conjurações e as Conduções caibam no PE; com esse descanso, seus **6,49** ainda passam de **5,50**. Sem descanso, a rotina anterior é inviável e precisa de outro preço.
 
 ## O que continua aberto
 
-- **O nome da etapa 1** (Abrir/Abertura).
 - **A assimetria entre distância e corpo a corpo** — 5,07 contra 1,34 no bruto; mais dura ainda no líquido.
-- **O preço total da Estocada**, e as duplas mágicas da Conclusão Dupla.
-- **O alvo cair no meio da sequência**: o texto de regra agora explicita que uma Abertura contra outro alvo substitui a sequência anterior; ainda não há regra nova de transferência gratuita.
-- **Nomear a etapa 1** e revisar o [`RASCUNHO-sequencia-de-combate.md`](RASCUNHO-sequencia-de-combate.md) antes de portar o texto ao repositório principal.
+- **O preço total da Estocada**, e as duplas de feitiço da Conclusão Dupla.
+- **O alvo cair no meio da sequência**: o texto de regra agora explicita que um Golpe Inicial contra outro alvo substitui a sequência anterior; ainda não há regra nova de transferência gratuita.
+- Revisar o [`RASCUNHO-sequencia-de-combate.md`](RASCUNHO-sequencia-de-combate.md) antes de portar o texto ao repositório principal.
 
 ## Fontes
 
-`vanguarda-sequencia-conversa-18-09.md` (texto-base) · `vanguarda-sequencia-consolidada.md` (fonte por frase + decisões de 21/09) · `vanguarda-orcamento.md` (registro vigente do orçamento) · `vanguarda-nao-cede.md` · `vanguarda-nv23.md` · `vanguarda-conclusao-dupla.md` · `vanguarda-escolas-rascunho.md` · `estocada-compasso.md` · `estocada-conclusoes-feiticos.md` · `estocada-bote.md` · `estocada-ferrao.md` · `estocada-auditoria.md` · `excecao-atributo-no-pe.md` · `conferir-vanguarda-pe.py` / `vanguarda-pe-contas.json`, `conferir-estocada-conclusoes-magicas.py` / `estocada-conclusoes-magicas-contas.json` (validadores, `TUDO OK`).
+`vanguarda-sequencia-conversa-18-09.md` (texto-base) · `vanguarda-sequencia-consolidada.md` (fonte por frase + decisões de 21/09) · `vanguarda-orcamento.md` (registro vigente do orçamento) · `vanguarda-nao-cede.md` · `vanguarda-nv23.md` · `vanguarda-conclusao-dupla.md` · `vanguarda-escolas-rascunho.md` · `estocada-compasso.md` · `estocada-conclusoes-feiticos.md` · `estocada-bote.md` · `estocada-ferrao.md` · `estocada-auditoria.md` · `RASCUNHO-orcamento-estocada.md` / `estocada-orcamento-cenarios-contas.json` · `excecao-atributo-no-pe.md` · `conferir-vanguarda-pe.py` / `vanguarda-pe-contas.json`, `conferir-estocada-conclusoes-magicas.py` / `estocada-conclusoes-magicas-contas.json` (validadores, `TUDO OK`).
+
+**Comparação de 22/09:** os dois cenários de janela foram medidos em [Comparação de Resposta](RASCUNHO-comparacao-resposta.md), incluindo Sequência, Caminho completo, Dupla e efeito para o grupo. O Mizuki decidiu manter as janelas diferentes: Interromper continua com a janela larga e Cortar continua limitado ao próximo ataque.

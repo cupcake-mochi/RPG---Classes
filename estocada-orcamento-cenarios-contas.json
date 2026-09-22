@@ -1,0 +1,99 @@
+{
+  "premissas": {
+    "orcamento_trilha_fatias": 5,
+    "descanso_curto_min": 0,
+    "descanso_curto_max": 2
+  },
+  "pe_nominal": {
+    "min": 0.5781777277840269,
+    "max": 0.9636295463067115
+  },
+  "cenarios": {
+    "Sem ataques de bônus": {
+      "distancia": {
+        "marginal_fatias": 0.0,
+        "compasso_usos_dia": 0.0,
+        "bote_usos_dia": 0.0
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 0.0,
+        "compasso_usos_dia": 0.0,
+        "bote_usos_dia": 0.0
+      }
+    },
+    "Compasso uma vez": {
+      "distancia": {
+        "marginal_fatias": 2.6648777104872337,
+        "compasso_usos_dia": 3.0,
+        "bote_usos_dia": 0.0
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 0.9991098727502813,
+        "compasso_usos_dia": 3.0,
+        "bote_usos_dia": 0.0
+      }
+    },
+    "Compasso duas vezes": {
+      "distancia": {
+        "marginal_fatias": 5.7511947956449925,
+        "compasso_usos_dia": 6.0,
+        "bote_usos_dia": 0.0
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 1.9909647000995239,
+        "compasso_usos_dia": 6.0,
+        "bote_usos_dia": 0.0
+      }
+    },
+    "Compasso atual": {
+      "distancia": {
+        "marginal_fatias": 6.489229180385902,
+        "compasso_usos_dia": 7.000000000000001,
+        "bote_usos_dia": 0.0
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 2.323643028662458,
+        "compasso_usos_dia": 7.000000000000001,
+        "bote_usos_dia": 0.0
+      }
+    },
+    "Ambos uma vez": {
+      "distancia": {
+        "marginal_fatias": 3.9535447521070313,
+        "compasso_usos_dia": 3.0,
+        "bote_usos_dia": 3.0
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 1.863717968348683,
+        "compasso_usos_dia": 3.0,
+        "bote_usos_dia": 3.0
+      }
+    },
+    "Compasso atual, Bote uma vez": {
+      "distancia": {
+        "marginal_fatias": 8.270452673139756,
+        "compasso_usos_dia": 7.000000000000001,
+        "bote_usos_dia": 3.0
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 3.2337913195829895,
+        "compasso_usos_dia": 7.000000000000001,
+        "bote_usos_dia": 3.0
+      }
+    },
+    "Ambos atuais": {
+      "distancia": {
+        "marginal_fatias": 9.991585395445648,
+        "compasso_usos_dia": 7.000000000000001,
+        "bote_usos_dia": 7.000000000000001
+      },
+      "corpo_a_corpo": {
+        "marginal_fatias": 4.4179904423465235,
+        "compasso_usos_dia": 7.000000000000001,
+        "bote_usos_dia": 7.000000000000001
+      }
+    }
+  },
+  "ataque_comum_equivalentes": 22.9125,
+  "checks": "Regressões do Caminho completo, tabela de cenários e limiares de ação bônus: OK."
+}

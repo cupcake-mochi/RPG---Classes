@@ -25,7 +25,7 @@ Mantém-se a base apresentada com o catálogo: feitiço ofensivo de Classe 1 ou 
 
 Função: abrir uma janela pontual pro grupo acertar aquele inimigo sem ele reagir. Mantém a proposta já apresentada, sem mudança de requisito.
 
-**Adenda de 21/09:** a mecânica original era "não pode usar reações até o começo do seu próximo turno" — janela larga, preçada em 2,17 fatias (magnitude 36,50, meia ação de chefe). O Mizuki achou o número alto demais e estreitou a janela pra um único ataque; preço novo, 0,34 fatia, mesma lógica de "vantagem numa rolagem" de Expor a Guarda. Ver `conferir-estocada-conclusoes-magicas.py`. **A irmã de arma, Interromper a Resposta, não foi tocada** e continua com a janela larga dentro de `conferir-vanguarda-v3.py` — pendência de sincronizar as duas.
+**Adenda de 21/09:** a mecânica original era "não pode usar reações até o começo do seu próximo turno" — janela larga, preçada em 2,17 fatias (magnitude 36,50, meia ação de chefe). O Mizuki achou o número alto demais e estreitou a janela pra um único ataque; preço novo, 0,34 fatia, mesma lógica de "vantagem numa rolagem" de Expor a Guarda. Ver `conferir-estocada-conclusoes-magicas.py`. **A irmã de arma, Interromper a Resposta, não foi tocada** e continua com a janela larga dentro de `conferir-vanguarda-v3.py` — diferença mantida por decisão do Mizuki em 22/09, após [comparação das janelas](RASCUNHO-comparacao-resposta.md). O feitiço já é uma entrega mais forte que um ataque simples em muitas rotinas; seu bônus pode ser mais estreito.
 
 ### 2. Romper Fileira
 
@@ -77,20 +77,24 @@ Função: aproveitar parte da energia da preparação ainda nesta cena, com uma 
 
 **Regra solicitada pelo autor:** as duas conclusões devem ser da mesma fonte — feitiço, distância ou corpo a corpo. A fonte da preparação anterior não precisa ser a mesma.
 
-Ao concluir com feitiço, escolha duas conclusões mágicas diferentes e cumpra os requisitos de ambas. Ao concluir com arma, use duas opções compatíveis com a fonte daquele ataque. Conclusões compartilhadas entre corpo a corpo e distância pertencem aos dois catálogos e podem ser escolhidas para qualquer um deles, sem misturar opções exclusivas.
+Ao concluir com feitiço, escolha duas conclusões de feitiço diferentes e cumpra os requisitos de ambas. Ao concluir com arma, use duas opções compatíveis com a fonte daquele ataque. Conclusões compartilhadas entre corpo a corpo e distância pertencem aos dois catálogos e podem ser escolhidas para qualquer um deles, sem misturar opções exclusivas.
 
-Exemplos: Cortar a Resposta + Ancorar é uma dupla mágica válida; Ponto Fraco + Cortar a Resposta não é permitido. Um feitiço de Toque não se torna uma conclusão de arma corpo a corpo. Um ataque de arma carregando feitiço não ganha permissão para combinar fontes.
+Exemplos: Cortar a Resposta + Ancorar é uma dupla de feitiço válida; Ponto Fraco + Cortar a Resposta não é permitido. Um feitiço de Toque não se torna uma conclusão de arma corpo a corpo. Um ataque de arma carregando feitiço não ganha permissão para combinar fontes.
 
 Uma única conjuração e um único pagamento de PE. Cada conclusão resolve seu próprio TR, quando houver; todos são calculados antes de aplicar novos efeitos do lançamento. Explorar o Desequilíbrio modifica só o próximo TR elegível da conclusão, como no Caminho, e não dois. Não altera o TR do próprio feitiço pela simples condição de agora estar concluindo. O uso do nível 30 continua limitado a uma vez por cena, exige pelo menos duas conduções acertadas e é consumido na declaração.
 
 ## Estado do orçamento
 
-**Catálogo fechado como versão mecânica de trabalho, ainda sem preço validado.** A reserva histórica do nível 30 foi calculada com conclusões de armas; ela não certifica essas duplas mágicas. A comparação futura precisa incluir a ação e o PE do feitiço, o que ele já fazia sem a conclusão, acerto/TR, preparação interrompida, duração útil, escolha entre opções e efeitos sobrepostos.
+**Catálogo fechado como versão mecânica de trabalho, ainda sem preço validado.** A reserva histórica do nível 30 foi calculada com conclusões de armas; ela não certifica essas duplas de feitiço. A comparação futura precisa incluir a ação e o PE do feitiço, o que ele já fazia sem a conclusão, acerto/TR, preparação interrompida, duração útil, escolha entre opções e efeitos sobrepostos.
 
 Pontos específicos: Desorientar pode agora atingir TR, Bloquear ou outras rolagens e não pode ser preçado somente como desvantagem em um ataque; seu benefício não se soma a desvantagem já existente. Expor a Guarda depende do próximo ataque de um aliado, com consumo mesmo se ele já tiver vantagem; não reduz Defesa. Ancorar não soma novamente todo o prejuízo de movimento de uma condição que já o zere. Cortar a Resposta pode perder valor se o feitiço já retirar a reação. Refluxo concede apenas energia temporária: seu valor depende de poder gastar o ponto antes de expirar e de não haver uma reserva temporária maior; não se presume recuperação permanente nem acúmulo. Romper Fileira depende de posição e terreno.
 
 ## Próxima entrega
 
-**Bote, nível 19, mantido pelo autor:** permite usar o ataque extra na ação bônus quando o feitiço da ação padrão é de condição e não causa dano. A regra e as interações estão em [Bote](estocada-bote.md). [Ferrão, nível 27](estocada-ferrao.md), foi escolhido com gatilho após conclusão mágica. Os preços históricos não foram reafirmados. A [conferência de orçamento](estocada-auditoria.md) distingue os resultados já calculados do preço conjunto ainda pendente.
+**Bote, nível 19, mantido pelo autor:** permite usar o ataque extra na ação bônus quando o feitiço da ação padrão é de condição e não causa dano. A regra e as interações estão em [Bote](estocada-bote.md). [Ferrão, nível 27](estocada-ferrao.md), foi escolhido com gatilho após conclusão de feitiço. Os preços históricos não foram reafirmados. A [conferência de orçamento](estocada-auditoria.md) distingue os resultados já calculados do preço conjunto ainda pendente.
 
 Fontes consultadas para compatibilidade: `sistema/03-mecanica/19-dano-e-condicoes.md`; energia temporária em `sistema/03-mecanica/01-atributos-acerto-defesa.md`, §5.1.2; arredondamento no §5.4; Bote em `sistema/05-material/livro/manual/35-caminhos-e-trilhas.md`; regras de Sequência e Conclusão Dupla da pasta de trabalho. Nenhum arquivo do repositório de consulta foi alterado.
+
+**Comparação de 22/09:** os dois cenários de janela foram medidos em [Comparação de Resposta](RASCUNHO-comparacao-resposta.md), incluindo Sequência, Caminho completo, Dupla e efeito para o grupo. O Mizuki decidiu manter as janelas diferentes: Interromper continua com a janela larga e Cortar continua limitado ao próximo ataque.
+
+**Decisão de 22/09 sobre dominância:** após [comparar as seis opções](RASCUNHO-dominancia-conclusoes-magicas.md), o Mizuki manteve Desorientar e o catálogo como estão. O preço isolado presume uma primeira rolagem útil; não é um piso universal em qualquer encontro.

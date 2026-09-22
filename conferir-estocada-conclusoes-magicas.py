@@ -38,6 +38,7 @@ Fontes de cada magnitude:
 """
 from fractions import Fraction as F
 import json
+import sys
 from pathlib import Path
 
 SLICE = F(508, 100)
@@ -152,3 +153,45 @@ print(output['nota'])
 
 (Path(__file__).resolve().parent / 'estocada-conclusoes-magicas-contas.json').write_text(
     json.dumps(output, ensure_ascii=False, indent=2) + '\n')
+
+
+def conferir_dominancia(publicar=False):
+    """Confere cenários de decisão publicados sem alterar as seis regras."""
+    import re
+    doc = Path(__file__).resolve().parent / 'RASCUNHO-dominancia-conclusoes-magicas.md'
+    texto = doc.read_text()
+    premissas = dict(re.findall(r'^\| (aproveitamento_u|ataques_aliados_expor) \| ([0-9.]+) \|$', texto, re.M))
+    assert len(premissas) == 2, 'Faltam as duas premissas ilustrativas da análise'
+    u = F(premissas['aproveitamento_u'])
+    ataques = int(premissas['ataques_aliados_expor'])
+    assert 0 <= u <= 1 and ataques >= 1
+    d = PRECOS['desorientar']
+    r = PRECOS['refluxo']
+    m = PRECOS['romper_fileira']
+    linhas = ['| Grandeza | Fatias ou fração |', '|---|---:|']
+    def adicionar(nome, valor):
+        linhas.append(f'| {nome} | {float(valor):.6f} |')
+    adicionar('Desorientar se u do cenário', fatias(d*u))
+    adicionar('Refluxo se o PE for gasto', fatias(r))
+    adicionar('Romper se o movimento for útil', fatias(m))
+    adicionar('u para empatar Refluxo', r/d)
+    adicionar('u para empatar Romper', m/d)
+    adicionar('Desorientar com TR adicional hipotético', fatias(d*FALHA_TR_ADD))
+    adicionar('Expor em ataques aliados do cenário', fatias(PRECOS['expor_a_guarda']*ataques))
+    inicio, fim = '<!-- inicio-contas-dominancia -->', '<!-- fim-contas-dominancia -->'
+    anterior = texto.split(inicio)[1].split(fim)[0]
+    calculado = '\n'+'\n'.join(linhas)+'\n'
+    if publicar:
+        doc.write_text(texto.replace(inicio+anterior+fim, inicio+calculado+fim))
+    else:
+        assert anterior == calculado, 'Tabela da dominância mágica diverge do preço ou das premissas publicadas'
+    print('Dominância mágica: preço atual, cenários e alternativas conferidos.', flush=True)
+
+
+if len(sys.argv) > 1:
+    if sys.argv[1:] == ['--analisar-dominancia']:
+        conferir_dominancia()
+    elif sys.argv[1:] == ['--publicar-analise']:
+        conferir_dominancia(publicar=True)
+    else:
+        raise SystemExit('Uso: conferir-estocada-conclusoes-magicas.py [--analisar-dominancia]')

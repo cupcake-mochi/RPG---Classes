@@ -40,6 +40,8 @@ from itertools import combinations
 import json
 import math
 import runpy
+import re
+import sys
 
 ROOT = Path(__file__).resolve().parent
 SLICE, DAY, PE_RATE = 5.08, 10.5, 5.14
@@ -342,5 +344,106 @@ def audit():
           'antiga, e as duas implementações concordando.')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__' and len(sys.argv)==1:
     audit()
+
+
+def comparar_orcamento(publicar=False):
+    """Cenários de usos de Compasso/Bote no Caminho completo, sem mudar regras."""
+    doc = ROOT/'RASCUNHO-orcamento-estocada.md'
+    texto = doc.read_text()
+    premissas = dict((k,int(v)) for k,v in re.findall(
+        r'^\| (orcamento_trilha_fatias|descanso_curto_min|descanso_curto_max) \| (\d+) \|$', texto, re.M))
+    assert len(premissas)==3, 'Faltam orçamento e descansos na fonte dos cenários'
+    pe_rows = json.loads((ROOT/'estocada-compasso-pe-contas.json').read_text())['orcamento_nivel_30']
+    def pe_fatias(rests):
+        return next(row['fatias_nominais'] for row in pe_rows if row['descansos_curto_25_porcento']==rests)
+    pe_min,pe_max=pe_fatias(premissas['descanso_curto_min']),pe_fatias(premissas['descanso_curto_max'])
+    assert pe_min<=pe_max
+    scenarios=[]
+    for label,c,b in re.findall(r'^\| ([^|]+) \| (0|1|2|sem_teto) \| (0|1|sem_teto) \|$',texto,re.M):
+        scenarios.append((label,4 if c=='sem_teto' else int(c),4 if b=='sem_teto' else int(b)))
+    assert scenarios and scenarios[0][1:]==(0,0) and len(scenarios)>=4
+    assert len({label for label,_,_ in scenarios})==len(scenarios), 'Cenários repetidos no documento'
+    cfgs={'distancia':replace(REFERENCIA,recovery=True,recovery_uses=3,capstone=True),
+          'corpo_a_corpo':replace(MELEE,recovery=True,recovery_uses=3,capstone=True)}
+    scores={};out={'premissas':premissas,'pe_nominal':{'min':pe_min,'max':pe_max},'cenarios':{}}
+    for profile,cfg in cfgs.items():
+        raw=attack(cfg)[1]
+        scores[profile]={}
+        for label,climit,blimit in scenarios:
+            total=0.;uses=0.;botes=0.
+            for turns,casts,weight in _mistura(CONJURACOES_DIA):
+                best=None;counts=(0,0)
+                for spell_turns in combinations(range(1,turns+1),casts):
+                    for ncomp in range(min(climit,casts)+1):
+                        for comp_turns in combinations(spell_turns,ncomp):
+                            for nbote in range(min(blimit,ncomp)+1):
+                                for bote_turns in combinations(comp_turns,nbote):
+                                    half=tuple(t for t in comp_turns if t not in bote_turns)
+                                    skipped=tuple(t for t in spell_turns if t not in comp_turns)
+                                    row=A_solve(cfg,turns,0.,half_turns=half,skip_turns=skipped)
+                                    value=row['benefit']-row['opening_loss']+(ncomp+nbote)*raw
+                                    if best is None or value>best:
+                                        best=value;counts=(ncomp,nbote)
+                total+=best*weight;uses+=counts[0]*weight;botes+=counts[1]*weight
+            scores[profile][label]={'score':total/DAY/SLICE,'compasso_usos':uses,'bote_usos':botes}
+            print('Orçamento:',profile,label,'OK',flush=True)
+    baseline_label=scenarios[0][0]
+    for profile in cfgs:
+        base=scores[profile][baseline_label]['score']
+        for label,climit,blimit in scenarios:
+            r=scores[profile][label]
+            out['cenarios'].setdefault(label,{})[profile]={
+                'marginal_fatias':r['score']-base,
+                'compasso_usos_dia':r['compasso_usos'],
+                'bote_usos_dia':r['bote_usos']}
+        owner=json.loads((ROOT/'estocada-rotina-contas.json').read_text())['caminho_completo'][profile]
+        assert abs(base+NAO_CEDE-owner['7_conjuracoes']['sem_compasso'])<1e-9
+        current=next(label for label,c,b in scenarios if c==4 and b==0)
+        target=owner['7_conjuracoes']['com_compasso']+owner['compasso_ataque_cru']-owner['7_conjuracoes']['sem_compasso']
+        assert abs(out['cenarios'][current][profile]['marginal_fatias']-target)<1e-9
+    lines=[f"| Cenário | Distância | Corpo a corpo | Distância + PE, {premissas['descanso_curto_min']} descanso(s) | Distância + PE, {premissas['descanso_curto_max']} descanso(s) |",
+           '|---|---:|---:|---:|---:|']
+    def number(n): return f'{n:.6f}'.replace('.',',')
+    for label,c,b in scenarios:
+        ranged=out['cenarios'][label]['distancia']['marginal_fatias']
+        melee=out['cenarios'][label]['corpo_a_corpo']['marginal_fatias']
+        lines.append(f'| {label} | {number(ranged)} | {number(melee)} | {number(ranged+pe_min)} | {number(ranged+pe_max)} |')
+    def check_block(start,end,generated):
+        assert texto.count(start)==texto.count(end)==1
+        previous=texto.split(start)[1].split(end)[0]
+        expected='\n'+'\n'.join(generated)+'\n'
+        if publicar:
+            nonlocal_text[0]=nonlocal_text[0].replace(start+previous+end,start+expected+end)
+        else:
+            assert previous==expected, 'Tabela de orçamento da Estocada diverge do cálculo ou das premissas'
+    nonlocal_text=[texto]
+    check_block('<!-- inicio-contas-orcamento-estocada -->','<!-- fim-contas-orcamento-estocada -->',lines)
+    current=next(label for label,c,b in scenarios if c==4 and b==0)
+    full=next(label for label,c,b in scenarios if c==4 and b==4)
+    attack_eq=attack(cfgs['distancia'])[1]
+    threshold=[]
+    for label in (current,full):
+        gain=out['cenarios'][label]['distancia']['marginal_fatias']
+        for rest,extra in ((premissas['descanso_curto_min'],pe_min),(premissas['descanso_curto_max'],pe_max)):
+            required=max(0.,(gain+extra-premissas['orcamento_trilha_fatias'])*DAY*SLICE/CONJURACOES_DIA)
+            threshold.append(f'| {label}, {rest} descanso(s) | {number(required)} | {number(required/attack_eq)} |')
+    threshold=['| Versão sem limite, PE aproveitado | Alternativa por ação bônus em equivalentes | Fração de um ataque comum |',
+               '|---|---:|---:|']+threshold
+    out['ataque_comum_equivalentes']=attack_eq
+    check_block('<!-- inicio-limiar-orcamento-estocada -->','<!-- fim-limiar-orcamento-estocada -->',threshold)
+    if publicar:
+        doc.write_text(nonlocal_text[0])
+    out['checks']='Regressões do Caminho completo, tabela de cenários e limiares de ação bônus: OK.'
+    (ROOT/'estocada-orcamento-cenarios-contas.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+    print(out['checks'],flush=True)
+
+
+if len(sys.argv)>1:
+    if sys.argv[1:]==['--comparar-orcamento']:
+        comparar_orcamento()
+    elif sys.argv[1:]==['--publicar-cenarios']:
+        comparar_orcamento(publicar=True)
+    else:
+        raise SystemExit('Uso: conferir-estocada-rotina.py [--comparar-orcamento]')

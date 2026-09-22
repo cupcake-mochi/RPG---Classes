@@ -1,6 +1,6 @@
 # Estocada — Bote, nível 19
 
-Versão mecânica de trabalho mantida pelo autor em 19 de setembro de 2026, após a revisão das conclusões mágicas. O preço histórico não foi reafirmado; a avaliação da Trilha completa continua pendente.
+Versão mecânica de trabalho mantida pelo autor em 19 de setembro de 2026, após a revisão das conclusões de feitiço. O preço histórico não foi reafirmado; a avaliação da Trilha completa continua pendente.
 
 ## Regra
 
@@ -12,7 +12,7 @@ Não recebe outra ação bônus nem um terceiro ataque. Bote é a exceção expr
 
 ## Interação com a Sequência
 
-- Se o feitiço não foi usado para Concluir, pode usar o primeiro ataque da ação bônus para Abrir e o segundo para Conduzir, pagando os custos e cumprindo os requisitos. Se a Abertura errar, não haverá sequência para conduzir.
+- Se o feitiço não foi usado para Concluir, pode usar o primeiro ataque da ação bônus para dar o Golpe Inicial e o segundo para Conduzir, pagando os custos e cumprindo os requisitos. Se o Golpe Inicial errar, não haverá sequência para conduzir.
 - Se já havia uma sequência ativa, os ataques podem ser usados em suas etapas normalmente, mas permanece o limite de uma Condução **ou** Conclusão por turno.
 - Se usou o feitiço de condição para Concluir, ainda pode fazer os dois ataques da ação bônus. Eles não concedem outra condução ou conclusão e não permitem abrir nova sequência naquele turno, conforme a regra geral vigente.
 - O feitiço não conta como condução por ter satisfeito o gatilho de Bote.
@@ -21,10 +21,12 @@ O requisito de feitiço sem dano distingue esse uso da ofensiva com feitiço de 
 
 ## Relação com o nível 27
 
-O autor escolheu a nova versão de [Ferrão](estocada-ferrao.md), habilitada depois de uma conclusão mágica cujo feitiço afete o alvo. Foi preservada a incompatibilidade: Bote e Ferrão não podem ser usados juntos no mesmo turno. Se ambos forem elegíveis, escolha entre os dois ataques de Bote e o ataque que carrega Classe 0 de Ferrão.
+O autor escolheu a nova versão de [Ferrão](estocada-ferrao.md), habilitada depois de uma conclusão de feitiço cujo feitiço afete o alvo. Foi preservada a incompatibilidade: Bote e Ferrão não podem ser usados juntos no mesmo turno. Se ambos forem elegíveis, escolha entre os dois ataques de Bote e o ataque que carrega Classe 0 de Ferrão.
 
 ## Orçamento
 
 O preço publicado de Bote pertence à versão anterior da Estocada. Não foi adotado automaticamente como preço atual: é preciso considerar o dano real dos ataques, seus erros, a escolha de feitiço sem dano, a competição pela ação bônus e as opções de Sequência. O orçamento da Trilha continua separado do Caminho.
+
+A [revalidação da escolha de feitiço](RASCUNHO-revalidacao-estocada.md) compara explicitamente o feitiço de condição sem dano com o feitiço de dano que poderia ocupar a ação padrão. O ganho de Bote varia com o valor do controle; o teto que assume feitiços equivalentes não é seu preço líquido universal.
 
 Fonte de consulta: `sistema/05-material/livro/manual/35-caminhos-e-trilhas.md`, seção Estocada, nível 19. Nenhum arquivo do repositório de consulta foi alterado.
