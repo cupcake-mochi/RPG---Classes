@@ -1,292 +1,576 @@
 {
-  "status": "Rascunho; preços marginais condicionais, não média observada nem teto universal.",
-  "assumptions": [
-    "1 fatia = 5.08 equivalentes/rodada; 1 PE = 5.14 equivalentes.",
-    "Benefício da escola apenas na abertura acertada; usa a categoria adequada em todos os ataques elegíveis.",
-    "Precisão: +1 no próximo ataque elegível; consumido inclusive no erro. Sem bônus em feitiços.",
-    "Guarda: +1 Defesa = 3.39 equivalentes por abertura; supõe o benefício integralmente útil.",
-    "Empurrar 3m e deslocar 1.5m: 0.60 equivalente/m, multiplicados pela falha do TR Físico; situação sempre útil.",
-    "Versado: economia de Movimento avaliada como deslocamento integral. Uso desse gesto para recarga/outras ações não simulado.",
-    "O quadro cruza efeitos com todos os perfis para comparação; isso não concede escolas incompatíveis com a arma.",
-    "Conserva as limitações do modelo anterior, inclusive condições externas favoráveis para Fixar/Explorar."
-  ],
-  "profiles": {
-    "corpo_a_corpo": {
+  "status": "Modelo v3 vigente; L desconta PE, Br não desconta PE e é a contabilidade adotada. Perfis cruzados não concedem escolhas ilegais de arma.",
+  "fontes": {
+    "modelo": "conferir-vanguarda-v3.py",
+    "precos": "vanguarda-escolas-rascunho.md",
+    "perfis": "vanguarda-contas-v3.json",
+    "ancora_bruta": "vanguarda-pe-contas.json"
+  },
+  "perfis": {
+    "yumi_referencia": {
       "desde_T1": {
-        "sem_escola": 0.0,
-        "effects": {
-          "precisao": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "guarda": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "empurrar_3m": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "desviar_1_5m": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "versado_movimento": {
-            "net_slices": 0.11288566144742163,
-            "incremento": 0.11288566144742163,
-            "aberturas_acertadas_por_rodada": 0.6757226418470983
+        "L": {
+          "sem_escola_fatias": 1.2621357356808118,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 1.3868967555497047,
+              "acrescimo_fatias": 0.12476101986889288,
+              "golpes_iniciais_dia": 3.3879872396658692
+            },
+            "postura_firme": {
+              "total_fatias": 1.4765969605289273,
+              "acrescimo_fatias": 0.21446122484811547,
+              "golpes_iniciais_dia": 3.4757874609960937
+            },
+            "empuxo": {
+              "total_fatias": 1.320206073644963,
+              "acrescimo_fatias": 0.058070337964151175,
+              "golpes_iniciais_dia": 3.4757874609960937
+            },
+            "mover_alvo": {
+              "total_fatias": 1.2895582275958848,
+              "acrescimo_fatias": 0.027422491915072955,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "versado": {
+              "total_fatias": 1.777047921469753,
+              "acrescimo_fatias": 0.5149121857889412,
+              "golpes_iniciais_dia": 4.740925656536367
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 3.0101125623023703,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 3.1338205116232283,
+              "acrescimo_fatias": 0.12370794932085794,
+              "golpes_iniciais_dia": 3.3879872396658692
+            },
+            "postura_firme": {
+              "total_fatias": 3.2644217228676267,
+              "acrescimo_fatias": 0.2543091605652563,
+              "golpes_iniciais_dia": 4.62616262676372
+            },
+            "empuxo": {
+              "total_fatias": 3.074623803142006,
+              "acrescimo_fatias": 0.06451124083963578,
+              "golpes_iniciais_dia": 3.4757874609960937
+            },
+            "mover_alvo": {
+              "total_fatias": 3.042368182722188,
+              "acrescimo_fatias": 0.03225562041981744,
+              "golpes_iniciais_dia": 3.4757874609960937
+            },
+            "versado": {
+              "total_fatias": 3.6005420107105035,
+              "acrescimo_fatias": 0.5904294484081332,
+              "golpes_iniciais_dia": 4.763879238386102
+            }
           }
         }
       },
       "desde_T2": {
-        "sem_escola": 0.0,
-        "effects": {
-          "precisao": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "guarda": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "empurrar_3m": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "desviar_1_5m": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "versado_movimento": {
-            "net_slices": 0.08086044686796967,
-            "incremento": 0.08086044686796967,
-            "aberturas_acertadas_por_rodada": 0.4920297299107143
+        "L": {
+          "sem_escola_fatias": 0.5621985459602724,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.6491795223693073,
+              "acrescimo_fatias": 0.0869809764090349,
+              "golpes_iniciais_dia": 2.9174434453125
+            },
+            "postura_firme": {
+              "total_fatias": 0.7297345860387494,
+              "acrescimo_fatias": 0.167536040078477,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "empuxo": {
+              "total_fatias": 0.5967770494808192,
+              "acrescimo_fatias": 0.03457850352054681,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "mover_alvo": {
+              "total_fatias": 0.5744134644079664,
+              "acrescimo_fatias": 0.012214918447693957,
+              "golpes_iniciais_dia": 1.3162500000000001
+            },
+            "versado": {
+              "total_fatias": 0.9632872820207491,
+              "acrescimo_fatias": 0.4010887360604767,
+              "golpes_iniciais_dia": 3.500082268718115
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 1.7300845860387488,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 1.8388469610029545,
+              "acrescimo_fatias": 0.10876237496420571,
+              "golpes_iniciais_dia": 2.9174434453125
+            },
+            "postura_firme": {
+              "total_fatias": 1.9330113812830862,
+              "acrescimo_fatias": 0.20292679524433743,
+              "golpes_iniciais_dia": 3.4757874609960937
+            },
+            "empuxo": {
+              "total_fatias": 1.7849295698688956,
+              "acrescimo_fatias": 0.0548449838301468,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "mover_alvo": {
+              "total_fatias": 1.7575070779538224,
+              "acrescimo_fatias": 0.02742249191507362,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "versado": {
+              "total_fatias": 2.1837136907111208,
+              "acrescimo_fatias": 0.45362910467237194,
+              "golpes_iniciais_dia": 3.5347469875853026
+            }
           }
         }
       },
       "T2_sem_ataque": {
-        "sem_escola": 0.0,
-        "effects": {
-          "precisao": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "guarda": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "empurrar_3m": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "desviar_1_5m": {
-            "net_slices": 0.0,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.0
-          },
-          "versado_movimento": {
-            "net_slices": 0.08086044686796967,
-            "incremento": 0.08086044686796967,
-            "aberturas_acertadas_por_rodada": 0.4920297299107143
+        "L": {
+          "sem_escola_fatias": 0.5621985459602724,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.6491795223693073,
+              "acrescimo_fatias": 0.0869809764090349,
+              "golpes_iniciais_dia": 2.9174434453125
+            },
+            "postura_firme": {
+              "total_fatias": 0.7297345860387494,
+              "acrescimo_fatias": 0.167536040078477,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "empuxo": {
+              "total_fatias": 0.5967770494808192,
+              "acrescimo_fatias": 0.03457850352054681,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "mover_alvo": {
+              "total_fatias": 0.5744134644079664,
+              "acrescimo_fatias": 0.012214918447693957,
+              "golpes_iniciais_dia": 1.3162500000000001
+            },
+            "versado": {
+              "total_fatias": 0.9632872820207491,
+              "acrescimo_fatias": 0.4010887360604767,
+              "golpes_iniciais_dia": 3.500082268718115
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 1.7300845860387488,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 1.8388469610029545,
+              "acrescimo_fatias": 0.10876237496420571,
+              "golpes_iniciais_dia": 2.9174434453125
+            },
+            "postura_firme": {
+              "total_fatias": 1.9330113812830862,
+              "acrescimo_fatias": 0.20292679524433743,
+              "golpes_iniciais_dia": 3.4757874609960937
+            },
+            "empuxo": {
+              "total_fatias": 1.7849295698688956,
+              "acrescimo_fatias": 0.0548449838301468,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "mover_alvo": {
+              "total_fatias": 1.7575070779538224,
+              "acrescimo_fatias": 0.02742249191507362,
+              "golpes_iniciais_dia": 2.9549812500000003
+            },
+            "versado": {
+              "total_fatias": 2.1837136907111208,
+              "acrescimo_fatias": 0.45362910467237194,
+              "golpes_iniciais_dia": 3.5347469875853026
+            }
           }
         }
       }
     },
-    "batedor_referencia": {
+    "lamina_longa": {
       "desde_T1": {
-        "sem_escola": 1.4864976984295017,
-        "effects": {
-          "precisao": {
-            "net_slices": 1.596012789769729,
-            "incremento": 0.10951509134022719,
-            "aberturas_acertadas_por_rodada": 0.2854477355573521
-          },
-          "guarda": {
-            "net_slices": 1.6747115333234641,
-            "incremento": 0.18821383489396237,
-            "aberturas_acertadas_por_rodada": 0.2854477355573521
-          },
-          "empurrar_3m": {
-            "net_slices": 1.5398543354223524,
-            "incremento": 0.05335663699285065,
-            "aberturas_acertadas_por_rodada": 0.2854477355573521
-          },
-          "desviar_1_5m": {
-            "net_slices": 1.5126071629546889,
-            "incremento": 0.026109464525187143,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "versado_movimento": {
-            "net_slices": 1.9309885049779265,
-            "incremento": 0.44449080654842477,
-            "aberturas_acertadas_por_rodada": 0.3828709826169707
+        "L": {
+          "sem_escola_fatias": 0.0,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "postura_firme": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "empuxo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "mover_alvo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "versado": {
+              "total_fatias": 0.11288566144742154,
+              "acrescimo_fatias": 0.11288566144742154,
+              "golpes_iniciais_dia": 7.095087739394532
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 0.1005257415284027,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.21882736970437294,
+              "acrescimo_fatias": 0.11830162817597024,
+              "golpes_iniciais_dia": 3.78442453125
+            },
+            "postura_firme": {
+              "total_fatias": 0.3381170910766904,
+              "acrescimo_fatias": 0.2375913495482877,
+              "golpes_iniciais_dia": 5.298551169140625
+            },
+            "empuxo": {
+              "total_fatias": 0.13908799546541056,
+              "acrescimo_fatias": 0.038562253937007865,
+              "golpes_iniciais_dia": 3.2649375000000007
+            },
+            "mover_alvo": {
+              "total_fatias": 0.1198068684969067,
+              "acrescimo_fatias": 0.019281126968503995,
+              "golpes_iniciais_dia": 3.2649375000000007
+            },
+            "versado": {
+              "total_fatias": 0.5418595440103325,
+              "acrescimo_fatias": 0.4413338024819298,
+              "golpes_iniciais_dia": 5.842387642910156
+            }
           }
         }
       },
       "desde_T2": {
-        "sem_escola": 0.6255027806569997,
-        "effects": {
-          "precisao": {
-            "net_slices": 0.709105716285328,
-            "incremento": 0.08360293562832832,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "guarda": {
-            "net_slices": 0.7857963877853562,
-            "incremento": 0.1602936071283565,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "empurrar_3m": {
-            "net_slices": 0.6592050446329374,
-            "incremento": 0.033702263975937674,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "desviar_1_5m": {
-            "net_slices": 0.6377176991046938,
-            "incremento": 0.012214918447694068,
-            "aberturas_acertadas_por_rodada": 0.12535714285714286
-          },
-          "versado_movimento": {
-            "net_slices": 0.9944384728661404,
-            "incremento": 0.3689356922091407,
-            "aberturas_acertadas_por_rodada": 0.2856816333200613
+        "L": {
+          "sem_escola_fatias": 0.0,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "postura_firme": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "empuxo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "mover_alvo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "versado": {
+              "total_fatias": 0.0808604468679697,
+              "acrescimo_fatias": 0.0808604468679697,
+              "golpes_iniciais_dia": 5.1663121640625
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 0.057310425337457865,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.13355485587739038,
+              "acrescimo_fatias": 0.07624443053993252,
+              "golpes_iniciais_dia": 2.3698125
+            },
+            "postura_firme": {
+              "total_fatias": 0.20940061234972587,
+              "acrescimo_fatias": 0.152090187012268,
+              "golpes_iniciais_dia": 3.85191984375
+            },
+            "empuxo": {
+              "total_fatias": 0.08315663596737911,
+              "acrescimo_fatias": 0.02584621062992125,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "mover_alvo": {
+              "total_fatias": 0.07023353065241851,
+              "acrescimo_fatias": 0.012923105314960645,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "versado": {
+              "total_fatias": 0.3585196320523411,
+              "acrescimo_fatias": 0.30120920671488327,
+              "golpes_iniciais_dia": 4.3810439062499995
+            }
           }
         }
       },
       "T2_sem_ataque": {
-        "sem_escola": 0.5753188738155262,
-        "effects": {
-          "precisao": {
-            "net_slices": 0.657063146227503,
-            "incremento": 0.08174427241197679,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "guarda": {
-            "net_slices": 0.7356124809438818,
-            "incremento": 0.1602936071283556,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "empurrar_3m": {
-            "net_slices": 0.6090211377914634,
-            "incremento": 0.03370226397593723,
-            "aberturas_acertadas_por_rodada": 0.2679516763392857
-          },
-          "desviar_1_5m": {
-            "net_slices": 0.58753379226322,
-            "incremento": 0.012214918447693845,
-            "aberturas_acertadas_por_rodada": 0.12535714285714286
-          },
-          "versado_movimento": {
-            "net_slices": 0.9516075558810158,
-            "incremento": 0.3762886820654896,
-            "aberturas_acertadas_por_rodada": 0.3026603553519949
+        "L": {
+          "sem_escola_fatias": 0.0,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "postura_firme": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "empuxo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "mover_alvo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "versado": {
+              "total_fatias": 0.0808604468679697,
+              "acrescimo_fatias": 0.0808604468679697,
+              "golpes_iniciais_dia": 5.1663121640625
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 0.057310425337457865,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.13355485587739038,
+              "acrescimo_fatias": 0.07624443053993252,
+              "golpes_iniciais_dia": 2.3698125
+            },
+            "postura_firme": {
+              "total_fatias": 0.20940061234972587,
+              "acrescimo_fatias": 0.152090187012268,
+              "golpes_iniciais_dia": 3.85191984375
+            },
+            "empuxo": {
+              "total_fatias": 0.08315663596737911,
+              "acrescimo_fatias": 0.02584621062992125,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "mover_alvo": {
+              "total_fatias": 0.07023353065241851,
+              "acrescimo_fatias": 0.012923105314960645,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "versado": {
+              "total_fatias": 0.3585196320523411,
+              "acrescimo_fatias": 0.30120920671488327,
+              "golpes_iniciais_dia": 4.3810439062499995
+            }
           }
         }
       }
     },
-    "batedor_extremo": {
+    "lamina_curta": {
       "desde_T1": {
-        "sem_escola": 4.895322253280964,
-        "effects": {
-          "precisao": {
-            "net_slices": 4.895322253280964,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.2857142834821289
-          },
-          "guarda": {
-            "net_slices": 5.085985918833014,
-            "incremento": 0.19066366555204972,
-            "aberturas_acertadas_por_rodada": 0.2857142834821289
-          },
-          "empurrar_3m": {
-            "net_slices": 4.981373996140741,
-            "incremento": 0.08605174285977668,
-            "aberturas_acertadas_por_rodada": 0.2857142834821289
-          },
-          "desviar_1_5m": {
-            "net_slices": 4.938348124710852,
-            "incremento": 0.04302587142988745,
-            "aberturas_acertadas_por_rodada": 0.2857142834821289
-          },
-          "versado_movimento": {
-            "net_slices": 5.361676056436056,
-            "incremento": 0.46635380315509156,
-            "aberturas_acertadas_por_rodada": 0.42750268300782646
+        "L": {
+          "sem_escola_fatias": 0.0,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "postura_firme": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "empuxo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "mover_alvo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "versado": {
+              "total_fatias": 0.09827035837427045,
+              "acrescimo_fatias": 0.09827035837427045,
+              "golpes_iniciais_dia": 7.095087739394532
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 0.09145967361501713,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.20842190446955863,
+              "acrescimo_fatias": 0.11696223085454151,
+              "golpes_iniciais_dia": 3.78442453125
+            },
+            "postura_firme": {
+              "total_fatias": 0.33501925203703925,
+              "acrescimo_fatias": 0.24355957842202214,
+              "golpes_iniciais_dia": 5.298551169140625
+            },
+            "empuxo": {
+              "total_fatias": 0.13165239510861942,
+              "acrescimo_fatias": 0.0401927214936023,
+              "golpes_iniciais_dia": 3.55584796875
+            },
+            "mover_alvo": {
+              "total_fatias": 0.11074080058352101,
+              "acrescimo_fatias": 0.019281126968503884,
+              "golpes_iniciais_dia": 3.2649375000000007
+            },
+            "versado": {
+              "total_fatias": 0.5387617049706811,
+              "acrescimo_fatias": 0.447302031355664,
+              "golpes_iniciais_dia": 5.842387642910156
+            }
           }
         }
       },
       "desde_T2": {
-        "sem_escola": 2.86166358712107,
-        "effects": {
-          "precisao": {
-            "net_slices": 2.86166358712107,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "guarda": {
-            "net_slices": 3.052088923089328,
-            "incremento": 0.19042533596825795,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "empurrar_3m": {
-            "net_slices": 2.9476077653014343,
-            "incremento": 0.08594417818036426,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "desviar_1_5m": {
-            "net_slices": 2.904635676211252,
-            "incremento": 0.04297208909018213,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "versado_movimento": {
-            "net_slices": 3.266261447688816,
-            "incremento": 0.4045978605677458,
-            "aberturas_acertadas_por_rodada": 0.28571428570870533
+        "L": {
+          "sem_escola_fatias": 0.0,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "postura_firme": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "empuxo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "mover_alvo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "versado": {
+              "total_fatias": 0.07054584724760965,
+              "acrescimo_fatias": 0.07054584724760965,
+              "golpes_iniciais_dia": 5.1663121640625
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 0.05360998945444329,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.12785920064679432,
+              "acrescimo_fatias": 0.07424921119235103,
+              "golpes_iniciais_dia": 2.3698125
+            },
+            "postura_firme": {
+              "total_fatias": 0.20825220121361795,
+              "acrescimo_fatias": 0.15464221175917467,
+              "golpes_iniciais_dia": 3.85191984375
+            },
+            "empuxo": {
+              "total_fatias": 0.07945620008436458,
+              "acrescimo_fatias": 0.025846210629921283,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "mover_alvo": {
+              "total_fatias": 0.06653309476940393,
+              "acrescimo_fatias": 0.012923105314960638,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "versado": {
+              "total_fatias": 0.3573712209162331,
+              "acrescimo_fatias": 0.3037612314617898,
+              "golpes_iniciais_dia": 4.3810439062499995
+            }
           }
         }
       },
       "T2_sem_ataque": {
-        "sem_escola": 2.859498732387242,
-        "effects": {
-          "precisao": {
-            "net_slices": 2.859498732387242,
-            "incremento": 0.0,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "guarda": {
-            "net_slices": 3.0499240683555,
-            "incremento": 0.19042533596825795,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "empurrar_3m": {
-            "net_slices": 2.9454429105676043,
-            "incremento": 0.08594417818036248,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "desviar_1_5m": {
-            "net_slices": 2.902470821477424,
-            "incremento": 0.04297208909018213,
-            "aberturas_acertadas_por_rodada": 0.285357140625
-          },
-          "versado_movimento": {
-            "net_slices": 3.2642512591881214,
-            "incremento": 0.4047525268008796,
-            "aberturas_acertadas_por_rodada": 0.28607142410157643
+        "L": {
+          "sem_escola_fatias": 0.0,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "postura_firme": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "empuxo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "mover_alvo": {
+              "total_fatias": 0.0,
+              "acrescimo_fatias": 0.0,
+              "golpes_iniciais_dia": 0.0
+            },
+            "versado": {
+              "total_fatias": 0.07054584724760965,
+              "acrescimo_fatias": 0.07054584724760965,
+              "golpes_iniciais_dia": 5.1663121640625
+            }
+          }
+        },
+        "Br": {
+          "sem_escola_fatias": 0.05360998945444329,
+          "effects": {
+            "ritmo": {
+              "total_fatias": 0.12785920064679432,
+              "acrescimo_fatias": 0.07424921119235103,
+              "golpes_iniciais_dia": 2.3698125
+            },
+            "postura_firme": {
+              "total_fatias": 0.20825220121361795,
+              "acrescimo_fatias": 0.15464221175917467,
+              "golpes_iniciais_dia": 3.85191984375
+            },
+            "empuxo": {
+              "total_fatias": 0.07945620008436458,
+              "acrescimo_fatias": 0.025846210629921283,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "mover_alvo": {
+              "total_fatias": 0.06653309476940393,
+              "acrescimo_fatias": 0.012923105314960638,
+              "golpes_iniciais_dia": 2.1883125000000003
+            },
+            "versado": {
+              "total_fatias": 0.3573712209162331,
+              "acrescimo_fatias": 0.3037612314617898,
+              "golpes_iniciais_dia": 4.3810439062499995
+            }
           }
         }
       }
     }
   },
-  "checks": "Escola desativada reproduz modelo anterior; incrementos não negativos: OK."
+  "checks": "v3 atual, regressão L/Br dos donos e tabela publicada: OK."
 }

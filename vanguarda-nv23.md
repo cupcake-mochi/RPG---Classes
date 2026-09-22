@@ -12,7 +12,7 @@ Na progressão atual, são **dois usos na maestria 3 (níveis 23–25)** e **tr�
 
 - O ataque continua errado: não causa dano nem aplica o efeito da condução.
 - O PE da tentativa continua gasto, e a tentativa não conta como condução acertada.
-- **O prazo não é renovado.** A sequência conserva o vencimento no fim do segundo turno próprio após a última Abertura ou Condução acertada. A habilidade não impede esse vencimento.
+- **O prazo não é renovado.** A sequência conserva o vencimento no fim do segundo turno próprio após o último Golpe Inicial acertado ou a última Condução acertada. A habilidade não impede esse vencimento.
 - Se trocou de condução antes do ataque, os efeitos encerrados pela troca não voltam.
 - A tentativa ocupa a condução permitida naquele turno. Não recebe outro ataque nem outra etapa da sequência.
 - Só preserva uma sequência ainda ativa. Não recupera uma sequência expirada ou concluída.

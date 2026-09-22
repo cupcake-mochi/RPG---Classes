@@ -1,23 +1,23 @@
 # Vanguarda — Sequência de Condução
 
-**Texto de regra consolidado, versão de trabalho.** Reúne as decisões registradas até 22/09/2026 para leitura na mesa. A etapa inicial ainda usa o nome de trabalho **Abrir/Abertura**. Esta proposta não foi aplicada ao [JJK---Project](https://github.com/cupcake-mochi/JJK---Project). Preços, hipóteses e histórico das mudanças ficam em [Vanguarda completa](vanguarda-completo.md) e no [consolidado de fontes](vanguarda-sequencia-consolidada.md).
+**Texto de regra consolidado, versão de trabalho.** Reúne as decisões registradas até 22/09/2026 para leitura na mesa. A etapa inicial se chama **Golpe Inicial**, nome escolhido pelo Mizuki em 22/09/2026. Esta proposta não foi aplicada ao [JJK---Project](https://github.com/cupcake-mochi/JJK---Project). Preços, hipóteses e histórico das mudanças ficam em [Vanguarda completa](vanguarda-completo.md) e no [consolidado de fontes](vanguarda-sequencia-consolidada.md).
 
 ## Nível 2 — Sequência de Condução
 
-Você explora uma abertura contra um inimigo, conduz a pressão com ataques seguintes e conclui com uma execução. **Abrir, Conduzir e Concluir usam ataques que você já poderia fazer no seu turno; a Sequência não concede ataques nem ações.** Há no máximo uma sequência ativa, contra um único alvo. Cada ataque pode cumprir apenas uma etapa. Você pode fazer **uma Condução ou uma Conclusão por turno seu**; Abrir e depois Conduzir ou Concluir no mesmo turno é permitido com ataques diferentes. Ataques fora do seu turno não cumprem etapas da Sequência.
+Você explora uma abertura contra um inimigo, conduz a pressão com ataques seguintes e conclui com uma execução. **Golpe Inicial, Condução e Conclusão usam ataques que você já poderia fazer no seu turno; a Sequência não concede ataques nem ações.** Há no máximo uma sequência ativa, contra um único alvo. Cada ataque pode cumprir apenas uma etapa. Você pode fazer **uma Condução ou uma Conclusão por turno seu**; dar o Golpe Inicial e depois Conduzir ou Concluir no mesmo turno é permitido com ataques diferentes. Ataques fora do seu turno não cumprem etapas da Sequência.
 
-Declare a etapa antes de rolar seu ataque ou, no caso de uma Conclusão mágica da Estocada, antes de resolver o feitiço. Se a etapa exigir um Teste de Resistência (TR), sua CD é **8 + atributo usado no ataque + maestria**, salvo a regra específica das conclusões mágicas da Estocada. O TR decide o efeito adicional, não se o ataque contou como Abertura ou Condução acertada.
+Declare a etapa antes de rolar seu ataque ou, no caso de uma Conclusão de feitiço da Estocada, antes de resolver o feitiço. Se a etapa exigir um Teste de Resistência (TR), sua CD é **8 + atributo usado no ataque + maestria**, salvo a regra específica das conclusões de feitiço da Estocada. O TR decide o efeito adicional, não se o ataque contou como Golpe Inicial ou Condução acertada.
 
-### Abrir
+### Golpe Inicial
 
-Antes de rolar um ataque com arma ou desarmado, declare uma Abertura. Se acertar, inicie uma sequência contra o alvo e reduza o **dano total desse golpe** em **Xd4**, até o mínimo de zero, sendo **X metade da maestria arredondada para cima**. Role a redução uma vez após os modificadores do atacante e antes da mitigação do alvo; ela não dobra no crítico. Arma, atributo, Canalizar em Golpe ou Estímulo Muscular entram normalmente no dano antes dessa redução. O acerto abre a sequência mesmo se o dano final for zero. Se errar, não abre e não perde dano. Abrir não custa PE.
+Antes de rolar um ataque com arma ou desarmado, declare um Golpe Inicial. Esse nome indica o começo da sequência, não exige que seja seu primeiro ataque no combate. Se acertar, inicie uma sequência contra o alvo e reduza o **dano total desse golpe** em **Xd4**, até o mínimo de zero, sendo **X metade da maestria arredondada para cima**. Role a redução uma vez após os modificadores do atacante e antes da mitigação do alvo; ela não dobra no crítico. Arma, atributo, Canalizar em Golpe ou Estímulo Muscular entram normalmente no dano antes dessa redução. O acerto abre a sequência mesmo se o dano final for zero. Se errar, não abre e não perde dano. Golpe Inicial não custa PE.
 
-| Maestria | Redução da Abertura | PE por tentativa de Condução |
+| Maestria | Redução do Golpe Inicial | PE por tentativa de Condução |
 |---:|---:|---:|
 | 1 ou 2 | 1d4 | 2 |
 | 3 ou 4 | 2d4 | 3 |
 
-Uma Abertura contra outro alvo substitui a sequência anterior. Você não pode reabrir uma sequência ainda ativa contra o mesmo alvo nem abrir outra no turno em que concluiu. Se uma Condução errada encerrar a sequência, um ataque restante daquele turno pode abrir uma nova; ele não concede outra Condução no mesmo turno.
+Um Golpe Inicial contra outro alvo substitui a sequência anterior. Você não pode reabrir uma sequência ainda ativa contra o mesmo alvo nem abrir outra no turno em que concluiu. Se uma Condução errada encerrar a sequência, um ataque restante daquele turno pode abrir uma nova; ele não concede outra Condução no mesmo turno.
 
 ### Conduzir
 
@@ -38,7 +38,7 @@ Ao declarar uma Condução diferente, encerre os efeitos sustentados da anterior
 
 Antes de rolar o ataque contra o alvo da sequência, escolha uma Conclusão disponível para aquela fonte e cumpra os requisitos dela. **Concluir não custa PE adicional.** A declaração consome a sequência mesmo se o ataque errar ou o alvo passar no TR. Você não pode abrir outra sequência no mesmo turno. Uma Conclusão não causa o dano do ataque duas vezes.
 
-Nas opções com TR, o efeito adicional ocorre após o acerto e a falha do alvo nesse teste. **“Nenhuma condução mínima” permite concluir tanto logo após Abrir quanto depois de conduzir**; não exige que o contador continue em zero. Corpo a corpo inclui ataques desarmados elegíveis; distância usa ataques com arma à distância.
+Nas opções com TR, o efeito adicional ocorre após o acerto e a falha do alvo nesse teste. **“Nenhuma condução mínima” permite concluir tanto logo após o Golpe Inicial quanto depois de conduzir**; não exige que o contador continue em zero. Corpo a corpo inclui ataques desarmados elegíveis; distância usa ataques com arma à distância.
 
 | Conclusão | Fonte e requisito | Efeito |
 |---|---|---|
@@ -50,17 +50,17 @@ Nas opções com TR, o efeito adicional ocorre após o acerto e a falha do alvo 
 | **Quebrar o Ritmo** | Corpo a corpo ou distância; **1 condução acertada** | Após o acerto, **TR de Vigor**. Na falha, o alvo fica **Lento até o fim do próximo turno dele**. |
 | **Fixar o Alvo** | Distância; **2 conduções acertadas**; deslocamento do alvo já reduzido antes de declarar | Após o acerto, **TR Físico**. Na falha, o alvo fica **Impedido até o fim do próximo turno dele**. Terreno difícil conta como redução prévia; a conclusão não satisfaz seu próprio requisito. |
 
-**Lento e Impedido com duração expressa** terminam no prazo indicado, sem TR adicional para encerrá-los antes. Derrubado e Desarmado seguem as regras próprias dessas condições. Movimento forçado respeita espaços ocupados, obstáculos e as demais regras gerais. A conclusão mágica da Estocada tem catálogo e gatilho próprios em [Estocada — conclusões para feitiços](estocada-conclusoes-feiticos.md); ela não é liberada pela Sequência sozinha.
+**Lento e Impedido com duração expressa** terminam no prazo indicado, sem TR adicional para encerrá-los antes. Derrubado e Desarmado seguem as regras próprias dessas condições. Movimento forçado respeita espaços ocupados, obstáculos e as demais regras gerais. A conclusão de feitiço da Estocada tem catálogo e gatilho próprios em [Estocada — conclusões para feitiços](estocada-conclusoes-feiticos.md); ela não é liberada pela Sequência sozinha.
 
 ### Prazo da sequência
 
-Uma Abertura ou Condução acertada no turno **T** mantém a sequência até o **fim do seu turno T+2**. Se você não a retomar nem concluir até lá, ela termina. Exemplo: após acertar no turno 1, ainda pode Conduzir ou Concluir no turno 2 ou 3; sem isso, a sequência acaba no fim do turno 3. Um acerto em nova Condução inicia um novo prazo de dois turnos. Um feitiço ou outra ação entre essas etapas não renova o prazo por si só.
+Um Golpe Inicial acertado ou uma Condução acertada no turno **T** mantém a sequência até o **fim do seu turno T+2**. Se você não a retomar nem concluir até lá, ela termina. Exemplo: após acertar no turno 1, ainda pode Conduzir ou Concluir no turno 2 ou 3; sem isso, a sequência acaba no fim do turno 3. Um acerto em nova Condução inicia um novo prazo de dois turnos. Um feitiço ou outra ação entre essas etapas não renova o prazo por si só.
 
-A sequência também termina quando você erra uma Condução sem usar Persistência, declara uma Conclusão ou a substitui por uma Abertura contra outro alvo. Seu fim apaga o progresso de conduções acertadas. Efeitos já aplicados com duração própria seguem sua duração; movimentos já feitos permanecem.
+A sequência também termina quando você erra uma Condução sem usar Persistência, declara uma Conclusão ou a substitui por um Golpe Inicial contra outro alvo. Seu fim apaga o progresso de conduções acertadas. Efeitos já aplicados com duração própria seguem sua duração; movimentos já feitos permanecem.
 
-## Escola de Arma na Abertura
+## Escola de Arma no Golpe Inicial
 
-Ao escolher Escola de Arma, selecione **uma categoria de arma** e receba a Manha correspondente. A Manha só se aplica quando você acerta uma Abertura com essa categoria, **uma vez por sequência e no máximo uma vez por turno**, depois do dano. Ela não dispara em Conduções, Conclusões, ataques comuns ou Aberturas erradas.
+Ao escolher Escola de Arma, selecione **uma categoria de arma** e receba a Manha correspondente. A Manha só se aplica quando você acerta um Golpe Inicial com essa categoria, **uma vez por sequência e no máximo uma vez por turno**, depois do dano. Ela não dispara em Conduções, Conclusões, ataques comuns ou Golpes Iniciais errados.
 
 | Categoria escolhida | Manha e efeito |
 |---|---|
@@ -69,7 +69,7 @@ Ao escolher Escola de Arma, selecione **uma categoria de arma** e receba a Manha
 | Massa, Porrete, Machado ou Armas Longas | **Empuxo:** o alvo faz TR Físico; na falha, você pode empurrá-lo até **3 m para longe de si**. |
 | Ceifa ou Flexível | **Mover Alvo:** o alvo faz TR Físico; na falha, você pode deslocá-lo até **1,5 m** na direção escolhida. |
 
-O sucesso no TR da Manha impede somente a Manha, não a sequência aberta. Em vez de uma categoria e sua Manha, você pode escolher **Versado**: imediatamente após acertar uma Abertura, pode guardar uma arma empunhada e sacar outra sem gastar ação, **uma troca por sequência**. Versado não concede as Manhas das armas usadas nem ignora os requisitos dos ataques posteriores.
+O sucesso no TR da Manha impede somente a Manha, não a sequência aberta. Em vez de uma categoria e sua Manha, você pode escolher **Versado**: imediatamente após acertar um Golpe Inicial, pode guardar uma arma empunhada e sacar outra sem gastar ação, **uma troca por sequência**. Versado não concede as Manhas das armas usadas nem ignora os requisitos dos ataques posteriores.
 
 ## Nível 23 — Persistência
 
@@ -83,12 +83,14 @@ Você tem **metade da maestria arredondada para baixo + 1 usos por descanso curt
 
 Escolha as duas antes da rolagem; todos os requisitos já devem estar cumpridos. Faça um único ataque ou conjuração, pague o custo normal uma vez e cause o dano normal uma vez. Cada Conclusão que exigir TR tem seu teste próprio. Resolva os testes antes de aplicar efeitos novos daquele ataque ou feitiço; uma condição recém-aplicada não satisfaz o requisito da outra Conclusão no mesmo uso. **Explorar o Desequilíbrio** modifica só um TR elegível, na ordem declarada previamente. O uso da cena é consumido na declaração, mesmo se o ataque errar ou o alvo resistir.
 
-Exemplo: depois de acertar duas ou mais Conduções, um ataque corpo a corpo pode combinar **Rasteira + Desarme**. Cada efeito tem seu TR; o alvo pode resistir aos dois, sofrer um ou sofrer ambos. A Estocada pode escolher duas Conclusões mágicas de seu catálogo no mesmo feitiço, mas não juntar uma Conclusão mágica com uma de arma.
+Exemplo: depois de acertar duas ou mais Conduções, um ataque corpo a corpo pode combinar **Rasteira + Desarme**. Cada efeito tem seu TR; o alvo pode resistir aos dois, sofrer um ou sofrer ambos. A Estocada pode escolher duas Conclusões de feitiço de seu catálogo no mesmo feitiço, mas não juntar uma Conclusão de feitiço com uma de arma.
 
 ## Interação com a Estocada
 
-O ataque da ação bônus de **Compasso** pode Abrir, Conduzir ou Concluir, com os custos e limites normais. O feitiço que liberou Compasso não é uma etapa e não renova a sequência sozinho. A partir do nível 11, um feitiço de Classe 1 ou superior que cause dano ou imponha condição ao alvo pode ser usado para Concluir após pelo menos uma Condução acertada, segundo as regras do [catálogo mágico](estocada-conclusoes-feiticos.md). **Bote** e **Ferrão** mantêm os gatilhos e a incompatibilidade descritos em seus próprios arquivos; nenhum deles permite abrir outra sequência depois de Concluir naquele turno.
+O ataque da ação bônus de **Compasso** pode ser usado para dar o Golpe Inicial, Conduzir ou Concluir, com os custos e limites normais. O feitiço que liberou Compasso não é uma etapa e não renova a sequência sozinho. A partir do nível 11, um feitiço de Classe 1 ou superior que cause dano ou imponha condição ao alvo pode ser usado para Concluir após pelo menos uma Condução acertada, segundo as regras do [catálogo de feitiços](estocada-conclusoes-feiticos.md). **Bote** e **Ferrão** mantêm os gatilhos e a incompatibilidade descritos em seus próprios arquivos; nenhum deles permite abrir outra sequência depois de Concluir naquele turno.
 
 ## Decisões ainda abertas
 
-O nome definitivo da etapa **Abrir/Abertura** ainda não foi escolhido. A reserva de fatias da Vanguarda é provisória, há assimetria de valor entre armas corpo a corpo e à distância e o orçamento total da Estocada segue em revisão. **Interromper a Resposta** (arma) mantém a janela até o começo do seu próximo turno; **Cortar a Resposta** (feitiço) foi estreitada para o próximo ataque. Sincronizar as duas ainda é uma decisão de design, não uma correção automática deste rascunho.
+A reserva de fatias da Vanguarda é provisória, há assimetria de valor entre armas corpo a corpo e à distância e o orçamento total da Estocada segue em revisão. **Interromper a Resposta** (arma) mantém a janela até o começo do seu próximo turno; **Cortar a Resposta** (feitiço) foi estreitada para o próximo ataque. O Mizuki decidiu manter as janelas diferentes em 22/09: o feitiço já oferece sua própria entrega, portanto seu efeito adicional pode ter a janela mais curta.
+
+**Comparação de 22/09:** os dois cenários de janela foram medidos em [Comparação de Resposta](RASCUNHO-comparacao-resposta.md), incluindo Sequência, Caminho completo, Dupla e efeito para o grupo. O Mizuki decidiu manter as janelas diferentes: Interromper continua com a janela larga e Cortar continua limitado ao próximo ataque.

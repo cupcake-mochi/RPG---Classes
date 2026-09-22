@@ -8,18 +8,18 @@ Registro de 19 de setembro de 2026. O autor escolheu Conclusão Dupla para desen
 
 **Não há limite de conduções acertadas em uma sequência.** Você pode continuar conduzindo enquanto a sequência estiver ativa e puder pagar o custo. Cada tentativa custa metade da maestria arredondada para cima + 1 PE, pago antes do ataque, mesmo se ele errar.
 
-**Errar o ataque de uma condução encerra a sequência imediatamente, salvo se gastar um uso de Persistência a partir do nível 23.** Acertar o ataque, mas o alvo passar no TR de seu efeito, não é errar a condução: o acerto conta e renova o prazo. Sem uma nova Abertura, não é possível continuar conduzindo nem concluir a sequência encerrada.
+**Errar o ataque de uma condução encerra a sequência imediatamente, salvo se gastar um uso de Persistência a partir do nível 23.** Acertar o ataque, mas o alvo passar no TR de seu efeito, não é errar a condução: o acerto conta e renova o prazo. Sem um novo Golpe Inicial, não é possível continuar conduzindo nem concluir a sequência encerrada.
 
-**A sequência também termina no fim do segundo turno seu após a última Abertura ou Condução acertada, se você não a retomar até lá.** Por exemplo: abriu ou conduziu no turno 1; pode retomar no turno 2 ou no turno 3. Se não o fizer, encerra no fim do turno 3. Uma conclusão já encerra a sequência ao ser resolvida, acertando ou não.
+**A sequência também termina no fim do segundo turno seu após o último Golpe Inicial acertado ou a última Condução acertada, se você não a retomar até lá.** Por exemplo: abriu ou conduziu no turno 1; pode retomar no turno 2 ou no turno 3. Se não o fizer, encerra no fim do turno 3. Uma conclusão já encerra a sequência ao ser resolvida, acertando ou não.
 
 Continuam valendo:
 
 - Uma única sequência ativa, contra um único inimigo.
 - No máximo uma condução **ou** conclusão por turno, usando um ataque já disponível.
 - Pode abrir e conduzir/concluir no mesmo turno com ataques diferentes.
-- Não pode reabrir no turno em que concluiu. Essa proibição continua sendo específica à conclusão; depois de errar uma condução, um ataque restante pode pagar uma nova Abertura, mas não oferece outra condução naquele turno.
+- Não pode reabrir no turno em que concluiu. Essa proibição continua sendo específica à conclusão; depois de errar uma condução, um ataque restante pode pagar um novo Golpe Inicial, mas não oferece outra condução naquele turno.
 - Trocar de condução encerra os efeitos sustentados da anterior na declaração, mesmo se errar o novo ataque. Os benefícios não se acumulam por conduzir indefinidamente.
-- A Abertura perde Xd4 do dano total, mínimo zero, sendo X metade da maestria arredondada para cima. O desconto ocorre uma vez por Abertura acertada.
+- O Golpe Inicial perde Xd4 do dano total, mínimo zero, sendo X metade da maestria arredondada para cima. O desconto ocorre uma vez por Golpe Inicial acertado.
 - Concluir não exige PE adicional.
 
 O encerramento da sequência remove o acesso às suas etapas e o progresso acumulado. A auditoria conserva o tratamento anterior dos efeitos com duração própria: eles respeitam o prazo expresso e a regra de substituição; não desfaz movimento já realizado. Em particular, Postura Firme continua até o começo do próximo turno, como foi aprovado. A comparação não introduziu uma nova duração para as conduções.
@@ -30,7 +30,7 @@ O encerramento da sequência remove o acesso às suas etapas e o progresso acumu
 
 **As fontes são corpo a corpo, distância e feitiço. Não pode misturar fontes na mesma Conclusão Dupla.** As duas opções precisam ser permitidas para a mesma fonte da execução. Rasteira e Quebrar o Ritmo, disponíveis nos dois catálogos de armas, podem integrar uma dupla corpo a corpo ou uma dupla à distância, conforme o ataque usado; isso não autoriza juntar uma opção exclusiva de cada catálogo.
 
-Um feitiço de Toque continua sendo da fonte feitiço. Um disparo de arma continua sendo da fonte distância. Carregar um feitiço junto de um ataque de arma não permite tratar a mesma Conclusão Dupla como duas fontes. A fonte das Aberturas e Conduções anteriores não precisa coincidir com a da conclusão: preparar com a arma e terminar com duas conclusões mágicas continua possível, se a ficha tiver esse acesso.
+Um feitiço de Toque continua sendo da fonte feitiço. Um disparo de arma continua sendo da fonte distância. Carregar um feitiço junto de um ataque de arma não permite tratar a mesma Conclusão Dupla como duas fontes. A fonte dos Golpes Iniciais e das Conduções anteriores não precisa coincidir com a da conclusão: preparar com a arma e terminar com duas conclusões de feitiço continua possível, se a ficha tiver esse acesso.
 
 Escolha as duas antes de rolar o ataque ou resolver o feitiço. Todos os requisitos de ambas devem estar cumpridos nesse momento, inclusive os referentes à fonte, à arma, à distância e ao estado do alvo.
 
@@ -40,7 +40,7 @@ Se Explorar o Desequilíbrio estiver preparado, seu benefício afeta apenas o pr
 
 Declarar Conclusão Dupla consome o uso da cena, mesmo se o ataque errar ou o alvo resistir aos efeitos. A sequência termina normalmente. A habilidade não concede ataque adicional, não exige PE adicional e ocupa a conclusão permitida naquele turno.
 
-**Estado desta revisão:** a proibição de misturar fontes foi solicitada pelo autor e incorporada à regra. O catálogo de seis conclusões mágicas está fechado como versão de trabalho em [Estocada — conclusões para feitiços](estocada-conclusoes-feiticos.md), incluindo Desorientar na próxima rolagem de qualquer natureza, Expor a Guarda no próximo ataque de um aliado e Refluxo como metade do custo de uma condução em energia temporária. Desorientar não piora os testes do próprio lançamento ou da outra conclusão simultânea. Os preços históricos abaixo avaliam apenas conclusões de armas. A restrição de fontes já era respeitada por suas combinações; esses resultados não validam o custo das duplas mágicas, que precisa de conferência junto da Estocada.
+**Estado desta revisão:** a proibição de misturar fontes foi solicitada pelo autor e incorporada à regra. O catálogo de seis conclusões de feitiço está fechado como versão de trabalho em [Estocada — conclusões para feitiços](estocada-conclusoes-feiticos.md), incluindo Desorientar na próxima rolagem de qualquer natureza, Expor a Guarda no próximo ataque de um aliado e Refluxo como metade do custo de uma condução em energia temporária. Desorientar não piora os testes do próprio lançamento ou da outra conclusão simultânea. Os preços históricos abaixo avaliam apenas conclusões de armas. A restrição de fontes já era respeitada por suas combinações; esses resultados não validam o custo das duplas de feitiço, que precisa de conferência junto da Estocada.
 
 **Exemplo:** depois de acertar duas, três ou mais conduções, você pode combinar Rasteira e Desarme em um ataque corpo a corpo. O inimigo faz os dois TRs após o acerto e pode resistir a ambos, sofrer apenas uma consequência ou sofrer as duas.
 
@@ -50,7 +50,7 @@ Declarar Conclusão Dupla consome o uso da cena, mesmo se o ataque errar ou o al
 
 Foi comparada a mesma ficha, com as novas regras da Sequência e a mesma Escola, **com e sem Conclusão Dupla**. A diferença é o custo marginal do nível 30; não se cobram novamente todas as aberturas e conduções já presentes na ficha-base.
 
-A enumeração por programação dinâmica escolhe ações antes das rolagens, permite reagir aos resultados, e conta acertos, erros, resistência, PE gasto, perda na Abertura, prazo de dois turnos, sequências interrompidas, começo tardio e turnos sem ataques elegíveis. Não há desconto inventado de frequência apresentado como observação de mesa.
+A enumeração por programação dinâmica escolhe ações antes das rolagens, permite reagir aos resultados, e conta acertos, erros, resistência, PE gasto, perda no Golpe Inicial, prazo de dois turnos, sequências interrompidas, começo tardio e turnos sem ataques elegíveis. Não há desconto inventado de frequência apresentado como observação de mesa.
 
 O dia de referência continua com três combates de três ou quatro turnos, com igual peso: 10,5 rodadas. Cada combate é tratado como uma nova cena; se vários combates pertencerem à mesma cena, há menos recargas de Conclusão Dupla. A fatia continua em 5,08 equivalentes por rodada e o PE na cotação nominal de 5,14.
 

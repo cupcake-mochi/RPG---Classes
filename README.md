@@ -59,7 +59,7 @@ As reservas de trabalho e o valor **bruto** medido no nível 30 ficam assim, no 
 | Conclusão Dupla (nível 30): duas conclusões num golpe | 1,00 | 0,84 |
 | **Total com Ritmo** | **5,00** | **5,07** |
 
-> **Histórico da conta:** a tabela anterior misturava a leitura líquida da Sequência (descontando PE) com a reserva vigente, que usa o benefício bruto. Seu 1,26 não é a medida bruta atual. A faixa antiga da Escola, 0,11 a 0,44, também vinha de regras abandonadas; a auditoria das Manhas sob as regras atuais mede 0,12 para Ritmo e 0,51 para Versado, mas esses perfis alternativos não entram no total da tabela. As contas e seus cenários estão em `vanguarda-pe-contas.json` e `vanguarda-contas-v3.json`.
+> **Histórico da conta:** a tabela anterior misturava a leitura líquida da Sequência (descontando PE) com a reserva vigente, que usa o benefício bruto. Seu 1,26 não é a medida bruta atual. A faixa antiga da Escola, 0,11 a 0,44, também vinha de regras abandonadas; o novo validador da Escola usa o v3 e separa líquido de bruto: na régua bruta, Ritmo acrescenta 0,1237 e Versado 0,5904 fatia. Esses perfis alternativos não entram juntos no total da tabela. As contas e seus cenários estão em `vanguarda-pe-contas.json`, `vanguarda-contas-v3.json` e `vanguarda-escolas-contas.json`.
 
 As reservas são escolhas provisórias de projeto, **não tetos demonstrados**: o próprio perfil de distância da tabela mede 5,07 para uma reserva de 5,00. Dois outros cenários de estresse também passam de cinco (alvo com Defesa 14; luta de doze turnos) e ficaram registrados.
 
@@ -76,13 +76,13 @@ O caminho até aqui teve idas e voltas, e os arquivos guardam todas: primeiro cu
 As quatro habilidades da Trilha fecharam como mecânica:
 
 - **Compasso (nível 2)** ganha o atributo escolhido (Essência ou Inteligência) no PE máximo, além de conjurar na padrão e atacar na bônus.
-- **Traçado (11) morreu** e virou seis **conclusões mágicas**: preparar a Sequência com arma e fechar com feitiço.
+- **Traçado (11) morreu** e virou seis **conclusões de feitiço**: preparar a Sequência com arma e fechar com feitiço.
 - **Bote (19)** mantido: feitiço de condição sem dano libera o ataque extra na bônus.
-- **Ferrão (27)** agora só dispara depois de uma conclusão mágica que afete o alvo.
+- **Ferrão (27)** agora só dispara depois de uma conclusão de feitiço que afete o alvo.
 
 Mas o preço total **não** fechou, e o motivo é o achado mais importante da pasta: o preço zero antigo do Compasso se apoiava numa regra em que conjurar já dava um golpe de brinde. Desde a v0.147 do repositório principal o ataque extra exige a Ação de Atacar. Então Compasso e Bote hoje são *permissões de atacar depois de conjurar* — e isso tem preço. Só Compasso+Bote, num Refino 6, dá 4,46 fatias por rodada elegível. A Trilha não cabe em cinco sem conta nova.
 
-**O registro vigente é `estocada-auditoria.md`.**
+**O registro vigente das regras é `estocada-auditoria.md`.** A [revalidação](RASCUNHO-revalidacao-estocada.md) separa o ganho de ataques do custo de escolher um feitiço de condição sem dano para Bote. Com ao menos um descanso curto, Compasso sozinho mede **6,49 fatias** à distância; os **9,99** de Compasso+Bote são apenas o teto em que o feitiço de condição vale tanto quanto o de dano. Se o controle valer zero, Bote acrescenta apenas **0,076** fatia à distância nesse modelo. O preço final das conclusões de feitiço e de Ferrão continua aberto.
 
 ## Mapa dos arquivos
 
@@ -99,31 +99,35 @@ Os arquivos da releitura ficam na raiz, com o nome dizendo a frente. Cada `confe
 | `conferir-escala-bastiao.py` | Bastião | — | *21/09*, dano cru contra dano com acerto nas três entregas que a escala decide |
 | `regua-do-caminho.md` | os cinco Caminhos | **vigente**, *22/09* | por que o Caminho vai a 5 fatias e por que o degrau é no 23 — o vão da escada, não o orçamento; mais a lista de porte com arquivo e linha |
 | `RASCUNHO-sequencia-de-combate.md` | Vanguarda | versão de trabalho | texto de regra da Sequência, Escola e níveis 23/30, com as decisões vigentes e sem números de orçamento no corpo da regra |
+| `RASCUNHO-comparacao-resposta.md` e `vanguarda-resposta-contas.json` | Vanguarda | decisão: manter as janelas | janelas larga e estreita; conferidas por `conferir-vanguarda-v3.py --comparar-resposta` |
+| `RASCUNHO-dominancia-conclusoes-magicas.md` | Estocada | decisão: manter as seis regras | teste de dominância do catálogo de feitiços e opções de ajuste |
 | `vanguarda-sequencia-conversa-18-09.md` | Vanguarda | fonte, *21/09* | a conversa que gerou a Sequência: o texto-base das conduções e conclusões |
-| `vanguarda-sequencia-consolidada.md` | Vanguarda | *21/09* | tudo sobre Abrir, Conduzir e Concluir, com a fonte de cada frase e as decisões de 21/09 |
+| `vanguarda-sequencia-consolidada.md` | Vanguarda | *21/09* | tudo sobre Golpe Inicial, Condução e Conclusão, com a fonte de cada frase e as decisões de 21/09 |
 | `vanguarda-orcamento.md` | Vanguarda | **vigente** | o registro das cinco fatias e das regras que sustentam o preço |
 | `vanguarda-completo.md` | Vanguarda, Estocada | **vigente**, *21/09* | o Caminho e a Trilha num lugar só, com o achado da Vanguarda que conjura 7 de 10,5 |
 | `vanguarda-conclusao-dupla.md` | Vanguarda | vigente | texto e conta do nível 30; regras atuais da Sequência |
 | `vanguarda-nv23.md` | Vanguarda | vigente | Persistência, nível 23, versão fechada |
 | `vanguarda-nao-cede.md` | Vanguarda | vigente | Não Cede mantido, reserva de 1,00 |
-| `vanguarda-escolas-rascunho.md` | Vanguarda | vigente (regras); números históricos | a Escola de Arma reduzida a quatro Manhas + Versado |
+| `vanguarda-escolas-rascunho.md` | Vanguarda | vigente (regras e nova tabela Br/L); números de 18/09 históricos | a Escola de Arma reduzida a quatro Manhas + Versado |
 | `vanguarda-precificacao-v2.md` | Vanguarda | histórico | a auditoria com os custos Xd4 e maestria/2+1 — **ainda publica o teto de duas conduções como vigente** |
 | `vanguarda-precificacao-inicial.md` | Vanguarda | histórico | a primeira auditoria, com −2 de dano e 1 PE |
 | `vanguarda-nv23-proposta.md` | Vanguarda | histórico | Persistência quando era um uso por cena |
 | `conferir-vanguarda.py` · `-v2.py` · `-v3.py` | Vanguarda | — | as três gerações do modelo; **a v3 importa a v2** e roda regressão contra ela |
-| `conferir-escolas-vanguarda.py` | Vanguarda | — | acréscimo marginal de cada Manha |
+| `conferir-escolas-vanguarda.py` | Vanguarda | v3 atual | acréscimo marginal das cinco escolhas em Br/L; confere a tabela publicada |
 | `conferir-nao-cede.py` | Vanguarda | — | sensibilidade de Não Cede |
 | `conferir-vanguarda-pe.py` | Vanguarda | — | *21/09*, o preço líquido contra o bruto nos dois perfis de arma |
 | `conferir-vanguarda-nv23.py` · `-nv23-usos.py` | Vanguarda | — | Persistência com um uso por cena, e depois com contador por maestria |
 | `estocada-auditoria.md` | Estocada | **vigente** | por que o preço total não fecha, e o que falta |
 | `estocada-compasso.md` | Estocada | vigente | Compasso com atributo no PE |
 | `excecao-atributo-no-pe.md` | Estocada, Bastião | vigente, *21/09* | exceção declarada contra a peça 1, pra Compasso e Retaliação |
-| `estocada-conclusoes-feiticos.md` | Estocada | vigente | as seis conclusões mágicas |
+| `estocada-conclusoes-feiticos.md` | Estocada | vigente | as seis conclusões de feitiço |
 | `estocada-bote.md` · `estocada-ferrao.md` | Estocada | vigente | níveis 19 e 27 |
 | `conferir-estocada-auditoria.py` | Estocada | — | Ferrão e Compasso+Bote por enumeração de estados |
 | `conferir-estocada-compasso-pe.py` | Estocada | — | só a parcela de PE do Compasso |
-| `conferir-estocada-conclusoes-magicas.py` | Estocada | — | *21/09*, preço das seis conclusões mágicas do nível 11 |
+| `conferir-estocada-conclusoes-magicas.py` | Estocada | — | *21/09*, preço das seis conclusões de feitiço do nível 11 |
 | `conferir-estocada-rotina.py` | Vanguarda, Estocada | — | *21/09*, o Caminho e a Estocada numa Vanguarda que conjura 7 de 10,5 rodadas; duas implementações que têm de concordar |
+| `RASCUNHO-orcamento-estocada.md` e `estocada-orcamento-cenarios-contas.json` | Estocada | análise, *22/09* | cenários de limite para Compasso/Bote no Caminho completo, PE nominal e custo de oportunidade da ação bônus; sem mudança de regra |
+| `RASCUNHO-revalidacao-estocada.md` e `conferir-estocada-troca-feitico.py` | Estocada | análise, *22/09* | decompõe a diferença entre as armas e compara Bote com a escolha de um feitiço de dano; saída em `estocada-troca-feitico-contas.json` |
 | `vanguarda-nao-acabou-comparacao.json` | Vanguarda | histórico | comparação da antiga Não Acabou, sem script próprio |
 
 ## Rodar os scripts
@@ -134,11 +138,13 @@ Python 3, sem dependência externa. Rode da raiz:
 for v in conferir-*.py; do python3 "$v"; done
 ```
 
-Cada um imprime a tabela dele e termina com uma linha de checagem (`OK` ou uma afirmação do que foi conferido). Os **quatorze** rodam limpos e reproduzem cada número dos documentos — conferido em 22/09/2026, junto do `conferir-dano-movido.py` e dos 22 scripts de conta do `bastiao-reforma/`. Não há validador de regressão entre os `.md` e os scripts; os números dos documentos foram copiados da saída à mão.
+Cada um termina com uma checagem. São **quinze** validadores na raiz, além de `conferir-dano-movido.py` e dos três scripts de `revisao/`. A tabela da escolha de feitiço é conferida diretamente por `conferir-estocada-troca-feitico.py`; outras tabelas históricas continuam sem essa ligação automática.
 
 Os três scripts de `revisao/` rodam de dentro da própria pasta e não entram nesse laço — `nivel-2.py`, `vao-do-nivel-23.py` e `orcamento-3-ou-5.py`. Os dois últimos leem os `*-contas.json` da raiz por caminho relativo.
 
 `conferir-vanguarda-v3.py` carrega `conferir-vanguarda-v2.py` por caminho relativo; os dois precisam estar na mesma pasta. O mesmo vale pros de nível 23 e de Escolas, que carregam a v3.
+
+Para conferir também a tabela de alternativas da Estocada, rode `python3 conferir-estocada-rotina.py --comparar-orcamento`.
 
 ## O que a revisão achou
 
@@ -150,9 +156,9 @@ Em 20/09/2026 dois agentes revisaram a pasta contra o repositório principal na 
 4. ~~O alvo morre no meio da Sequência.~~ **Resolvido e escrito:** *"abrir uma sequência contra outro alvo substitui a anterior"* agora aparece expressamente no `RASCUNHO-sequencia-de-combate.md`.
 5. ~~Não Pega: peça 6 diz Vanguarda, manual diz Bastião.~~ **Resolvido a favor do manual:** o zip põe Não Pega no nível 7 do Bastião, de graça, junto de Ainda de Pé. A peça 6 §3.1 envelhece no porte.
 
-E o que vale corrigir antes: ~~a escala de Fagulha (achado 12, agora com a tensão interna do zip somada)~~ — **resolvido em 21/09, com acerto pras três** (`bastiao-correcao-escala.md`); Conclusão Dupla "por cena" deveria ser "por descanso curto" pela regra do próprio repositório — **medido em 22/09: a troca não mexe no preço.** A Dupla dispara **2,33 vezes por dia** no perfil de referência (`vanguarda-contas-v3.json`, `yumi_referencia.com_nivel_30.double_attempts`), contra um teto de 3 que o `conferir-vanguarda-v3.py` já assere nas duas formas (≤3 por dia, ≤1 por combate). Com três lutas e um descanso curto entre elas, "por descanso curto" dá o mesmo teto de 3 — **o 1,00 fatia continua valendo**. O que a troca conserta é outra coisa: a peça 10 §5 mede que "cena" varia **3,0×** entre mestres, e *"a luta acabou"* dois mestres arbitram igual. É consistência, não repreço. **A mudança de texto é decisão sua;** no nível 2 a Sequência perde dinheiro em toda rota (conta em `revisao/nivel-2.py`) — e o Mizuki pôs a Sequência no nível 2; Desorientar domina as outras conclusões mágicas. ~~A v2 ainda publica regra velha sem aviso~~ — **o aviso entrou em 22/09**, no topo do arquivo e na linha que publicava o teto de duas conduções.
+E o que vale corrigir antes: ~~a escala de Fagulha (achado 12, agora com a tensão interna do zip somada)~~ — **resolvido em 21/09, com acerto pras três** (`bastiao-correcao-escala.md`); Conclusão Dupla "por cena" deveria ser "por descanso curto" pela regra do próprio repositório — **medido em 22/09: a troca não mexe no preço.** A Dupla dispara **2,33 vezes por dia** no perfil de referência (`vanguarda-contas-v3.json`, `yumi_referencia.com_nivel_30.double_attempts`), contra um teto de 3 que o `conferir-vanguarda-v3.py` já assere nas duas formas (≤3 por dia, ≤1 por combate). Com três lutas e um descanso curto entre elas, "por descanso curto" dá o mesmo teto de 3 — **o 1,00 fatia continua valendo**. O que a troca conserta é outra coisa: a peça 10 §5 mede que "cena" varia **3,0×** entre mestres, e *"a luta acabou"* dois mestres arbitram igual. É consistência, não repreço. **A mudança de texto é decisão sua;** no nível 2 a Sequência perde dinheiro em toda rota (conta em `revisao/nivel-2.py`) — e o Mizuki pôs a Sequência no nível 2; Desorientar lidera o preço escalar de uma Condução quando a próxima rolagem é útil; o Mizuki decidiu manter o catálogo após a análise de dominância. ~~A v2 ainda publica regra velha sem aviso~~ — **o aviso entrou em 22/09**, no topo do arquivo e na linha que publicava o teto de duas conduções.
 
-~~Na triagem de nomes, cinco morreram no validador do repositório (Condução, Conduzir, Precisão, Guarda, Impacto) e seis precisam de outro nome por sentido (Abrir/Abertura, Fechar a Rota, Golpe de Impacto, Derrubada, Desvio, Abrir Caminho).~~ **Fechado em 21/09**, ver `vanguarda-sequencia-consolidada.md` §12: Sequência de Condução, Ritmo, Postura Firme, Empuxo, Mover Alvo, Ponto Fraco, Rasteira, Romper Fileira. Fechar a Rota e as duas "Resposta" ficam mantidos por decisão. Só falta a etapa 1 (Abrir/Abertura). Os dezoito do Bastião passaram limpos.
+~~Na triagem de nomes, cinco morreram no validador do repositório (Condução, Conduzir, Precisão, Guarda, Impacto) e seis precisam de outro nome por sentido (Abrir/Abertura, Fechar a Rota, Golpe de Impacto, Derrubada, Desvio, Abrir Caminho).~~ **Fechado em 21/09**, ver `vanguarda-sequencia-consolidada.md` §12: Sequência de Condução, Ritmo, Postura Firme, Empuxo, Mover Alvo, Ponto Fraco, Rasteira, Romper Fileira. Fechar a Rota e as duas "Resposta" ficam mantidos por decisão. A etapa 1 foi fechada em 22/09: **Golpe Inicial**. Os dezoito do Bastião passaram limpos.
 
 `revisao/cruzamento-constantes.md` confere as 30 constantes que os scripts usam contra o documento dono: 26 batem com citação literal.
 
@@ -163,13 +169,13 @@ Decisões do Mizuki, primeiro — nenhuma é conta:
 1. ~~A fatia cobra PE ou não?~~ **Resolvido em 21/09: conta bruto, sem descontar.** A Vanguarda de distância mede 5,07 fatias; o perfil corpo a corpo mede 1,34, e essa diferença entre armas fica como pendência separada (ver a seção da Vanguarda).
 2. ~~A escala: dano cru ou com acerto?~~ **Resolvido em 21/09: com acerto.** Fagulha 2,05, Trocação Franca 0,85 (caiu de 1,70), Retaliação 2,10 sem mudar. Critério: cru fazia o Combatente Amaldiçoado passar de 7,00 fatias.
 3. ~~Persistência precisa de nível.~~ **Já estava escrito, só disperso.** Sequência + Escola no 2 (2,75), Não Cede no 15 (1,00, já dito em `vanguarda-nao-cede.md`: "na progressão antiga, a habilidade entra no nível 15"), Persistência no 23 (0,25), Conclusão Dupla no 30 (1,00). Soma 5,00 exato, sem margem.
-4. ~~Nomes da Vanguarda.~~ **Fechado em 21/09**, oito de nove trocas decididas (`vanguarda-sequencia-consolidada.md` §12). Falta só o nome da etapa 1 (Abrir/Abertura).
+4. ~~Nomes da Vanguarda.~~ **Fechado em 21/09**, oito de nove trocas decididas (`vanguarda-sequencia-consolidada.md` §12). A etapa 1 também foi fechada em 22/09: **Golpe Inicial**.
 5. ~~Compasso com atributo no PE contra a peça 1.~~ **Resolvido em 21/09: exceção declarada**, ideia do próprio Mizuki — o bônus não é fixo, cresce junto do atributo pelas aptidões da peça 11.
 
 Depois, trabalho:
 
-6. ~~Escrever o texto de regra da Sequência.~~ **Feito em `RASCUNHO-sequencia-de-combate.md`.** O nome da etapa Abrir/Abertura ainda precisa de decisão antes do porte ao repositório principal.
-7. Preço total da Estocada, e as duplas mágicas da Conclusão Dupla. **Medido em 21/09** (`conferir-estocada-rotina.py`; uma primeira versão da mesma tarde, que dizia "Compasso nunca vence a arma pura", estava errada e foi desfeita). Numa Vanguarda que conjura 7 de 10,5 rodadas: Compasso 5,35 (distância) / 2,13 (corpo a corpo); conclusões mágicas e Ferrão 0,00, porque o ataque de bônus já conclui de arma por mais; Bote até 3,43 / 2,05. A Trilha mede 5,35 a 8,78 no perfil de distância. A distribuição fica pra reescrita das Trilhas. As seis conclusões mágicas do nível 11 já fecharam (Cortar a Resposta 0,34, Desorientar 0,62). Pendência aberta: sincronizar Interromper a Resposta (arma) com a janela estreitada de Cortar a Resposta.
+6. ~~Escrever o texto de regra da Sequência.~~ **Feito em `RASCUNHO-sequencia-de-combate.md`.** **Golpe Inicial** é o nome da etapa inicial, escolhido pelo Mizuki em 22/09. A comparação das janelas de Interromper e Cortar a Resposta está em [`RASCUNHO-comparacao-resposta.md`](RASCUNHO-comparacao-resposta.md), decidida pelo Mizuki: manter a janela larga da arma e a janela de um ataque do feitiço.
+7. Preço total da Estocada, e as duplas de feitiço da Conclusão Dupla. **A conta de 21/09** (`conferir-estocada-rotina.py`) mede Compasso 5,35 / 2,13 sobre a Sequência sozinha; conclusões de feitiço e Ferrão 0,00 nessa rotina. **No Caminho completo**, Compasso mede 6,49 / 2,32, com pelo menos um descanso curto. Os antigos 9,99 / 4,42 de Compasso+Bote supõem que os sete feitiços sem dano tenham o mesmo valor dos feitiços de dano abandonados. A [revalidação de 22/09](RASCUNHO-revalidacao-estocada.md) mostra Bote entre 0,076 e 3,502 fatias à distância conforme o valor do controle; com controle de valor zero, Bote corpo a corpo não é usado. Compasso sozinho ainda excede 5,50 na ficha à distância com descanso. Sem descanso, sete feitiços e as Conduções otimizadas não cabem no PE. Nenhuma regra foi alterada; o preço final das conclusões de feitiço e de Ferrão continua pendente.
 8. A fila do próprio zip do Bastião: a linha de playtest, a linha na peça 19, fechar a régua de dano movido como peça, repreçar as quatro entregas que dependem dela.
 9. Levar pro JJK---Project, seguindo o procedimento de lá (validadores, CHANGELOG, mensagem de commit). Toca o `DESENHO-caminhos.md`, a peça 6 §3.1, a peça 19 e o manual.
 
@@ -177,8 +183,8 @@ E duas pontas pequenas que apareceram ao conferir a pasta em 22/09, as duas do m
 
 10. ~~A Escola de Arma tem dois números publicados que discordam.~~ **Resolvido em 22/09, e não era discordância:** é o mesmo modelo antes e depois de uma mudança de regra. Perturbando `break_on_miss` e `conduct_cap` um de cada vez, o teto é inerte neste perfil e **errar-encerra é a única variável** — desligado dá 1,4865 / 0,1095 / 0,4445, ligado dá 1,2621 / 0,1248 / 0,5149. Os `0,11 a 0,44` eram a regra que morreu em 19/09. A tabela de orçamento foi corrigida.
 
-    **Sobra uma dívida disso, e ela é maior:** o `conferir-escolas-vanguarda.py` instrumenta o modelo **v2** (linha 14, `runpy.run_path('conferir-vanguarda-v2.py')`), então ele mede a Escola sob as regras mortas e **passa verde**. O `vanguarda-escolas-contas.json` inteiro é de regra velha. As quatro Manhas sob a regra vigente valem Ritmo 0,1248, Postura Firme 0,2145, Empuxo 0,0581, Mover Alvo 0,0274 e Versado 0,5149 — medidos em 22/09 contra o v3, **não publicados em JSON nenhum**. Ou o validador é reescrito em cima do v3, ou ele é aposentado; do jeito que está, o verde dele não diz nada sobre hoje.
-11. **Dois valores moram dentro de um validador.** A linha 278 do `conferir-estocada-rotina.py` traz `1.2621357356808118` e `3.0101` escritos à mão. Os donos deles são `perfis/distancia/etapas/sequencia/acumulado/{L,Br}` no `vanguarda-pe-contas.json` — inflar os dois no JSON em 10% **não acende** a checagem. O resto do script lê do dono direito: perturbar o 5,07, o 1,34, o Não Cede, o PE por nível, a maior Classe, o nível ou o custo do feitiço faz ele falhar como devia.
+    **Validador corrigido em 22/09:** `conferir-escolas-vanguarda.py` agora usa o modelo v3 e gera `vanguarda-escolas-contas.json` com as duas contabilidades. Os valores antes citados (0,1248; 0,2145; 0,0581; 0,0274; 0,5149) são a coluna **líquida** da regra vigente, não o preço bruto adotado. No cenário de Yumi, a coluna bruta passa a 0,1237; 0,2543; 0,0645; 0,0323; 0,5904, respectivamente. O documento da Escola traz as duas colunas e preserva os números de 18/09 como histórico.
+11. ~~Dois valores moram dentro de um validador.~~ **Resolvido em 22/09:** `conferir-estocada-rotina.py` lê `perfis/distancia/etapas/sequencia/acumulado/{L,Br}` do `vanguarda-pe-contas.json`. Os antigos literais `1.2621357356808118` e `3.0101` não estão mais no script; alterar cada valor de origem em uma cópia isolada acende a checagem de regressão.
 
 ## As outras pastas
 

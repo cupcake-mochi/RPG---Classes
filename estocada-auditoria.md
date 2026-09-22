@@ -9,9 +9,9 @@ Conferência executada em 19 de setembro de 2026. **As quatro entregas estão de
 | 2, Compasso | Conjurar na padrão e atacar na bônus; atributo Essência/Inteligência na arma; mesmo atributo no PE máximo | PE isolado conferido; núcleo de ação precisa ser reavaliado |
 | 11, antigo Traçado | Concluir com feitiço, catálogo de seis opções | Catálogo e interação com Conclusão Dupla ainda sem preço conjunto |
 | 19, Bote | Segundo ataque na bônus após feitiço de condição sem dano | Não reutilizar automaticamente o preço antigo |
-| 27, Ferrão | Após conclusão mágica cujo feitiço afete o alvo, o ataque de Compasso pode carregar Classe 0; incompatível com Bote | Acertos próprios, perda de Canalizar e frequência conferidos nos cenários abaixo |
+| 27, Ferrão | Após conclusão de feitiço cujo feitiço afete o alvo, o ataque de Compasso pode carregar Classe 0; incompatível com Bote | Acertos próprios, perda de Canalizar e frequência conferidos nos cenários abaixo |
 
-O Caminho e a Trilha continuam com orçamentos separados. As cinco fatias reservadas para o Caminho não pagam automaticamente as novas possibilidades da Estocada. A reserva do nível 30 do Caminho também não prova o preço de suas duplas mágicas.
+O Caminho e a Trilha continuam com orçamentos separados. As cinco fatias reservadas para o Caminho não pagam automaticamente as novas possibilidades da Estocada. A reserva do nível 30 do Caminho também não prova o preço de suas duplas de feitiço.
 
 ## Ferrão: o que realmente se acrescenta ao ataque
 
@@ -77,13 +77,13 @@ Como diagnóstico, compare a mesma conjuração de condição sem dano com e sem
 
 Os números são por rodada elegível, não somas acumuladas em diversos turnos. Se o jogador conjurar menos vezes, ou tiver outro uso valioso da ação bônus, o benefício muda. Não se presumiu que todo jogador usa a rotina máxima.
 
-Somar apenas a parcela nominal de PE máximo com dois descansos curtos aproveitados (0,9636) dá 5,4223 no exemplo de Refino 6 e 6,8298 no de Refino 10, antes do catálogo mágico. **Essas somas são testes de disponibilidade favorável, não o preço adotado da Trilha nem garantia de gasto dos PE extras.** Sem demanda para gastar essa energia, seu benefício realizado é menor. A tabela serve para mostrar que o zero antigo do Compasso não é uma justificativa suficiente para declarar que o conjunto cabe em cinco.
+Somar apenas a parcela nominal de PE máximo com dois descansos curtos aproveitados (0,9636) dá 5,4223 no exemplo de Refino 6 e 6,8298 no de Refino 10, antes do catálogo de feitiços. **Essas somas são testes de disponibilidade favorável, não o preço adotado da Trilha nem garantia de gasto dos PE extras.** Sem demanda para gastar essa energia, seu benefício realizado é menor. A tabela serve para mostrar que o zero antigo do Compasso não é uma justificativa suficiente para declarar que o conjunto cabe em cinco.
 
 ## O que falta para fechar o preço total
 
 1. Comparar rotinas legais completas com a mesma ficha-base, incluindo o custo de oportunidade da ação bônus, decisões de conjurar ou atacar, PE e o quanto as escolhas da Sequência mudam. Não impor uma taxa arbitrária de conjuração e chamá-la de frequência observada.
 2. Medir as seis conclusões como um catálogo de escolhas, em vez de somar o melhor valor de todas como se fossem usadas juntas. Desorientar requer contextos distintos para ataque, TR, Bloquear e dano; não tem um equivalente único universal.
-3. Conferir as duplas mágicas do nível 30, com um único lançamento, fontes compatíveis, resistências resolvidas antes dos novos efeitos e descontos de sobreposição. Uma condição aplicada pelo feitiço pode já retirar reação ou movimento, por exemplo.
+3. Conferir as duplas de feitiço do nível 30, com um único lançamento, fontes compatíveis, resistências resolvidas antes dos novos efeitos e descontos de sobreposição. Uma condição aplicada pelo feitiço pode já retirar reação ou movimento, por exemplo.
 4. Só então distribuir as cinco fatias da Trilha ou propor ajustes de regra ao autor. Nenhuma redução automática dos benefícios aprovados foi aplicada nesta auditoria.
 
 O resultado desta rodada é um diagnóstico conferido e o fechamento mecânico de Ferrão, **não uma certificação incompleta apresentada como preço final**.
@@ -92,7 +92,9 @@ O resultado desta rodada é um diagnóstico conferido e o fechamento mecânico d
 
 O modelo de rotina (`conferir-estocada-rotina.py`) responde ao item 1. **Uma primeira versão, da mesma tarde, concluiu que "Compasso nunca vence a arma pura" e estava errada**: comparava com uma Vanguarda que nunca conjura e cobrava o feitiço a 5,14 por PE — que é o câmbio derivado dos próprios feitiços, e por isso zera qualquer feitiço. Foi desfeita.
 
-Na base da régua do repositório principal — a Vanguarda de nível 30 conjura em 7 das 10,5 rodadas (`conferir-orcamento.py`, bloco 1) —, **o Compasso é a entrega mais cara da Trilha**: 5,35 fatias no perfil de distância e 2,13 no corpo a corpo, só sobre a Sequência. É exatamente o que o diagnóstico desta auditoria suspeitava lá em cima (*"Compasso e Bote são justamente permissões para atacar depois de usar a ação Conjurar"*), agora com a frequência de conjuração da régua em vez de "toda rodada elegível". As conclusões mágicas e o Ferrão valem zero na referência (o ataque de bônus já conclui de arma, por mais); o Bote vai até 3,43 se todo feitiço conjurado for de condição sem dano. Tabela completa em `vanguarda-completo.md`.
+Na base da régua do repositório principal — a Vanguarda de nível 30 conjura em 7 das 10,5 rodadas (`conferir-orcamento.py`, bloco 1) —, **o Compasso é a entrega mais cara da Trilha**: 5,35 fatias no perfil de distância e 2,13 no corpo a corpo, só sobre a Sequência. É exatamente o que o diagnóstico desta auditoria suspeitava lá em cima (*"Compasso e Bote são justamente permissões para atacar depois de usar a ação Conjurar"*), agora com a frequência de conjuração da régua em vez de "toda rodada elegível". As conclusões de feitiço e o Ferrão valem zero na referência (o ataque de bônus já conclui de arma, por mais); o Bote vai até 3,43 se todo feitiço conjurado for de condição sem dano. Tabela completa em `vanguarda-completo.md`.
+
+**Adenda de 22/09:** o número de Bote acima é o ganho dos ataques mantendo fixo o valor dos feitiços; não desconta a alternativa de conjurar um feitiço de dano. A [revalidação da escolha](RASCUNHO-revalidacao-estocada.md) faz essa comparação no Caminho completo e mostra que Bote pode valer muito menos. Ela também mostra que os 6,49 de Compasso à distância exigem ao menos um descanso curto para acomodar as Conduções no PE disponível.
 
 ## Reprodução e fontes
 
