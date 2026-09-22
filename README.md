@@ -147,7 +147,7 @@ Em 20/09/2026 dois agentes revisaram a pasta contra o repositório principal na 
 1. ~~O Caminho tem 3 fatias no repositório, não 5, e não tem nível 23.~~ **Resolvido:** a decisão estava no zip do Bastião — 5 fatias, quatro degraus em 2 · 15 · 23 · 30 — e o Mizuki confirmou que vale pros cinco Caminhos. **O motivo está em `regua-do-caminho.md`**, e não é o orçamento: é o vão da escada, que foi de 5 pra 8 níveis quando o degrau do 23 saiu na v0.70. Esse arquivo também avisa que a mudança **reverte uma decisão registrada** do repositório principal (*"o vão fica, e é preço aceito e não defeito"*), e traz a lista de porte com arquivo e linha — cinco donos mais dois que só descrevem.
 2. ~~O texto das conduções e conclusões não está em arquivo nenhum.~~ **Resolvido:** está em `vanguarda-sequencia-conversa-18-09.md`. Três regras daquela conversa morreram em 19/09 (erro conserva prazo; teto de duas; prazo de um turno) e o consolidado marca quais.
 3. ~~Compasso somando atributo no PE máximo contraria uma regra que tem motivo escrito na peça 1.~~ **Resolvido em 21/09: exceção declarada**, cobrindo também a Retaliação do Bastião, que faz a mesma coisa (`excecao-atributo-no-pe.md`).
-4. ~~O alvo morre no meio da Sequência.~~ **Resolvido pelo texto-base:** *"abrir uma sequência contra outro alvo substitui a anterior"*. Falta só deixar explícito no texto de regra.
+4. ~~O alvo morre no meio da Sequência.~~ **Resolvido e escrito:** *"abrir uma sequência contra outro alvo substitui a anterior"* agora aparece expressamente no `RASCUNHO-sequencia-de-combate.md`.
 5. ~~Não Pega: peça 6 diz Vanguarda, manual diz Bastião.~~ **Resolvido a favor do manual:** o zip põe Não Pega no nível 7 do Bastião, de graça, junto de Ainda de Pé. A peça 6 §3.1 envelhece no porte.
 
 E o que vale corrigir antes: ~~a escala de Fagulha (achado 12, agora com a tensão interna do zip somada)~~ — **resolvido em 21/09, com acerto pras três** (`bastiao-correcao-escala.md`); Conclusão Dupla "por cena" deveria ser "por descanso curto" pela regra do próprio repositório — **medido em 22/09: a troca não mexe no preço.** A Dupla dispara **2,33 vezes por dia** no perfil de referência (`vanguarda-contas-v3.json`, `yumi_referencia.com_nivel_30.double_attempts`), contra um teto de 3 que o `conferir-vanguarda-v3.py` já assere nas duas formas (≤3 por dia, ≤1 por combate). Com três lutas e um descanso curto entre elas, "por descanso curto" dá o mesmo teto de 3 — **o 1,00 fatia continua valendo**. O que a troca conserta é outra coisa: a peça 10 §5 mede que "cena" varia **3,0×** entre mestres, e *"a luta acabou"* dois mestres arbitram igual. É consistência, não repreço. **A mudança de texto é decisão sua;** no nível 2 a Sequência perde dinheiro em toda rota (conta em `revisao/nivel-2.py`) — e o Mizuki pôs a Sequência no nível 2; Desorientar domina as outras conclusões mágicas. ~~A v2 ainda publica regra velha sem aviso~~ — **o aviso entrou em 22/09**, no topo do arquivo e na linha que publicava o teto de duas conduções.
@@ -188,13 +188,14 @@ E duas pontas pequenas que apareceram ao conferir a pasta em 22/09, as duas do m
 
 ## Histórico deste repositório
 
-Cinco commits, de propósito:
+Seis commits, de propósito:
 
 1. A pasta exatamente como foi entregue em 20/09/2026, mais um `.gitignore`.
 2. Só a troca dos links: os documentos apontavam uns pros outros e pro repositório principal por caminho absoluto de uma máquina; viraram links relativos. Nenhuma palavra de texto mudou — o `git diff` desse commit só tem linhas com link.
 3. Este README, a pasta de referência e a pasta de revisão.
 4. O `bastiao-reforma/`, a conversa e o consolidado da Sequência, e as decisões de 21/09 refletidas neste README.
 5. A noite de 21/09 — a decisão de PE bruto, a escala com acerto, a exceção de atributo, os dois consolidados e o achado da Vanguarda que conjura — mais o `regua-do-caminho.md` e os dois scripts que vieram com ele.
+6. O texto de regra da Sequência de Condução, a propagação dos nomes fechados e a correção da tabela do README para a contabilidade bruta adotada.
 
 O quinto junta duas pontas. Uma é a noite de 21/09, que ficou fora do git por um dia. A outra é a branch **`claude/jjk-classes-review-g21rh1`**, que saiu do commit 3 às 19:53 daquele dia, fechou o mesmo item 1 por outro caminho e nunca voltou. Ela não foi mesclada — mesclar apagaria o `bastiao-reforma/` e a conversa da Sequência, que entraram depois que ela saiu. Os três arquivos dela que o `main` não tinha foram trazidos à mão, e o `regua-do-caminho.md` abre com o aviso do que envelheceu no texto dele.
 
