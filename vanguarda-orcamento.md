@@ -10,10 +10,10 @@ Registro iniciado em 18 de setembro de 2026, atualizado em 19 de setembro após 
 
 | Perfil de arma | líquido (desconta PE) | **bruto — adotado** |
 |---|---:|---:|
-| Distância (arco, Manha de Precisão) | 3,25 | **5,07** |
-| Corpo a corpo (lâmina longa, Manha de Guarda) | 0,82 | **1,34** |
+| Distância (arco, Manha Ritmo) | 3,25 | **5,07** |
+| Corpo a corpo (lâmina longa, Manha Postura Firme) | 0,82 | **1,34** |
 
-O perfil de distância fecha em **5,07 fatias**, folga parecida com a que o Bastião já tem publicada (5,20 a 5,58). **A diferença entre os dois perfis de arma continua aberta** — no bruto ela é 5,07 contra 1,34; no líquido ela era mais dura ainda, porque a Sequência inteira vale zero pra quem usa espada (a política ótima simplesmente não abre sequência quando cada Condução custa PE e o líquido de Golpe de Impacto não paga o câmbio). Essa assimetria não é resolvida por esta decisão; é registrada como pendência de desenho separada.
+O perfil de distância fecha em **5,07 fatias**, folga parecida com a que o Bastião já tem publicada (5,20 a 5,58). **A diferença entre os dois perfis de arma continua aberta** — no bruto ela é 5,07 contra 1,34; no líquido ela era mais dura ainda, porque a Sequência inteira vale zero pra quem usa espada (a política ótima simplesmente não abre sequência quando cada Condução custa PE e o líquido de Ponto Fraco não paga o câmbio). Essa assimetria não é resolvida por esta decisão; é registrada como pendência de desenho separada.
 
 Conta em [`conferir-vanguarda-pe.py`](conferir-vanguarda-pe.py), saída completa em `vanguarda-pe-contas.json`.
 
@@ -21,7 +21,7 @@ Conta em [`conferir-vanguarda-pe.py`](conferir-vanguarda-pe.py), saída completa
 
 ## Valor adotado
 
-**Base aprovada: Sequência de Combate + Escola de Arma = 2,75 fatias, como orçamento provisório de projeto.** A Sequência conserva sua reserva de 2,00; a Escola simplificada, incluindo Versado como alternativa, recebe 0,75.
+**Base aprovada: Sequência de Condução + Escola de Arma = 2,75 fatias, como orçamento provisório de projeto.** A Sequência conserva sua reserva de 2,00; a Escola simplificada, incluindo Versado como alternativa, recebe 0,75.
 
 O valor cobre Abrir, Conduzir e Concluir com o catálogo atual de seis conduções e sete conclusões distintas. É o preço do conjunto; não se cobra esse valor novamente em cada etapa ou em cada opção.
 
@@ -30,7 +30,7 @@ O valor cobre Abrir, Conduzir e Concluir com o catálogo atual de seis conduçõ
 | Destino | Fatias |
 |---|---:|
 | Orçamento total do Caminho | 5,00 |
-| Sequência de Combate — catálogo atual | **2,00** |
+| Sequência de Condução — catálogo atual | **2,00** |
 | Escola de Arma simplificada — uma Manha ou Versado | **0,75** |
 | Total reservado para a base | **2,75** |
 | Não Cede — reserva provisória | **1,00** |
@@ -41,7 +41,7 @@ O valor cobre Abrir, Conduzir e Concluir com o catálogo atual de seis conduçõ
 
 O ataque extra do nível 7 mantém o tratamento de correção de base da reforma. As 1,25 fatias anteriormente livres foram distribuídas entre os níveis 23 e 30. Os poderes antigos ainda não revisados não são considerados mantidos gratuitamente; as Trilhas têm orçamento separado. A distribuição fecha o orçamento de trabalho, com preços ainda provisórios.
 
-Em 18 de setembro de 2026, após o exemplo de Abertura com Guarda, condução Pressionar a Guarda e conclusão Derrubada, o autor aprovou a Escola simplificada: “por mim tudo bem, achei okey”. O texto aprovado está em [Escola de Arma simplificada](vanguarda-escolas-rascunho.md). O nome do arquivo foi preservado para manter os links existentes; seu estado agora é aprovado como versão de trabalho.
+Em 18 de setembro de 2026, após o exemplo de Abertura com Postura Firme, condução Pressionar a Guarda e conclusão Rasteira, o autor aprovou a Escola simplificada: “por mim tudo bem, achei okey”. O texto aprovado está em [Escola de Arma simplificada](vanguarda-escolas-rascunho.md). O nome do arquivo foi preservado para manter os links existentes; seu estado agora é aprovado como versão de trabalho.
 
 ## Por que dois
 
@@ -55,7 +55,7 @@ Os 4,8953 do cenário extremo e os 5,6939 do teste extremo de doze turnos contin
 
 A reserva de 0,75 para a Escola também é uma escolha de orçamento, com as hipóteses e limitações da conferência preservadas no documento da Escola. Aprovar o conjunto não transforma os 2,75 em um teto universal demonstrado.
 
-**Conferência de 19/09:** com conduções sem teto e erro encerrando a sequência, a mesma referência rendeu 1,2621 sem Escola e 1,3869 com Precisão. Conservam-se as reservas de 2,00 para Sequência e 0,75 para Escola. Os números da seção anterior registram a justificativa histórica da reserva; a [auditoria da Conclusão Dupla](vanguarda-conclusao-dupla.md) traz a regra e os resultados atuais.
+**Conferência de 19/09:** com conduções sem teto e erro encerrando a sequência, a mesma referência rendeu 1,2621 sem Escola e 1,3869 com Ritmo. Conservam-se as reservas de 2,00 para Sequência e 0,75 para Escola. Os números da seção anterior registram a justificativa histórica da reserva; a [auditoria da Conclusão Dupla](vanguarda-conclusao-dupla.md) traz a regra e os resultados atuais.
 
 ## Regras que sustentam o preço
 

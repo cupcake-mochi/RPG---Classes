@@ -1,12 +1,12 @@
 # Vanguarda — Escola de Arma simplificada
 
-Versão de trabalho aprovada pelo autor em 18 de setembro de 2026, depois da apresentação da proposta e do exemplo de uso com katana, Guarda, Pressionar a Guarda e Derrubada. A reserva de 2,75 fatias para Sequência + Escola foi adotada; continua provisória como avaliação de equilíbrio. O nome do arquivo foi preservado para manter os links existentes. Nenhuma regra aprovada da Sequência ou arquivo do repositório de consulta foi alterado.
+Versão de trabalho aprovada pelo autor em 18 de setembro de 2026, depois da apresentação da proposta e do exemplo de uso com katana, Postura Firme, Pressionar a Guarda e Rasteira. A reserva de 2,75 fatias para Sequência + Escola foi adotada; continua provisória como avaliação de equilíbrio. O nome do arquivo foi preservado para manter os links existentes. Em 21/09, as quatro Manhas passaram a se chamar **Ritmo, Postura Firme, Empuxo e Mover Alvo**; a mecânica não mudou.
 
 **Atualização de 19/09:** o autor retirou o teto de conduções e passou a encerrar a sequência ao errar uma condução, mantendo o prazo de dois turnos. As regras da Escola abaixo permanecem. Os valores numéricos desta conferência de 18/09 são históricos; os resultados com a continuidade nova estão em [Conclusão Dupla e revisão da Sequência](vanguarda-conclusao-dupla.md).
 
 **Os números da regra vigente, medidos em 22/09.** Os de 18/09 continuam na tabela mais abaixo, e ficam porque o argumento deles é histórico — mas não são o preço de hoje. No mesmo cenário de referência (Yumi contra Defesa 20, disponível desde o primeiro turno):
 
-| Uso | Sem Escola | Com Precisão | Acréscimo | Com Versado | Acréscimo |
+| Uso | Sem Escola | Com Ritmo | Acréscimo | Com Versado | Acréscimo |
 |---|---:|---:|---:|---:|---:|
 | 18/09 — teto de duas, erro não encerra | 1,4865 | 1,5960 | 0,1095 | 1,9310 | 0,4445 |
 | **vigente — sem teto, erro encerra** | **1,2621** | **1,3869** | **0,1248** | **1,7770** | **0,5149** |
@@ -19,7 +19,7 @@ Os três valores da linha vigente saem do `vanguarda-contas-v3.json`, sem conta 
 
 | Parte | Fatias reservadas |
 |---|---:|
-| Sequência de Combate, conforme registro vigente | 2,00 |
+| Sequência de Condução, conforme registro vigente | 2,00 |
 | Escola de Arma, nesta versão reduzida | 0,75 |
 | Total reservado para a base | **2,75** |
 | Saldo das cinco fatias do Caminho | **2,25** |
@@ -34,18 +34,18 @@ Escolha uma categoria de arma. Também é possível escolher golpes desarmados c
 
 Não é possível reabrir uma sequência ainda ativa para repetir a Manha. Permanecem as regras de encerramento e a proibição de reabrir no turno em que se concluiu. Acertar uma Abertura que termine com zero de dano continua suficiente.
 
-As categorias agrupadas compartilham a mesma Manha; a escolha ainda é de uma categoria, não de todas as categorias da linha. Todos os nomes abaixo são funcionais e provisórios.
+As categorias agrupadas compartilham a mesma Manha; a escolha ainda é de uma categoria, não de todas as categorias da linha.
 
 | Categorias | Manha | Efeito na abertura acertada |
 |---|---|---|
-| Lâmina Curta, Arremesso, Yumi, Balestra ou Arma de Fogo | Precisão | Recebe +1 no próximo ataque com a categoria escolhida contra o alvo da sequência. Consome o bônus mesmo se errar. O bônus expira se a sequência terminar antes desse ataque. Não melhora a margem crítica. |
-| Lâmina Longa ou Manopla; golpes desarmados como escolha adicional | Guarda | Recebe +1 de Defesa até o começo do seu próximo turno. Não acumula consigo mesmo. Inclui Bloquear, sem contar o mesmo bônus duas vezes. |
-| Massa, Porrete, Machado ou Armas Longas | Impacto | O alvo faz TR Físico; na falha, você pode empurrá-lo até 3 m para longe de si. |
-| Ceifa ou Flexível | Desvio | O alvo faz TR Físico; na falha, você pode deslocá-lo até 1,5 m em uma direção à sua escolha. |
+| Lâmina Curta, Arremesso, Yumi, Balestra ou Arma de Fogo | **Ritmo** | Recebe +1 no próximo ataque com a categoria escolhida contra o alvo da sequência. Consome o bônus mesmo se errar. O bônus expira se a sequência terminar antes desse ataque. Não melhora a margem crítica. |
+| Lâmina Longa ou Manopla; golpes desarmados como escolha adicional | **Postura Firme** | Recebe +1 de Defesa até o começo do seu próximo turno. Não acumula consigo mesmo. Inclui Bloquear, sem contar o mesmo bônus duas vezes. |
+| Massa, Porrete, Machado ou Armas Longas | **Empuxo** | O alvo faz TR Físico; na falha, você pode empurrá-lo até 3 m para longe de si. |
+| Ceifa ou Flexível | **Mover Alvo** | O alvo faz TR Físico; na falha, você pode deslocá-lo até 1,5 m em uma direção à sua escolha. |
 
 A CD das duas Manhas com resistência é 8 + atributo usado no ataque + maestria. Um sucesso no TR impede apenas a Manha; a Abertura continua válida. O deslocamento respeita obstáculos, espaços ocupados e as regras gerais de movimento forçado; a Manha não aumenta o alcance da arma.
 
-Guarda não é um efeito sustentado de Conduzir: trocar de condução não a apaga. Ela dura até o começo do próximo turno, inclusive se a sequência terminar antes. Seu +1 pode somar ao +1 de Proteger o Avanço; o modelo conserva essa interação. Precisão pode somar a Pressionar a Guarda, mas continua valendo para apenas um ataque.
+Postura Firme não é um efeito sustentado de Conduzir: trocar de condução não a apaga. Ela dura até o começo do próximo turno, inclusive se a sequência terminar antes. Seu +1 pode somar ao +1 de Proteger o Avanço; o modelo conserva essa interação. Ritmo pode somar a Pressionar a Guarda, mas continua valendo para apenas um ataque.
 
 ## Versado, como alternativa
 
@@ -72,7 +72,7 @@ A comparação usa a mesma simulação determinística da auditoria v2, acrescen
 
 Exemplos compatíveis com o Batedor de Yumi da referência, contra Defesa 20:
 
-| Uso | Sem Escola | Com Precisão | Acréscimo de Precisão | Com Versado* | Acréscimo de Versado* |
+| Uso | Sem Escola | Com Ritmo | Acréscimo de Ritmo | Com Versado* | Acréscimo de Versado* |
 |---|---:|---:|---:|---:|---:|
 | Disponível desde o primeiro turno | 1,4865 | 1,5960 | 0,1095 | 1,9310 | 0,4445 |
 | Começa no segundo turno | 0,6255 | 0,7091 | 0,0836 | 0,9944 | 0,3689 |

@@ -1,6 +1,6 @@
 # Estocada — conclusões para feitiços
 
-Versão de trabalho fechada em 19 de setembro de 2026 para substituir Traçado, nível 11. O autor escolheu preparar com armas e concluir com técnica, acolheu Cortar a Resposta, rejeitou Rechaçar (somente empurrar 3 metros) e pediu seis opções. Depois da apresentação do catálogo, aprovou seguir com três ajustes: Desorientar afeta qualquer próxima rolagem; Expor a Guarda concede vantagem ao próximo ataque de um aliado; Refluxo transforma metade do gasto elegível em energia temporária. Os nomes continuam de trabalho e o preço do conjunto ainda precisa de validação.
+Versão de trabalho fechada em 19 de setembro de 2026 para substituir Traçado, nível 11. O autor escolheu preparar com armas e concluir com técnica, acolheu Cortar a Resposta, rejeitou Rechaçar (somente empurrar 3 metros) e pediu seis opções. Depois da apresentação do catálogo, aprovou seguir com três ajustes: Desorientar afeta qualquer próxima rolagem; Expor a Guarda concede vantagem ao próximo ataque de um aliado; Refluxo transforma metade do gasto elegível em energia temporária. Em 21/09, **Abrir Caminho** passou a se chamar **Romper Fileira**. O preço do conjunto ainda precisa de validação.
 
 ## Base da habilidade
 
@@ -27,7 +27,7 @@ Função: abrir uma janela pontual pro grupo acertar aquele inimigo sem ele reag
 
 **Adenda de 21/09:** a mecânica original era "não pode usar reações até o começo do seu próximo turno" — janela larga, preçada em 2,17 fatias (magnitude 36,50, meia ação de chefe). O Mizuki achou o número alto demais e estreitou a janela pra um único ataque; preço novo, 0,34 fatia, mesma lógica de "vantagem numa rolagem" de Expor a Guarda. Ver `conferir-estocada-conclusoes-magicas.py`. **A irmã de arma, Interromper a Resposta, não foi tocada** e continua com a janela larga dentro de `conferir-vanguarda-v3.py` — pendência de sincronizar as duas.
 
-### 2. Abrir Caminho
+### 2. Romper Fileira
 
 **Requer uma condução acertada. TR Físico.** Após o feitiço afetar o alvo, se ele falhar no TR adicional, mova-o até **6 metros** em uma direção escolhida por você, respeitando as regras de movimento forçado. Em seguida, você pode se mover até **metade do seu deslocamento**, sem gastar ação ou seu movimento normal e sem provocar ataques de oportunidade daquele alvo. O movimento próprio depende da falha do alvo nesse TR.
 
@@ -79,7 +79,7 @@ Função: aproveitar parte da energia da preparação ainda nesta cena, com uma 
 
 Ao concluir com feitiço, escolha duas conclusões mágicas diferentes e cumpra os requisitos de ambas. Ao concluir com arma, use duas opções compatíveis com a fonte daquele ataque. Conclusões compartilhadas entre corpo a corpo e distância pertencem aos dois catálogos e podem ser escolhidas para qualquer um deles, sem misturar opções exclusivas.
 
-Exemplos: Cortar a Resposta + Ancorar é uma dupla mágica válida; Golpe de Impacto + Cortar a Resposta não é permitido. Um feitiço de Toque não se torna uma conclusão de arma corpo a corpo. Um ataque de arma carregando feitiço não ganha permissão para combinar fontes.
+Exemplos: Cortar a Resposta + Ancorar é uma dupla mágica válida; Ponto Fraco + Cortar a Resposta não é permitido. Um feitiço de Toque não se torna uma conclusão de arma corpo a corpo. Um ataque de arma carregando feitiço não ganha permissão para combinar fontes.
 
 Uma única conjuração e um único pagamento de PE. Cada conclusão resolve seu próprio TR, quando houver; todos são calculados antes de aplicar novos efeitos do lançamento. Explorar o Desequilíbrio modifica só o próximo TR elegível da conclusão, como no Caminho, e não dois. Não altera o TR do próprio feitiço pela simples condição de agora estar concluindo. O uso do nível 30 continua limitado a uma vez por cena, exige pelo menos duas conduções acertadas e é consumido na declaração.
 
@@ -87,7 +87,7 @@ Uma única conjuração e um único pagamento de PE. Cada conclusão resolve seu
 
 **Catálogo fechado como versão mecânica de trabalho, ainda sem preço validado.** A reserva histórica do nível 30 foi calculada com conclusões de armas; ela não certifica essas duplas mágicas. A comparação futura precisa incluir a ação e o PE do feitiço, o que ele já fazia sem a conclusão, acerto/TR, preparação interrompida, duração útil, escolha entre opções e efeitos sobrepostos.
 
-Pontos específicos: Desorientar pode agora atingir TR, Bloquear ou outras rolagens e não pode ser preçado somente como desvantagem em um ataque; seu benefício não se soma a desvantagem já existente. Expor a Guarda depende do próximo ataque de um aliado, com consumo mesmo se ele já tiver vantagem; não reduz Defesa. Ancorar não soma novamente todo o prejuízo de movimento de uma condição que já o zere. Cortar a Resposta pode perder valor se o feitiço já retirar a reação. Refluxo concede apenas energia temporária: seu valor depende de poder gastar o ponto antes de expirar e de não haver uma reserva temporária maior; não se presume recuperação permanente nem acúmulo. Abrir Caminho depende de posição e terreno.
+Pontos específicos: Desorientar pode agora atingir TR, Bloquear ou outras rolagens e não pode ser preçado somente como desvantagem em um ataque; seu benefício não se soma a desvantagem já existente. Expor a Guarda depende do próximo ataque de um aliado, com consumo mesmo se ele já tiver vantagem; não reduz Defesa. Ancorar não soma novamente todo o prejuízo de movimento de uma condição que já o zere. Cortar a Resposta pode perder valor se o feitiço já retirar a reação. Refluxo concede apenas energia temporária: seu valor depende de poder gastar o ponto antes de expirar e de não haver uma reserva temporária maior; não se presume recuperação permanente nem acúmulo. Romper Fileira depende de posição e terreno.
 
 ## Próxima entrega
 

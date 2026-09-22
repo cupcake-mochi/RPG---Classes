@@ -4,7 +4,7 @@
 >
 > - **"A releitura da Vanguarda, medida, custa 3,2529 fatias… Sobram 1,7471 sem alocar"** (seção *O que isto não resolve*) é o número **líquido**. Na mesma noite o Mizuki decidiu contar o PE **bruto**: o perfil de distância mede **5,07** e o saldo não alocado é **0,00**. Dono: [`vanguarda-orcamento.md`](vanguarda-orcamento.md).
 > - **"O Bastião continua sem número nenhum"** e **"`Olhos Em Mim` não existe em arquivo nenhum, só na tabela de nomes"** caíram os dois. O zip de 17/09 entrou no `main` às 21:37 e o consolidado às 22:44: o texto de regra do `Olhos Em Mim` e os preços das cinco entregas (2,46 · 0,00 · 2,12–2,50 · 0,00 · 0,62, total **5,20 a 5,58**) estão em [`bastiao-completo.md`](bastiao-completo.md) e em [`bastiao-reforma/`](bastiao-reforma/).
-> - **"A Sequência de Combate mede 0,0000 fora de uma montagem"** continua de pé, e ficou pior: o achado da noite mostrou que os 5,07 e os 1,34 foram medidos numa Vanguarda que **nunca conjura**. Na régua do repositório principal, 7 de 10,5 rodadas, o Caminho cai pra **1,09** sem Compasso. Quadro em [`vanguarda-completo.md`](vanguarda-completo.md).
+> - **"A Sequência de Condução mede 0,0000 fora de uma montagem"** continua de pé, e ficou pior: o achado da noite mostrou que os 5,07 e os 1,34 foram medidos numa Vanguarda que **nunca conjura**. Na régua do repositório principal, 7 de 10,5 rodadas, o Caminho cai pra **1,09** sem Compasso. Quadro em [`vanguarda-completo.md`](vanguarda-completo.md).
 >
 > **O que este arquivo tem e nenhum outro tem** é o *motivo* do degrau do 23 — e o aviso de que ele **reverte uma decisão registrada** do repositório principal (*"o vão fica, e é preço aceito e não defeito"*, `referencia-jjk-project/sistema/03-mecanica/RASCUNHO-trilhas.md`). Mais a lista de porte com arquivo e linha, o contra-teste dos degraus 22 · 23 · 24, e a vaga de nível 23 vazia no Guia, no Emanador e no Evocador.
 
@@ -71,7 +71,7 @@ Não dá para saber daqui se algum validador do principal confere o número de f
 
 **O Bastião continua sem número nenhum.** As cinco entregas dele não têm preço nesta pasta nem no principal, e o nível 2 trocou de mecânica inteira — `Olhos Em Mim` é a área de Provocar, não é o `Absorver` de 1,60. Essa mecânica não existe em arquivo nenhum, só na tabela de nomes. A régua nova dá espaço para ele; não dá conta.
 
-**A Sequência de Combate mede 0,0000 fora de uma montagem.** Nos JSON da própria pasta, `lamina_longa`, `lamina_curta` e `estocada_hibrida` dão zero em todas as linhas contábeis — a política ótima nunca abre sequência. O 1,3869 que sustenta a reserva de 2,00 sai de um Batedor Yumi com o `Mirar` ligado, e o `Mirar` se perde se você se deslocar na rodada. Decidir o tamanho do orçamento não conserta isso; só dá mais espaço para a peça que ainda precisa de conserto.
+**A Sequência de Condução mede 0,0000 fora de uma montagem.** Nos JSON da própria pasta, `lamina_longa`, `lamina_curta` e `estocada_hibrida` dão zero em todas as linhas contábeis — a política ótima nunca abre sequência. O 1,3869 que sustenta a reserva de 2,00 sai de um Batedor Yumi com o `Mirar` ligado, e o `Mirar` se perde se você se deslocar na rodada. Decidir o tamanho do orçamento não conserta isso; só dá mais espaço para a peça que ainda precisa de conserto.
 
 ## O que não foi medido
 

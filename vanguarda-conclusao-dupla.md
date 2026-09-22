@@ -22,19 +22,19 @@ Continuam valendo:
 - A Abertura perde Xd4 do dano total, mínimo zero, sendo X metade da maestria arredondada para cima. O desconto ocorre uma vez por Abertura acertada.
 - Concluir não exige PE adicional.
 
-O encerramento da sequência remove o acesso às suas etapas e o progresso acumulado. A auditoria conserva o tratamento anterior dos efeitos com duração própria: eles respeitam o prazo expresso e a regra de substituição; não desfaz movimento já realizado. Em particular, Guarda continua até o começo do próximo turno, como foi aprovado. A comparação não introduziu uma nova duração para as conduções.
+O encerramento da sequência remove o acesso às suas etapas e o progresso acumulado. A auditoria conserva o tratamento anterior dos efeitos com duração própria: eles respeitam o prazo expresso e a regra de substituição; não desfaz movimento já realizado. Em particular, Postura Firme continua até o começo do próximo turno, como foi aprovado. A comparação não introduziu uma nova duração para as conduções.
 
 ## Texto de Conclusão Dupla — nível 30, nome provisório
 
 **Uma vez por cena, ao Concluir uma Sequência na qual você tenha acertado pelo menos duas conduções, pode escolher duas conclusões diferentes da mesma fonte e aplicar ambas por meio do mesmo ataque ou feitiço elegível.** Pode ter acertado mais conduções antes de concluir; isso não aumenta a quantidade de conclusões aplicadas. A possibilidade de concluir com feitiço depende da habilidade da Estocada que a concede; não é liberada pelo nível 30 sozinho.
 
-**As fontes são corpo a corpo, distância e feitiço. Não pode misturar fontes na mesma Conclusão Dupla.** As duas opções precisam ser permitidas para a mesma fonte da execução. Derrubada e Quebrar o Ritmo, disponíveis nos dois catálogos de armas, podem integrar uma dupla corpo a corpo ou uma dupla à distância, conforme o ataque usado; isso não autoriza juntar uma opção exclusiva de cada catálogo.
+**As fontes são corpo a corpo, distância e feitiço. Não pode misturar fontes na mesma Conclusão Dupla.** As duas opções precisam ser permitidas para a mesma fonte da execução. Rasteira e Quebrar o Ritmo, disponíveis nos dois catálogos de armas, podem integrar uma dupla corpo a corpo ou uma dupla à distância, conforme o ataque usado; isso não autoriza juntar uma opção exclusiva de cada catálogo.
 
 Um feitiço de Toque continua sendo da fonte feitiço. Um disparo de arma continua sendo da fonte distância. Carregar um feitiço junto de um ataque de arma não permite tratar a mesma Conclusão Dupla como duas fontes. A fonte das Aberturas e Conduções anteriores não precisa coincidir com a da conclusão: preparar com a arma e terminar com duas conclusões mágicas continua possível, se a ficha tiver esse acesso.
 
 Escolha as duas antes de rolar o ataque ou resolver o feitiço. Todos os requisitos de ambas devem estar cumpridos nesse momento, inclusive os referentes à fonte, à arma, à distância e ao estado do alvo.
 
-No ataque de arma, faça uma única rolagem de ataque e cause o dano uma única vez. No feitiço, faça uma única conjuração, pague seu custo uma vez e resolva seus efeitos normais uma vez; as duas conclusões só afetam o alvo da sequência. A Conclusão Dupla não duplica o feitiço ou sua área. Uma conclusão que modifique o próprio ataque, como Golpe de Impacto ou Explorar a Cobertura, modifica essa mesma rolagem normalmente. Cada conclusão que exigir resistência terá seu próprio TR. **Resolva todos esses testes antes de aplicar os novos efeitos.** No caso do feitiço, seus novos efeitos também não dificultam os testes das conclusões do mesmo lançamento.
+No ataque de arma, faça uma única rolagem de ataque e cause o dano uma única vez. No feitiço, faça uma única conjuração, pague seu custo uma vez e resolva seus efeitos normais uma vez; as duas conclusões só afetam o alvo da sequência. A Conclusão Dupla não duplica o feitiço ou sua área. Uma conclusão que modifique o próprio ataque, como Ponto Fraco ou Explorar a Cobertura, modifica essa mesma rolagem normalmente. Cada conclusão que exigir resistência terá seu próprio TR. **Resolva todos esses testes antes de aplicar os novos efeitos.** No caso do feitiço, seus novos efeitos também não dificultam os testes das conclusões do mesmo lançamento.
 
 Se Explorar o Desequilíbrio estiver preparado, seu benefício afeta apenas o próximo TR elegível, não os dois. Declare a ordem dos testes antes de rolá-los.
 
@@ -42,7 +42,7 @@ Declarar Conclusão Dupla consome o uso da cena, mesmo se o ataque errar ou o al
 
 **Estado desta revisão:** a proibição de misturar fontes foi solicitada pelo autor e incorporada à regra. O catálogo de seis conclusões mágicas está fechado como versão de trabalho em [Estocada — conclusões para feitiços](estocada-conclusoes-feiticos.md), incluindo Desorientar na próxima rolagem de qualquer natureza, Expor a Guarda no próximo ataque de um aliado e Refluxo como metade do custo de uma condução em energia temporária. Desorientar não piora os testes do próprio lançamento ou da outra conclusão simultânea. Os preços históricos abaixo avaliam apenas conclusões de armas. A restrição de fontes já era respeitada por suas combinações; esses resultados não validam o custo das duplas mágicas, que precisa de conferência junto da Estocada.
 
-**Exemplo:** depois de acertar duas, três ou mais conduções, você pode combinar Derrubada e Desarme em um ataque corpo a corpo. O inimigo faz os dois TRs após o acerto e pode resistir a ambos, sofrer apenas uma consequência ou sofrer as duas.
+**Exemplo:** depois de acertar duas, três ou mais conduções, você pode combinar Rasteira e Desarme em um ataque corpo a corpo. O inimigo faz os dois TRs após o acerto e pode resistir a ambos, sofrer apenas uma consequência ou sofrer as duas.
 
 **Fixar + Quebrar o Ritmo:** a redução de movimento exigida por Fixar precisa existir antes de declarar o ataque. Não é possível usar o Lento que a outra conclusão ainda aplicará para satisfazer esse requisito. Se Fixar e outra conclusão pedirem TR Físico, o Impedido recém-aplicado também não impõe desvantagem ao outro TR do mesmo ataque.
 
@@ -58,12 +58,12 @@ As condições conservam as âncoras históricas da auditoria anterior. No entan
 
 - Fixar + Quebrar o Ritmo conserva a perda de ação bônus de Lento, mas não cobra de novo metade do movimento quando Impedido já o zerou.
 - Fixar + Interromper a Resposta é comparado com o prejuízo que Impedido já causaria a uma reação de ataque. A leitura central considera metade do valor de impedir Reação quando ambos se aplicam; outra leitura conserva o valor integral para sensibilidade.
-- Fixar + Derrubada não soma vantagem duas vezes. Considerando um aliado próximo e dois distantes, a desvantagem de atacar de longe o alvo caído cancela a vantagem que Impedido oferecia aos distantes. O mesmo cancelamento é aplicado aos ataques restantes do próprio Vanguarda.
+- Fixar + Rasteira não soma vantagem duas vezes. Considerando um aliado próximo e dois distantes, a desvantagem de atacar de longe o alvo caído cancela a vantagem que Impedido oferecia aos distantes. O mesmo cancelamento é aplicado aos ataques restantes do próprio Vanguarda.
 - Explorar o Desequilíbrio modifica só um TR. Os efeitos das duas conclusões não modificam as resistências umas das outras no mesmo ataque.
 
 ## Resultados da referência
 
-Perfil de referência: Yumi com Precisão, atributo 6, maestria 4, Mirar e bônus de acerto +2; dano d10 + 6 + 4d6. Alvo com Defesa 20, falha de 55% no TR Físico e 55% no TR de Vigor. Os requisitos externos de Explorar e Fixar estão disponíveis, e o movimento reduzido para Fixar não implica que o alvo já esteja Lento.
+Perfil de referência: Yumi com Ritmo, atributo 6, maestria 4, Mirar e bônus de acerto +2; dano d10 + 6 + 4d6. Alvo com Defesa 20, falha de 55% no TR Físico e 55% no TR de Vigor. Os requisitos externos de Explorar e Fixar estão disponíveis, e o movimento reduzido para Fixar não implica que o alvo já esteja Lento.
 
 | Situação | Sem nível 30 | Com nível 30 | Acréscimo do nível 30 |
 |---|---:|---:|---:|
@@ -72,13 +72,13 @@ Perfil de referência: Yumi com Precisão, atributo 6, maestria 4, Mirar e bônu
 | Segundo turno sem ataque elegível | 0,6492 | 1,0066 | **0,3574** |
 | Alvo com cobertura Parcial | 0,7561 | 1,4098 | **0,6538** |
 | Alvo com cobertura Boa | 0,0392 | 0,2862 | **0,2470** |
-| Mesmo perfil com Versado no lugar de Precisão | 1,7770 | 2,5526 | **0,7756** |
+| Mesmo perfil com Versado no lugar de Ritmo | 1,7770 | 2,5526 | **0,7756** |
 
 Todas as colunas estão em fatias por rodada; os totais das duas primeiras colunas representam Sequência + Escola naquele cenário, não o Caminho inteiro. Não incluem Não Cede.
 
 Na referência, a política seleciona Fixar + Quebrar o Ritmo. Há aproximadamente 2,33 tentativas de Conclusão Dupla por dia, contra um máximo possível de três; não se presumiu que toda luta chegasse ao uso. Começar tarde ou intercalar um turno sem ataque reduz a frequência antes de dividir pelas rodadas do dia.
 
-Sem Escola, a Sequência revisada rende 1,2621 fatia na referência, ou 2,0379 com Conclusão Dupla. Com Precisão e sem nível 30, a regra antiga rendia 1,5960; fazer o erro encerrar reduz para 1,3869. Retirar o teto não aumentou a política ótima nos cenários nominais de continuidade examinados, porque conduções adicionais continuam custando PE e substituindo efeitos.
+Sem Escola, a Sequência revisada rende 1,2621 fatia na referência, ou 2,0379 com Conclusão Dupla. Com Ritmo e sem nível 30, a regra antiga rendia 1,5960; fazer o erro encerrar reduz para 1,3869. Retirar o teto não aumentou a política ótima nos cenários nominais de continuidade examinados, porque conduções adicionais continuam custando PE e substituindo efeitos.
 
 ## Sensibilidade e limites
 
@@ -100,7 +100,7 @@ Trocar a cotação nominal de PE por metade ou por zero manteve o acréscimo da 
 
 **O preço está concentrado nas duplas com Fixar.** Nas referências corpo a corpo, o otimizador não escolheu preparar a segunda condução apenas para usar Conclusão Dupla. Na cotação nominal de PE, algumas dessas fichas nem escolhem usar a Sequência. Isso não significa que a habilidade valha literalmente zero em mesa: indica uma limitação de atratividade quando se usa essa régua para escolher o maior saldo numérico.
 
-Mesmo sem cobrar a oportunidade de PE, o acréscimo da referência de lâmina longa foi apenas 0,0136: concluir mais cedo com Quebrar o Ritmo frequentemente vale mais do que atrasar a conclusão para acrescentar Derrubada ou Desarme. Não se usou esse resultado baixo para declarar o nível 30 gratuito. A diferença merece revisão de desenho antes de considerar a habilidade igualmente satisfatória em todas as Trilhas.
+Mesmo sem cobrar a oportunidade de PE, o acréscimo da referência de lâmina longa foi apenas 0,0136: concluir mais cedo com Quebrar o Ritmo frequentemente vale mais do que atrasar a conclusão para acrescentar Rasteira ou Desarme. Não se usou esse resultado baixo para declarar o nível 30 gratuito. A diferença merece revisão de desenho antes de considerar a habilidade igualmente satisfatória em todas as Trilhas.
 
 O modelo não resolve mapas, todo o valor da desvantagem em TR Físico imposta a testes futuros por Impedido, todo dano de aliados, todas as combinações de equipamento, a oportunidade exata de Reação ou o tempo que o alvo leva para cair. A régua histórica de Derrubado e Desarmado também simplifica consequências que dependem da situação. Preservar essas âncoras permite comparação com o orçamento adotado, mas não equivale a uma simulação completa de combate.
 

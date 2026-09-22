@@ -1,6 +1,6 @@
 # Vanguarda — Caminho e a Trilha Estocada, completo
 
-Consolidado em 21/09/2026. Junta a conversa de origem de 18/09 (`vanguarda-sequencia-conversa-18-09.md`), os ajustes de 19/09, o consolidado com fonte por frase (`vanguarda-sequencia-consolidada.md`) e as seis decisões de 21/09 (PE, escala, níveis, nomes, exceção de atributo). **Não é texto novo de regra** — é tudo que já estava decidido, num lugar só, com nomes e números finais. Cobre só a Trilha Estocada; Batedor e Executor não fazem parte desta releitura.
+Consolidado em 21/09/2026. Junta a conversa de origem de 18/09 (`vanguarda-sequencia-conversa-18-09.md`), os ajustes de 19/09, o consolidado com fonte por frase (`vanguarda-sequencia-consolidada.md`) e as seis decisões de 21/09 (PE, escala, níveis, nomes, exceção de atributo). **Não é texto novo de regra** — é tudo que já estava decidido, num lugar só, com nomes e números finais. O texto corrido de regra da Sequência está em [`RASCUNHO-sequencia-de-combate.md`](RASCUNHO-sequencia-de-combate.md). Cobre só a Trilha Estocada; Batedor e Executor não fazem parte desta releitura.
 
 O Caminho foi refeito em volta de uma mecânica central, a **Sequência de Condução**: você abre um golpe que perde dano, conduz pagando PE por tentativa, e conclui com um efeito forte. Errar uma condução encerra a sequência; ela também morre se ficar dois turnos sem retomar.
 
@@ -89,8 +89,8 @@ CD dos TRs: 8 + atributo do ataque + maestria. Duração das condições: Impedi
 
 | Conclusão | Exige | Fonte | Efeito |
 |---|---|---|---|
-| **Ponto Fraco** | sequência aberta, zero conduções | corpo a corpo | margem crítica passa de 20 pra 19–20, sem vantagem |
-| **Explorar a Cobertura** | zero conduções | distância, alvo com cobertura | reduz a cobertura um degrau: Boa → Parcial, Parcial → nenhuma |
+| **Ponto Fraco** | nenhuma condução mínima | corpo a corpo | margem crítica passa de 20 pra 19–20, sem vantagem |
+| **Explorar a Cobertura** | nenhuma condução mínima | distância, alvo com cobertura | reduz a cobertura um degrau: Boa → Parcial, Parcial → nenhuma |
 | **Rasteira** | ≥ 1 condução | corpo a corpo ou distância | Derrubado, TR Físico; empurrão opcional |
 | **Desarme** | ≥ 1 | corpo a corpo | Desarmado, TR Físico |
 | **Interromper a Resposta** | ≥ 1 | distância | sem Reação até o começo do seu próximo turno; não desliga Bloquear |
@@ -223,8 +223,8 @@ O preço zero antigo do núcleo de Compasso se apoiava numa regra em que conjura
 - **O nome da etapa 1** (Abrir/Abertura).
 - **A assimetria entre distância e corpo a corpo** — 5,07 contra 1,34 no bruto; mais dura ainda no líquido.
 - **O preço total da Estocada**, e as duplas mágicas da Conclusão Dupla.
-- **O alvo cair no meio da sequência**: respondido pelo texto-base ("abrir contra outro alvo substitui a anterior"), falta deixar explícito no texto de regra final.
-- **Escrever `RASCUNHO-sequencia-de-combate.md`** como texto de regra formal, com tudo isto por cima.
+- **O alvo cair no meio da sequência**: o texto de regra agora explicita que uma Abertura contra outro alvo substitui a sequência anterior; ainda não há regra nova de transferência gratuita.
+- **Nomear a etapa 1** e revisar o [`RASCUNHO-sequencia-de-combate.md`](RASCUNHO-sequencia-de-combate.md) antes de portar o texto ao repositório principal.
 
 ## Fontes
 

@@ -1,8 +1,8 @@
-# Sequência de Combate — tudo que está escrito, com fonte
+# Sequência de Condução — tudo que está escrito, com fonte
 
 Consolidado em 21/09/2026. **Não é texto novo de regra.** É a junção de tudo que os documentos desta pasta dizem sobre Abrir, Conduzir e Concluir, mais o que só existe dentro dos scripts. Cada frase traz de onde veio. Quando duas fontes discordam, a mais nova vence e a velha vai marcada como histórico.
 
-Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não estava em arquivo nenhum — só o preço de cada etapa. Este documento é o primeiro passo pra fechar esse buraco; o segundo é você escrever a regra.
+Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não estava em arquivo nenhum — só o preço de cada etapa. Este documento preserva a trilha de fontes e mudanças; o texto de regra resultante está em [`RASCUNHO-sequencia-de-combate.md`](RASCUNHO-sequencia-de-combate.md).
 
 **Siglas das fontes:** V1 = `vanguarda-precificacao-inicial.md` · V2 = `vanguarda-precificacao-v2.md` · ESC = `vanguarda-escolas-rascunho.md` · N23 = `vanguarda-nv23.md` · N23P = `vanguarda-nv23-proposta.md` · CD = `vanguarda-conclusao-dupla.md` · ORC = `vanguarda-orcamento.md` · EC = `estocada-compasso.md` · ECF = `estocada-conclusoes-feiticos.md` · EB = `estocada-bote.md` · EF = `estocada-ferrao.md` · **v2.py / v3.py** = `conferir-vanguarda-v2.py` / `-v3.py`, quando a regra só existe no código.
 
@@ -47,7 +47,7 @@ Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não
 |---|---|---|
 | **Mudar o Ângulo** | 3 metros de reposicionamento (1,80 equivalentes). De quem, pra onde — não escrito. | V2 |
 | **Pressionar a Guarda** | +1 no acerto dos seus ataques enquanto o efeito está ativo (o código usa +5 pontos percentuais). "Pode beneficiar ataques de feitiço, conforme o alcance da redação"; precisa fechar junto da Estocada. | V2, V1, v2.py |
-| **Proteger o Avanço** | +1 de Defesa por rodada protegida (3,39). Soma com o +1 da Manha Guarda. | V2, ESC |
+| **Proteger o Avanço** | +1 de Defesa por rodada protegida (3,39). Soma com o +1 da Manha Postura Firme. | V2, ESC |
 | **Acompanhar o Movimento** | Metade do deslocamento (× 0,60 por metro). Detalhe não escrito. | V2, v2.py |
 | **Explorar o Desequilíbrio** | −1 no próximo TR elegível da conclusão (5 pontos percentuais). Exige um requisito externo: o alvo Derrubado ou Agarrado. Numa Conclusão Dupla afeta só um dos TRs. | V2, CD, v2.py (`external_explorable`) |
 | **Fechar a Rota** | Após acerto e falha no TR Físico, o alvo não pode se afastar voluntariamente de você até o fim do próximo turno dele. Aproximar continua permitido. Movimento forçado e teleporte são exceções. Não reduz a característica de deslocamento — logo não satisfaz o requisito de Fixar sozinha. | V2, ORC, V1 |
@@ -64,17 +64,17 @@ Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não
 
 | Conclusão | Exige | Fonte | Efeito | Valor de preço |
 |---|---|---|---|---|
-| **Ponto Fraco** (antes Golpe de Impacto) | sequência aberta; zero conduções | corpo a corpo | margem crítica passa de 20 pra 19–20. Sem vantagem. [V2, ORC] | diferença real de crítico |
-| **Explorar a Cobertura** | zero conduções | distância, alvo com cobertura | reduz a cobertura do alvo um degrau: Boa → Parcial, Parcial → nenhuma [V2] | melhora de chance |
-| **Derrubada** | ≥ 1 condução [V2: "exige condução anterior"] | corpo a corpo ou distância | Derrubado, TR Físico; empurrão opcional | 8,45 + 0,90 |
+| **Ponto Fraco** (antes Golpe de Impacto) | sequência aberta; nenhuma condução mínima | corpo a corpo | margem crítica passa de 20 pra 19–20. Sem vantagem. [V2, ORC] | diferença real de crítico |
+| **Explorar a Cobertura** | nenhuma condução mínima | distância, alvo com cobertura | reduz a cobertura do alvo um degrau: Boa → Parcial, Parcial → nenhuma [V2] | melhora de chance |
+| **Rasteira** (antes Derrubada) | ≥ 1 condução [V2: "exige condução anterior"] | corpo a corpo ou distância | Derrubado, TR Físico; empurrão opcional | 8,45 + 0,90 |
 | **Desarme** | ≥ 1 | corpo a corpo | Desarmado, TR Físico; a régua já inclui buscar a arma | 3,45 |
 | **Interromper a Resposta** | ≥ 1 | distância | sem Reação; não desliga Bloquear [V2] | 36,50 |
 | **Quebrar o Ritmo** | ≥ 1 | corpo a corpo ou distância | Lento, TR de Vigor [V2] | 39,20 |
 | **Fixar o Alvo** | **≥ 2 conduções e o alvo já com movimento reduzido antes do ataque** [V1, V2, ORC] | distância; requisito externo de Lento | Impedido, TR Físico | 132,15 |
 
-- Derrubada e Quebrar o Ritmo pertencem aos dois catálogos de arma. [CD, ECF]
+- Rasteira e Quebrar o Ritmo pertencem aos dois catálogos de arma. [CD, ECF]
 - A CD dos TRs: 8 + atributo usado no ataque + maestria. [ESC, para as Manhas; ECF, para as conclusões mágicas. Para as conclusões de arma está implícito.]
-- Depois de Fixar ou Derrubada, os seus ataques seguintes contra o alvo carregam a condição: vantagem com Impedido; vantagem de perto e desvantagem de longe com Derrubado. [v2.py, `attack()`]
+- Depois de Fixar ou Rasteira, os seus ataques seguintes contra o alvo carregam a condição: vantagem com Impedido; vantagem de perto e desvantagem de longe com Derrubado. [v2.py, `attack()`]
 - Fixar não tem contador por descanso. [V2, ORC] A V1 propôs uma ou duas tentativas por descanso longo; não foi adotado. [V1]
 
 **Não está escrito:** quanto tempo dura cada condição aplicada (o preço supõe uma rodada); o que conta como "movimento reduzido" pra Fixar; se Interromper a Resposta e Desarme são mesmo só de uma fonte, ou se isso é simplificação do modelo.
@@ -83,7 +83,7 @@ Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não
 
 - **Abertura ou Condução acertada no turno T mantém a sequência até o fim do turno T+2** — o segundo turno seu depois daquele. Exemplo: abriu ou conduziu no turno 1; pode retomar no 2 ou no 3; se não retomar, encerra no fim do 3. [V1, V2, CD, ORC]
 - A sequência encerra por: erro no ataque de uma condução; fim do prazo sem retomar; uma conclusão resolvida, acertando ou não. [CD]
-- Encerrar remove o acesso às etapas e o progresso acumulado. Efeitos com duração própria respeitam o prazo deles; movimento já feito não se desfaz; Guarda segue até o começo do seu próximo turno. [CD]
+- Encerrar remove o acesso às etapas e o progresso acumulado. Efeitos com duração própria respeitam o prazo deles; movimento já feito não se desfaz; Postura Firme segue até o começo do seu próximo turno. [CD]
 - Erro em condução **não** renova nem, antes de 19/09, apagava o prazo. [V1, V2 — histórico na parte de apagar]
 
 **Não está escrito:** o que acontece se o alvo cai no meio da sequência; se dá pra abandonar uma sequência de propósito; se um ataque fora do seu turno (Reação, ataque de oportunidade, Revide) pode ser etapa — e, nesse caso, "por turno" e "turno seu" de quem.
@@ -108,7 +108,7 @@ Quando errar o ataque de uma Condução, pode gastar um uso pra impedir que o er
 
 - **Compasso (2).** O ataque da ação bônus serve pra Abrir, Conduzir ou Concluir, com os custos e requisitos normais. O feitiço não é etapa e não renova prazo. [EC]
 - **Conclusões mágicas (11).** Depois de acertar pelo menos uma Condução, um feitiço de Classe 1 ou mais que cause dano ou imponha condição ao alvo da sequência pode Concluir. Ativa se o feitiço acerta ou o alvo falha no TR principal — dano parcial não basta. Escolhe antes de resolver. Afeta só o alvo da sequência. Consome a sequência mesmo falhando. TR adicional com CD 8 + atributo do Compasso + maestria; os efeitos novos do feitiço não pioram esse TR. Uma conclusão mágica ocupa a etapa do turno e impede nova abertura nele. [ECF, EC]
-  Seis opções: **Cortar a Resposta** (2 conduções, TR Físico, sem Reação) · **Abrir Caminho** (1, TR Físico, move o alvo 6 m e você meio deslocamento) · **Desorientar** (1, sem TR, desvantagem na próxima rolagem dele) · **Expor a Guarda** (2, TR de Vigor, vantagem no próximo ataque de um aliado) · **Ancorar** (2, TR Físico, deslocamento zero) · **Refluxo** (1, sem TR, metade do PE de uma condução em energia temporária). [ECF]
+  Seis opções: **Cortar a Resposta** (2 conduções, TR Físico, sem Reação) · **Romper Fileira** (antes Abrir Caminho; 1, TR Físico, move o alvo 6 m e você meio deslocamento) · **Desorientar** (1, sem TR, desvantagem na próxima rolagem dele) · **Expor a Guarda** (2, TR de Vigor, vantagem no próximo ataque de um aliado) · **Ancorar** (2, TR Físico, deslocamento zero) · **Refluxo** (1, sem TR, metade do PE de uma condução em energia temporária). [ECF]
 - **Bote (19).** Com feitiço de condição sem dano na padrão, dois ataques na bônus: o primeiro pode Abrir e o segundo Conduzir. Se o feitiço concluiu, os dois ataques não dão etapa nem abertura nova. O feitiço não conta como condução. [EB]
 - **Ferrão (27).** Depois de Concluir com feitiço que afetou o alvo, o primeiro ataque da bônus leva um Classe 0. A sequência já terminou; Ferrão não reabre. [EF]
 
@@ -148,7 +148,7 @@ Em 21/09 o Mizuki trouxe a transcrição da conversa de 18/09 que gerou a Sequê
 | 5. Ataque fora do turno como etapa | **respondida, precisa ficar explícita** | *"ataque com arma ou desarmado que você já possa realizar **no seu turno**"* e *"uma vez por turno **seu**"* — Reação não é etapa |
 | 6. Duração das condições | **respondida** | Interromper: até o início do seu próximo turno · Fixar e Quebrar: até o fim do próximo turno do alvo · efeitos de condução: até o fim do seu próximo turno · Derrubado e Desarmado: regra própria da condição |
 | 7. O que é "movimento reduzido" pra Fixar | **meio respondida** | *"alvo já com deslocamento reduzido por um efeito"*, e o requisito "permite aproveitar uma Manha, uma técnica própria ou a preparação de um aliado". Terreno difícil não é "efeito" — fica sem resposta |
-| 8. Restrição de fonte é regra ou modelo? | **respondida: é regra** | as conclusões vêm em duas tabelas, *corpo a corpo* e *à distância*. Desarme só de perto; Interromper e Fixar só de longe; Derrubada e Quebrar nas duas. O código estava certo |
+| 8. Restrição de fonte é regra ou modelo? | **respondida: é regra** | as conclusões vêm em duas tabelas, *corpo a corpo* e *à distância*. Desarme só de perto; Interromper e Fixar só de longe; Rasteira e Quebrar nas duas. O código estava certo |
 
 **O que a conversa tem e já morreu em 19/09 — não carregar pro texto:** errar condução *"conserva o prazo que já tinha"* (hoje: erro encerra); *"máximo de duas conduções acertadas"* (hoje: sem teto); e o prazo de *"até o fim do seu próximo turno"* do primeiro rascunho (virou T+2 ainda na conversa).
 
