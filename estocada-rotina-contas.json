@@ -1,0 +1,47 @@
+{
+  "conjuracoes_dia": 7,
+  "concordancia_compasso_so_sequencia": {
+    "A_v3_remendado": 5.348171244434296,
+    "B_modelo_novo": 5.348171244434296
+  },
+  "caminho_completo": {
+    "distancia": {
+      "0_conjuracoes": {
+        "sem_compasso": 5.068278351435524,
+        "com_compasso": 5.068278351435524
+      },
+      "7_conjuracoes": {
+        "sem_compasso": 1.0904724835489314,
+        "com_compasso": 4.572811900155306
+      },
+      "compasso_ataque_cru": 3.0068897637795278
+    },
+    "corpo_a_corpo": {
+      "0_conjuracoes": {
+        "sem_compasso": 1.3409392132032896,
+        "com_compasso": 1.3409392132032896
+      },
+      "7_conjuracoes": {
+        "sem_compasso": 0.8770170123265841,
+        "com_compasso": 1.2236259202541333
+      },
+      "compasso_ataque_cru": 1.9770341207349085
+    }
+  },
+  "escada_estocada": {
+    "distancia": {
+      "compasso_nv2": 5.348171244434296,
+      "magicas_nv11": 0.0,
+      "magicas_usadas_dia": 0.0,
+      "bote_nv19_se_todo_feitico_for_de_condicao": 3.4328975656535112,
+      "ferrao_nv27": 0.0
+    },
+    "corpo_a_corpo": {
+      "compasso_nv2": 2.134359484251969,
+      "magicas_nv11": 0.0,
+      "magicas_usadas_dia": 0.0,
+      "bote_nv19_se_todo_feitico_for_de_condicao": 2.054527892350663,
+      "ferrao_nv27": 0.0
+    }
+  }
+}

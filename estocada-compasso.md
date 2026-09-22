@@ -1,6 +1,6 @@
 # Estocada — Compasso, nível 2
 
-Versão de trabalho de 19 de setembro de 2026. O autor aprovou acrescentar o atributo escolhido, entre Essência e Inteligência, ao PE máximo, seguindo a ideia de Força no PE máximo do Combatente Amaldiçoado. O núcleo de conjurar e atacar com a arma foi mantido. O nome Compasso continua sendo o nome de trabalho existente.
+Versão de trabalho de 19 de setembro de 2026. **Exceção declarada em 21/09** contra a peça 1 §5.3 do repositório principal — ver [`excecao-atributo-no-pe.md`](excecao-atributo-no-pe.md). O autor aprovou acrescentar o atributo escolhido, entre Essência e Inteligência, ao PE máximo, seguindo a ideia de Força no PE máximo do Combatente Amaldiçoado. O núcleo de conjurar e atacar com a arma foi mantido. O nome Compasso continua sendo o nome de trabalho existente.
 
 ## Regra consolidada
 

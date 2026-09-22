@@ -54,3 +54,7 @@ O total da Brasa antiga não foi reaprovado aqui: o documento contém tabelas de
 ## Correção editorial preparada
 
 Na tabela histórica de Fagulha, usar **1,49 fatia** para a parcela base e **0,56 fatia** para o ganho condicional da vantagem, totalizando **2,05 fatias**. Manter a regra de mesa. Atualizar as remissões ao preço de 4,08 apenas quando a correção for aplicada ao material publicado e seus totais forem revistos.
+
+## Adenda de 21/09
+
+A escala com acerto usada aqui virou decisão do projeto inteiro, não só de Fagulha — estendida pra Trocação Franca (Punho) e confirmada em Retaliação (Combatente Amaldiçoado). Ver [`bastiao-correcao-escala.md`](bastiao-correcao-escala.md).

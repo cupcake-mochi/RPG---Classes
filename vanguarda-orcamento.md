@@ -1,12 +1,31 @@
 # Vanguarda — orçamento de trabalho
 
-Registro iniciado em 18 de setembro de 2026 e atualizado em 19 de setembro, após fechar a versão de trabalho do nível 23 e conferir sua interação com Conclusão Dupla.
+Registro iniciado em 18 de setembro de 2026, atualizado em 19 de setembro após fechar o nível 23, e em 21 de setembro com a decisão de contabilidade de PE.
+
+## Decisão de 21/09: o preço conta o PE gasto bruto, sem descontar
+
+**A pergunta era se o benefício de cada peça da Sequência desconta o PE que ela gasta — a 5,14 de dano equivalente por ponto, o câmbio da peça 5 §4 do repositório principal — ou não.** Isso nunca muda quanto PE a Sequência custa em mesa: Conduzir sempre paga metade da maestria mais 1 antes de rolar, nos dois jeitos de contar. A escolha só decide se esse gasto é subtraído do preço registrado.
+
+**Decisão: não descontar. O preço registrado da Vanguarda é o bruto.**
+
+| Perfil de arma | líquido (desconta PE) | **bruto — adotado** |
+|---|---:|---:|
+| Distância (arco, Manha de Precisão) | 3,25 | **5,07** |
+| Corpo a corpo (lâmina longa, Manha de Guarda) | 0,82 | **1,34** |
+
+O perfil de distância fecha em **5,07 fatias**, folga parecida com a que o Bastião já tem publicada (5,20 a 5,58). **A diferença entre os dois perfis de arma continua aberta** — no bruto ela é 5,07 contra 1,34; no líquido ela era mais dura ainda, porque a Sequência inteira vale zero pra quem usa espada (a política ótima simplesmente não abre sequência quando cada Condução custa PE e o líquido de Golpe de Impacto não paga o câmbio). Essa assimetria não é resolvida por esta decisão; é registrada como pendência de desenho separada.
+
+Conta em [`conferir-vanguarda-pe.py`](conferir-vanguarda-pe.py), saída completa em `vanguarda-pe-contas.json`.
+
+> ⚠ **Achado de 21/09, noite, pendente de decisão do Mizuki.** Os 5,07 e os 1,34 desta tabela foram medidos numa Vanguarda que nunca conjura. A régua do repositório principal diz que ela conjura em 7 das 10,5 rodadas no nível 30 (`conferir-orcamento.py`, bloco 1; peça 6, "Vanguarda conjura 67% das rodadas"), e sem Compasso essas rodadas não têm ataque de arma. Nessa base o Caminho mede **1,09** (distância) e **0,88** (corpo a corpo) pra Batedor e Executor, e **4,57** / **1,22** pra Estocada. A decisão de PE bruto não muda; o que falta decidir é contra qual Vanguarda o Caminho é preçado. Conta em `conferir-estocada-rotina.py`; quadro completo em `vanguarda-completo.md`.
 
 ## Valor adotado
 
 **Base aprovada: Sequência de Combate + Escola de Arma = 2,75 fatias, como orçamento provisório de projeto.** A Sequência conserva sua reserva de 2,00; a Escola simplificada, incluindo Versado como alternativa, recebe 0,75.
 
-O valor cobre Abrir, Conduzir e Concluir com o catálogo atual de seis conduções e sete conclusões distintas. É o preço do conjunto; não se cobra esse valor novamente em cada etapa ou em cada opção. A distribuição dessas opções pelos níveis ainda pode ser definida.
+O valor cobre Abrir, Conduzir e Concluir com o catálogo atual de seis conduções e sete conclusões distintas. É o preço do conjunto; não se cobra esse valor novamente em cada etapa ou em cada opção.
+
+**Distribuição pelos níveis, confirmada em 21/09:** Sequência + Escola no nível 2 (2,75), Não Cede no 15 (1,00 — já registrado em `vanguarda-nao-cede.md`, "na progressão antiga, a habilidade entra no nível 15", e nada mais disputa esse degrau), Persistência no 23 (0,25), Conclusão Dupla no 30 (1,00). Soma exata em 5,00, sem margem de sobra na reserva.
 
 | Destino | Fatias |
 |---|---:|
@@ -50,7 +69,7 @@ A reserva de 0,75 para a Escola também é uma escolha de orçamento, com as hip
 - Concluir não cobra PE adicional, consome a sequência mesmo no erro ou no sucesso do TR do alvo, e impede nova abertura no mesmo turno.
 - Fechar a Rota impede apenas afastamento voluntário após acerto e falha em TR; não impede aproximação. Movimento forçado e teleporte conservam as exceções do rascunho.
 - Fixar exige pelo menos duas conduções acertadas e o requisito de redução de movimento já cumprido antes do ataque, sem contador adicional por descanso.
-- Golpe de Impacto mantém apenas a melhoria de uma unidade na margem crítica do ataque corpo a corpo, sem vantagem acrescentada.
+- Ponto Fraco (antes Golpe de Impacto) mantém apenas a melhoria de uma unidade na margem crítica do ataque corpo a corpo, sem vantagem acrescentada.
 
 ## Histórico e conferência
 

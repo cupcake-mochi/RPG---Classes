@@ -14,7 +14,7 @@ Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não
 - Cada etapa usa **um ataque que você já tem**. A Sequência não concede ataque nem ação. [V1, CD] O ataque da ação bônus do Compasso conta como ataque existente. [EC] Concluir com feitiço só existe pela Estocada. [ECF]
 - **No máximo uma Condução OU uma Conclusão por turno.** Abrir e conduzir/concluir no mesmo turno, com ataques diferentes, pode. [V1, V2, CD, ORC]
 - Reserva de orçamento: 2,00 fatias pra Sequência, 0,75 pra Escola de Arma. [ORC]
-- Os nomes das seis conduções e das sete conclusões são provisórios. [V1]
+- Os nomes das seis conduções e das sete conclusões eram provisórios. [V1] A maioria fechou em 21/09 — ver §12.
 
 ## 2. Abrir
 
@@ -64,7 +64,7 @@ Isso existe porque a revisão de 20/09 achou que o texto-base da Sequência não
 
 | Conclusão | Exige | Fonte | Efeito | Valor de preço |
 |---|---|---|---|---|
-| **Golpe de Impacto** | sequência aberta; zero conduções | corpo a corpo | margem crítica passa de 20 pra 19–20. Sem vantagem. [V2, ORC] | diferença real de crítico |
+| **Ponto Fraco** (antes Golpe de Impacto) | sequência aberta; zero conduções | corpo a corpo | margem crítica passa de 20 pra 19–20. Sem vantagem. [V2, ORC] | diferença real de crítico |
 | **Explorar a Cobertura** | zero conduções | distância, alvo com cobertura | reduz a cobertura do alvo um degrau: Boa → Parcial, Parcial → nenhuma [V2] | melhora de chance |
 | **Derrubada** | ≥ 1 condução [V2: "exige condução anterior"] | corpo a corpo ou distância | Derrubado, TR Físico; empurrão opcional | 8,45 + 0,90 |
 | **Desarme** | ≥ 1 | corpo a corpo | Desarmado, TR Físico; a régua já inclui buscar a arma | 3,45 |
@@ -166,3 +166,24 @@ Em 21/09 o Mizuki trouxe a transcrição da conversa de 18/09 que gerou a Sequê
 **O 1,39 aberto (conta rodada em 21/09 com o `conferir-vanguarda-v3.py`, cenário de referência, nível 30):** benefício bruto 3,45 − abertura 0,32 − PE 1,75 = **1,39 líquido**. Sem cobrar PE: **3,13**. Cobrando metade: 2,26. A cobrança de PE a 5,14 por ponto é convenção da auditoria v2, simétrica ao que o repositório paga por "+1 PE por rodada" (5,14, peça 5 §4); a v1 tinha argumentado contra descontar PE automaticamente. **Cobrando PE, a Vanguarda inteira mede ~3,0–3,25; sem cobrar, ~4,7–4,95.** Os dois orçamentos são as duas contabilidades.
 
 **Decisões do Mizuki, 21/09, sobre a escada:** o orçamento de 5 fatias vale **pros cinco Caminhos**, e **todos passam a ter quatro habilidades — níveis 2, 15, 23 e 30 — sem contar o ataque extra do 7.** Isso substitui a régua de `DESENHO-caminhos.md` ("3 fatias, níveis 2 · 15 · 30") no porte.
+
+## 12. Nomes fechados em 21/09
+
+Triagem rodada no `conferir-nomes.py` do repositório principal, de `sistema/03-mecanica/`. Os cinco mortos do achado de nomes (Condução, Conduzir, Precisão, Guarda, Impacto) e quatro dos seis por sentido (Abertura como nome de conclusão, Golpe de Impacto, Derrubada, Desvio) ficam resolvidos assim:
+
+| Onde | Nome antigo | **Nome novo** | Nota |
+|---|---|---|---|
+| Sequência inteira | Sequência de Combate | **Sequência de Condução** | "Condução" é ofício no repositório principal (peça 7, manual 12 e 25 — dirigir carro/moto/van); batizar a Sequência inteira com o nome desambigua. **Etapa 2 continua "Conduzir" / "uma condução"**, sem trocar — nunca colidia sozinha, só por associação com a Sequência sem nome próprio |
+| Escola de Arma, Manha (bônus no próximo ataque) | Precisão | **Ritmo** | Precisão é Melhoria no manual (+2 no acerto), mesmo efeito, número diferente |
+| Escola de Arma, Manha (+1 Defesa) | Guarda | **Postura Firme** | Guarda é Melhoria no manual (+2 Defesa), mesmo efeito, número diferente |
+| Escola de Arma, Manha (empurrar 3 m) | Impacto | **Empuxo** | Impacto é Tema (tipo de dano) no manual |
+| Escola de Arma, Manha (deslocar o alvo 1,5 m) | Desvio | **Mover Alvo** | sentido invertido: a Manha desloca o alvo, "desviar" no hobby é o defensor esquivando |
+| Conclusão de arma (crítico em 19–20) | Golpe de Impacto | **Ponto Fraco** | Impacto é Tema (tipo de dano) no manual |
+| Conclusão de arma (Derrubado + empurrão) | Derrubada | **Rasteira** | a uma letra de Derrubado (condição) e Derrubar (opção de ataque do manual) |
+| Conclusão mágica da Estocada (desloca o alvo 6 m, você meio deslocamento) | Abrir Caminho | **Romper Fileira** | "Caminho" é a classe inteira — 53 arquivos do repositório principal usam o termo |
+
+**Mantidos sem troca, colisão aceita de propósito:**
+- **Fechar a Rota** (condução): "Rota" é termo definido no repositório principal (Rota de arma, Rota de ferramenta, peça 20 e manual 42; Rota: Yumi/Besta/Arma de Fogo do Batedor, manual 35) — colisão real, não incidental. Mantido por decisão do Mizuki.
+- **Interromper a Resposta** (conclusão de arma, só à distância) e **Cortar a Resposta** (conclusão mágica da Estocada): mesmo efeito, dois nomes — ficam separados de propósito, porque são entregas de catálogos diferentes (arma × feitiço), não a mesma entrada duplicada.
+
+**Ainda sem nome fechado:** a etapa 1 (Abrir/Abertura). "Abertura" colide de sentido com o vocabulário de Expansão de Domínio ("a cada abertura", "reaberturas"). Candidatos triados e livres: Golpe Inicial, Primeiro Golpe.

@@ -1,0 +1,38 @@
+{
+  "em_fatias": {
+    "cortar_a_resposta": 0.34239665354330706,
+    "romper_fileira": 0.42874015748031497,
+    "expor_a_guarda": 0.34239665354330706,
+    "ancorar": 0.715378937007874,
+    "refluxo": 0.556496062992126,
+    "desorientar": 0.6225393700787402
+  },
+  "contra_teste_gate": {
+    "cortar_a_resposta_sem_segundo_gate": 0.6225393700787402,
+    "cortar_a_resposta_com_os_dois_gates": 0.34239665354330706
+  },
+  "contra_teste_janela": {
+    "janela_larga_rejeitada": 2.173474409448819,
+    "janela_estreita_adotada": 0.34239665354330706
+  },
+  "vao_2_conducoes_resolvido": true,
+  "checks": "Segundo gate muda o número; janela larga x estreita muda o número; Cortar a Resposta e Expor a Guarda batem exato, sem vão: OK.",
+  "duplas_por_acionamento": {
+    "cortar_a_resposta+expor_a_guarda": 0.6847933070866141,
+    "cortar_a_resposta+romper_fileira": 0.7711368110236221,
+    "cortar_a_resposta+refluxo": 0.8988927165354331,
+    "cortar_a_resposta+desorientar": 0.9649360236220472,
+    "cortar_a_resposta+ancorar": 1.0577755905511812,
+    "expor_a_guarda+romper_fileira": 0.7711368110236221,
+    "expor_a_guarda+refluxo": 0.8988927165354331,
+    "expor_a_guarda+desorientar": 0.9649360236220472,
+    "expor_a_guarda+ancorar": 1.0577755905511812,
+    "romper_fileira+refluxo": 0.985236220472441,
+    "romper_fileira+desorientar": 1.0512795275590552,
+    "romper_fileira+ancorar": 1.144119094488189,
+    "refluxo+desorientar": 1.1790354330708661,
+    "refluxo+ancorar": 1.271875,
+    "desorientar+ancorar": 1.337918307086614
+  },
+  "nota": "Valor por acionamento assumindo a dupla acontece -- não é a marginal do dia. Falta o modelo de rotina completo (Compasso por turno) pra converter isto em fatia do orçamento, igual foi feito pro nível 30 de arma."
+}

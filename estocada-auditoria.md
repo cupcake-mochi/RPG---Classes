@@ -88,6 +88,12 @@ Somar apenas a parcela nominal de PE máximo com dois descansos curtos aproveita
 
 O resultado desta rodada é um diagnóstico conferido e o fechamento mecânico de Ferrão, **não uma certificação incompleta apresentada como preço final**.
 
+## Adenda de 21/09 — o item 1 desta lista fechou
+
+O modelo de rotina (`conferir-estocada-rotina.py`) responde ao item 1. **Uma primeira versão, da mesma tarde, concluiu que "Compasso nunca vence a arma pura" e estava errada**: comparava com uma Vanguarda que nunca conjura e cobrava o feitiço a 5,14 por PE — que é o câmbio derivado dos próprios feitiços, e por isso zera qualquer feitiço. Foi desfeita.
+
+Na base da régua do repositório principal — a Vanguarda de nível 30 conjura em 7 das 10,5 rodadas (`conferir-orcamento.py`, bloco 1) —, **o Compasso é a entrega mais cara da Trilha**: 5,35 fatias no perfil de distância e 2,13 no corpo a corpo, só sobre a Sequência. É exatamente o que o diagnóstico desta auditoria suspeitava lá em cima (*"Compasso e Bote são justamente permissões para atacar depois de usar a ação Conjurar"*), agora com a frequência de conjuração da régua em vez de "toda rodada elegível". As conclusões mágicas e o Ferrão valem zero na referência (o ataque de bônus já conclui de arma, por mais); o Bote vai até 3,43 se todo feitiço conjurado for de condição sem dano. Tabela completa em `vanguarda-completo.md`.
+
 ## Reprodução e fontes
 
 Contas: `conferir-estocada-auditoria.py` e `estocada-auditoria-contas.json`. A parcela de PE está em `conferir-estocada-compasso-pe.py` e `estocada-compasso-pe-contas.json`.

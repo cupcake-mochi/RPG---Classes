@@ -1,0 +1,30 @@
+{
+  "decisao": "com acerto, adotada para as tres",
+  "punho": {
+    "cru": {
+      "trocacao_franca": 1.6978346456692914,
+      "nv2_total": 2.347834645669291,
+      "caminho_baixo": 4.447834645669292,
+      "caminho_alto": 5.117834645669292
+    },
+    "com_acerto": {
+      "trocacao_franca": 0.8489173228346457,
+      "nv2_total": 1.4989173228346457,
+      "caminho_baixo": 3.598917322834646,
+      "caminho_alto": 4.268917322834645
+    }
+  },
+  "combatente_amaldicoado": {
+    "cru": {
+      "retaliacao": 3.6152980877390326,
+      "tres_primeiros_degraus": 6.525298087739032,
+      "total": 7.025298087739032
+    },
+    "com_acerto": {
+      "retaliacao": 2.09673790776153,
+      "tres_primeiros_degraus": 5.00673790776153,
+      "total": 5.50673790776153
+    }
+  },
+  "checks": "Cru faz o Combatente Amaldiçoado passar de 7,00 (pior estouro do projeto); com acerto no Punho fica com margem, sem quebrar a Trilha: OK."
+}

@@ -21,9 +21,11 @@ Mantém-se a base apresentada com o catálogo: feitiço ofensivo de Classe 1 ou 
 
 ### 1. Cortar a Resposta
 
-**Requer duas conduções acertadas. TR Físico.** Após o feitiço afetar o alvo, se ele falhar no TR adicional, não pode usar reações até o começo do seu próximo turno. Isso não impede Bloquear, que não é uma reação.
+**Requer duas conduções acertadas. TR Físico.** Após o feitiço afetar o alvo, se ele falhar no TR adicional, não pode usar Reação contra o **próximo ataque** que sofrer. Isso não impede Bloquear, que não é uma reação.
 
-Função: abrir espaço para o grupo agir sem a reação daquele inimigo. Mantém a proposta já apresentada, sem mudança de efeito ou requisito nesta rodada.
+Função: abrir uma janela pontual pro grupo acertar aquele inimigo sem ele reagir. Mantém a proposta já apresentada, sem mudança de requisito.
+
+**Adenda de 21/09:** a mecânica original era "não pode usar reações até o começo do seu próximo turno" — janela larga, preçada em 2,17 fatias (magnitude 36,50, meia ação de chefe). O Mizuki achou o número alto demais e estreitou a janela pra um único ataque; preço novo, 0,34 fatia, mesma lógica de "vantagem numa rolagem" de Expor a Guarda. Ver `conferir-estocada-conclusoes-magicas.py`. **A irmã de arma, Interromper a Resposta, não foi tocada** e continua com a janela larga dentro de `conferir-vanguarda-v3.py` — pendência de sincronizar as duas.
 
 ### 2. Abrir Caminho
 

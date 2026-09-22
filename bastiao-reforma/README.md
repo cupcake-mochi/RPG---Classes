@@ -32,6 +32,7 @@ A mecânica de cada uma é a do zip — a tabela de nomes da raiz reescreve cada
 - **Provocar entra no lugar de Intimidação como perícia fixa do Bastião.** Toca o manual publicado.
 - **Uma constante nova: 1 ponto de dano movido = 0,30 de dano causado.** Provisória, decidida, não medida. O `RASCUNHO-dano-movido.md` é o rascunho dela; sem ela o Bastião não tem preço, e com ela passam a ter o Ninguém Cai do Guia e o Escudo de Osso do Evocador.
 - **O câmbio de 1 PE = 5,14 não se aplica ao Bastião**, porque o PE dele não compete com nada.
+- **Retaliação (nível 2) soma Força ao PE máximo — exceção declarada contra a peça 1 §5.3 em 21/09**, junto com o Compasso da Estocada, que faz a mesma coisa. Ver [`excecao-atributo-no-pe.md`](../excecao-atributo-no-pe.md).
 
 ## Os preços, como o zip fechou
 
@@ -39,7 +40,7 @@ A mecânica de cada uma é a do zip — a tabela de nomes da raiz reescreve cada
 |---|---:|---|
 | Caminho | 5,20 a 5,58 | estouro declarado pelo Mizuki; a faixa é o Duro de Matar (15), que depende de quantas vezes o Bastião falha um Bloquear |
 | Muro | 5,39 (4,79 a 6,46) | a largura toda é o Guarda-Costas (11) |
-| Punho | 4,45 a 5,12 | a única que não estoura |
+| Punho | 3,60 a 4,27 | escala corrigida em 21/09; a única com folga clara, ver `bastiao-correcao-escala.md` |
 | Combatente Amaldiçoado | 5,51 | os três primeiros degraus somam 5,01; o Contra a Parede (27) está em 0,50 por decisão do Mizuki, medido 0,32 a 5,42 |
 
 ## O que continua aberto, na ordem do próprio zip
@@ -51,4 +52,4 @@ A mecânica de cada uma é a do zip — a tabela de nomes da raiz reescreve cada
 7. Os outros quatro Caminhos — a Vanguarda é o que a raiz deste repositório fez em 18 e 19/09.
 8. Recalibrar o Bestiário contra a proporção nova (32,4%).
 
-**E uma tensão que a revisão de 21/09 achou lendo o zip:** ele aplica 50% de acerto ao Classe 0 de Fagulha, mas preça o soco da bônus do Engate/Trocação Franca em 11,50 × 0,75 = 8,63, sem os 50% do soco. Mesma reforma, duas escalas. Se o soco também precisa acertar, a Trocação Franca vale 0,85 e não 1,70; se não precisa, Fagulha volta pra perto de 3,5. A peça 5 do principal preça o soco permanente cru. **A escala é uma decisão pendente e ela decide os dois.**
+~~E uma tensão que a revisão de 21/09 achou lendo o zip: ele aplica 50% de acerto ao Classe 0 de Fagulha, mas preça o soco da bônus do Engate/Trocação Franca cru, sem os 50%. Mesma reforma, duas escalas.~~ **Resolvido em 21/09: com acerto, nas três — Fagulha, Trocação Franca e Retaliação.** O critério foi qual escala cabe melhor em 5,00 nas duas Trilhas que a tensão toca: cru levava o Combatente Amaldiçoado a passar de 7,00 fatias; com acerto ele fica em 5,51, igual ao que já estava aceito. Trocação Franca caiu de 1,70 pra 0,85; o Punho caiu de 4,45–5,12 pra 3,60–4,27. Fagulha e Retaliação não mudaram — já estavam nessa escala. Registro completo em [`bastiao-correcao-escala.md`](../bastiao-correcao-escala.md). **Isso diverge da convenção do repositório principal** (`DESENHO-trilhas.md`: "dano cru, como as nove Trilhas publicadas medem botão") — é exceção declarada, como o câmbio de PE que também não vale pro Bastião.

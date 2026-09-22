@@ -1,0 +1,119 @@
+{
+  "status": "Decisão de 21/09: preço registrado é o bruto (Br). PE continua custando PE em mesa nos dois casos.",
+  "nao_cede_slices": 0.8172982283464566,
+  "perfis": {
+    "distancia": {
+      "etapas": {
+        "sequencia": {
+          "acumulado": {
+            "L": 1.2621357356808118,
+            "Br": 3.0101125623023703,
+            "PE_dia_L": 16.643931890625,
+            "PE_dia_Br": 18.20635052361328
+          },
+          "marginal": {
+            "L": 1.2621357356808118,
+            "Br": 3.0101125623023703
+          }
+        },
+        "escola": {
+          "acumulado": {
+            "L": 1.3868967555497047,
+            "Br": 3.1338205116232283,
+            "PE_dia_L": 18.128582324700734,
+            "PE_dia_Br": 18.128582324700734
+          },
+          "marginal": {
+            "L": 0.12476101986889288,
+            "Br": 0.12370794932085794
+          }
+        },
+        "persistencia_23": {
+          "acumulado": {
+            "L": 1.5960127897697287,
+            "Br": 3.4112769881964327,
+            "PE_dia_L": 18.227655880994092,
+            "PE_dia_Br": 21.474621068002115
+          },
+          "marginal": {
+            "L": 0.209116034220024,
+            "Br": 0.2774564765732044
+          }
+        },
+        "conclusao_dupla_30": {
+          "acumulado": {
+            "L": 2.4355586518828862,
+            "Br": 4.250980123089067,
+            "PE_dia_L": 18.227655880994092,
+            "PE_dia_Br": 21.474621068002115
+          },
+          "marginal": {
+            "L": 0.8395458621131575,
+            "Br": 0.8397031348926345
+          }
+        }
+      },
+      "total_com_nao_cede": {
+        "L": 3.2528568802293427,
+        "Br": 5.068278351435524
+      }
+    },
+    "corpo_a_corpo": {
+      "etapas": {
+        "sequencia": {
+          "acumulado": {
+            "L": 0.0,
+            "Br": 0.1005257415284027,
+            "PE_dia_L": 0.0,
+            "PE_dia_Br": 9.7948125
+          },
+          "marginal": {
+            "L": 0.0,
+            "Br": 0.1005257415284027
+          }
+        },
+        "escola": {
+          "acumulado": {
+            "L": 0.0,
+            "Br": 0.3381170910766904,
+            "PE_dia_L": 0.0,
+            "PE_dia_Br": 15.895653507421875
+          },
+          "marginal": {
+            "L": 0.0,
+            "Br": 0.2375913495482877
+          }
+        },
+        "persistencia_23": {
+          "acumulado": {
+            "L": 0.0,
+            "Br": 0.47305444968450133,
+            "PE_dia_L": 0.0,
+            "PE_dia_Br": 19.500719944921876
+          },
+          "marginal": {
+            "L": 0.0,
+            "Br": 0.13493735860781092
+          }
+        },
+        "conclusao_dupla_30": {
+          "acumulado": {
+            "L": 0.0,
+            "Br": 0.5236409848568331,
+            "PE_dia_L": 0.0,
+            "PE_dia_Br": 19.99620643710937
+          },
+          "marginal": {
+            "L": 0.0,
+            "Br": 0.05058653517233175
+          }
+        }
+      },
+      "total_com_nao_cede": {
+        "L": 0.8172982283464566,
+        "Br": 1.3409392132032898
+      }
+    }
+  },
+  "checks": "Bruto nunca abaixo do líquido; corpo a corpo em líquido reproduz o zero da Sequência (o modelo escolhe não usá-la): OK."
+}
