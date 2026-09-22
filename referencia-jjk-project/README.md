@@ -13,7 +13,7 @@ Os links internos desses arquivos apontam para a estrutura do repositório origi
 | Arquivo | Por que está aqui |
 |---|---|
 | `README-jjk-project.md` | o README do projeto principal. A seção *"Nove lições que custaram erro"* é o que mais importa — ela explica o jeito de trabalhar que a releitura tenta seguir. Renomeado pra não virar o README desta pasta no GitHub. |
-| `DESENHO-caminhos.md` | a régua dos Caminhos: **3 fatias, degraus em 2 · 7 · 15 · 30**. É o documento que a releitura da Vanguarda contradiz sem saber (ver `revisao/`). |
+| `DESENHO-caminhos.md` | a régua dos Caminhos: **3 fatias, degraus em 2 · 7 · 15 · 30**. A reforma sobe pra 5 fatias e acrescenta o nível 23 — decisão de 17/09, em `bastiao-reforma/`; o porte reescreve esta linha. |
 | `DESENHO-trilhas.md` | a régua das Trilhas, 5 fatias. A conta histórica de Fagulha está na linha ~800. |
 | `DESENHO-manhas.md` | as treze Manhas originais da Escola de Arma, que a releitura reduz a quatro. |
 

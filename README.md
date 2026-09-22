@@ -1,6 +1,6 @@
 # RPG — Classes: releitura de Bastião, Vanguarda e Estocada
 
-Este repositório guarda uma **releitura de três classes** do Projeto M, o sistema de RPG de mesa de Jujutsu Kaisen que mora em [cupcake-mochi/JJK---Project](https://github.com/cupcake-mochi/JJK---Project). O trabalho aconteceu fora do repositório principal, nos dias 18 e 19 de setembro de 2026, e **nada daqui foi aplicado lá**. É proposta de trabalho, com número calculado, esperando decisão.
+Este repositório guarda uma **releitura de três classes** do Projeto M, o sistema de RPG de mesa de Jujutsu Kaisen que mora em [cupcake-mochi/JJK---Project](https://github.com/cupcake-mochi/JJK---Project). O trabalho aconteceu fora do repositório principal, entre 17 e 19 de setembro de 2026, e **nada daqui foi aplicado lá**. É proposta de trabalho, com número calculado, esperando decisão.
 
 Se você chegou aqui sem conhecer o Projeto M: a seção *"O mínimo pra ler isto"* logo abaixo dá o vocabulário. Se conhece, pule pra *"As três frentes"*.
 
@@ -11,7 +11,8 @@ O Projeto M é um sistema feito pra um servidor de guilda com vários mestres e 
 Alguns termos que aparecem o tempo todo:
 
 - **Caminho** é a classe (Bastião, Vanguarda, Guia, Emanador, Evocador). **Trilha** é a subclasse, escolhida no nível 2. A Estocada é uma Trilha da Vanguarda.
-- **Fatia** é a unidade de orçamento: uma fatia vale **5,08 de dano por rodada no nível 30**. Toda habilidade é convertida pra isso — dano, condição, movimento, defesa. No repositório principal, um Caminho tem orçamento de **3 fatias** e uma Trilha tem **5**.
+- **Fatia** é a unidade de orçamento: uma fatia vale **5,08 de dano por rodada no nível 30**. Toda habilidade é convertida pra isso — dano, condição, movimento, defesa. No repositório principal, um Caminho tem orçamento de **3 fatias** (níveis 2 · 15 · 30) e uma Trilha tem **5**. **Esta releitura sobe o Caminho pra 5 fatias, em quatro degraus — 2 · 15 · 23 · 30 —, com o ataque extra do 7 de graça.** A decisão está no `bastiao-reforma/` (17/09) e foi confirmada pelo Mizuki em 21/09 pros cinco Caminhos.
+- **Dano movido** é a régua nova que o Bastião precisou: *1 ponto de dano movido de um aliado pra você vale 0,30 de dano causado*. Provisória, decidida, não medida — como o 5,08.
 - **PE** é ponto de energia. Feitiço, Kata e várias habilidades gastam PE. Na régua de orçamento, **1 PE vale 5,14 de dano equivalente**.
 - **Maestria** é o bônus de nível: 1 nos níveis 2–9, 2 nos 10–17, 3 nos 18–25, 4 nos 26–30. Muita coisa escala por ela.
 - **Manha** é o que a Escola de Arma dá: um efeito ligado à categoria de arma que você escolheu.
@@ -22,16 +23,26 @@ Alguns termos que aparecem o tempo todo:
 
 Tudo aqui é *versão de trabalho*. Os documentos dizem isso neles mesmos, repetidamente. O JJK---Project, na v0.263, ainda tem o texto antigo: Brasa, Fagulha, treze Manhas, Não Acabou, Traçado.
 
-E a revisão feita em 20/09 (pasta `revisao/`) achou coisa que **bloqueia** levar isto pro repositório principal do jeito que está. O mais grave: a releitura da Vanguarda distribui **5 fatias** e cria um **nível 23**, mas o repositório principal dá **3 fatias** ao Caminho e não tem degrau no 23. Se a conversa que gerou isto decidiu mudar a régua, a decisão não ficou escrita. Detalhe na seção *"O que a revisão achou"*.
+A revisão feita em 20/09 (pasta `revisao/`) achou cinco coisas que **bloqueavam** levar isto pro repositório principal. Em 21/09, com o zip da reforma do Bastião e a transcrição da conversa da Sequência, três delas fecharam: a régua de 5 fatias e o nível 23 estavam decididos e escritos no zip; o texto-base da Sequência existe e está em `vanguarda-sequencia-conversa-18-09.md`; e Não Pega é do Bastião, como o manual diz. O que sobra está na seção *"O que a revisão achou"*.
 
 ## As três frentes
 
-### Bastião — só nomes e uma conta
+### Bastião — o Caminho e as três Trilhas, refeitos e medidos
 
-A menor das três. Dois arquivos.
+A primeira frente, de 17/09, e a única fechada de ponta a ponta: texto, preço e nome. Mora em duas camadas.
 
-- **`bastiao-nomes-aprovados.md`** — a rodada de nomes fechou. A Trilha *Brasa* virou **Combatente Amaldiçoado**; a habilidade central *Encarar* virou **Olhos Em Mim**; dezoito nomes no total, cada um com a mecânica reescrita por extenso. Atenção: a mecânica reformada do Bastião (a área de Provocar, Retaliação com Força no PE) **não está neste repositório nem no principal** — só nesta tabela, que a restitui de segunda mão.
-- **`bastiao-correcao-fagulha.md`** — a tabela histórica dava 4,08 fatias pra Fagulha; a correção diz 2,05, porque faltava aplicar o acerto do feitiço. **A revisão contesta a correção** (achado 12): a régua de Trilhas preça dano *cru*, sem acerto, e só a parcela de vantagem estava errada. Na régua crua, Fagulha dá **3,53**. Os três números estão documentados; a decisão é do autor.
+**`bastiao-reforma/`** é o zip que saiu da conversa de 17/09 — o documento principal, a régua nova de dano movido, um validador que reproduz cada número (`TUDO OK`) e os scripts de cada rodada. O Bastião deixou de ser um evento (uma Reação que intercepta) e virou um **estado**: Olhos Em Mim, uma área de 6 m em que você provoca quem entra e puxa pra você, com a Reação, qualquer golpe que acerte um aliado — sem nova rolagem, crítico e condição inclusos. *"Você não intercepta golpe. Você fica impossível de ignorar."* As três Trilhas viraram três respostas em cima do mesmo estado: Muro come e fica mais duro, Punho come e devolve, Combatente Amaldiçoado come e vira energia.
+
+| Peça | Fatias | Observação |
+|---|---:|---|
+| Caminho | 5,20 a 5,58 | estouro declarado pelo Mizuki: *"tanque tancando bem não é o perigo"* |
+| Muro | 5,39 | faixa 4,79 a 6,46, toda no Guarda-Costas |
+| Punho | 4,45 a 5,12 | a única que não estoura |
+| Combatente Amaldiçoado | 5,51 | o nível 27 está em 0,50 por decisão; medido 0,32 a 5,42 |
+
+**Os dois arquivos da raiz, de 18/09, fecham a fila do zip.** `bastiao-nomes-aprovados.md` dá os dezoito nomes (Encarar → Olhos Em Mim, Brasa → Combatente Amaldiçoado, e os onze que o zip deixou sem nome), cada um com a mecânica reescrita. `bastiao-correcao-fagulha.md` corrige o preço histórico de Fagulha de 4,08 pra **2,05**. O README do `bastiao-reforma/` tem o mapa nome a nome e o que o zip decide pro sistema inteiro.
+
+**Uma tensão de escala ficou aberta.** A correção de Fagulha aplica 50% de acerto ao Classe 0; a mesma reforma preça o soco do Trocação Franca sem os 50%; e a revisão de 20/09 leu a régua de Trilhas como *crua*, o que daria **3,53** pra Fagulha. Dois números documentados, uma decisão de escala pendente — e ela decide os dois.
 
 ### Vanguarda — o Caminho reconstruído
 
@@ -52,7 +63,9 @@ Toda reserva tem margem sobre o medido, e os documentos são honestos sobre isso
 
 O caminho até aqui teve idas e voltas, e os arquivos guardam todas: primeiro custo de −2 de dano e 1 PE, depois Xd4 e maestria/2+1 PE; primeiro teto de duas conduções, depois sem teto mas erro encerra; Persistência primeiro era um uso por cena, depois virou metade da maestria pra baixo + 1 por descanso.
 
-**O registro vigente é `vanguarda-orcamento.md`.** Os outros documentos marcam no cabeçalho se são históricos.
+**O registro vigente é `vanguarda-orcamento.md`.** Os outros documentos marcam no cabeçalho se são históricos. O texto de regra das seis conduções e das sete conclusões está em `vanguarda-sequencia-conversa-18-09.md`, a conversa que as gerou; `vanguarda-sequencia-consolidada.md` junta tudo que os documentos e o código dizem sobre Abrir, Conduzir e Concluir, com a fonte de cada frase e as decisões de 21/09 (a Sequência entra no nível 2; terreno difícil conta pra Fixar; a duração escrita substitui o TR de fim de turno).
+
+**O 1,39 tem uma escolha de contabilidade dentro.** Aberto: benefício bruto 3,45, menos 0,32 de abertura, menos **1,75 de PE** cobrado a 5,14 por ponto. Sem cobrar PE, a mesma Sequência rende 3,13. Cobrando PE, a Vanguarda inteira mede 3,0 a 3,25; sem cobrar, 4,7 a 4,95. O zip do Bastião diz que o câmbio de PE só vale onde o PE compete com algo — na Vanguarda ele compete. A escolha ainda não foi feita.
 
 ### Estocada — quatro entregas fechadas, preço aberto
 
@@ -69,13 +82,16 @@ Mas o preço total **não** fechou, e o motivo é o achado mais importante da pa
 
 ## Mapa dos arquivos
 
-Os 35 arquivos da releitura ficam na raiz, com o nome dizendo a frente. Cada `conferir-*.py` tem um `*-contas.json` ao lado com a saída completa.
+Os 35 arquivos da releitura ficam na raiz, com o nome dizendo a frente. Cada `conferir-*.py` tem um `*-contas.json` ao lado com a saída completa. Os três marcados *21/09* foram acrescentados depois, nesta sessão de revisão.
 
 | Arquivo | Frente | Estado | O que é |
 |---|---|---|---|
+| `bastiao-reforma/` | Bastião | **vigente**, fonte | o zip de 17/09: texto, preço e régua do Bastião inteiro; README próprio com o mapa de nomes |
 | `bastiao-nomes-aprovados.md` | Bastião | vigente | os dezoito nomes e a mecânica de cada um |
-| `bastiao-correcao-fagulha.md` | Bastião | vigente, contestado | a conta corrigida de Fagulha |
+| `bastiao-correcao-fagulha.md` | Bastião | vigente, escala em aberto | a conta corrigida de Fagulha |
 | `conferir-fagulha.py` | Bastião | — | enumera 160 mil combinações de dado pra conferir Fagulha |
+| `vanguarda-sequencia-conversa-18-09.md` | Vanguarda | fonte, *21/09* | a conversa que gerou a Sequência: o texto-base das conduções e conclusões |
+| `vanguarda-sequencia-consolidada.md` | Vanguarda | *21/09* | tudo sobre Abrir, Conduzir e Concluir, com a fonte de cada frase e as decisões de 21/09 |
 | `vanguarda-orcamento.md` | Vanguarda | **vigente** | o registro das cinco fatias e das regras que sustentam o preço |
 | `vanguarda-conclusao-dupla.md` | Vanguarda | vigente | texto e conta do nível 30; regras atuais da Sequência |
 | `vanguarda-nv23.md` | Vanguarda | vigente | Persistência, nível 23, versão fechada |
@@ -110,15 +126,15 @@ Cada um imprime a tabela dele e termina com uma linha de checagem (`OK` ou uma a
 
 ## O que a revisão achou
 
-Em 20/09/2026 dois agentes revisaram a pasta contra o repositório principal na v0.261. Os relatórios completos estão em `revisao/`; os achados mais importantes foram conferidos à mão depois. Resumindo o que **bloqueia** o porte:
+Em 20/09/2026 dois agentes revisaram a pasta contra o repositório principal na v0.261. Os relatórios completos estão em `revisao/`; os achados mais importantes foram conferidos à mão depois. Eram cinco bloqueios; o estado em 21/09:
 
-1. **O Caminho tem 3 fatias no repositório, não 5.** E não tem nível 23. Toda a distribuição da Vanguarda depende de uma régua que ninguém escreveu.
-2. **O texto das seis conduções e das sete conclusões de arma não está em arquivo nenhum.** Os documentos só têm o preço. Requisito, efeito, duração — isso vive na conversa que gerou a pasta.
-3. **Compasso somando atributo no PE máximo contraria uma regra que tem motivo escrito** na peça 1: *"se um atributo somasse PE, ele viraria o atributo obrigatório de todo conjurador pela porta dos fundos"*.
-4. **O alvo morre no meio da Sequência e o texto não diz o que acontece.** Dois mestres travam de jeito oposto.
-5. **O repositório principal se contradiz sobre Não Pega** — a peça 6 dá pra Vanguarda, o manual põe no Bastião — e o porte tropeça nisso.
+1. ~~O Caminho tem 3 fatias no repositório, não 5, e não tem nível 23.~~ **Resolvido:** a decisão estava no zip do Bastião — 5 fatias, quatro degraus em 2 · 15 · 23 · 30 — e o Mizuki confirmou que vale pros cinco Caminhos. O porte precisa reescrever o `DESENHO-caminhos.md`.
+2. ~~O texto das conduções e conclusões não está em arquivo nenhum.~~ **Resolvido:** está em `vanguarda-sequencia-conversa-18-09.md`. Três regras daquela conversa morreram em 19/09 (erro conserva prazo; teto de duas; prazo de um turno) e o consolidado marca quais.
+3. **Compasso somando atributo no PE máximo contraria uma regra que tem motivo escrito** na peça 1: *"se um atributo somasse PE, ele viraria o atributo obrigatório de todo conjurador pela porta dos fundos"*. Continua aberto.
+4. ~~O alvo morre no meio da Sequência.~~ **Resolvido pelo texto-base:** *"abrir uma sequência contra outro alvo substitui a anterior"*. Falta só deixar explícito no texto de regra.
+5. ~~Não Pega: peça 6 diz Vanguarda, manual diz Bastião.~~ **Resolvido a favor do manual:** o zip põe Não Pega no nível 7 do Bastião, de graça, junto de Ainda de Pé. A peça 6 §3.1 envelhece no porte.
 
-E o que vale corrigir antes: a correção de Fagulha trocou a régua (achado 12); Conclusão Dupla "por cena" deveria ser "por descanso curto" pela regra do próprio repositório; no nível 2 a Sequência perde dinheiro em toda rota (conta em `revisao/nivel-2.py`); Desorientar domina as outras conclusões mágicas; a v2 ainda publica regra velha sem aviso.
+E o que vale corrigir antes: a escala de Fagulha (achado 12, agora com a tensão interna do zip somada); Conclusão Dupla "por cena" deveria ser "por descanso curto" pela regra do próprio repositório; no nível 2 a Sequência perde dinheiro em toda rota (conta em `revisao/nivel-2.py`) — e o Mizuki pôs a Sequência no nível 2; Desorientar domina as outras conclusões mágicas; a v2 ainda publica regra velha sem aviso.
 
 Na triagem de nomes, **cinco morreram** no validador do repositório (Condução, Conduzir, Precisão, Guarda, Impacto — as três últimas já são Melhoria ou Tema no manual, com o mesmo efeito e número diferente) e **seis precisam de outro nome** por sentido (Abrir/Abertura, Fechar a Rota, Golpe de Impacto, Derrubada, Desvio, Abrir Caminho). Os dezoito do Bastião passaram limpos.
 
@@ -126,28 +142,35 @@ Na triagem de nomes, **cinco morreram** no validador do repositório (Condução
 
 ## O que está aberto
 
-Na ordem em que um trava o seguinte:
+Decisões do Mizuki, primeiro — nenhuma é conta:
 
-1. **3 ou 5 fatias, com ou sem nível 23.** É montante de tudo.
-2. **Recuperar o texto-base das conduções e conclusões** e botar em arquivo.
-3. **Fagulha: 2,05 ou 3,53.** Depende de confirmar que a régua é crua.
-4. Nomes.
-5. Preço total da Estocada, e as duplas mágicas da Conclusão Dupla.
-6. Em que nível cada pedaço da Sequência entra — hoje não está definido, e a Escola de Arma reformada só dispara na Abertura.
-7. Levar pro JJK---Project, seguindo o procedimento de lá (validadores, CHANGELOG, mensagem de commit).
+1. **A fatia cobra PE ou não?** Decide se a Vanguarda mede 3 ou 5 (ver a seção da Vanguarda).
+2. **A escala: dano cru ou com acerto?** Decide Fagulha (2,05 ou 3,53) e Trocação Franca (1,70 ou 0,85) de uma vez.
+3. **Persistência precisa de nível.** O 23 existe agora; ela está lá. Mas com a Sequência inteira no 2 (2,75 reservadas), o que o 15, o 23 e o 30 carregam precisa fechar em 5 junto.
+4. **Nomes da Vanguarda.** Cinco mortos no validador (Condução, Conduzir, Precisão, Guarda, Impacto), seis pra trocar por sentido.
+5. **Compasso com atributo no PE** contra a peça 1: exceção declarada, ou outra forma.
 
-## As outras duas pastas
+Depois, trabalho:
 
+6. Escrever o `RASCUNHO-sequencia-de-combate.md` — texto de regra, com as mudanças de 19/09 e as respostas de 21/09 por cima da conversa.
+7. Preço total da Estocada, e as duplas mágicas da Conclusão Dupla.
+8. A fila do próprio zip do Bastião: a linha de playtest, a linha na peça 19, fechar a régua de dano movido como peça, repreçar as quatro entregas que dependem dela.
+9. Levar pro JJK---Project, seguindo o procedimento de lá (validadores, CHANGELOG, mensagem de commit). Toca o `DESENHO-caminhos.md`, a peça 6 §3.1, a peça 19 e o manual.
+
+## As outras pastas
+
+- **`bastiao-reforma/`** — a fonte do Bastião: o zip de 17/09, com README de reconciliação contra os arquivos de 18/09 da raiz.
 - **`referencia-jjk-project/`** — cópia somente-leitura de 22 arquivos do JJK---Project na v0.263, os que os documentos daqui citam como fonte. Tem um README próprio dizendo o que é cada um e por que está lá. Se discordar do repositório principal, o principal vence.
-- **`revisao/`** — os dois relatórios de 20/09 e o script de nível 2. Não fazem parte da releitura; são revisão dela.
+- **`revisao/`** — os dois relatórios de 20/09 e o script de nível 2. Não fazem parte da releitura; são revisão dela. Os achados 1, 2, 4 e 5 fecharam em 21/09; o documento não foi editado, o estado está acima.
 
 ## Histórico deste repositório
 
-Três commits, de propósito:
+Quatro commits, de propósito:
 
 1. A pasta exatamente como foi entregue em 20/09/2026, mais um `.gitignore`.
 2. Só a troca dos links: os documentos apontavam uns pros outros e pro repositório principal por caminho absoluto de uma máquina; viraram links relativos. Nenhuma palavra de texto mudou — o `git diff` desse commit só tem linhas com link.
 3. Este README, a pasta de referência e a pasta de revisão.
+4. O `bastiao-reforma/`, a conversa e o consolidado da Sequência, e as decisões de 21/09 refletidas neste README.
 
 ## Licença e escopo
 
