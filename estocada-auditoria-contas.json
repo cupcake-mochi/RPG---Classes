@@ -11,7 +11,7 @@
     "active_blocking": false,
     "prep": "Abertura perde 2d4; condução paga 3 PE; uma condução/conclusão por turno; erro encerra; prazo T+2; Persistência três usos no começo de cada cena.",
     "bonus_opportunity": "Ataques de Compasso/Bote são comparados com a mesma ação Conjurar, com bônus sem outro uso quantificado. Não é otimização de todas as ações da ficha.",
-    "limits": "Feitiços e efeitos de conclusão têm o mesmo resultado-base dos dois lados da comparação de Ferrão. Não enumera todos os modificadores criados por essas condições nem o valor do catálogo mágico."
+    "limits": "Feitiços e efeitos de conclusão têm o mesmo resultado-base dos dois lados da comparação de Ferrão. Não enumera todos os modificadores criados por essas condições nem o valor do catálogo de feitiços."
   },
   "ferrão_by_refino": {
     "1": {

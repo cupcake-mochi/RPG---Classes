@@ -1,4 +1,4 @@
-"""As seis conclusões mágicas da Estocada (nível 11), precificadas contra a
+"""As seis conclusões de feitiço da Estocada (nível 11), precificadas contra a
 régua já publicada do repositório principal.
 
 Duas rolagens gate o efeito bônus, não uma: (1) o feitiço precisa acertar ou o
@@ -15,7 +15,7 @@ Decisão do Mizuki, 21/09, depois da primeira rodada:
    ataque que o alvo sofrer, não a janela inteira. Isso troca a magnitude de
    36,50 (meia ação de chefe) por 25pp x 0,230 (a mesma lógica de "vantagem
    numa rolagem" que Expor a Guarda já usa) -- e bate no mesmo número.
-   NOTA: isto estreita só a versão mágica. A irmã de arma, Interromper a
+   NOTA: isto estreita só a versão de feitiço. A irmã de arma, Interromper a
    Resposta, continua com a janela larga e o 36,50 dentro do modelo já
    validado (conferir-vanguarda-v3.py) -- as duas deixam de ser "mesmo
    efeito, dois nomes" até alguém decidir estreitar a de arma também. Fica
@@ -40,6 +40,7 @@ from fractions import Fraction as F
 import json
 import sys
 from pathlib import Path
+import re
 
 SLICE = F(508, 100)
 P_SPELL = F(55, 100)        # feitiço acerta / alvo falha no TR principal
@@ -48,8 +49,13 @@ FALHA_TR_ADD = F(55, 100)   # TR adicional da conclusão, mesma referência
 TIRAR_REACAO = F(3650, 100)
 METRO = F(60, 100)
 PP_ALIADO = F(230, 1000)
-IMPEDIDO = F(13215, 100)
-DESLOC_ZERO = IMPEDIDO - IMPEDIDO / F(110, 100)
+REGUA = (Path(__file__).resolve().parent / 'referencia-jjk-project/sistema/03-mecanica/19-dano-e-condicoes.md').read_text()
+def preco_condicao(nome):
+    linha = next(l for l in REGUA.splitlines() if re.match(r'^\| \*\*`' + nome + r'`\*\* \|', l))
+    return F(linha.split('|')[2].strip().strip('`').replace(',', '.'))
+IMPEDIDO = preco_condicao('Impedido')
+CEGO = preco_condicao('Cego')
+DESLOC_ZERO = IMPEDIDO - CEGO
 PE_RATE = F(514, 100)
 DESASTRE = F(73)
 
@@ -73,8 +79,9 @@ HISTORICO = {
 }
 
 output = {'em_fatias': {k: float(fatias(v)) for k, v in PRECOS.items()}}
+output['ancorar_magnitude_deslocamento'] = float(DESLOC_ZERO)
 
-print("As seis conclusões mágicas, com os dois gates corretos:\n")
+print("As seis conclusões de feitiço, com os dois gates corretos:\n")
 for nome, val in sorted(PRECOS.items(), key=lambda kv: kv[1]):
     print(f"  {nome:20s} {float(fatias(val)):.4f} fatias")
 
@@ -106,11 +113,10 @@ output['checks'] = ('Segundo gate muda o número; janela larga x estreita muda o
                      'Cortar a Resposta e Expor a Guarda batem exato, sem vão: OK.')
 print('\n' + output['checks'])
 
-# --- Duplas mágicas do nível 30 -------------------------------------------
+# --- Duplas de feitiço do nível 30 -----------------------------------------
 # As duas dependem do MESMO gate de "o feitiço afetar o alvo"; daí em diante
-# cada uma paga (ou não) seu próprio TR adicional, independente da outra.
-# Isto é valor POR ACIONAMENTO -- não é a marginal do dia, que exige o
-# modelo de rotina completo (Compasso decidindo por turno), ainda não feito.
+# cada uma paga (ou não) seu TR adicional. A soma só serve como teto aditivo
+# condicionado: efeitos podem se sobrepor e só há um uso por cena.
 from itertools import combinations
 
 COMPONENTES = {
@@ -135,9 +141,15 @@ for a, b in combinations(COMPONENTES, 2):
     duplas[f'{a}+{b}'] = P_SPELL * (componente(a) + componente(b))
 
 output['duplas_por_acionamento'] = {k: float(fatias(v)) for k, v in duplas.items()}
+output['duplas_chance_ambas'] = {
+    f'{a}+{b}': float(P_SPELL *
+                        (FALHA_TR_ADD if PEDE_TR[a] else 1) *
+                        (FALHA_TR_ADD if PEDE_TR[b] else 1))
+    for a, b in combinations(COMPONENTES, 2)
+}
 melhor = max(duplas.items(), key=lambda kv: kv[1])
 pior = min(duplas.items(), key=lambda kv: kv[1])
-print(f"\nDuplas mágicas (por acionamento, sem frequência do dia): melhor {melhor[0]} "
+print(f"\nDuplas de feitiço (por acionamento, sem frequência do dia): melhor {melhor[0]} "
       f"{float(fatias(melhor[1])):.4f}, pior {pior[0]} {float(fatias(pior[1])):.4f}")
 
 # Contra-teste: nenhuma dupla foge da soma das duas isoladas -- prova que não
@@ -146,9 +158,10 @@ for a, b in combinations(COMPONENTES, 2):
     total = duplas[f'{a}+{b}']
     esperado = P_SPELL * componente(a) + P_SPELL * componente(b)
     assert abs(total - esperado) < F(1, 10**6)
-output['nota'] = ('Valor por acionamento assumindo a dupla acontece -- não é a marginal do '
-                   'dia. Falta o modelo de rotina completo (Compasso por turno) pra converter '
-                   'isto em fatia do orçamento, igual foi feito pro nível 30 de arma.')
+output['nota'] = ('Teto aditivo por acionamento condicionado à dupla ocorrer, sem '
+                   'sobreposição de efeitos. O gatilho do feitiço é compartilhado; '
+                   'a frequência por cena, a preparação e a alternativa de concluir '
+                   'pela arma ainda não foram simuladas conjuntamente.')
 print(output['nota'])
 
 (Path(__file__).resolve().parent / 'estocada-conclusoes-magicas-contas.json').write_text(
@@ -184,8 +197,8 @@ def conferir_dominancia(publicar=False):
     if publicar:
         doc.write_text(texto.replace(inicio+anterior+fim, inicio+calculado+fim))
     else:
-        assert anterior == calculado, 'Tabela da dominância mágica diverge do preço ou das premissas publicadas'
-    print('Dominância mágica: preço atual, cenários e alternativas conferidos.', flush=True)
+        assert anterior == calculado, 'Tabela da dominância das conclusões diverge do preço ou das premissas publicadas'
+    print('Dominância das conclusões: preço atual, cenários e alternativas conferidos.', flush=True)
 
 
 if len(sys.argv) > 1:

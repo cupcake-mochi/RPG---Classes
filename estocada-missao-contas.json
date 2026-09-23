@@ -1,0 +1,569 @@
+{
+  "fontes_sha256": "bc4d2d7c7aeee2d7b541afbd1789c26ce82794039a08e1f32608120cd1c531f3",
+  "premissas": {
+    "decisao": "22/09: manter Canalizar no golpe; excluir apenas do golpe que carrega feitiço de dano. Ferrão disponível, opcional e incompatível com Bote no mesmo turno.",
+    "nivel": 30,
+    "atributo": 6,
+    "refino": 10,
+    "maestria": 4,
+    "fatia": 5.08,
+    "combates": [
+      [
+        3,
+        3,
+        4
+      ],
+      [
+        4,
+        4,
+        3
+      ]
+    ],
+    "descansos": [
+      [],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "cenas_distintas": true,
+    "acerto_feitico": 0.55,
+    "falha_tr_adicional": 0.55,
+    "condicao_fracao_do_dano": [
+      0,
+      1
+    ],
+    "alternativa_bonus": 0,
+    "perfis": [
+      {
+        "nome": "Yumi, sem Fixar",
+        "arma": "Yumi",
+        "acerto": 0.55,
+        "vantagem": false,
+        "fixar": false
+      },
+      {
+        "nome": "Yumi, Fixar externo",
+        "arma": "Yumi",
+        "acerto": 0.55,
+        "vantagem": false,
+        "fixar": true
+      },
+      {
+        "nome": "Lâmina Longa",
+        "arma": "Lâmina Longa",
+        "acerto": 0.55,
+        "vantagem": false,
+        "fixar": false
+      },
+      {
+        "nome": "Yumi, vantagem e Fixar externos",
+        "arma": "Yumi",
+        "acerto": 0.55,
+        "vantagem": true,
+        "fixar": true
+      }
+    ],
+    "limites": "Valor do controle é uma sensibilidade já líquida de CD, duração, resistência e término ao receber dano; não concede acerto ou Fixar adicional. Efeitos do Caminho usam a régua equivalente herdada, condicionada à utilidade. Não é simulação de mapa, vida do alvo ou grupo. Atributo 6 nos dois lados; flexibilidade da troca de atributo não preçada. Vantagem/Fixar externos só nas linhas declaradas. Uma cena por combate. Dois calendários explícitos têm média de 10,5 rodadas; não representam todas as missões."
+  },
+  "feiticos": {
+    "1": [
+      3,
+      13.5
+    ],
+    "2": [
+      6,
+      27.0
+    ],
+    "3": [
+      9,
+      40.5
+    ],
+    "4": [
+      12,
+      54.0
+    ],
+    "5": [
+      15,
+      67.5
+    ],
+    "6": [
+      18,
+      81.0
+    ],
+    "7": [
+      21,
+      94.5
+    ],
+    "0": [
+      0,
+      27.0
+    ]
+  },
+  "resultados": [
+    {
+      "perfil": "Yumi, sem Fixar",
+      "descansos_apos": [],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.03236422901055
+      },
+      "detalhes": {
+        "None": {
+          "valor": 503.16119938500003,
+          "pe_normal_gasto": 149.801803125,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.1981968749999936,
+          "estados": 8776.5
+        },
+        "0": {
+          "valor": 718.2475073604228,
+          "pe_normal_gasto": 155.92482846398346,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.07517153601654059,
+          "estados": 71269.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, sem Fixar",
+      "descansos_apos": [
+        1,
+        2
+      ],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.257692854850374
+      },
+      "detalhes": {
+        "None": {
+          "valor": 511.1146933224687,
+          "pe_normal_gasto": 153.28644534375002,
+          "pe_recuperado": 62.46375,
+          "saldo_final": 59.17730465625,
+          "estados": 5615.0
+        },
+        "0": {
+          "valor": 738.2200302001877,
+          "pe_normal_gasto": 165.85933603125,
+          "pe_recuperado": 76.88625,
+          "saldo_final": 67.02691396875,
+          "estados": 36359.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [],
+      "controle_fracao": 0,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 2.537441824734099
+      },
+      "detalhes": {
+        "None": {
+          "valor": 503.16119938500003,
+          "pe_normal_gasto": 149.801803125,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.1981968749999936,
+          "estados": 9082.5
+        },
+        "0": {
+          "valor": 638.5083463163169,
+          "pe_normal_gasto": 155.68232104446093,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.31767895553906556,
+          "estados": 74932.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.338822671721785
+      },
+      "detalhes": {
+        "None": {
+          "valor": 503.16119938500003,
+          "pe_normal_gasto": 149.801803125,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.1981968749999936,
+          "estados": 9082.5
+        },
+        "0": {
+          "valor": 734.59400069464,
+          "pe_normal_gasto": 155.69311057450432,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.3068894254956831,
+          "estados": 74932.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [],
+      "controle_fracao": 1,
+      "rotina": "Classes 0 a 7 livres",
+      "fatias": {
+        "0": 4.51462490338439,
+        "4": 4.393642845312869,
+        "3": 4.393642845312869
+      },
+      "detalhes": {
+        "None": {
+          "valor": 515.7266462347809,
+          "pe_normal_gasto": 146.44574829375,
+          "pe_recuperado": 0.0,
+          "saldo_final": 3.5542517062499854,
+          "estados": 29256.0
+        },
+        "0": {
+          "valor": 756.5367385813042,
+          "pe_normal_gasto": 156.0,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.0,
+          "estados": 168158.0
+        },
+        "4": {
+          "valor": 750.0835556037694,
+          "pe_normal_gasto": 156.0,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.0,
+          "estados": 185251.5
+        },
+        "3": {
+          "valor": 750.0835556037694,
+          "pe_normal_gasto": 156.0,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.0,
+          "estados": 187313.0
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        1
+      ],
+      "controle_fracao": 0,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 2.8791625258948246
+      },
+      "detalhes": {
+        "None": {
+          "valor": 521.8865336493125,
+          "pe_normal_gasto": 153.01419534374998,
+          "pe_recuperado": 25.191499999999998,
+          "saldo_final": 22.177304656250016,
+          "estados": 5933.5
+        },
+        "0": {
+          "valor": 675.4610627805424,
+          "pe_normal_gasto": 164.82734473884375,
+          "pe_recuperado": 39.0,
+          "saldo_final": 30.17265526115625,
+          "estados": 58599.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        1
+      ],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.660901264174322
+      },
+      "detalhes": {
+        "None": {
+          "valor": 521.8865336493125,
+          "pe_normal_gasto": 153.01419534374998,
+          "pe_recuperado": 25.191499999999998,
+          "saldo_final": 22.177304656250016,
+          "estados": 5933.5
+        },
+        "0": {
+          "valor": 770.4990070803708,
+          "pe_normal_gasto": 165.01176597,
+          "pe_recuperado": 34.79452125,
+          "saldo_final": 25.78275527999999,
+          "estados": 58599.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        2
+      ],
+      "controle_fracao": 0,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 2.8786728583970533
+      },
+      "detalhes": {
+        "None": {
+          "valor": 521.8865336493125,
+          "pe_normal_gasto": 153.01419534374998,
+          "pe_recuperado": 37.0,
+          "saldo_final": 33.98580465625001,
+          "estados": 7264.0
+        },
+        "0": {
+          "valor": 675.4349439162113,
+          "pe_normal_gasto": 164.82676377435936,
+          "pe_recuperado": 39.0,
+          "saldo_final": 30.173236225640636,
+          "estados": 51528.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        2
+      ],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.660350626572109
+      },
+      "detalhes": {
+        "None": {
+          "valor": 521.8865336493125,
+          "pe_normal_gasto": 153.01419534374998,
+          "pe_recuperado": 37.0,
+          "saldo_final": 33.98580465625001,
+          "estados": 7264.0
+        },
+        "0": {
+          "valor": 770.4696360706688,
+          "pe_normal_gasto": 165.01781381998126,
+          "pe_recuperado": 39.0,
+          "saldo_final": 29.982186180018758,
+          "estados": 51528.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        1,
+        2
+      ],
+      "controle_fracao": 0,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 2.880934678888399
+      },
+      "detalhes": {
+        "None": {
+          "valor": 521.8865336493125,
+          "pe_normal_gasto": 153.01419534374998,
+          "pe_recuperado": 62.191500000000005,
+          "saldo_final": 59.177304656250016,
+          "estados": 5846.0
+        },
+        "0": {
+          "valor": 675.5555894212197,
+          "pe_normal_gasto": 164.86630933920935,
+          "pe_recuperado": 78.0,
+          "saldo_final": 69.13369066079063,
+          "estados": 38057.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        1,
+        2
+      ],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.662158713436217
+      },
+      "detalhes": {
+        "None": {
+          "valor": 521.8865336493125,
+          "pe_normal_gasto": 153.01419534374998,
+          "pe_recuperado": 62.191500000000005,
+          "saldo_final": 59.177304656250016,
+          "estados": 5846.0
+        },
+        "0": {
+          "valor": 770.5660794240002,
+          "pe_normal_gasto": 165.04258603125,
+          "pe_recuperado": 75.74539284375,
+          "saldo_final": 66.70280681249999,
+          "estados": 38057.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, Fixar externo",
+      "descansos_apos": [
+        1,
+        2
+      ],
+      "controle_fracao": 1,
+      "rotina": "Classes 0 a 7 livres",
+      "fatias": {
+        "0": 6.860972056154003,
+        "4": 6.859719049659813,
+        "3": 6.859719049659813
+      },
+      "detalhes": {
+        "None": {
+          "valor": 583.2,
+          "pe_normal_gasto": 216.0,
+          "pe_recuperado": 74.0,
+          "saldo_final": 8.0,
+          "estados": 15987.0
+        },
+        "0": {
+          "valor": 949.1642494752546,
+          "pe_normal_gasto": 230.55049632278613,
+          "pe_recuperado": 78.0,
+          "saldo_final": 3.449503677213869,
+          "estados": 81484.5
+        },
+        "4": {
+          "valor": 949.0974141088545,
+          "pe_normal_gasto": 230.55049632278613,
+          "pe_recuperado": 78.0,
+          "saldo_final": 3.449503677213869,
+          "estados": 87249.5
+        },
+        "3": {
+          "valor": 949.0974141088545,
+          "pe_normal_gasto": 230.55049632278613,
+          "pe_recuperado": 78.0,
+          "saldo_final": 3.449503677213869,
+          "estados": 88556.0
+        }
+      }
+    },
+    {
+      "perfil": "Lâmina Longa",
+      "descansos_apos": [],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.242841369361123
+      },
+      "detalhes": {
+        "None": {
+          "valor": 510.367753829604,
+          "pe_normal_gasto": 149.96671573945312,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.033284260546878386,
+          "estados": 8278.5
+        },
+        "0": {
+          "valor": 736.6809124713263,
+          "pe_normal_gasto": 155.95783629059446,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.04216370940552849,
+          "estados": 68548.0
+        }
+      }
+    },
+    {
+      "perfil": "Lâmina Longa",
+      "descansos_apos": [
+        1,
+        2
+      ],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 4.42981667753891
+      },
+      "detalhes": {
+        "None": {
+          "valor": 516.0727828378508,
+          "pe_normal_gasto": 153.17211634101562,
+          "pe_recuperado": 67.75124375,
+          "saldo_final": 64.57912740898438,
+          "estados": 5405.5
+        },
+        "0": {
+          "valor": 752.3592044177763,
+          "pe_normal_gasto": 166.99620643710938,
+          "pe_recuperado": 73.3491037265625,
+          "saldo_final": 62.352897289453125,
+          "estados": 35544.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, vantagem e Fixar externos",
+      "descansos_apos": [],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 6.716106051226255
+      },
+      "detalhes": {
+        "None": {
+          "valor": 557.9645589866273,
+          "pe_normal_gasto": 149.99696697175767,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.003033028242327873,
+          "estados": 9082.5
+        },
+        "0": {
+          "valor": 916.2016557590357,
+          "pe_normal_gasto": 155.99371834872122,
+          "pe_recuperado": 0.0,
+          "saldo_final": 0.006281651278783329,
+          "estados": 74932.5
+        }
+      }
+    },
+    {
+      "perfil": "Yumi, vantagem e Fixar externos",
+      "descansos_apos": [
+        1,
+        2
+      ],
+      "controle_fracao": 1,
+      "rotina": "sete Classe 7",
+      "fatias": {
+        "0": 7.780783867729996
+      },
+      "detalhes": {
+        "None": {
+          "valor": 604.8382975145412,
+          "pe_normal_gasto": 154.01375836947392,
+          "pe_recuperado": 60.7301631346875,
+          "saldo_final": 56.71640476521357,
+          "estados": 5846.0
+        },
+        "0": {
+          "valor": 1019.8653090192591,
+          "pe_normal_gasto": 167.86783218876747,
+          "pe_recuperado": 65.02305942221795,
+          "saldo_final": 53.15522723345049,
+          "estados": 38057.5
+        }
+      }
+    }
+  ]
+}
