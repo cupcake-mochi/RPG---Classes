@@ -3,10 +3,11 @@
     "cortar_a_resposta": 0.34239665354330706,
     "romper_fileira": 0.42874015748031497,
     "expor_a_guarda": 0.34239665354330706,
-    "ancorar": 0.715378937007874,
+    "ancorar": 0.32155511811023624,
     "refluxo": 0.556496062992126,
     "desorientar": 0.6225393700787402
   },
+  "ancorar_magnitude_deslocamento": 5.4,
   "contra_teste_gate": {
     "cortar_a_resposta_sem_segundo_gate": 0.6225393700787402,
     "cortar_a_resposta_com_os_dois_gates": 0.34239665354330706
@@ -22,17 +23,34 @@
     "cortar_a_resposta+romper_fileira": 0.7711368110236221,
     "cortar_a_resposta+refluxo": 0.8988927165354331,
     "cortar_a_resposta+desorientar": 0.9649360236220472,
-    "cortar_a_resposta+ancorar": 1.0577755905511812,
+    "cortar_a_resposta+ancorar": 0.6639517716535434,
     "expor_a_guarda+romper_fileira": 0.7711368110236221,
     "expor_a_guarda+refluxo": 0.8988927165354331,
     "expor_a_guarda+desorientar": 0.9649360236220472,
-    "expor_a_guarda+ancorar": 1.0577755905511812,
+    "expor_a_guarda+ancorar": 0.6639517716535434,
     "romper_fileira+refluxo": 0.985236220472441,
     "romper_fileira+desorientar": 1.0512795275590552,
-    "romper_fileira+ancorar": 1.144119094488189,
+    "romper_fileira+ancorar": 0.7502952755905512,
     "refluxo+desorientar": 1.1790354330708661,
-    "refluxo+ancorar": 1.271875,
-    "desorientar+ancorar": 1.337918307086614
+    "refluxo+ancorar": 0.8780511811023622,
+    "desorientar+ancorar": 0.9440944881889763
   },
-  "nota": "Valor por acionamento assumindo a dupla acontece -- não é a marginal do dia. Falta o modelo de rotina completo (Compasso por turno) pra converter isto em fatia do orçamento, igual foi feito pro nível 30 de arma."
+  "duplas_chance_ambas": {
+    "cortar_a_resposta+expor_a_guarda": 0.166375,
+    "cortar_a_resposta+romper_fileira": 0.166375,
+    "cortar_a_resposta+refluxo": 0.3025,
+    "cortar_a_resposta+desorientar": 0.3025,
+    "cortar_a_resposta+ancorar": 0.166375,
+    "expor_a_guarda+romper_fileira": 0.166375,
+    "expor_a_guarda+refluxo": 0.3025,
+    "expor_a_guarda+desorientar": 0.3025,
+    "expor_a_guarda+ancorar": 0.166375,
+    "romper_fileira+refluxo": 0.3025,
+    "romper_fileira+desorientar": 0.3025,
+    "romper_fileira+ancorar": 0.166375,
+    "refluxo+desorientar": 0.55,
+    "refluxo+ancorar": 0.3025,
+    "desorientar+ancorar": 0.3025
+  },
+  "nota": "Teto aditivo por acionamento condicionado à dupla ocorrer, sem sobreposição de efeitos. O gatilho do feitiço é compartilhado; a frequência por cena, a preparação e a alternativa de concluir pela arma ainda não foram simuladas conjuntamente."
 }

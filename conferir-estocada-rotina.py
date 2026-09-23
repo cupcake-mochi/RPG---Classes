@@ -29,7 +29,7 @@ rodadas conjura; toma-se a melhor posição de cada luta. PE da Condução em br
 DUAS IMPLEMENTAÇÕES, QUE TÊM DE CONCORDAR.
   A -- o próprio v3 (via o loader do nv23, com Escola, Persistência e
        Conclusão Dupla), remendado com uma "meia rodada" pro Compasso.
-  B -- um modelo novo, mais curto, que também faz as conclusões mágicas, Bote
+  B -- um modelo novo, mais curto, que também faz as conclusões de feitiço, Bote
        e Ferrão, que o v3 não tem.
 Nas duas, Compasso sobre a Sequência sozinha dá o mesmo número (assert).
 """
@@ -148,15 +148,24 @@ def _sc(v, w):
     return tuple(x * w for x in v)
 
 
-# Mesmas magnitudes de conferir-estocada-conclusoes-magicas.py (mecânica de 21/09).
-_PP, _M, _IMP = .230, .60, 132.15
+# Mesmas magnitudes da régua de condições; Ancorar mede apenas deslocamento.
+_PP, _M = .230, .60
+_REGUA = (ROOT / 'referencia-jjk-project/sistema/03-mecanica/19-dano-e-condicoes.md').read_text()
+def _condicao(nome):
+    linha = next(l for l in _REGUA.splitlines() if re.match(r'^\| \*\*`' + nome + r'`\*\* \|', l))
+    return float(linha.split('|')[2].strip().strip('`').replace(',', '.'))
+_DESLOC_ZERO = _condicao('Impedido') - _condicao('Cego')
+_REFINO = (ROOT / 'referencia-jjk-project/sistema/05-material/livro/manual/45-aptidoes-e-refino.md').read_text()
+_DADOS_CANALIZAR = re.search(r'No refino `10` os dados viram `d6`: `(\d+)d6`', _REFINO)
+assert _DADOS_CANALIZAR, 'Escala de Canalizar ausente da fonte'
+_CANALIZAR = int(_DADOS_CANALIZAR.group(1)) * 3.5
 MAGICAS = {
     'cortar_a_resposta': (25 * _PP, True, 2),
     'expor_a_guarda': (25 * _PP, True, 2),
     'romper_fileira': (12 * _M, True, 1),
     'refluxo': (1 * PE_RATE, False, 1),
     'desorientar': (25 * _PP, False, 1),
-    'ancorar': (_IMP - _IMP / 1.10, True, 2),
+    'ancorar': (_DESLOC_ZERO, True, 2),
 }
 
 
@@ -167,8 +176,10 @@ def _melhor_magica(n):
 
 def B_solve(cfg, turns, casts, pe_rate=0.):
     cost = (cfg.mastery + 1) // 2 + 1
-    p_spell, _ = attack(cfg, spell=True)
-    _, e_c0 = attack(replace(cfg, spell_damage=cfg.classe0), spell=True)
+    # O bônus de Mirar embutido no p_die da ficha antiga é só da arma.
+    spell_cfg = replace(cfg, p_die=MELEE.p_die, advantage=False)
+    p_spell, _ = attack(spell_cfg, spell=True)
+    _, e_c0 = attack(replace(spell_cfg, spell_damage=cfg.classe0), spell=True)
 
     def score(v):
         return v[0] - v[1] - pe_rate * v[2]
@@ -232,20 +243,25 @@ def B_solve(cfg, turns, casts, pe_rate=0.):
         if c < turns - t + 1:
             ops.append(slot(t, c, n, e, False, False, b, be, (), 2, False))
         if c > 0:
-            k = (2 if cfg.bote else 1) if cfg.compasso else 0
-            if k == 0:
+            ks = (1, 2) if cfg.compasso and cfg.bote else ((1,) if cfg.compasso else (0,))
+            if ks == (0,):
                 ops.append(_add(_e(casts=1), end_turn(t, c - 1, n, e, b, be)))
             else:
-                ops.append(_add(_e(casts=1, bonus_attacks=k), slot(t, c - 1, n, e, False, False, b, be, (), k, False)))
-                if cfg.magicas and n >= 0:
-                    nome, comp = _melhor_magica(n)
-                    if nome:
-                        val = p_spell * comp
-                        if cfg.ferrao and not cfg.bote:   # Bote e Ferrão não no mesmo turno
-                            p_hit, _ = attack(cfg)
-                            val += p_spell * p_hit * e_c0
-                        ops.append(_add(_e(casts=1, bonus_attacks=k, magic_finishes=1, value=val),
-                                        slot(t, c - 1, -1, -1, True, True, b, be, (), k, True)))
+                for k in ks:
+                    ops.append(_add(_e(casts=1, bonus_attacks=k), slot(t, c - 1, n, e, False, False, b, be, (), k, False)))
+                    if cfg.magicas and n >= 0:
+                        nome, comp = _melhor_magica(n)
+                        if nome:
+                            val = p_spell * comp
+                            ops.append(_add(_e(casts=1, bonus_attacks=k, magic_finishes=1, value=val),
+                                            slot(t, c - 1, -1, -1, True, True, b, be, (), k, True)))
+                            if cfg.ferrao and k == 1:  # Bote e Ferrão se excluem apenas neste turno.
+                                p_hit, _ = attack(cfg)
+                                _, without_channel = attack(replace(cfg,damage_normal=cfg.damage_normal-_CANALIZAR))
+                                _, with_channel = attack(cfg)
+                                val += p_spell * (p_hit * e_c0 + without_channel - with_channel)
+                                ops.append(_add(_e(casts=1, bonus_attacks=k, magic_finishes=1, value=val),
+                                                slot(t, c - 1, -1, -1, True, True, b, be, (), k, True)))
         return best(ops)
 
     r = dict(zip(KEYS, turn(1, casts, -1, -1, '', -1)))
@@ -296,6 +312,13 @@ def audit():
     # Contra-teste: o erro da primeira versão. Sem rodada de conjuração, o Compasso
     # não tem onde agir -- vale exatamente zero. A base antiga não podia enxergá-lo.
     assert abs(B_dia(replace(yumi, compasso=True), 0)['score'] - B_dia(yumi, 0)['score']) < 1e-9
+
+    # Contra-tese: possuir Bote não remove a opção de Ferrão em outro turno.
+    # Classe 0 aumentado só nesta prova força a opção a aparecer; não é preço.
+    synthetic = replace(yumi, compasso=True, magicas=True, bote=True, classe0=yumi.damage_normal * 20)
+    without_ferrao = B_solve(replace(synthetic, ferrao=False), 4, 2)['score']
+    with_ferrao = B_solve(replace(synthetic, ferrao=True), 4, 2)['score']
+    assert with_ferrao > without_ferrao, 'Bote desligou Ferrão permanentemente'
 
     # Concordância: Compasso sobre a Sequência sozinha, nas duas implementações.
     seq_A = replace(REFERENCIA, school='')
@@ -441,7 +464,13 @@ def comparar_orcamento(publicar=False):
 
 
 if len(sys.argv)>1:
-    if sys.argv[1:]==['--comparar-orcamento']:
+    if sys.argv[1:]==['--verificar-missao']:
+        import estocada_missao
+        estocada_missao.verify(globals())
+    elif sys.argv[1:] in (['--missao'], ['--missao', '--rapida'], ['--missao', '--publicar']):
+        import estocada_missao
+        estocada_missao.main(globals(), publish='--publicar' in sys.argv, quick='--rapida' in sys.argv)
+    elif sys.argv[1:]==['--comparar-orcamento']:
         comparar_orcamento()
     elif sys.argv[1:]==['--publicar-cenarios']:
         comparar_orcamento(publicar=True)

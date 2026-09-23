@@ -1,6 +1,23 @@
-# RPG — Classes: releitura de Bastião, Vanguarda e Estocada
+# RPG — Classes do Projeto M
 
-Este repositório guarda uma **releitura de três classes** do Projeto M, o sistema de RPG de mesa de Jujutsu Kaisen que mora em [cupcake-mochi/JJK---Project](https://github.com/cupcake-mochi/JJK---Project). O trabalho aconteceu fora do repositório principal, entre 17 e 19 de setembro de 2026, e **nada daqui foi aplicado lá**. É proposta de trabalho, com número calculado, esperando decisão.
+## Continuidade de 22/09/2026
+
+O estado de trabalho desta rodada é acompanhado em [CONTINUIDADE-caminhos.md](CONTINUIDADE-caminhos.md). A **Estocada foi aprovada pelo autor no estado atual**; suas auditorias continuam disponíveis como histórico de cenários, sem bloquear a fila. As releituras produzidas nesta rodada para **Batedor e Executor foram descartadas integralmente**. Essas duas Trilhas aguardam uma nova conversa criativa e não possuem regras ou preços vigentes neste satélite.
+
+A reconstrução de **Guia e Emanador está concluída**, cada um com suas três Trilhas, exemplos, decisões, premissas e validação no próprio documento:
+
+| Documento dono | Caminho, na referência | Trilhas, na referência |
+|---|---:|---|
+| [Guia completo](guia-completo.md) | 4,52 | Cartógrafo 4,39 · Analista 3,07 · Regente 4,37 |
+| [Emanador completo](emanador-completo.md) | 4,47 | Prisma 3,53 · Crivo 3,71 · Vestígio 3,61 |
+
+Esses números incluem **reservas de projeto explicitadas**, além das parcelas calculadas. Todas as novas Trilhas ficam abaixo de 5,50 nas referências e sensibilidades publicadas; isso não é um teto universal para qualquer ficha. As contas conjuntas respeitam ações compartilhadas e indicam as interações que precisam ser realocadas ao somar Caminho e Trilha. O Emanador com TR mede 5,33 no cenário alternativo; o Regente com aliado mais forte mede 5,45.
+
+Reprodução: `python3 validacao/caminhos.py`; contraprovas em cópias isoladas: `python3 validacao/contrateses.py`. Os documentos donos registram o que foi verificado e o que depende de uso em mesa.
+
+**Evocador permanece fora do escopo.** Não houve porte ao projeto principal, commit ou push nesta rodada. As seções abaixo registram as frentes e análises anteriores; pendências históricas da Estocada não substituem a aprovação acima.
+
+Este repositório guarda uma **releitura de Caminhos e Trilhas** do Projeto M, o sistema de RPG de mesa de Jujutsu Kaisen que mora em [cupcake-mochi/JJK---Project](https://github.com/cupcake-mochi/JJK---Project). O trabalho acontece fora do repositório principal desde 17 de setembro de 2026, e **nada daqui foi aplicado lá**. As decisões atuais estão nos documentos donos e na continuidade acima.
 
 Se você chegou aqui sem conhecer o Projeto M: a seção *"O mínimo pra ler isto"* logo abaixo dá o vocabulário. Se conhece, pule pra *"As três frentes"*.
 
@@ -69,20 +86,20 @@ O caminho até aqui teve idas e voltas, e os arquivos guardam todas: primeiro cu
 
 **Decidido em 21/09: o preço conta o benefício bruto, sem descontar o PE gasto.** A escolha nunca muda quanto PE a Sequência custa em mesa — só se esse gasto é subtraído do preço registrado. **A Vanguarda de distância mede 5,07 fatias no bruto adotado; o perfil corpo a corpo mede só 1,34, e essa diferença entre armas continua aberta.** Conta em `conferir-vanguarda-pe.py` / `vanguarda-pe-contas.json`, decisão registrada em `vanguarda-orcamento.md`.
 
-**⚠ Achado de 21/09, noite: esses 5,07 e 1,34 são de uma Vanguarda que nunca conjura.** A régua do repositório principal diz que ela conjura em 7 das 10,5 rodadas no nível 30, e sem Compasso essas rodadas não têm ataque. Nessa base o Caminho mede **1,09** (distância) e **0,88** (corpo a corpo) pra Batedor e Executor, e **4,57** / **1,22** pra Estocada — a Sequência quase só existe com Compasso. Contra qual Vanguarda preçar o Caminho foi encerrado em 22/09 sem resposta, por decisão do Mizuki — a reescrita das Trilhas muda o terreno. O bruto não muda. Quadro em `vanguarda-completo.md`, conta em `conferir-estocada-rotina.py`.
+**⚠ Achado de 21/09, noite: esses 5,07 e 1,34 são de uma Vanguarda que nunca conjura.** A régua do repositório principal diz que ela conjura em 7 das 10,5 rodadas no nível 30, e sem Compasso essas rodadas não têm ataque. Na comparação antiga o Caminho media **1,09** (distância) e **0,88** (corpo a corpo) sem Compasso, e **4,57** / **1,22** com Compasso. A ficha de distância retinha benefícios de Batedor nos dois lados; por isso o lado com Compasso é **contrafactual**, não uma ficha legal de Estocada. A [revalidação](RASCUNHO-revalidacao-estocada.md) traz perfis sem Batedor. Contra qual Vanguarda preçar o Caminho continua sem resposta; o bruto não muda. Quadro em `vanguarda-completo.md`, conta em `conferir-estocada-rotina.py`.
 
 ### Estocada — quatro entregas fechadas, preço aberto
 
 As quatro habilidades da Trilha fecharam como mecânica:
 
-- **Compasso (nível 2)** ganha o atributo escolhido (Essência ou Inteligência) no PE máximo, além de conjurar na padrão e atacar na bônus.
+- **Compasso (nível 2)** ganha o atributo escolhido (Essência ou Inteligência) no PE máximo e permite atacar na bônus após conjurar na padrão um feitiço de pelo menos metade da Classe máxima, arredondada para cima.
 - **Traçado (11) morreu** e virou seis **conclusões de feitiço**: preparar a Sequência com arma e fechar com feitiço.
 - **Bote (19)** mantido: feitiço de condição sem dano libera o ataque extra na bônus.
 - **Ferrão (27)** agora só dispara depois de uma conclusão de feitiço que afete o alvo.
 
 Mas o preço total **não** fechou, e o motivo é o achado mais importante da pasta: o preço zero antigo do Compasso se apoiava numa regra em que conjurar já dava um golpe de brinde. Desde a v0.147 do repositório principal o ataque extra exige a Ação de Atacar. Então Compasso e Bote hoje são *permissões de atacar depois de conjurar* — e isso tem preço. Só Compasso+Bote, num Refino 6, dá 4,46 fatias por rodada elegível. A Trilha não cabe em cinco sem conta nova.
 
-**O registro vigente das regras é `estocada-auditoria.md`.** A [revalidação](RASCUNHO-revalidacao-estocada.md) separa o ganho de ataques do custo de escolher um feitiço de condição sem dano para Bote. Com ao menos um descanso curto, Compasso sozinho mede **6,49 fatias** à distância; os **9,99** de Compasso+Bote são apenas o teto em que o feitiço de condição vale tanto quanto o de dano. Se o controle valer zero, Bote acrescenta apenas **0,076** fatia à distância nesse modelo. O preço final das conclusões de feitiço e de Ferrão continua aberto.
+**Atualização de 22/09:** a [missão conjunta](RASCUNHO-revalidacao-estocada.md) acompanha PE, descansos, Persistência, Dupla, conclusões e Ferrão. Na Yumi sem vantagem e com Fixar externo, sete Classe 7 dão **4,34–4,66 fatias**, na hipótese favorável de controle equivalente ao dano. Com Classes livres e dois descansos, chegam a **6,861**. Por autorização do autor, Compasso agora exige metade da Classe máxima, arredondada para cima (**Classe 4 no nível 30**); esse caso passa a **6,860**, portanto o requisito não garante 5,50. São valores do conjunto dentro de cenários declarados, não preço universal. Canalizar energia permanece nos ataques comuns e é substituído no golpe que carregar feitiço de dano.
 
 ## Mapa dos arquivos
 
@@ -118,7 +135,7 @@ Os arquivos da releitura ficam na raiz, com o nome dizendo a frente. Cada `confe
 | `conferir-vanguarda-pe.py` | Vanguarda | — | *21/09*, o preço líquido contra o bruto nos dois perfis de arma |
 | `conferir-vanguarda-nv23.py` · `-nv23-usos.py` | Vanguarda | — | Persistência com um uso por cena, e depois com contador por maestria |
 | `estocada-auditoria.md` | Estocada | **vigente** | por que o preço total não fecha, e o que falta |
-| `estocada-compasso.md` | Estocada | vigente | Compasso com atributo no PE |
+| `estocada-compasso.md` | Estocada | vigente | atributo no PE e Classe mínima igual à metade da máxima, arredondada para cima |
 | `excecao-atributo-no-pe.md` | Estocada, Bastião | vigente, *21/09* | exceção declarada contra a peça 1, pra Compasso e Retaliação |
 | `estocada-conclusoes-feiticos.md` | Estocada | vigente | as seis conclusões de feitiço |
 | `estocada-bote.md` · `estocada-ferrao.md` | Estocada | vigente | níveis 19 e 27 |
@@ -129,6 +146,8 @@ Os arquivos da releitura ficam na raiz, com o nome dizendo a frente. Cada `confe
 | `RASCUNHO-orcamento-estocada.md` e `estocada-orcamento-cenarios-contas.json` | Estocada | análise, *22/09* | cenários de limite para Compasso/Bote no Caminho completo, PE nominal e custo de oportunidade da ação bônus; sem mudança de regra |
 | `RASCUNHO-revalidacao-estocada.md` e `conferir-estocada-troca-feitico.py` | Estocada | análise, *22/09* | decompõe a diferença entre as armas e compara Bote com a escolha de um feitiço de dano; saída em `estocada-troca-feitico-contas.json` |
 | `vanguarda-nao-acabou-comparacao.json` | Vanguarda | histórico | comparação da antiga Não Acabou, sem script próprio |
+
+A missão conjunta usa `estocada_missao.py`, chamado por `conferir-estocada-rotina.py --missao --publicar`; `--verificar-missao` confere os invariantes e a tabela. Premissas em `estocada-missao-premissas.json` e resultados em `estocada-missao-contas.json`.
 
 ## Rodar os scripts
 
@@ -175,7 +194,7 @@ Decisões do Mizuki, primeiro — nenhuma é conta:
 Depois, trabalho:
 
 6. ~~Escrever o texto de regra da Sequência.~~ **Feito em `RASCUNHO-sequencia-de-combate.md`.** **Golpe Inicial** é o nome da etapa inicial, escolhido pelo Mizuki em 22/09. A comparação das janelas de Interromper e Cortar a Resposta está em [`RASCUNHO-comparacao-resposta.md`](RASCUNHO-comparacao-resposta.md), decidida pelo Mizuki: manter a janela larga da arma e a janela de um ataque do feitiço.
-7. Preço total da Estocada, e as duplas de feitiço da Conclusão Dupla. **A conta de 21/09** (`conferir-estocada-rotina.py`) mede Compasso 5,35 / 2,13 sobre a Sequência sozinha; conclusões de feitiço e Ferrão 0,00 nessa rotina. **No Caminho completo**, Compasso mede 6,49 / 2,32, com pelo menos um descanso curto. Os antigos 9,99 / 4,42 de Compasso+Bote supõem que os sete feitiços sem dano tenham o mesmo valor dos feitiços de dano abandonados. A [revalidação de 22/09](RASCUNHO-revalidacao-estocada.md) mostra Bote entre 0,076 e 3,502 fatias à distância conforme o valor do controle; com controle de valor zero, Bote corpo a corpo não é usado. Compasso sozinho ainda excede 5,50 na ficha à distância com descanso. Sem descanso, sete feitiços e as Conduções otimizadas não cabem no PE. Nenhuma regra foi alterada; o preço final das conclusões de feitiço e de Ferrão continua pendente.
+7. Preço total robusto da Estocada. A [missão conjunta](RASCUNHO-revalidacao-estocada.md) já mede o conjunto sob premissas declaradas; a frequência e o valor real do controle, a fonte de vantagem/Fixar e a troca de atributo continuam dependentes da ficha e da mesa. O mínimo de Classe aplicado a Compasso não basta para assegurar 5,50 no cenário favorável com dois descansos.
 8. A fila do próprio zip do Bastião: a linha de playtest, a linha na peça 19, fechar a régua de dano movido como peça, repreçar as quatro entregas que dependem dela.
 9. Levar pro JJK---Project, seguindo o procedimento de lá (validadores, CHANGELOG, mensagem de commit). Toca o `DESENHO-caminhos.md`, a peça 6 §3.1, a peça 19 e o manual.
 

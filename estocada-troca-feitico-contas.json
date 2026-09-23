@@ -17,27 +17,27 @@
     "distancia": {
       "chance_arma": 0.8775000000000001,
       "dano_arma_esperado": 22.9125,
-      "chance_feitico": 0.65,
-      "dano_feitico_esperado": 66.15,
+      "chance_feitico": 0.55,
+      "dano_feitico_esperado": 56.7,
       "compasso_ataque_cru_fatias": 3.0068897637795278,
       "compasso_interacao_caminho_fatias": 3.482339416606374,
       "compasso_total_fatias": 6.489229180385902,
       "bote_mesmo_feitico_fatias": 3.5023562150597467,
       "cenarios": {
         "zero": {
-          "marginal_fatias": 0.07587408256078121,
+          "marginal_fatias": 0.16445675972613596,
           "usos_dia": 0.5000000000000002
         },
         "20": {
-          "marginal_fatias": 0.26335064799010255,
+          "marginal_fatias": 0.35193332515545733,
           "usos_dia": 0.5000000000000002
         },
         "40": {
-          "marginal_fatias": 0.4508272134194239,
-          "usos_dia": 0.5000000000000002
+          "marginal_fatias": 1.3107551651909803,
+          "usos_dia": 7.0
         },
         "50": {
-          "marginal_fatias": 1.3829336428812684,
+          "marginal_fatias": 2.6230911231962297,
           "usos_dia": 7.0
         },
         "igual_ao_dano": {
@@ -46,7 +46,7 @@
         }
       },
       "pe_conducoes_esperado_sem_cota": 20.000181982127344,
-      "limite_superior_compasso_sem_descanso": 5.42737190152413
+      "estimativa_penalizada_sem_descanso_nao_e_limite": 5.42737190152413
     },
     "corpo_a_corpo": {
       "chance_arma": 0.55,
@@ -80,7 +80,7 @@
         }
       },
       "pe_conducoes_esperado_sem_cota": 16.991318437500002,
-      "limite_superior_compasso_sem_descanso": 3.6643232095988
+      "estimativa_penalizada_sem_descanso_nao_e_limite": 3.6643232095988
     }
   },
   "pe_nominal_dois_descansos_fatias": 0.9636295463067115,

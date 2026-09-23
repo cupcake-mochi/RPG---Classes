@@ -5,7 +5,7 @@
 3) Confere os ataques que Compasso/Bote acrescentam à ação Conjurar atual.
 
 Os roteiros são políticas fixas, não um otimizador de todas as ações possíveis.
-Não precifica o catálogo mágico inteiro nem transforma seu melhor caso em média.
+Não precifica o catálogo inteiro de conclusões de feitiço nem transforma seu melhor caso em média.
 """
 from functools import lru_cache
 from itertools import product
@@ -135,7 +135,7 @@ def audit():
         'crit_chance':.05,'kokusen':False,'active_blocking':False,
         'prep':'Abertura perde 2d4; condução paga 3 PE; uma condução/conclusão por turno; erro encerra; prazo T+2; Persistência três usos no começo de cada cena.',
         'bonus_opportunity':'Ataques de Compasso/Bote são comparados com a mesma ação Conjurar, com bônus sem outro uso quantificado. Não é otimização de todas as ações da ficha.',
-        'limits':'Feitiços e efeitos de conclusão têm o mesmo resultado-base dos dois lados da comparação de Ferrão. Não enumera todos os modificadores criados por essas condições nem o valor do catálogo mágico.'},
+        'limits':'Feitiços e efeitos de conclusão têm o mesmo resultado-base dos dois lados da comparação de Ferrão. Não enumera todos os modificadores criados por essas condições nem o valor do catálogo de feitiços.'},
       'ferrão_by_refino':{},'scenes':{},'compasso_bote':{}}
     for ref,channel in CHANNEL.items():
         result['ferrão_by_refino'][str(ref)]=ferrão(channel=channel)

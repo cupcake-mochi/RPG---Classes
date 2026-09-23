@@ -1,12 +1,15 @@
 # Estocada — conferência de orçamento após Ferrão
 
+**Atualização de 22/09:** o [mínimo de Classe de Compasso](estocada-compasso.md) foi aplicado por autorização do autor. A [missão conjunta](RASCUNHO-revalidacao-estocada.md) substitui as contas isoladas abaixo para avaliar o conjunto: sete Classe 7, na Yumi sem vantagem e com Fixar externo, dão 4,34–4,66 fatias com controle suposto equivalente ao dano; Classes livres e dois descansos dão 6,860 após o requisito. Esse cenário favorável não estabelece preço universal e a alteração não garante 5,50. As tabelas abaixo preservam seus recortes históricos.
+
+
 Conferência executada em 19 de setembro de 2026. **As quatro entregas estão definidas como versão mecânica de trabalho; o preço total da Trilha ainda não está validado.** Esta auditoria identifica o que pode ser calculado diretamente e por que somar os preços antigos daria uma conclusão enganosa. Não modifica regras aprovadas para fazê-las caber num número.
 
 ## Estado das entregas
 
 | Nível | Regra escolhida | Estado do preço |
 |---|---|---|
-| 2, Compasso | Conjurar na padrão e atacar na bônus; atributo Essência/Inteligência na arma; mesmo atributo no PE máximo | PE isolado conferido; núcleo de ação precisa ser reavaliado |
+| 2, Compasso | Conjurar na padrão um feitiço de Classe ≥ metade da máxima, arredondada para cima, e atacar na bônus; atributo Essência/Inteligência na arma; mesmo atributo no PE máximo | PE isolado conferido; núcleo de ação precisa ser reavaliado |
 | 11, antigo Traçado | Concluir com feitiço, catálogo de seis opções | Catálogo e interação com Conclusão Dupla ainda sem preço conjunto |
 | 19, Bote | Segundo ataque na bônus após feitiço de condição sem dano | Não reutilizar automaticamente o preço antigo |
 | 27, Ferrão | Após conclusão de feitiço cujo feitiço afete o alvo, o ataque de Compasso pode carregar Classe 0; incompatível com Bote | Acertos próprios, perda de Canalizar e frequência conferidos nos cenários abaixo |
@@ -94,7 +97,7 @@ O modelo de rotina (`conferir-estocada-rotina.py`) responde ao item 1. **Uma pri
 
 Na base da régua do repositório principal — a Vanguarda de nível 30 conjura em 7 das 10,5 rodadas (`conferir-orcamento.py`, bloco 1) —, **o Compasso é a entrega mais cara da Trilha**: 5,35 fatias no perfil de distância e 2,13 no corpo a corpo, só sobre a Sequência. É exatamente o que o diagnóstico desta auditoria suspeitava lá em cima (*"Compasso e Bote são justamente permissões para atacar depois de usar a ação Conjurar"*), agora com a frequência de conjuração da régua em vez de "toda rodada elegível". As conclusões de feitiço e o Ferrão valem zero na referência (o ataque de bônus já conclui de arma, por mais); o Bote vai até 3,43 se todo feitiço conjurado for de condição sem dano. Tabela completa em `vanguarda-completo.md`.
 
-**Adenda de 22/09:** o número de Bote acima é o ganho dos ataques mantendo fixo o valor dos feitiços; não desconta a alternativa de conjurar um feitiço de dano. A [revalidação da escolha](RASCUNHO-revalidacao-estocada.md) faz essa comparação no Caminho completo e mostra que Bote pode valer muito menos. Ela também mostra que os 6,49 de Compasso à distância exigem ao menos um descanso curto para acomodar as Conduções no PE disponível.
+**Adenda corrigida de 22/09:** o número de Bote acima é o ganho dos ataques mantendo fixo o valor dos feitiços; não desconta a alternativa de conjurar um feitiço de dano. A [revalidação da escolha](RASCUNHO-revalidacao-estocada.md) mostra perfis sem Batedor e separa o custo da condição. Os 6,49 de Compasso são uma ficha favorecida por Batedor e Fixar; o PE pode caber com descanso, mas Persistência e Conclusão Dupla foram reiniciadas por combate no modelo anterior. Logo, esse número não prova um estouro robusto.
 
 ## Reprodução e fontes
 

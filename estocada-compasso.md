@@ -8,7 +8,11 @@ Versão de trabalho de 19 de setembro de 2026. **Exceção declarada em 21/09** 
 
 Escolha um grupo de armas para Compasso. Se escolheu Versado na Escola de Arma, pode escolher uma quantidade de grupos igual à sua maestria, conforme a regra já existente. A quantidade de grupos não multiplica o aumento de PE.
 
-**Quando usar a ação Conjurar na ação padrão, pode fazer um ataque com uma arma de um desses grupos como ação bônus.** Compasso não exige que o feitiço acerte para liberar esse ataque.
+**Quando usar a ação Conjurar na ação padrão para lançar um feitiço cuja Classe seja pelo menos metade da maior Classe que você pode conjurar, arredondada para cima, pode fazer um ataque com uma arma de um desses grupos como ação bônus.** Compasso não exige que o feitiço acerte para liberar esse ataque.
+
+No nível 30, com Classe máxima 7, exige **Classe 4 ou maior**. Esse requisito também precisa liberar a ação bônus usada por Bote e Ferrão; o feitiço carregado por Ferrão continua sendo de Classe 0.
+
+**Decisão de 22/09:** requisito aplicado por autorização condicional do autor após a [missão conjunta](RASCUNHO-revalidacao-estocada.md) superar 5,50 em cenário favorável. Com dois descansos, Classes livres, Yumi sem vantagem, Fixar externo e controle assumido equivalente ao dano, o total passa de **6,861 para 6,860**. A exigência não estabelece um teto de 5,50; sete Classe 7 permanecem elegíveis, e arredondar para baixo permite mais ativações.
 
 O aumento é uma parcela do PE máximo, não um ganho de PE por ataque, condução ou conjuração. Para o Vanguarda sem outros modificadores, o máximo passa a ser **5 × nível + atributo escolhido**. Segue as regras normais de recuperação.
 

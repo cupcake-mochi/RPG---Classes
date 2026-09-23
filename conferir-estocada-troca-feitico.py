@@ -55,7 +55,10 @@ output = {
 for profile, original in (('distancia', model['REFERENCIA']), ('corpo_a_corpo', model['MELEE'])):
     cfg = replace(original, recovery=True, recovery_uses=3, capstone=True)
     weapon_hit, weapon_value = model['attack'](cfg)
-    spell_hit, spell_value = model['attack'](replace(cfg, spell_damage=spell_mean), spell=True)
+    # p_die da Yumi antiga incorporava o +2 de Mirar do Batedor. Esse bônus
+    # não aumenta o acerto do feitiço da Estocada.
+    spell_cfg = replace(cfg, p_die=model['MELEE'].p_die, advantage=False, spell_damage=spell_mean)
+    spell_hit, spell_value = model['attack'](spell_cfg, spell=True)
     compasso = previous['cenarios']['Compasso atual'][profile]['marginal_fatias']
     both = previous['cenarios']['Ambos atuais'][profile]['marginal_fatias']
     fixed_spell_bote = both - compasso
@@ -107,8 +110,6 @@ for profile, original in (('distancia', model['REFERENCIA']), ('corpo_a_corpo', 
     pe_left_no_rest = pe_max + extra_initial - casts * spell_pe
     upper_no_rest = (raw_bonus + model['A_dia'](cfg, casts, True, pe_rate=10)
                      + 10 * pe_left_no_rest / day / slice_value)
-    if profile == 'distancia':
-        assert upper_no_rest < 5.50
     output['perfis'][profile] = {
         'chance_arma': weapon_hit, 'dano_arma_esperado': weapon_value,
         'chance_feitico': spell_hit, 'dano_feitico_esperado': spell_value,
@@ -118,12 +119,11 @@ for profile, original in (('distancia', model['REFERENCIA']), ('corpo_a_corpo', 
         'bote_mesmo_feitico_fatias': fixed_spell_bote,
         'cenarios': cases,
         'pe_conducoes_esperado_sem_cota': conduct_pe_expected,
-        'limite_superior_compasso_sem_descanso': upper_no_rest,
+        'estimativa_penalizada_sem_descanso_nao_e_limite': upper_no_rest,
     }
 
 pe_two = next(row['fatias_nominais'] for row in pe_rows if row['descansos_curto_25_porcento'] == 2)
 output['pe_nominal_dois_descansos_fatias'] = pe_two
-assert output['perfis']['distancia']['compasso_total_fatias'] > 5.50
 
 def comma(n):
     return f'{n:.3f}'.replace('.', ',')

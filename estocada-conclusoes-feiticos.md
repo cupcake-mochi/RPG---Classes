@@ -98,3 +98,5 @@ Fontes consultadas para compatibilidade: `sistema/03-mecanica/19-dano-e-condicoe
 **Comparação de 22/09:** os dois cenários de janela foram medidos em [Comparação de Resposta](RASCUNHO-comparacao-resposta.md), incluindo Sequência, Caminho completo, Dupla e efeito para o grupo. O Mizuki decidiu manter as janelas diferentes: Interromper continua com a janela larga e Cortar continua limitado ao próximo ataque.
 
 **Decisão de 22/09 sobre dominância:** após [comparar as seis opções](RASCUNHO-dominancia-conclusoes-magicas.md), o Mizuki manteve Desorientar e o catálogo como estão. O preço isolado presume uma primeira rolagem útil; não é um piso universal em qualquer encontro.
+
+**Correção apenas de conta:** a magnitude isolada de deslocamento de Ancorar é `132,15 − 126,75 = 5,40` na régua publicada de Impedido e Cego. O preço condicional por acionamento, nos gates do validador, passa a **0,3216 fatia**. Isso não muda a duração nem o texto da habilidade. As 15 duplas calculadas por soma são tetos condicionados à falta de sobreposição, não preços diários; a comparação com uma conclusão de arma e o limite por cena continuam pendentes.

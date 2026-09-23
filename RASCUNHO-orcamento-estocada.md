@@ -1,5 +1,9 @@
 # Estocada — orçamento das rotinas e alternativas
 
+**Resultado mais recente:** a [missão conjunta](RASCUNHO-revalidacao-estocada.md) inclui reserva de PE, descansos, conclusões e Ferrão. Na Yumi sem vantagem e com Fixar externo, sete Classe 7 medem 4,34–4,66 fatias com controle suposto equivalente ao dano. Com Classes livres e dois descansos, o cenário favorável chega a 6,861; o requisito de metade da Classe máxima arredondada para cima, aplicado a Compasso em 22/09, reduz para 6,860. A mudança não garante 5,50. As tabelas abaixo registram a comparação anterior, sem esse requisito e sem o livro-caixa conjunto.
+
+**Correção de 22/09 sobre o commit `84ec7a2`:** esta tabela é um cenário histórico favorecido, não preço da Trilha. A ficha de Yumi incorporou vantagem, `+2` de Mirar e deslocamento do Batedor; Mirar e Compasso disputam a ação bônus. O modelo reinicia Persistência e Conclusão Dupla a cada combate e não acompanha a reserva de PE entre eles. As colunas “+ PE” são apenas capacidade nominal e **não podem ser somadas a uma simulação que já inclua o gasto desses PE**. A [revalidação corrigida](RASCUNHO-revalidacao-estocada.md) separa ataques, interações, perfis sem Batedor, escolhas de feitiço e livro-caixa por descanso. Nenhuma linha desta tabela demonstra que superar 5,50 seja robusto.
+
 Análise de 22/09/2026, **sem alteração de regra**. Esta rodada compara a mesma ficha de Vanguarda que conjura nas sete rodadas do dia de referência, com e sem os ataques de ação bônus da Estocada. A escolha de quantas vezes permitir cada ataque é do Mizuki. **Leia também a [revalidação da escolha de feitiço](RASCUNHO-revalidacao-estocada.md): esta tabela fixa os feitiços como equivalentes e, por isso, o ganho de Bote nela é um teto condicional, não seu preço líquido.**
 
 ## Premissas e o que a conta significa
@@ -42,7 +46,7 @@ Valores abaixo são **acréscimos ao Caminho sem esses ataques** na mesma rotina
 
 ## Ação bônus, opções e custo de cada uma
 
-A comparação acima atribui custo de oportunidade **zero** à ação bônus. Isso é compatível com a régua geral que a descreve como um slot pouco disputado; uma ficha que tenha outro uso valioso nessa rodada perde esse uso ao ativar Compasso ou Bote. Bote usa **a mesma ação bônus** de Compasso, portanto não se cobra uma segunda ação bônus pelo segundo ataque. A linha de sensibilidade abaixo pergunta quanto teria de valer uma alternativa de ação bônus **em todas as sete conjurações** para trazer as versões sem limite até as cinco fatias, quando os PE extras forem integralmente aproveitados. É um limiar, não uma atribuição automática de custo.
+A comparação antiga atribui custo de oportunidade **zero** à ação bônus. Isso omite usos alternativos reais; em particular, Mirar do Batedor custa essa mesma ação bônus e não pode ocorrer junto de Compasso no turno. Bote usa **a mesma ação bônus** de Compasso, portanto não se cobra uma segunda ação bônus pelo segundo ataque. A linha de sensibilidade abaixo é apenas um limiar formal da ficha antiga, com PE nominal somado; não é custo observado nem preço da Trilha.
 
 <!-- inicio-limiar-orcamento-estocada -->
 | Versão sem limite, PE aproveitado | Alternativa por ação bônus em equivalentes | Fração de um ataque comum |
@@ -53,11 +57,11 @@ A comparação acima atribui custo de oportunidade **zero** à ação bônus. Is
 | Ambos atuais, 2 descanso(s) | 45,378738 | 1,980523 |
 <!-- fim-limiar-orcamento-estocada -->
 
-**Conservar tudo sem limite:** mantém a identidade de conjurar e atacar em toda oportunidade, mas o teto favorável excede cinco fatias mesmo antes de contar PE extra. Aceitar essa versão exigiria declarar uma exceção ao orçamento da Trilha ou demonstrar uma frequência menor de conjurações de condição e um custo real da ação bônus.
+**Conservar tudo sem limite:** mantém a identidade de conjurar e atacar em toda oportunidade. O teto favorecido desta ficha excede cinco fatias, mas não demonstra estouro robusto entre fichas, descansos e rotinas. A decisão de orçamento depende da revalidação corrigida.
 
-**Limitar só Bote a uma vez por combate:** reduz o pico do nível 19, mas Compasso continua acima de cinco fatias à distância no Caminho completo. Não fecha o orçamento sozinho.
+**Limitar só Bote a uma vez por combate:** reduz o pico do nível 19 nesta ficha antiga. Sem os benefícios de Batedor, Compasso não foi demonstrado acima de cinco fatias; esta linha não decide o orçamento.
 
-**Limitar Compasso e Bote a um uso cada por combate:** reduz o teto deste teste para a linha “Ambos uma vez”; mesmo somando os PE nominais dos dois descansos, a coluna à distância fica abaixo de cinco. O preço é alto em identidade: Compasso deixaria de oferecer o ataque na maioria dos turnos de conjuração. O catálogo de feitiços e Ferrão podem ganhar valor quando há menos ataques de arma disponíveis, e ainda precisam ser reotimizados antes de chamar isso de preço final. A contagem por combate também exige confirmar se a regra deveria usar cena ou descanso curto.
+**Limitar Compasso e Bote a um uso cada por combate:** reduz o teto formal desta ficha antiga para a linha “Ambos uma vez”. Isso não certifica o orçamento, porque a ficha incorporou benefícios de Batedor e somou PE nominal sem gasto demonstrado. Compasso deixaria de oferecer o ataque na maioria dos turnos de conjuração; as conclusões de feitiço e Ferrão poderiam ganhar valor e precisariam de nova otimização. É uma opção para decisão futura, não regra adotada.
 
 **Manter a regra enquanto se mede a mesa:** preserva todas as escolhas atuais; requer medir quantos dos sete feitiços realmente seriam de condição sem dano, quais ações bônus competem com Compasso e se o PE extra é efetivamente gasto. Sem esses dados, o intervalo é mais informativo que um preço único.
 

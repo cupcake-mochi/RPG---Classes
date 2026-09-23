@@ -1,0 +1,22 @@
+{
+  "decisao": "22/09: manter Canalizar no golpe; excluir apenas do golpe que carrega feitiço de dano. Ferrão disponível, opcional e incompatível com Bote no mesmo turno.",
+  "nivel": 30,
+  "atributo": 6,
+  "refino": 10,
+  "maestria": 4,
+  "fatia": 5.08,
+  "combates": [[3, 3, 4], [4, 4, 3]],
+  "descansos": [[], [1], [2], [1, 2]],
+  "cenas_distintas": true,
+  "acerto_feitico": 0.55,
+  "falha_tr_adicional": 0.55,
+  "condicao_fracao_do_dano": [0, 1],
+  "alternativa_bonus": 0,
+  "perfis": [
+    {"nome": "Yumi, sem Fixar", "arma": "Yumi", "acerto": 0.55, "vantagem": false, "fixar": false},
+    {"nome": "Yumi, Fixar externo", "arma": "Yumi", "acerto": 0.55, "vantagem": false, "fixar": true},
+    {"nome": "Lâmina Longa", "arma": "Lâmina Longa", "acerto": 0.55, "vantagem": false, "fixar": false},
+    {"nome": "Yumi, vantagem e Fixar externos", "arma": "Yumi", "acerto": 0.55, "vantagem": true, "fixar": true}
+  ],
+  "limites": "Valor do controle é uma sensibilidade já líquida de CD, duração, resistência e término ao receber dano; não concede acerto ou Fixar adicional. Efeitos do Caminho usam a régua equivalente herdada, condicionada à utilidade. Não é simulação de mapa, vida do alvo ou grupo. Atributo 6 nos dois lados; flexibilidade da troca de atributo não preçada. Vantagem/Fixar externos só nas linhas declaradas. Uma cena por combate. Dois calendários explícitos têm média de 10,5 rodadas; não representam todas as missões."
+}
